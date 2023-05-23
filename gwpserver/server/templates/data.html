@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="{{ url_for('static', filename='js/jquery-3.6.3.js')}}" type="text/javascript"></script>
+    
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <script src="{{ url_for('static', filename='js/bootstrap.js')}}" type="text/javascript"></script>
+</head>
+<body>
+    <div class="output">
+        <table class="table table-hover table-bordered table-striped">
+            <tr class="border">
+                <th class="border">Id</th>
+                <th class="border">Plant</th>
+                <th class="border">Water Interval</th>
+                <th class="border">Last watered</th>
+                <th class="border">Panel</th>
+                <th class="border">line</th>
+                <th class="border">Sensor number</th>
+                <th >Options</th>
+            </tr class="border">
+        {% for p in plants %}
+        <tr class="border">
+            <td class="border">{{p.id}}</td>
+            <td class="border">{{p.name}}</td>
+            <td class="border">{{p.waterInterval}}</td>
+            <td class="border">{{p.date_time}}</td>
+            <td class="border">{{p.panel}}</td>
+            <td class="border">{{p.line}}</td>
+            <td class="border">{{p.sensorNum}}</td>
+            <td><a href="{{url_for('delete',id_num=p.id)}}">Delete    </a><a href="{{url_for('updt',id_num=p.id)}}">    Update</a></td>
+
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

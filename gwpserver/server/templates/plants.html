@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+    
+    <script src="{{ url_for('static', filename='js/jquery-3.6.3.js')}}" type="text/javascript"></script>
+    
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <script src="{{ url_for('static', filename='js/bootstrap.js')}}" type="text/javascript"></script>
+<head>
+    <style>
+        .input,h2{
+            margin-left: 25px;
+            margin-bottom: 25px;
+        }
+        button, h2{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+        
+    <h2>Blue - Green Wall Data</h2>
+    <div class="flex-container">
+    <div class="input">
+        <form action="{{url_for('add_posts')}}" method="POST">
+            <label for="name">Plant name: </label><br>
+            <select id = "name"type="text" name="name" placeholder="Name" class="form-select">
+                {% for i in plantsdata %}
+                <option value="{{ i.name }}">{{ i.name }}</option>
+                {% endfor %}
+            </select> <br>
+            <label for="interval">Watering interval: </label><br>
+            <input id="interval "type="number" name="waterInterval" placeholder="1"><br>
+            <label for="lastWater">Last watered: </label><br>
+            <input id="lastWater" type="datetime-local" name="waterdate" /><br>
+            <label for="panel">Panel: </label><br>
+            <input id="panel" type="number" name="panel" value="{{position[0]}}" /><br>
+            <label for="line">Line: </label><br>
+            <input id="line" type="number" name="line" value="{{position[1]}}"/><br>
+            <label for="sensorNum">Sensor number: </label><br>
+            <input id="sensorNum" type="number" name="sensorNum" value="{{position[2]}}"/><br>
+            <input type="submit" name="action" value="submitData">
+            <input type="submit" name="action" value="addMore">
+        </form>
+    </div>
+    
+    </div>
+</body>
+</html>
