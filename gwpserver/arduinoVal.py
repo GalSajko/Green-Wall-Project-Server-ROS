@@ -477,13 +477,7 @@ arduino6 = {
     }
 }
 arduinoList = [arduino1,arduino2,arduino3,arduino4,arduino5,arduino6]
-global sensors
-global goal
-global rnd
-global sensorList
-global orderIndex
-global order
-global jsons
+
 #MCd = (0.000001007*(cap**2))+(0.000024885*cap)-0.062508722
 
 

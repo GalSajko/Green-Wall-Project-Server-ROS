@@ -9,10 +9,19 @@ import requests
 import numpy as np
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-import arduinoVal
+import random
+import os
+import sys
+from datetime import datetime
+file_dir = os.path.dirname(__file__)
+sys.path.append(file_dir)
 from GeneticAlgorithm import geneticAlgorithm
 from sensor import Sensor
 import config
+
+from gwpconfig import commconstants
+
+print(commconstants.GRIPPER_ERROR)
 
 app = Flask(__name__)
 file_handler = FileHandler('errorlog.txt')
@@ -41,6 +50,17 @@ class Plants(db.Model):
     line = db.Column(db.Integer)
     sensorNum = db.Column(db.Integer)
 
+class PlantTypes(db.Model):
+    """Class represents the Plants table in the database.
+
+    Args:
+        db (database): database instance.
+    """
+    __tablename__ = 'planttypes'
+    id = db.Column(db.Integer, primary_key=True)
+    plant_type = db.Column(db.Integer)
+    min_moisture = db.Column(db.Integer)
+
 class PlantsData(db.Model):
     """Class represents PlantsData table in the database.
 
@@ -50,6 +70,16 @@ class PlantsData(db.Model):
     __tablename__ = 'plantsdata'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(1000))
+    name_latin = db.Column(db.String(1000))
+    plant_type = db.Column(db.Integer)
+    watering_96h = db.Column(db.Integer)
+    watering_72h = db.Column(db.Integer)
+    quantity = db.Column(db.Integer)
+    light_level = db.Column(db.Integer)
+    min_moisture = db.Column(db.Integer)
+    areas = db.Column(db.String(1000))
+    plant_needs = db.Column(db.String(1000))
+    characteristics = db.Column(db.String(1000))
 
 @app.route('/updt/<int:id_num>', methods=['GET','POST'])
 def updt(id_num):
@@ -88,6 +118,10 @@ def show_data():
         function: Serves a HTML page that show data from the table Plants.
     """
     plants = Plants.query.all()
+    date_1 = plants[0].date_time
+    date_2 = datetime(2022,1,1)
+    delta = date_1-date_2
+    print(delta.days)
     return render_template("data.html", plants=plants)
 
 @app.route('/add',methods=['GET', 'POST'])
@@ -112,6 +146,18 @@ def ind():
         config.selected = request.get_data().decode()
         print(request.get_data().decode())
         return 'OK'
+    
+@app.route('/addPlantsData',methods=['GET', 'POST'])
+def add():
+    """Function that serves a HTML page for adding new entries to the Plants table.
+
+    Returns:
+        function: serves a HTML page for adding new entries to the Plants table.
+        
+    """
+    plants_data = PlantsData.query.all()
+    return render_template("addPlantData.html",plants_data=plants_data)
+   
 
 @app.route('/posts',methods=['GET','POST'])
 def add_posts():
@@ -153,6 +199,41 @@ def add_posts():
         position = json.dumps([panel,line,sensor_num])
         return redirect(url_for('ind',position=position))
 
+@app.route('/plantData',methods=['GET','POST'])
+def add_plant_data():
+    """Function adds an entry to the Plants table and calculates the position for the next entrie if the user wants to add more entries.
+
+    Returns:
+        function: serves a HTML page for adding data or showing data, depending on the user action.
+    """
+    position = []
+    if request.method == 'POST':
+        name  = request.form['name']
+        name_latin = request.form['name_latin']
+        plant_type = request.form['type']
+        watering_96h = request.form['watering_96h']
+        watering_72h = request.form['watering_72h']
+        quantity = request.form['quantity']
+        light_level = request.form['light_level']
+        
+        areas = request.form['areas']
+        plant_needs = request.form['plant_needs']
+        characteristics = request.form['characteristics']
+        plant_data_post = PlantsData(name=name, 
+                                     name_latin=name_latin,
+                                     plant_type=plant_type,
+                                     watering_96h=watering_96h,
+                                     watering_72h=watering_72h,
+                                     quantity=quantity,
+                                     light_level=light_level,
+                                     areas=areas,
+                                     plant_needs=plant_needs,
+                                     characteristics=characteristics)
+        db.session.add(plant_data_post)
+        db.session.commit()
+        flash("Post Added",'success')
+    
+        return redirect(url_for('add'))
 
 @app.route('/getId', methods=['POST', 'GET'])
 def get_id():
@@ -205,11 +286,14 @@ config.arduinoValues = [{},{},{},{},{},{}]
 startPos = Sensor()
 startPos.x = 1.9
 startPos.y = 0.1
-arduinoVal.sensors = []
-arduinoVal.jsons = []
-arduinoVal.sensorList = []
-arduinoVal.orderIndex = 0
-arduinoVal.order = []
+config.sensors = []
+config.jsons = []
+config.sensorList = []
+config.orderIndex = 0
+config.order = []
+config.need_watering = []
+config.watering_queue = []
+config.already_selected = []
 config.generate = None
 
 
@@ -247,6 +331,12 @@ def set_data_from_db():
         vrstica = data.line-1
         sensor_id = data.sensorNum
         name = data.name
+        print(vrstica,"  ",sensor_id,"   ", panel)
+        db_id = db.session.query(Plants.id).filter(Plants.panel==panel,Plants.line==data.line,Plants.sensorNum==sensor_id).all()[0][0]
+        print(db_id)
+        plant_type =db.session.query(PlantsData.plant_type).filter(PlantsData.name==name).all()[0][0]
+        water =db.session.query(PlantsData.watering_96h).filter(PlantsData.name==name).all()[0][0]
+        print(plant_type)
         if panel == 1 or panel == 4:
             start = 20
         elif panel == 3 or panel == 6:
@@ -257,6 +347,7 @@ def set_data_from_db():
         else:
             y_coordinate = (((5 - vrstica)) * y_dim + 24.0) / 100.0
             x_coordinate = (start + ((panel - 4) * 7 + (sensor_id-1)) * x_dim + x_dim / 2) / 100.0
+        
         sensor = Sensor()
         sensor.plantName = name
         sensor.arduino = panel
@@ -264,11 +355,23 @@ def set_data_from_db():
         sensor.sensorID = sensor_id-1
         sensor.x = x_coordinate
         sensor.y = y_coordinate
+        sensor.water = water
+        sensor.lastWater = data.date_time.timestamp()
+        sensor.db_id = db_id
+    
         array_ind = ((panel-1)*36+vrstica*6+sensor_id)-1
+        sensor.base_index = array_ind
         if config.sensorBase[array_ind] is None:
             config.sensorBase[array_ind] = sensor
         else:
             config.sensorBase[array_ind].plantName = name
+            config.sensorBase[array_ind].lastWater = sensor.lastWater
+            config.sensorBase[array_ind].water = sensor.water
+            config.sensorBase[array_ind].db_id = db_id
+            config.sensorBase[array_ind].base_index = array_ind
+            print(config.sensorBase[array_ind].base_index)
+
+
 
 def tsp(data, sol):
     """Function that solves the travelling salesperson problem for visiting the sensors.
@@ -279,8 +382,13 @@ def tsp(data, sol):
     Returns:
         list: ordered list of sensors
     """
+    
     data.insert(0, startPos)
     sol = list(range(len(data)))
+    print(sol)
+    print(data)
+    if len(data) <=3:
+        return sol 
     x_coordinate = []
     y_coordinate = []
     for i in data:
@@ -290,7 +398,6 @@ def tsp(data, sol):
     print("Path generation started")
     best_state = geneticAlgorithm(sol,x_coordinate,y_coordinate,len(data), 200, 500)
     best_state = np.array(best_state)
-    print(best_state)
     zero_ind = np.where(best_state == 0)[0][0]
     best_state = np.roll(best_state, -zero_ind)
     for i in best_state:
@@ -325,7 +432,6 @@ def setup_sensor_list(panel, arduino):
                 else:
                     y_coordinate = (((5 - vrstica)) * y_dim + 24.0) / 100.0
                     x_coordinate = (start + ((panel - 4) * 7 + (sensor_id)) * x_dim + x_dim / 2) / 100.0
-                #print(cap)
                 sensor = Sensor()
                 sensor.arduino = panel
                 sensor.line = vrstica
@@ -357,44 +463,77 @@ def create_order():
     data = []
     i = 0
     sol = []
-    while len(data) < N-1:
-        if len(arduinoVal.sensorList) != 0:
-            dot = arduinoVal.sensorList.pop()
-            data.append(dot)
-            sol.append(i)
-            i+=1
+    water_sum = 0
+    while True:
+        if len(config.need_watering) != 0:
+            dot = config.need_watering.pop()
+            print(water_sum,"    ", dot.water)
+            if water_sum + dot.water <= config.WATER_LIMIT:
+                water_sum += dot.water
+                data.append(dot)
+                sol.append(i)
+                i+=1
+            else:
+                break
+        elif len(config.watering_queue) != 0:
+            dot = config.watering_queue.pop()
+            if water_sum + dot.water <= config.WATER_LIMIT:
+                water_sum += dot.water
+                data.append(dot)
+                sol.append(i)
+                i+=1
+            else:
+                break
         else:
-            arduinoVal.sensorList = []
-            arduinoVal.jsons=[]
-            arduinoVal.orderIndex = 0
-            bubble_sort()
+            print("no entries")
+            break
     order = tsp(data,sol)
     return order
 
 def bubble_sort():
     """Sorts the values from smallest to highest capacity
     """
-    arduinoVal.sensorList = []
-    arduinoVal.jsons = []
+    config.sensorList = []
+    config.jsons = []
     for data in config.sensorBase:
         if data is not None :
             if data.lastAlive is not None and time.time()-data.lastAlive<300 :
-                arduinoVal.sensorList.append(data)
-                arduinoVal.jsons.append(json.loads(data.toJson()))
-    length = len(arduinoVal.sensorList)
+                config.sensorList.append(data)
+                config.jsons.append(json.loads(data.toJson()))
+    length = len(config.sensorList)
     for i in range(length):
         for j in range(0, length-i-1):
-            if arduinoVal.sensorList[j].cap < arduinoVal.sensorList[j+1].cap:
-                temp1 = arduinoVal.sensorList[j]
-                temp2 = arduinoVal.jsons[j]
-                arduinoVal.sensorList[j] = arduinoVal.sensorList[j+1]
-                arduinoVal.sensorList[j+1] = temp1
-                arduinoVal.jsons[j] = arduinoVal.jsons[j+1]
-                arduinoVal.jsons[j+1] = temp2
+            if config.sensorList[j].cap < config.sensorList[j+1].cap:
+                temp1 = config.sensorList[j]
+                temp2 = config.jsons[j]
+                config.sensorList[j] = config.sensorList[j+1]
+                config.sensorList[j+1] = temp1
+                config.jsons[j] = config.jsons[j+1]
+                config.jsons[j+1] = temp2
 #@app.route('/stop', methods=['POST'])
 #def stop_generate():
 #    config.generate = True
 #    return 'test'
+def check_moisture():
+    for i in config.sensorBase:
+        if i is not None:
+            try:
+                a = datetime.fromtimestamp(i.lastWater)
+                b = datetime.now()
+                delta = b- a
+                if i in config.already_selected:
+                    config.already_selected.pop(config.already_selected.index(i))
+                    continue
+                if delta.days >=5 and i not in config.need_watering:
+                    config.need_watering.append(i)
+                    config.already_selected.append(i)
+                elif delta.days == 4 and i.cap <= 10 and i not in config.watering_queue:
+                    config.watering_queue.append(i)
+                    config.already_selected.append(i)
+            except Exception as e:
+                print("There is a database entry without senosr or sensor without database entry" ,e)
+    random.shuffle(config.need_watering)
+    random.shuffle(config.watering_queue)
 
 @app.route('/deleted', methods=['GET'])
 def deleted():
@@ -434,9 +573,9 @@ def send_goal():
     """
     try:
         data = []
-        for i in arduinoVal.order:
+        for i in config.order:
             data.append(i.toJson())
-        return jsonify(data, arduinoVal.orderIndex), 200, {"Access-Control-Allow-Origin": "*"}
+        return jsonify(data, config.orderIndex), 200, {"Access-Control-Allow-Origin": "*"}
     except Exception:
         print("ERROR TRYING TO SEND GOAL VALUE TO FRONTEND")
         return jsonify([]), 200, {"Access-Control-Allow-Origin": "*"}
@@ -449,11 +588,19 @@ def get_val():
        list: Information about random sensor.
     """
     #try:
-    arduinoVal.orderIndex += 1
-    print(len(arduinoVal.order))
-    print(arduinoVal.orderIndex)
-    print([arduinoVal.order[arduinoVal.orderIndex].x,arduinoVal.order[arduinoVal.orderIndex].y])
-    return jsonify([arduinoVal.order[arduinoVal.orderIndex].x,arduinoVal.order[arduinoVal.orderIndex].y]), 200, {"Access-Control-Allow-Origin": "*"}
+    if config.orderIndex != 0:
+        print(config.order[config.orderIndex].toJson())
+        array_ind = config.order[config.orderIndex].index
+        print(array_ind)
+        print(config.order)
+        config.sensorBase[array_ind].lastWater = time.time()
+        plant = Plants.query.get(config.sensorBase[array_ind].db_id)
+        print(plant)
+        plant.date_time = datetime.fromtimestamp(config.sensorBase[array_ind].lastWater)
+        db.session.commit()
+    config.orderIndex += 1
+    
+    return jsonify([config.order[config.orderIndex].x,config.order[config.orderIndex].y]), 200, {"Access-Control-Allow-Origin": "*"}
     #except Exception as e:
      #   print(e)
       #  return jsonify([]), 200, {"Access-Control-Allow-Origin": "*"}
@@ -465,13 +612,13 @@ def update():
     Returns:
         JSON: Information about active sensors.
     """
-    arduinoVal.jsons.clear()
-    print(config.sensorBase[0])
+    check_moisture()
+    config.jsons.clear()
     for i in config.sensorBase:
         if i is not None:
-            arduinoVal.jsons.append(json.loads(i.toJson()))
+            config.jsons.append(json.loads(i.toJson()))
     try:
-        return jsonify(arduinoVal.jsons), 200, {"Access-Control-Allow-Origin": "*"}
+        return jsonify(config.jsons), 200, {"Access-Control-Allow-Origin": "*"}
     except Exception:
         return jsonify([]), 200, {"Access-Control-Allow-Origin": "*"}
 
@@ -491,11 +638,11 @@ def refill():
     Returns:
         String: Confirmation that request was receieved
     """
-    arduinoVal.orderIndex = 0
-    arduinoVal.sensorList = []
-    arduinoVal.jsons=[]
-    arduinoVal.orderIndex = 0
-    arduinoVal.order = config.nextRoute.copy()
+    config.orderIndex = 0
+    config.sensorList = []
+    config.jsons=[]
+    config.orderIndex = 0
+    config.order = config.nextRoute.copy()
     config.nextRoute = create_order()
     return 'OK'
 
@@ -521,10 +668,10 @@ def get_routes():
     """
     data_curr = []
     data_next = []
-    length = len(arduinoVal.order)
+    length = len(config.order)
     try:
         for i in range(length):
-            data_curr.append(arduinoVal.order[i].toJson())
+            data_curr.append(config.order[i].toJson())
             data_next.append(config.nextRoute[i].toJson())
     except Exception:
         pass
@@ -552,8 +699,8 @@ def start_generating():
     Returns:
         String: Confirmation string.
     """
-    if arduinoVal.order == []:
-        arduinoVal.order = create_order()
+    if config.order == []:
+        config.order = create_order()
         config.nextRoute = create_order()
     return 'OK'
 
@@ -564,8 +711,8 @@ def index():
     Returns:
         render_template: serves a webpage
     """
-    arduinoVal.sensorList = []
-    arduinoVal.orderIndex = 0
+    config.sensorList = []
+    config.orderIndex = 0
     set_data_from_db()
     return render_template('index.html')
 
@@ -576,8 +723,8 @@ def svg():
     Returns:
         render_template: serves a webpage
     """
-    arduinoVal.sensorList = []
-    arduinoVal.orderIndex = 0
+    config.sensorList = []
+    config.orderIndex = 0
     set_data_from_db()
     return render_template('svgtest.html')
 

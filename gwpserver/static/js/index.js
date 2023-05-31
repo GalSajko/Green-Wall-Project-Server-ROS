@@ -2,7 +2,6 @@ scale = 2.8
 
 //Funkcija v novem oknu odpre obrazec za dodajaje nove rastline
 function add() { 
-    console.log(this.id);
     $.post('./add',this.id);
     window.open('http://192.168.1.25:5000/add', '_blank');
     
@@ -10,10 +9,7 @@ function add() {
 
 //Funkcija v novem oknu odpre obrazec za posodabljanje obstoječe rastline
 function updt() { 
-    console.log("this is for update");
     $.post('./getId',this.id, function(response){
-        console.log(this.id)
-        console.log(response)
         window.open('http://192.168.1.25:5000/updt/'+response, '_blank');
     }); 
 }
@@ -21,7 +17,6 @@ function updt() {
 //Funkcija požene generiranje poti
 $(".link").on("click", function(e) {
     $.post("./start", function (data) {
-        console.log(data)
     })
 });
 function updateOpacity(){
@@ -67,7 +62,6 @@ for (var x = 0; x < numPinsX; x++) {
         circle.setAttribute("r", 2); 
         circle.setAttribute("fill", "gray");
         $("svg").append(circle);
-        console.log(circle.getAttribute('id'))
     }
 }
 
@@ -219,7 +213,7 @@ for(let i = 0; i<50; i++){
 }
 //Funkcija vsake 2 sekundi pridobi podatke iz strežnika in jih posodobi
 function update(){
-
+    
     //Pridobivanje informacij o aktivnih senzorjih
     $.get("./update", function (data) {
         for(let i = 0; i<data.length;i++){
@@ -240,7 +234,6 @@ function update(){
                 if(name != null && empty_slots[index].getAttribute('fill')!="pink"){
                     empty_slots[index].removeEventListener('click',add)
                     empty_slots[index].addEventListener('click',updt)
-                    console.log("here")
                 }
                 else if(empty_slots[index].getAttribute('fill')!="pink"){
                     empty_slots[index].setAttribute("fill","yellow");
@@ -259,9 +252,8 @@ function update(){
         }
     })
     $.get('./spiderPos',function(data){
-        console.log(data)
+        try{
         pose = data["pose"]
-        console.log(pose)
         //spiderLocation[i][0] * 100 * scale + pad, (12 * yDim * scale + 20) - (spiderLocation[i][1] * 100 * scale), 10 * scale, 0, 2 * Math.PI
         if(JSON.stringify(pose)!=lastPose){
             lastPose = JSON.stringify(pose)
@@ -279,19 +271,21 @@ function update(){
                 newPos.setAttribute("cy",(12 * yDim * scale + 20) - (pose[1] * 100 * scale))
                 positions.unshift(newPos)
             }
-            console.log(positions)
             updateOpacity()
+    }
+}
+    catch{
+        console.log("ERROR GETTING SPIDER POSITION")
     }
         
     })
     //Risanje poti in oblačka
     $.get("./goal", function(data){
+        try{
         coords = data[0]
         index = data[1]
-        console.log(index)
         let txtCont1 = "Refilling!"
         let txtCont2 = ""
-        console.log(bubbleElems)
         if (lines.length ==0){
             for(let i = 0; i<coords.length-1; i++){
                 if(index!=0){
@@ -372,7 +366,6 @@ function update(){
             arrow.setAttribute("stroke","black")
             arrow.setAttribute("fill","white")
             arrow.setAttribute("points",(goalPos.getAttribute('cx')-7)+","+(goalPos.getAttribute('cy')-15)+" " +goalPos.getAttribute('cx')+","+goalPos.getAttribute('cy')+" "+(parseInt(goalPos.getAttribute('cx'))+7)+","+(goalPos.getAttribute('cy')-15));
-            console.log(arrow.getAttribute("points"))
             $("svg").append(arrow);
             bubbleElems.push(arrow)
 
@@ -390,8 +383,9 @@ function update(){
             text.setAttribute("y", goalPos.getAttribute('cy')-75);
             text.setAttribute("text-anchor", "middle");
             text.setAttribute("alignment-baseline", "middle");
-            text.textContent = txtCont1;
+            
             $("svg").append(text);
+            document.getElementById("plantName").innerHTML = txtCont1
 
             //Text za prikaz vlažnosti zemlje
             bubbleElems.push(text)
@@ -404,8 +398,8 @@ function update(){
             $("svg").append(text2);
             bubbleElems.push(text2)  
         }
+    
         else{
-            console.log(coords)
             for(let i = 0; i<coords.length-1; i++){
                 if(index!=0){
 
@@ -447,7 +441,7 @@ function update(){
                 bubbleElems[1].setAttribute("points",(goalPos.getAttribute('cx')-7)+","+(parseInt(goalPos.getAttribute('cy'))-15)+" " +goalPos.getAttribute('cx')+","+(parseInt(goalPos.getAttribute('cy')))+" "+(parseInt(goalPos.getAttribute('cx'))+7)+","+(parseInt(goalPos.getAttribute('cy'))-15))
                 bubbleElems[2].setAttribute("points",(goalPos.getAttribute('cx')-7)+","+(parseInt(goalPos.getAttribute('cy'))-16)+" " +goalPos.getAttribute('cx')+","+(parseInt(goalPos.getAttribute('cy')))+" "+(parseInt(goalPos.getAttribute('cx'))+7)+","+(parseInt(goalPos.getAttribute('cy'))-16))
                 bubbleElems[3].setAttribute("x",goalPos.getAttribute('cx'))
-                bubbleElems[3].textContent=txtCont1
+                document.getElementById("plantName").innerHTML = txtCont1
                 bubbleElems[3].setAttribute("y",parseInt(goalPos.getAttribute('cy'))-75)//75
                 bubbleElems[4].setAttribute("x",goalPos.getAttribute('cx'))
                 bubbleElems[4].textContent=txtCont2
@@ -459,15 +453,20 @@ function update(){
                 bubbleElems[1].setAttribute("points",(goalPos.getAttribute('cx')-7)+","+(parseInt(goalPos.getAttribute('cy'))+15)+" " +goalPos.getAttribute('cx')+","+(parseInt(goalPos.getAttribute('cy')))+" "+(parseInt(goalPos.getAttribute('cx'))+7)+","+(parseInt(goalPos.getAttribute('cy'))+15))
                 bubbleElems[2].setAttribute("points",(goalPos.getAttribute('cx')-7)+","+(parseInt(goalPos.getAttribute('cy'))+16)+" " +goalPos.getAttribute('cx')+","+(parseInt(goalPos.getAttribute('cy')))+" "+(parseInt(goalPos.getAttribute('cx'))+7)+","+(parseInt(goalPos.getAttribute('cy'))+16))
                 bubbleElems[3].setAttribute("x",goalPos.getAttribute('cx'))
-                bubbleElems[3].textContent=txtCont1
+                document.getElementById("plantName").innerHTML = txtCont1
                 bubbleElems[3].setAttribute("y",parseInt(goalPos.getAttribute('cy'))+55)//75
                 bubbleElems[4].setAttribute("x",goalPos.getAttribute('cx'))
                 bubbleElems[4].textContent=txtCont2
                 bubbleElems[4].setAttribute("y",parseInt(goalPos.getAttribute('cy'))+75) //55 
             }
         }
+    }
+    catch{
+        console.log("ERROR GETTING GOAL POSITION")
+    }
     })
     $.get('./getRoutes', function(data){
+        try{
         current = data[0]
         next = data[1]
         stringCurrent = ""
@@ -480,6 +479,10 @@ function update(){
         stringNext = stringNext+" "+JSON.parse(next[current.length-1])['index']
         document.getElementById("routeCurr").innerHTML = stringCurrent
         document.getElementById("routeNext").innerHTML = stringNext
+    }
+    catch{
+        console.log("NO ROUTE WAS GIVEN")
+    }
     })
     $.get('./getPlantNum', function(data){
         document.getElementById("plantsNo").innerHTML= JSON.parse(data)
