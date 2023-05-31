@@ -1,5 +1,12 @@
 """This is a server that processes data from arduino controllers and sends it to the spider robot.
 """
+import os
+import sys
+file_dir = os.path.dirname(__file__)
+sys.path.append(file_dir)
+from GeneticAlgorithm import geneticAlgorithm
+from sensor import Sensor
+import config
 import time
 import json
 import threading
@@ -10,18 +17,10 @@ import numpy as np
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import random
-import os
-import sys
 from datetime import datetime
-file_dir = os.path.dirname(__file__)
-sys.path.append(file_dir)
-from GeneticAlgorithm import geneticAlgorithm
-from sensor import Sensor
-import config
+
 
 from gwpconfig import commconstants
-
-print(commconstants.GRIPPER_ERROR)
 
 app = Flask(__name__)
 file_handler = FileHandler('errorlog.txt')
@@ -174,9 +173,14 @@ def add_posts():
         line = request.form['line']
         panel = request.form['panel']
         sensor_num = request.form['sensorNum']
+        date1 = datetime.now()
+        delta = date1-date_time
         plant_post = Plants(name=name, waterInterval=water_interval, date_time=date_time, panel=panel, line=line, sensorNum=sensor_num)
         if db.session.query(Plants.id).filter(Plants.panel==plant_post.panel,Plants.line==plant_post.line,Plants.sensorNum==plant_post.sensorNum).count()>0:
             flash("error there is already a plant at that location", 'error')
+        elif delta.days < 0:
+            flash("bad date entry", 'error')
+            print("bad date entry")
         else:
             db.session.add(plant_post)
             db.session.commit()
@@ -258,16 +262,12 @@ def delete(id_num):
     """
     record_to_delete = Plants.query.get_or_404(id_num)
     try:
-        print(config.sensorBase[0])
         panel = record_to_delete.panel
         vrstica = record_to_delete.line-1
         sensor_id = record_to_delete.sensorNum
-        print(panel ,"   ", vrstica, "   ",sensor_id)
         array_ind = ((panel-1)*36+vrstica*6+sensor_id)-1
-        print(array_ind)
         config.deleted.append(array_ind)
         config.sensorBase[array_ind] = None
-        print(config.sensorBase[0])
         db.session.delete(record_to_delete)
         db.session.commit()
         set_data_from_db()
@@ -277,7 +277,6 @@ def delete(id_num):
         flash("Error", 'error')
         print(e)
         return redirect(url_for('show_data'))
-
 
 N = 7
 sensor_ids = [54, 55, 56, 57, 58, 59]
@@ -296,7 +295,6 @@ config.watering_queue = []
 config.already_selected = []
 config.generate = None
 
-
 def get_data_thread():
     """Function pings arduinos so they can start sending data
 
@@ -313,7 +311,6 @@ def get_data_thread():
             time.sleep(1)
         time.sleep(60)
     return 0
-
 
 th2 = threading.Thread(target=get_data_thread)
 th2.start()

@@ -51,6 +51,7 @@ var goalIndex = 0
 var spiderLocation = []
 var empty_slots = []
 var posInd = 0
+document.getElementById("plantName").innerHTML = "Not selected"
 //Risanje pinov
 for (var x = 0; x < numPinsX; x++) {
     for (var y = numPinsY - 1; y >= 0; y--) {
@@ -284,7 +285,7 @@ function update(){
         try{
         coords = data[0]
         index = data[1]
-        let txtCont1 = "Refilling!"
+        let txtCont1 = ""
         let txtCont2 = ""
         if (lines.length ==0){
             for(let i = 0; i<coords.length-1; i++){
@@ -293,6 +294,9 @@ function update(){
                     //Pridobivanje informacij za izpis
                     txtCont1 = JSON.parse(coords[index])["plantName"]
                     txtCont2 = JSON.parse(coords[index])["cap"]
+                }
+                else{
+                    txtCont2 = "Refilling!"
                 }
 
                 //Risanje črt ob prvi generaciji poti
@@ -406,6 +410,9 @@ function update(){
                     //Pridobivanje informacij za izpis
                     txtCont1 = JSON.parse(coords[index])["plantName"]
                     txtCont2 = JSON.parse(coords[index])["cap"]
+                }
+                else{
+                    txtCont2 = "Refilling!"
                 }
 
                 //Posodobitev lokacij črt
