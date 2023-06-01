@@ -173,8 +173,10 @@ def add_posts():
         line = request.form['line']
         panel = request.form['panel']
         sensor_num = request.form['sensorNum']
+        datetime_object = datetime.strptime(date_time, "%Y-%m-%dT%H:%M")
+        print(datetime_object,"  ",type(datetime_object))
         date1 = datetime.now()
-        delta = date1-date_time
+        delta = date1-datetime_object
         plant_post = Plants(name=name, waterInterval=water_interval, date_time=date_time, panel=panel, line=line, sensorNum=sensor_num)
         if db.session.query(Plants.id).filter(Plants.panel==plant_post.panel,Plants.line==plant_post.line,Plants.sensorNum==plant_post.sensorNum).count()>0:
             flash("error there is already a plant at that location", 'error')
@@ -281,7 +283,6 @@ def delete(id_num):
 N = 7
 sensor_ids = [54, 55, 56, 57, 58, 59]
 ARDUINO_NUM = 6
-config.arduinoValues = [{},{},{},{},{},{}]
 startPos = Sensor()
 startPos.x = 1.9
 startPos.y = 0.1
@@ -293,7 +294,6 @@ config.order = []
 config.need_watering = []
 config.watering_queue = []
 config.already_selected = []
-config.generate = None
 
 def get_data_thread():
     """Function pings arduinos so they can start sending data
@@ -333,6 +333,10 @@ def set_data_from_db():
         print(db_id)
         plant_type =db.session.query(PlantsData.plant_type).filter(PlantsData.name==name).all()[0][0]
         water =db.session.query(PlantsData.watering_96h).filter(PlantsData.name==name).all()[0][0]
+        areas = db.session.query(PlantsData.areas).filter(PlantsData.name==name).all()[0][0]
+        needs = db.session.query(PlantsData.plant_needs).filter(PlantsData.name==name).all()[0][0]
+        latin_name = db.session.query(PlantsData.name_latin).filter(PlantsData.name==name).all()[0][0]
+        characteristics = db.session.query(PlantsData.characteristics).filter(PlantsData.name==name).all()[0][0]
         print(plant_type)
         if panel == 1 or panel == 4:
             start = 20
@@ -355,6 +359,10 @@ def set_data_from_db():
         sensor.water = water
         sensor.lastWater = data.date_time.timestamp()
         sensor.db_id = db_id
+        sensor.areas = areas
+        sensor.characteristics = characteristics
+        sensor.latin_name = latin_name
+        sensor.needs = needs
     
         array_ind = ((panel-1)*36+vrstica*6+sensor_id)-1
         sensor.base_index = array_ind
@@ -366,6 +374,10 @@ def set_data_from_db():
             config.sensorBase[array_ind].water = sensor.water
             config.sensorBase[array_ind].db_id = db_id
             config.sensorBase[array_ind].base_index = array_ind
+            config.sensorBase[array_ind].needs = needs
+            config.sensorBase[array_ind].latin_name = latin_name
+            config.sensorBase[array_ind].areas = areas
+            config.sensorBase[array_ind].characteristics = characteristics
             print(config.sensorBase[array_ind].base_index)
 
 

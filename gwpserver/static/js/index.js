@@ -52,6 +52,10 @@ var spiderLocation = []
 var empty_slots = []
 var posInd = 0
 document.getElementById("plantName").innerHTML = "Not selected"
+document.getElementById("plantNameLatin").innerHTML = "Not selected"
+document.getElementById("areas").innerHTML = "Not selected"
+document.getElementById("needs").innerHTML = "Not selected"
+document.getElementById("cha").innerHTML = "Not selected"
 //Risanje pinov
 for (var x = 0; x < numPinsX; x++) {
     for (var y = numPinsY - 1; y >= 0; y--) {
@@ -287,6 +291,10 @@ function update(){
         index = data[1]
         let txtCont1 = ""
         let txtCont2 = ""
+        let name_latin =""
+        let areas = ""
+        let needs = ""
+        let charact = ""
         if (lines.length ==0){
             for(let i = 0; i<coords.length-1; i++){
                 if(index!=0){
@@ -294,6 +302,10 @@ function update(){
                     //Pridobivanje informacij za izpis
                     txtCont1 = JSON.parse(coords[index])["plantName"]
                     txtCont2 = JSON.parse(coords[index])["cap"]
+                    name_latin = JSON.parse(coords[index])["latin_name"]
+                    needs = JSON.parse(coords[index])["needs"]
+                    areas = JSON.parse(coords[index])["areas"]
+                    charact = JSON.parse(coords[index])["characteristics"]
                 }
                 else{
                     txtCont2 = "Refilling!"
@@ -390,6 +402,10 @@ function update(){
             
             $("svg").append(text);
             document.getElementById("plantName").innerHTML = txtCont1
+            document.getElementById("plantNameLatin").innerHTML = name_latin
+            document.getElementById("areas").innerHTML = areas
+            document.getElementById("needs").innerHTML = needs
+            document.getElementById("cha").innerHTML = charact
 
             //Text za prikaz vlažnosti zemlje
             bubbleElems.push(text)
@@ -410,6 +426,10 @@ function update(){
                     //Pridobivanje informacij za izpis
                     txtCont1 = JSON.parse(coords[index])["plantName"]
                     txtCont2 = JSON.parse(coords[index])["cap"]
+                    name_latin = JSON.parse(coords[index])["latin_name"]
+                    needs = JSON.parse(coords[index])["needs"]
+                    areas = JSON.parse(coords[index])["areas"]
+                    charact = JSON.parse(coords[index])["characteristics"]
                 }
                 else{
                     txtCont2 = "Refilling!"
@@ -449,6 +469,10 @@ function update(){
                 bubbleElems[2].setAttribute("points",(goalPos.getAttribute('cx')-7)+","+(parseInt(goalPos.getAttribute('cy'))-16)+" " +goalPos.getAttribute('cx')+","+(parseInt(goalPos.getAttribute('cy')))+" "+(parseInt(goalPos.getAttribute('cx'))+7)+","+(parseInt(goalPos.getAttribute('cy'))-16))
                 bubbleElems[3].setAttribute("x",goalPos.getAttribute('cx'))
                 document.getElementById("plantName").innerHTML = txtCont1
+                document.getElementById("plantNameLatin").innerHTML = name_latin
+                document.getElementById("areas").innerHTML = areas
+                document.getElementById("needs").innerHTML = needs
+                document.getElementById("cha").innerHTML = charact
                 bubbleElems[3].setAttribute("y",parseInt(goalPos.getAttribute('cy'))-75)//75
                 bubbleElems[4].setAttribute("x",goalPos.getAttribute('cx'))
                 bubbleElems[4].textContent=txtCont2

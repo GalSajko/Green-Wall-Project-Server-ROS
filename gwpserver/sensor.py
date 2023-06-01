@@ -16,6 +16,10 @@ class Sensor:
         self.water = None
         self.db_id = None
         self.base_index = None
+        self.latin_name = None
+        self.areas = None
+        self.needs = None
+        self.characteristics = None
     def toJson(self):
         return json.dumps(self, default=lambda o:o.__dict__)
     
