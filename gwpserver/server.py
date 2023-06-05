@@ -120,7 +120,6 @@ def show_data():
     date_1 = plants[0].date_time
     date_2 = datetime(2022,1,1)
     delta = date_1-date_2
-    print(delta.days)
     return render_template("data.html", plants=plants)
 
 @app.route('/add',methods=['GET', 'POST'])
@@ -136,14 +135,12 @@ def ind():
         plantsdata = PlantsData.query.all()
         position = config.selected.split(':')
         try:
-            print(request.args['position'])
             position = json.loads(request.args['position'])
         except Exception as e:
             print(e)
         return render_template("plants.html",posts=posts, plantsdata=plantsdata, position=position)
     else:
         config.selected = request.get_data().decode()
-        print(request.get_data().decode())
         return 'OK'
     
 @app.route('/addPlantsData',methods=['GET', 'POST'])
@@ -174,7 +171,6 @@ def add_posts():
         panel = request.form['panel']
         sensor_num = request.form['sensorNum']
         datetime_object = datetime.strptime(date_time, "%Y-%m-%dT%H:%M")
-        print(datetime_object,"  ",type(datetime_object))
         date1 = datetime.now()
         delta = date1-datetime_object
         plant_post = Plants(name=name, waterInterval=water_interval, date_time=date_time, panel=panel, line=line, sensorNum=sensor_num)
@@ -293,7 +289,8 @@ config.orderIndex = 0
 config.order = []
 config.need_watering = []
 config.watering_queue = []
-config.already_selected = []
+config.nextRoute = []
+config.status = "OFF"
 
 def get_data_thread():
     """Function pings arduinos so they can start sending data
@@ -328,16 +325,16 @@ def set_data_from_db():
         vrstica = data.line-1
         sensor_id = data.sensorNum
         name = data.name
-        print(vrstica,"  ",sensor_id,"   ", panel)
+
         db_id = db.session.query(Plants.id).filter(Plants.panel==panel,Plants.line==data.line,Plants.sensorNum==sensor_id).all()[0][0]
-        print(db_id)
+
         plant_type =db.session.query(PlantsData.plant_type).filter(PlantsData.name==name).all()[0][0]
         water =db.session.query(PlantsData.watering_96h).filter(PlantsData.name==name).all()[0][0]
         areas = db.session.query(PlantsData.areas).filter(PlantsData.name==name).all()[0][0]
         needs = db.session.query(PlantsData.plant_needs).filter(PlantsData.name==name).all()[0][0]
         latin_name = db.session.query(PlantsData.name_latin).filter(PlantsData.name==name).all()[0][0]
         characteristics = db.session.query(PlantsData.characteristics).filter(PlantsData.name==name).all()[0][0]
-        print(plant_type)
+
         if panel == 1 or panel == 4:
             start = 20
         elif panel == 3 or panel == 6:
@@ -378,7 +375,7 @@ def set_data_from_db():
             config.sensorBase[array_ind].latin_name = latin_name
             config.sensorBase[array_ind].areas = areas
             config.sensorBase[array_ind].characteristics = characteristics
-            print(config.sensorBase[array_ind].base_index)
+           
 
 
 
@@ -394,8 +391,6 @@ def tsp(data, sol):
     
     data.insert(0, startPos)
     sol = list(range(len(data)))
-    print(sol)
-    print(data)
     if len(data) <=3:
         return sol 
     x_coordinate = []
@@ -474,19 +469,9 @@ def create_order():
     sol = []
     water_sum = 0
     while True:
-        if len(config.need_watering) != 0:
-            dot = config.need_watering.pop()
-            print(water_sum,"    ", dot.water)
-            if water_sum + dot.water <= config.WATER_LIMIT:
-                water_sum += dot.water
-                data.append(dot)
-                sol.append(i)
-                i+=1
-            else:
-                break
-        elif len(config.watering_queue) != 0:
-            dot = config.watering_queue.pop()
-            if water_sum + dot.water <= config.WATER_LIMIT:
+        if len(config.watering_queue) != 0:
+            if water_sum + config.watering_queue[len(config.watering_queue)-1].water <= config.WATER_LIMIT:
+                dot = config.watering_queue.pop()
                 water_sum += dot.water
                 data.append(dot)
                 sol.append(i)
@@ -495,7 +480,7 @@ def create_order():
                 break
         else:
             print("no entries")
-            break
+            check_moisture()
     order = tsp(data,sol)
     return order
 
@@ -519,30 +504,28 @@ def bubble_sort():
                 config.sensorList[j+1] = temp1
                 config.jsons[j] = config.jsons[j+1]
                 config.jsons[j+1] = temp2
-#@app.route('/stop', methods=['POST'])
-#def stop_generate():
-#    config.generate = True
-#    return 'test'
+
 def check_moisture():
+    must_water = []
+    can_wait = []
     for i in config.sensorBase:
         if i is not None:
             try:
                 a = datetime.fromtimestamp(i.lastWater)
                 b = datetime.now()
                 delta = b- a
-                if i in config.already_selected:
-                    config.already_selected.pop(config.already_selected.index(i))
-                    continue
-                if delta.days >=5 and i not in config.need_watering:
-                    config.need_watering.append(i)
-                    config.already_selected.append(i)
-                elif delta.days == 4 and i.cap <= 10 and i not in config.watering_queue:
-                    config.watering_queue.append(i)
-                    config.already_selected.append(i)
+                if delta.days >=5:
+                    must_water.append(i)
+                elif delta.days == 4 and i.cap <= 10:
+                    can_wait.append(i)
             except Exception as e:
                 print("There is a database entry without senosr or sensor without database entry" ,e)
-    random.shuffle(config.need_watering)
-    random.shuffle(config.watering_queue)
+    random.shuffle(must_water)
+    random.shuffle(can_wait)
+    config.watering_queue = can_wait+must_water
+    for i in config.watering_queue:
+        print(datetime.fromtimestamp(i.lastWater))
+    print(len(config.watering_queue))
 
 @app.route('/deleted', methods=['GET'])
 def deleted():
@@ -555,7 +538,11 @@ def deleted():
     config.deleted.clear()
     return jsonify(temp)
 
-@app.route('/spiderPos', methods=['POST', 'GET'])
+@app.route('/get_status', methods=['POST', 'GET'])
+def status():
+    return config.status
+
+@app.route('/spider_position', methods=['POST', 'GET'])
 def get_spider_pos():
     """Gets data from the spider and forwards it to the frontend for visualisation.
 
@@ -589,22 +576,21 @@ def send_goal():
         print("ERROR TRYING TO SEND GOAL VALUE TO FRONTEND")
         return jsonify([]), 200, {"Access-Control-Allow-Origin": "*"}
 
-@app.route('/zalij', methods=["GET"])
+@app.route('/watering', methods=["GET"])
 def get_val():
     """Sends the location of the currently selected sensor.
 
     Returns:
-       list: Information about random sensor.
+       list: Information about selected sensor.
     """
     #try:
     if config.orderIndex != 0:
-        print(config.order[config.orderIndex].toJson())
+        
         array_ind = config.order[config.orderIndex].index
-        print(array_ind)
-        print(config.order)
+    
         config.sensorBase[array_ind].lastWater = time.time()
         plant = Plants.query.get(config.sensorBase[array_ind].db_id)
-        print(plant)
+
         plant.date_time = datetime.fromtimestamp(config.sensorBase[array_ind].lastWater)
         db.session.commit()
     config.orderIndex += 1
@@ -621,7 +607,6 @@ def update():
     Returns:
         JSON: Information about active sensors.
     """
-    check_moisture()
     config.jsons.clear()
     for i in config.sensorBase:
         if i is not None:
@@ -639,8 +624,18 @@ def ping_pong():
         JSON: Sends the string 'pong!'
     """
     return jsonify('pong!'), 200, {"Access-Control-Allow-Origin": "*"}
-
-@app.route('/refill', methods=['POST'])
+@app.route('/message', methods=['POST'])
+def messages():
+    message = request.get_data().decode()
+    if message == commconstants.REFILLING_STARTED_MESSAGE:
+        refill()
+    elif message == commconstants.WORKING_PHASE_STARTED_MESSAGE:
+        config.status = "Working"
+    elif message == commconstants.RESTING_PHASE_STARTED_MESSAGE:
+        config.status = "Resting"
+    print(commconstants.STATUS_CODES_DICT[message])
+    return 'OK'
+    
 def refill():
     """Gets request from robot to create a new path.
 
@@ -653,9 +648,8 @@ def refill():
     config.orderIndex = 0
     config.order = config.nextRoute.copy()
     config.nextRoute = create_order()
-    return 'OK'
 
-@app.route('/getPlantNum')
+@app.route('/get_plant_num')
 def get_plant_num():
     """Funtion counts the number of active sensors.
 
@@ -668,7 +662,7 @@ def get_plant_num():
             count+=1
     return jsonify(count)
 
-@app.route('/getRoutes', methods=["GET"])
+@app.route('/get_routes', methods=["GET"])
 def get_routes():
     """Function sends data about routes to the frontend
 
@@ -709,8 +703,9 @@ def start_generating():
         String: Confirmation string.
     """
     if config.order == []:
-        config.order = create_order()
-        config.nextRoute = create_order()
+       check_moisture()
+       config.order = create_order()
+       config.nextRoute = create_order()
     return 'OK'
 
 @app.route('/index')

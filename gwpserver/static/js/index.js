@@ -6,7 +6,28 @@ function add() {
     window.open('http://192.168.1.25:5000/add', '_blank');
     
 }
-
+function deleteCirc(){
+    var element = document.getElementById("test")
+    element.remove()
+}
+function cleanLines(){
+    for(let i = 0; i<lines.length; i++){
+        lines[i].remove()
+    }
+    for(let i = 0; i< bubbleElems.length; i++){
+        bubbleElems[i].remove()
+    }
+    for(let i = 0; i< pathPoints.length; i++){
+        pathPoints[i].remove()
+    }
+    lines = []
+    bubbleElems = []
+    pathPoints = []
+    if (goalPos != null){
+    goalPos.remove()
+    }
+    goalPos = null
+}
 //Funkcija v novem oknu odpre obrazec za posodabljanje obstoječe rastline
 function updt() { 
     $.post('./getId',this.id, function(response){
@@ -25,6 +46,15 @@ function updateOpacity(){
         positions[x].setAttribute('opacity', 1.0 - x*0.02)
     }
 }
+var test = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        test.setAttribute('id',"test");
+        test.setAttribute("cx", 100);
+        test.setAttribute("cy", 100);
+        test.setAttribute("r", 3*Math.PI); 
+        test.setAttribute("stroke", "black"); 
+        test.setAttribute("fill","magenta")
+        test.addEventListener('click', add);     
+        $("svg").append(test);
 //Uporabljene globalne spremenljivke
 var pathPoints = []
 var lastPose = "sth"
@@ -32,6 +62,7 @@ var positions = []
 var firstPath = true
 var startPos = null
 var goalPos = null
+var lastRoute = []
 var bubbleElems = []
 var colors = ["#75EB00", "#53BBF4", "#FF85CB", "#FF432E", "#FFAC00",];
 var pinLocations = []
@@ -256,7 +287,7 @@ function update(){
             empty_slots[data[i]].addEventListener('click',add)
         }
     })
-    $.get('./spiderPos',function(data){
+    $.get('./spider_position',function(data){
         try{
         pose = data["pose"]
         //spiderLocation[i][0] * 100 * scale + pad, (12 * yDim * scale + 20) - (spiderLocation[i][1] * 100 * scale), 10 * scale, 0, 2 * Math.PI
@@ -295,6 +326,9 @@ function update(){
         let areas = ""
         let needs = ""
         let charact = ""
+        if (JSON.stringify(data) != JSON.stringify(lastRoute)){
+            cleanLines()
+        }
         if (lines.length ==0){
             for(let i = 0; i<coords.length-1; i++){
                 if(index!=0){
@@ -492,11 +526,11 @@ function update(){
             }
         }
     }
-    catch{
-        console.log("ERROR GETTING GOAL POSITION")
+    catch (error){
+        console.log("ERROR GETTING GOAL POSITION "+ error)
     }
     })
-    $.get('./getRoutes', function(data){
+    $.get('./get_routes', function(data){
         try{
         current = data[0]
         next = data[1]
@@ -515,10 +549,12 @@ function update(){
         console.log("NO ROUTE WAS GIVEN")
     }
     })
-    $.get('./getPlantNum', function(data){
+    $.get('./get_plant_num', function(data){
         document.getElementById("plantsNo").innerHTML= JSON.parse(data)
     })
-    
+    $.get('./get_status', function(data){
+        document.getElementById("status").innerHTML = data
+    })
 }
 var inrvalId = setInterval(function () {
     update();
