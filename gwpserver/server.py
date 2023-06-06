@@ -291,6 +291,7 @@ config.need_watering = []
 config.watering_queue = []
 config.nextRoute = []
 config.status = "OFF"
+config.refill_volume = 0
 
 def get_data_thread():
     """Function pings arduinos so they can start sending data
@@ -376,9 +377,6 @@ def set_data_from_db():
             config.sensorBase[array_ind].areas = areas
             config.sensorBase[array_ind].characteristics = characteristics
            
-
-
-
 def tsp(data, sol):
     """Function that solves the travelling salesperson problem for visiting the sensors.
 
@@ -457,7 +455,6 @@ def setup_sensor_list(panel, arduino):
             except Exception:
                 pass
 
-
 def create_order():
     """Takes last n sesnors and finds the shortest path from first to last.
 
@@ -468,6 +465,7 @@ def create_order():
     i = 0
     sol = []
     water_sum = 0
+    done = 0
     while True:
         if len(config.watering_queue) != 0:
             if water_sum + config.watering_queue[len(config.watering_queue)-1].water <= config.WATER_LIMIT:
@@ -477,10 +475,14 @@ def create_order():
                 sol.append(i)
                 i+=1
             else:
+                config.refill_volume = water_sum
                 break
         else:
             print("no entries")
             check_moisture()
+            done+=1
+            if done == 2:
+                break
     order = tsp(data,sol)
     return order
 
@@ -585,17 +587,16 @@ def get_val():
     """
     #try:
     if config.orderIndex != 0:
-        
         array_ind = config.order[config.orderIndex].index
-    
         config.sensorBase[array_ind].lastWater = time.time()
         plant = Plants.query.get(config.sensorBase[array_ind].db_id)
-
         plant.date_time = datetime.fromtimestamp(config.sensorBase[array_ind].lastWater)
         db.session.commit()
     config.orderIndex += 1
-    
-    return jsonify([config.order[config.orderIndex].x,config.order[config.orderIndex].y]), 200, {"Access-Control-Allow-Origin": "*"}
+    if config.orderIndex<len(config.order):
+        return jsonify([config.order[config.orderIndex].x,config.order[config.orderIndex].y,0,config.order[config.orderIndex].water]), 200, {"Access-Control-Allow-Origin": "*"}
+    else:
+        return jsonify([startPos.x,startPos.y,1,config.refill_volume]), 200, {"Access-Control-Allow-Origin": "*"}
     #except Exception as e:
      #   print(e)
       #  return jsonify([]), 200, {"Access-Control-Allow-Origin": "*"}

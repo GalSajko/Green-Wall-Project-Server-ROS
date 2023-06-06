@@ -23,6 +23,7 @@ global need_watering
 global watering_queue
 global already_selected
 global status
+global refill_volume
 WATER_LIMIT = 450
 SENSOR_IDS = [54, 55, 56, 57, 58, 59]
 GET_SENSOR_POSITION_ADDR = 'http://192.168.1.25:5000/zalij'
