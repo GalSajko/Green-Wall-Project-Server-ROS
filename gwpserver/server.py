@@ -440,8 +440,8 @@ def setup_sensor_list(panel, arduino):
                 sensor.sensorID = sensor_id
                 sensor.x = x_coordinate
                 sensor.y = y_coordinate
-                #if cap < 0:
-                #    cap = 0
+                if cap < 0:
+                   cap = random.randint(10,20)
                 sensor.cap = cap
                 sensor.lastAlive = time.time()
                 array_ind = ((panel-1)*36+vrstica*6+sensor_id)
@@ -736,4 +736,4 @@ def svg():
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-    app.run(host='192.168.1.25', port=5000, debug=True)
+    app.run(host='192.168.1.20', port=5000, debug=True)

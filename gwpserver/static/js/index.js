@@ -46,15 +46,7 @@ function updateOpacity(){
         positions[x].setAttribute('opacity', 1.0 - x*0.02)
     }
 }
-var test = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-        test.setAttribute('id',"test");
-        test.setAttribute("cx", 100);
-        test.setAttribute("cy", 100);
-        test.setAttribute("r", 3*Math.PI); 
-        test.setAttribute("stroke", "black"); 
-        test.setAttribute("fill","magenta")
-        test.addEventListener('click', add);     
-        $("svg").append(test);
+
 //Uporabljene globalne spremenljivke
 var pathPoints = []
 var lastPose = "sth"

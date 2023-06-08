@@ -37,7 +37,6 @@
             <option value="{{ i.name }}" {% if i.name == record.name %} selected {% endif %}> {{i.name}}</option>
             {% endfor %}
         </select> <br>
-        
         <button class="btn btn-secondary" type="submit">Update</button>
         <a href="{{ url_for('delete', id_num=record.id)}}" class="btn btn-danger">Delete</a>
     </form>
