@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gwpspider_interfaces/srv/DistributeForces.srv
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Int8MultiArray.idl"
+
+module gwpspider_interfaces {
+  module srv {
+    struct DistributeForces_Request {
+      std_msgs::msg::Int8MultiArray legs_ids;
+    };
+    struct DistributeForces_Response {
+      boolean success;
+    };
+  };
+};

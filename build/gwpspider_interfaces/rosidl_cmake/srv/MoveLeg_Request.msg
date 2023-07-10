@@ -1,0 +1,9 @@
+int8 leg_id
+std_msgs/Float32MultiArray goal_position
+string trajectory_type
+string origin
+float32 duration
+bool is_offset
+std_msgs/Float32MultiArray spider_pose
+bool open_gripper
+bool close_gripper

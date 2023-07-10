@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gwpspider_interfaces/srv/ToggleController.srv
+// generated code does not contain a copyright notice
+
+
+module gwpspider_interfaces {
+  module srv {
+    struct ToggleController_Request {
+      string command;
+    };
+    struct ToggleController_Response {
+      boolean success;
+    };
+  };
+};

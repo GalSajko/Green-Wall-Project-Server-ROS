@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gwpspider_interfaces/srv/SetBusWatchdog.srv
+// generated code does not contain a copyright notice
+
+
+module gwpspider_interfaces {
+  module srv {
+    struct SetBusWatchdog_Request {
+      int32 value;
+    };
+    struct SetBusWatchdog_Response {
+      boolean success;
+    };
+  };
+};

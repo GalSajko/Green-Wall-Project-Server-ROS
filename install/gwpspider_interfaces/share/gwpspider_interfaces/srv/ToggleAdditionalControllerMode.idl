@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gwpspider_interfaces/srv/ToggleAdditionalControllerMode.srv
+// generated code does not contain a copyright notice
+
+
+module gwpspider_interfaces {
+  module srv {
+    struct ToggleAdditionalControllerMode_Request {
+      string mode;
+
+      string command;
+    };
+    struct ToggleAdditionalControllerMode_Response {
+      boolean success;
+    };
+  };
+};

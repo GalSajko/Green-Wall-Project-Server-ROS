@@ -1,0 +1,2 @@
+std_msgs/Int8MultiArray legs_ids
+std_msgs/Float32MultiArray legs_global_positions

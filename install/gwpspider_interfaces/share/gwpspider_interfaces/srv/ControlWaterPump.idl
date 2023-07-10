@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gwpspider_interfaces/srv/ControlWaterPump.srv
+// generated code does not contain a copyright notice
+
+#include "gwpspider_interfaces/msg/WaterPumpCommand.idl"
+
+module gwpspider_interfaces {
+  module srv {
+    struct ControlWaterPump_Request {
+      gwpspider_interfaces::msg::WaterPumpCommand instructions;
+    };
+    struct ControlWaterPump_Response {
+      boolean success;
+    };
+  };
+};

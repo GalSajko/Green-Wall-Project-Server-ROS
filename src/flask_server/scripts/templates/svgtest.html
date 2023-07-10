@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="{{ url_for('static', filename='js/jquery-3.6.3.js')}}" type="text/javascript"></script>
+  <style>
+    #telematics {
+      margin-left: 50px;
+      float: left;
+      text-align: start;
+    }
+
+    #naslov {
+      text-align: center;
+    }
+
+    button.link {
+      background: none;
+      border: none;
+      font-size: 45px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div id="#content" style="text-align:right; margin-right: 20px;">
+    <div id="grid" style="float: right;">
+      <div id="naslov">
+        <button class="link">Blue - Green Wall</button>
+      </div>
+      <svg style="float:right; padding-top: 10px" id="canv" xmlns="http://www.w3.org/2000/svg">
+
+      </svg>
+
+    </div>
+    <div id="tele" style="float: left;">
+      <div id="telematics">
+        <div>
+          <p>Location: ArsElectronica</p>
+          <p id="date"></p>
+        </div>
+        <h2>Telematics</h2>
+        <h3>SpiderBot:</h3>
+        <div>
+          <p>Status: <span id="status"></span></p>
+          <p>Start: <span id="startTime"></span> Stop: <span id="stopTime"></span></p>
+          <p>No. of movements on current route: 200</p>
+          <p>No. of meters walked on current route: 10</p>
+          <p>Next route: <span id="routeNext"></span></p>
+          <p>current route: <span id="routeCurr"></span></p>
+        </div>
+        <h3>Vegetation:</h3>
+        <div>
+          <p>Number of plants: <span id="plantsNo"></span></p>
+          <p>Water usage total: 152L</p>
+        </div>
+        <h3>Fish pond:</h3>
+        <div>
+          <p>Number of fish: 12</p>
+          <p>Food amount: 42kg</p>
+        </div>
+        <h3>Current plant:</h3>
+        <div>
+          <p>Plant name: <span id="plantName"></span></p>
+          <p>Latin name: <span id="plantNameLatin"></span></p>
+          <p>Areas: <span id="areas"></span></p>
+          <p>Needs: <span id="needs"></span></p>
+          <p>Charcteristics: <span id="cha"></span></p>
+
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      document.getElementById("status").innerHTML = "ON"
+      document.getElementById("startTime").innerHTML = "12:00"
+      document.getElementById("stopTime").innerHTML = "20:00"
+      var date = new Date()
+      var yr = date.getFullYear()
+      var m = date.getMonth() + 1
+      var d = date.getDate()
+      document.getElementById("date").innerHTML = "Date: " + d + "/" + m + "/" + yr;
+    </script>
+
+    <script src="{{ url_for('static', filename='js/index.js')}}" type="text/javascript"></script>
+  </div>
+</body>
+
+</html>

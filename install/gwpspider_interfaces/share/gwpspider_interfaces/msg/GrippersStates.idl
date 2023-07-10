@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from gwpspider_interfaces/msg/GrippersStates.msg
+// generated code does not contain a copyright notice
+
+#include "gwpspider_interfaces/msg/GripperState.idl"
+
+module gwpspider_interfaces {
+  module msg {
+    struct GrippersStates {
+      gwpspider_interfaces::msg::GripperState first_gripper;
+
+      gwpspider_interfaces::msg::GripperState second_gripper;
+
+      gwpspider_interfaces::msg::GripperState third_gripper;
+
+      gwpspider_interfaces::msg::GripperState fourth_gripper;
+
+      gwpspider_interfaces::msg::GripperState fifth_gripper;
+    };
+  };
+};

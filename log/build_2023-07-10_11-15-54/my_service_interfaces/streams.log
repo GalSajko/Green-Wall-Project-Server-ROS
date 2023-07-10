@@ -1,0 +1,19 @@
+[0.019s] Invoking command in '/home/spider/ros2_ws/build/my_service_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spider/ros2_ws/install/py_srvcli:/home/spider/ros2_ws/install/py_node_test:/home/spider/ros2_ws/install/flask_server:/opt/ros/humble /usr/bin/cmake --build /home/spider/ros2_ws/build/my_service_interfaces -- -j8 -l8
+[0.051s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.191s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.193s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.196s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.224s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.249s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.380s] [31mCMake Error at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+[0.380s]   rosidl_generate_interfaces() the passed file 'srv/SpiderGoal.srv' doesn't
+[0.380s]   exist relative to the CMAKE_CURRENT_SOURCE_DIR
+[0.380s]   '/home/spider/ros2_ws/src/my_service_interfaces'
+[0.380s] Call Stack (most recent call first):
+[0.380s]   CMakeLists.txt:12 (rosidl_generate_interfaces)
+[0.380s] 
+[0.380s] [0m
+[0.381s] -- Configuring incomplete, errors occurred!
+[0.381s] See also "/home/spider/ros2_ws/build/my_service_interfaces/CMakeFiles/CMakeOutput.log".
+[0.384s] gmake: *** [Makefile:1179: cmake_check_build_system] Error 1
+[0.386s] Invoked command in '/home/spider/ros2_ws/build/my_service_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spider/ros2_ws/install/py_srvcli:/home/spider/ros2_ws/install/py_node_test:/home/spider/ros2_ws/install/flask_server:/opt/ros/humble /usr/bin/cmake --build /home/spider/ros2_ws/build/my_service_interfaces -- -j8 -l8

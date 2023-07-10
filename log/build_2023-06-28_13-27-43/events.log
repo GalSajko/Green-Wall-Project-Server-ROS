@@ -1,0 +1,290 @@
+[0.000000] (-) TimerEvent: {}
+[0.002942] (my_service_interfaces) JobQueued: {'identifier': 'my_service_interfaces', 'dependencies': OrderedDict()}
+[0.003044] (my_service_interfaces) JobStarted: {'identifier': 'my_service_interfaces'}
+[0.029358] (my_service_interfaces) JobProgress: {'identifier': 'my_service_interfaces', 'progress': 'cmake'}
+[0.029420] (my_service_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/spider/ros2_ws/src/my_service_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/spider/ros2_ws/install/my_service_interfaces'], 'cwd': '/home/spider/ros2_ws/build/my_service_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('USER', 'spider'), ('LC_TIME', 'en_GB.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/spider'), ('OLDPWD', '/home/spider/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/spider/.nvm/versions/node/v16.15.1/bin'), ('NVM_INC', '/home/spider/.nvm/versions/node/v16.15.1/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_GB.UTF-8'), ('SYSTEMD_EXEC_PID', '1853'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/spider/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/spider/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'spider'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'spider'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/spider/.nvm/versions/node/v16.15.1/bin:/home/spider/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/spider-ThinkPad-T480:@/tmp/.ICE-unix/1833,unix/spider-ThinkPad-T480:/tmp/.ICE-unix/1833'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_GB.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d646a571_c1a2_41ef_8296_00a7e52c8486'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_GB.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.KHQZ61'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.121'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_GB.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_GB.UTF-8'), ('LC_IDENTIFICATION', 'en_GB.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/spider/ros2_ws/build/my_service_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_GB.UTF-8'), ('LC_PAPER', 'en_GB.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099360] (-) TimerEvent: {}
+[0.173304] (my_service_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.3.0\n'}
+[0.199632] (-) TimerEvent: {}
+[0.264322] (my_service_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.3.0\n'}
+[0.276442] (my_service_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299968] (-) TimerEvent: {}
+[0.381527] (my_service_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.391494] (my_service_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.392018] (my_service_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.392857] (my_service_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.397887] (my_service_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.400054] (-) TimerEvent: {}
+[0.500863] (-) TimerEvent: {}
+[0.507830] (my_service_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.518627] (my_service_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.519099] (my_service_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.519824] (my_service_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.523069] (my_service_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.601085] (-) TimerEvent: {}
+[0.702045] (-) TimerEvent: {}
+[0.764439] (my_service_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter \n'}
+[0.802305] (-) TimerEvent: {}
+[0.888845] (my_service_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.891702] (my_service_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.898837] (my_service_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.902475] (-) TimerEvent: {}
+[0.951523] (my_service_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.994456] (my_service_interfaces) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.002691] (-) TimerEvent: {}
+[1.103783] (-) TimerEvent: {}
+[1.205739] (-) TimerEvent: {}
+[1.306334] (-) TimerEvent: {}
+[1.406588] (-) TimerEvent: {}
+[1.506856] (-) TimerEvent: {}
+[1.560916] (my_service_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.606951] (-) TimerEvent: {}
+[1.707237] (-) TimerEvent: {}
+[1.807574] (-) TimerEvent: {}
+[1.895831] (my_service_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.907646] (-) TimerEvent: {}
+[2.007946] (-) TimerEvent: {}
+[2.108255] (-) TimerEvent: {}
+[2.208592] (-) TimerEvent: {}
+[2.308944] (-) TimerEvent: {}
+[2.333367] (my_service_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.401901] (my_service_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.6", minimum required is "3.6") \n'}
+[2.403679] (my_service_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[2.409036] (-) TimerEvent: {}
+[2.442051] (my_service_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.6", minimum required is "3.5") \n'}
+[2.442480] (my_service_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.442664] (my_service_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[2.442847] (my_service_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[2.472133] (my_service_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[2.509173] (-) TimerEvent: {}
+[2.555719] (my_service_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.609311] (-) TimerEvent: {}
+[2.609657] (my_service_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[2.612701] (my_service_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/spider/ros2_ws/build/my_service_interfaces\n'}
+[2.631386] (my_service_interfaces) CommandEnded: {'returncode': 0}
+[2.632097] (my_service_interfaces) JobProgress: {'identifier': 'my_service_interfaces', 'progress': 'build'}
+[2.632979] (my_service_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/spider/ros2_ws/build/my_service_interfaces', '--', '-j8', '-l8'], 'cwd': '/home/spider/ros2_ws/build/my_service_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('USER', 'spider'), ('LC_TIME', 'en_GB.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/spider'), ('OLDPWD', '/home/spider/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/spider/.nvm/versions/node/v16.15.1/bin'), ('NVM_INC', '/home/spider/.nvm/versions/node/v16.15.1/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_GB.UTF-8'), ('SYSTEMD_EXEC_PID', '1853'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/spider/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/spider/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'spider'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'spider'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/spider/.nvm/versions/node/v16.15.1/bin:/home/spider/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/spider-ThinkPad-T480:@/tmp/.ICE-unix/1833,unix/spider-ThinkPad-T480:/tmp/.ICE-unix/1833'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_GB.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d646a571_c1a2_41ef_8296_00a7e52c8486'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_GB.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.KHQZ61'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.121'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_GB.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_GB.UTF-8'), ('LC_IDENTIFICATION', 'en_GB.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/spider/ros2_ws/build/my_service_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_GB.UTF-8'), ('LC_PAPER', 'en_GB.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[2.697665] (my_service_interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.709011] (my_service_interfaces) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[2.709324] (-) TimerEvent: {}
+[2.722496] (my_service_interfaces) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_copy_my_service_interfaces\n'}
+[2.809525] (-) TimerEvent: {}
+[2.909886] (-) TimerEvent: {}
+[3.010350] (-) TimerEvent: {}
+[3.084586] (my_service_interfaces) StdoutLine: {'line': b'[  6%] Built target my_service_interfaces__cpp\n'}
+[3.103748] (my_service_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.104095] (my_service_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[3.106202] (my_service_interfaces) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.110454] (-) TimerEvent: {}
+[3.117177] (my_service_interfaces) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding C object CMakeFiles/my_service_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_service_interfaces/msg/detail/target_coordinates__functions.c.o\x1b[0m\n'}
+[3.143641] (my_service_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[3.144946] (my_service_interfaces) StdoutLine: {'line': b'creating my_service_interfaces.egg-info\n'}
+[3.145383] (my_service_interfaces) StdoutLine: {'line': b'writing my_service_interfaces.egg-info/PKG-INFO\n'}
+[3.145694] (my_service_interfaces) StdoutLine: {'line': b'writing dependency_links to my_service_interfaces.egg-info/dependency_links.txt\n'}
+[3.146004] (my_service_interfaces) StdoutLine: {'line': b'writing top-level names to my_service_interfaces.egg-info/top_level.txt\n'}
+[3.146439] (my_service_interfaces) StdoutLine: {'line': b"writing manifest file 'my_service_interfaces.egg-info/SOURCES.txt'\n"}
+[3.151518] (my_service_interfaces) StdoutLine: {'line': b"reading manifest file 'my_service_interfaces.egg-info/SOURCES.txt'\n"}
+[3.154616] (my_service_interfaces) StdoutLine: {'line': b"writing manifest file 'my_service_interfaces.egg-info/SOURCES.txt'\n"}
+[3.210846] (-) TimerEvent: {}
+[3.237529] (my_service_interfaces) StdoutLine: {'line': b'[ 19%] Built target ament_cmake_python_build_my_service_interfaces_egg\n'}
+[3.239197] (my_service_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library libmy_service_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[3.305326] (my_service_interfaces) StdoutLine: {'line': b'[ 22%] Built target my_service_interfaces__rosidl_generator_c\n'}
+[3.310981] (-) TimerEvent: {}
+[3.320599] (my_service_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.323299] (my_service_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.324045] (my_service_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[3.411156] (-) TimerEvent: {}
+[3.512046] (-) TimerEvent: {}
+[3.553109] (my_service_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/my_service_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_service_interfaces/msg/target_coordinates__type_support.cpp.o\x1b[0m\n'}
+[3.570434] (my_service_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/my_service_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_service_interfaces/msg/detail/target_coordinates__type_support.cpp.o\x1b[0m\n'}
+[3.612134] (-) TimerEvent: {}
+[3.684613] (my_service_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/my_service_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_service_interfaces/msg/detail/dds_fastrtps/target_coordinates__type_support.cpp.o\x1b[0m\n'}
+[3.712252] (-) TimerEvent: {}
+[3.766430] (my_service_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/my_service_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_service_interfaces/msg/target_coordinates__type_support.cpp.o\x1b[0m\n'}
+[3.812697] (-) TimerEvent: {}
+[3.849894] (my_service_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libmy_service_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[3.902581] (my_service_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/my_service_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_service_interfaces/msg/detail/target_coordinates__type_support_c.cpp.o\x1b[0m\n'}
+[3.914866] (-) TimerEvent: {}
+[3.954030] (my_service_interfaces) StdoutLine: {'line': b'[ 51%] Built target my_service_interfaces__rosidl_typesupport_c\n'}
+[3.972327] (my_service_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding C object CMakeFiles/my_service_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_service_interfaces/msg/detail/target_coordinates__type_support.c.o\x1b[0m\n'}
+[4.014950] (-) TimerEvent: {}
+[4.045626] (my_service_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking C shared library libmy_service_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[4.103645] (my_service_interfaces) StdoutLine: {'line': b'[ 58%] Built target my_service_interfaces__rosidl_typesupport_introspection_c\n'}
+[4.115052] (-) TimerEvent: {}
+[4.215426] (-) TimerEvent: {}
+[4.270100] (my_service_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libmy_service_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[4.315601] (-) TimerEvent: {}
+[4.347092] (my_service_interfaces) StdoutLine: {'line': b'[ 61%] Built target my_service_interfaces__rosidl_typesupport_cpp\n'}
+[4.365444] (my_service_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libmy_service_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[4.415709] (-) TimerEvent: {}
+[4.490892] (my_service_interfaces) StdoutLine: {'line': b'[ 64%] Built target my_service_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[4.515885] (-) TimerEvent: {}
+[4.551282] (my_service_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking CXX shared library libmy_service_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[4.560144] (my_service_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libmy_service_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[4.616074] (-) TimerEvent: {}
+[4.716491] (-) TimerEvent: {}
+[4.737788] (my_service_interfaces) StdoutLine: {'line': b'[ 70%] Built target my_service_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[4.747430] (my_service_interfaces) StdoutLine: {'line': b'[ 70%] Built target my_service_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[4.781555] (my_service_interfaces) StdoutLine: {'line': b'[ 70%] Built target my_service_interfaces\n'}
+[4.815234] (my_service_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[4.816566] (-) TimerEvent: {}
+[4.916859] (-) TimerEvent: {}
+[5.017133] (-) TimerEvent: {}
+[5.117412] (-) TimerEvent: {}
+[5.189824] (my_service_interfaces) StdoutLine: {'line': b'[ 74%] Built target my_service_interfaces__py\n'}
+[5.217551] (-) TimerEvent: {}
+[5.217885] (my_service_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/my_service_interfaces__rosidl_generator_py.dir/rosidl_generator_py/my_service_interfaces/msg/_target_coordinates_s.c.o\x1b[0m\n'}
+[5.317745] (-) TimerEvent: {}
+[5.378612] (my_service_interfaces) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/my_service_interfaces/libmy_service_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[5.417862] (-) TimerEvent: {}
+[5.439024] (my_service_interfaces) StdoutLine: {'line': b'[ 80%] Built target my_service_interfaces__rosidl_generator_py\n'}
+[5.470023] (my_service_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/my_service_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/my_service_interfaces/_my_service_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[5.470331] (my_service_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/my_service_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/my_service_interfaces/_my_service_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[5.470517] (my_service_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/my_service_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/my_service_interfaces/_my_service_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[5.517994] (-) TimerEvent: {}
+[5.607925] (my_service_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[5.609717] (my_service_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[5.610913] (my_service_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[5.618107] (-) TimerEvent: {}
+[5.669210] (my_service_interfaces) StdoutLine: {'line': b'[100%] Built target my_service_interfaces__rosidl_typesupport_c__pyext\n'}
+[5.669419] (my_service_interfaces) StdoutLine: {'line': b'[100%] Built target my_service_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[5.669567] (my_service_interfaces) StdoutLine: {'line': b'[100%] Built target my_service_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[5.682239] (my_service_interfaces) CommandEnded: {'returncode': 0}
+[5.718190] (-) TimerEvent: {}
+[5.754461] (my_service_interfaces) JobProgress: {'identifier': 'my_service_interfaces', 'progress': 'install'}
+[5.763310] (my_service_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/spider/ros2_ws/build/my_service_interfaces'], 'cwd': '/home/spider/ros2_ws/build/my_service_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('USER', 'spider'), ('LC_TIME', 'en_GB.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/spider'), ('OLDPWD', '/home/spider/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/spider/.nvm/versions/node/v16.15.1/bin'), ('NVM_INC', '/home/spider/.nvm/versions/node/v16.15.1/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_GB.UTF-8'), ('SYSTEMD_EXEC_PID', '1853'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/spider/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/spider/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'spider'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'spider'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/spider/.nvm/versions/node/v16.15.1/bin:/home/spider/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/spider-ThinkPad-T480:@/tmp/.ICE-unix/1833,unix/spider-ThinkPad-T480:/tmp/.ICE-unix/1833'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_GB.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d646a571_c1a2_41ef_8296_00a7e52c8486'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_GB.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.KHQZ61'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.121'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_GB.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_GB.UTF-8'), ('LC_IDENTIFICATION', 'en_GB.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/spider/ros2_ws/build/my_service_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_GB.UTF-8'), ('LC_PAPER', 'en_GB.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[5.778881] (my_service_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.779174] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/ament_index/resource_index/rosidl_interfaces/my_service_interfaces\n'}
+[5.779355] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces\n'}
+[5.779529] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg\n'}
+[5.779693] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[5.779889] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/target_coordinates.h\n'}
+[5.780081] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail\n'}
+[5.780242] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__functions.c\n'}
+[5.780428] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__type_support.h\n'}
+[5.780555] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__struct.h\n'}
+[5.780722] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__functions.h\n'}
+[5.780909] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/environment/library_path.sh\n'}
+[5.781018] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/environment/library_path.dsv\n'}
+[5.781226] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_generator_c.so\n'}
+[5.781834] (my_service_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_generator_c.so" to ""\n'}
+[5.782087] (my_service_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces\n'}
+[5.782323] (my_service_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg\n'}
+[5.782519] (my_service_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail\n'}
+[5.782683] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__rosidl_typesupport_fastrtps_c.h\n'}
+[5.782805] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[5.782882] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[5.783067] (my_service_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[5.783187] (my_service_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces\n'}
+[5.783293] (my_service_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg\n'}
+[5.783470] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[5.783592] (my_service_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail\n'}
+[5.783664] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__type_support.c\n'}
+[5.783755] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__rosidl_typesupport_introspection_c.h\n'}
+[5.783825] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[5.784143] (my_service_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[5.784242] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_c.so\n'}
+[5.784607] (my_service_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[5.784765] (my_service_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces\n'}
+[5.784869] (my_service_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg\n'}
+[5.784958] (my_service_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail\n'}
+[5.785050] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__struct.hpp\n'}
+[5.785120] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__traits.hpp\n'}
+[5.785209] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__builder.hpp\n'}
+[5.785278] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/target_coordinates.hpp\n'}
+[5.785401] (my_service_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces\n'}
+[5.785490] (my_service_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg\n'}
+[5.785596] (my_service_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail\n'}
+[5.785718] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.785839] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/dds_fastrtps\n'}
+[5.785918] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[5.785988] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[5.786305] (my_service_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[5.786410] (my_service_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces\n'}
+[5.786577] (my_service_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg\n'}
+[5.786714] (my_service_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail\n'}
+[5.786886] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__type_support.cpp\n'}
+[5.786958] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.787026] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[5.787298] (my_service_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[5.787402] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_cpp.so\n'}
+[5.787815] (my_service_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[5.787918] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/environment/pythonpath.sh\n'}
+[5.788073] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/environment/pythonpath.dsv\n'}
+[5.788295] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces-0.0.0-py3.10.egg-info\n'}
+[5.788469] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[5.788598] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[5.788733] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[5.788937] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[5.789137] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces\n'}
+[5.789335] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.789515] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.789707] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/msg\n'}
+[5.789906] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/msg/_target_coordinates_s.c\n'}
+[5.790065] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/msg/__init__.py\n'}
+[5.790211] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/msg/_target_coordinates.py\n'}
+[5.790383] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/_my_service_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[5.790554] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/_my_service_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[5.790800] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/__init__.py\n'}
+[5.790994] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/_my_service_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[5.791243] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/libmy_service_interfaces__rosidl_generator_py.so\n'}
+[5.791456] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.818282] (-) TimerEvent: {}
+[5.850646] (my_service_interfaces) StdoutLine: {'line': b"Listing '/home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces'...\n"}
+[5.850887] (my_service_interfaces) StdoutLine: {'line': b"Compiling '/home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/__init__.py'...\n"}
+[5.850979] (my_service_interfaces) StdoutLine: {'line': b"Listing '/home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/msg'...\n"}
+[5.851055] (my_service_interfaces) StdoutLine: {'line': b"Compiling '/home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/msg/__init__.py'...\n"}
+[5.851126] (my_service_interfaces) StdoutLine: {'line': b"Compiling '/home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/msg/_target_coordinates.py'...\n"}
+[5.859645] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.860867] (my_service_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[5.861345] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.861959] (my_service_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[5.862406] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.863150] (my_service_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[5.863388] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_generator_py.so\n'}
+[5.863959] (my_service_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_generator_py.so" to ""\n'}
+[5.864311] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/msg/TargetCoordinates.idl\n'}
+[5.864566] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/msg/TargetCoordinates.msg\n'}
+[5.864968] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/ament_index/resource_index/package_run_dependencies/my_service_interfaces\n'}
+[5.865389] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/ament_index/resource_index/parent_prefix_path/my_service_interfaces\n'}
+[5.865699] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/environment/ament_prefix_path.sh\n'}
+[5.865817] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/environment/ament_prefix_path.dsv\n'}
+[5.865991] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/environment/path.sh\n'}
+[5.866147] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/environment/path.dsv\n'}
+[5.866287] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/local_setup.bash\n'}
+[5.866456] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/local_setup.sh\n'}
+[5.866603] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/local_setup.zsh\n'}
+[5.866754] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/local_setup.dsv\n'}
+[5.866863] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/package.dsv\n'}
+[5.867061] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/ament_index/resource_index/packages/my_service_interfaces\n'}
+[5.867259] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_generator_cExport.cmake\n'}
+[5.867440] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[5.867658] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[5.867772] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[5.867914] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[5.868086] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[5.868270] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[5.868422] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[5.868573] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_generator_cppExport.cmake\n'}
+[5.868728] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[5.868879] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[5.869042] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[5.869196] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[5.869360] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[5.869522] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[5.869684] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_generator_pyExport.cmake\n'}
+[5.869839] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[5.870019] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[5.870185] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[5.870334] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[5.870476] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[5.870617] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[5.870814] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[5.870934] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[5.871085] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfacesConfig.cmake\n'}
+[5.871203] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfacesConfig-version.cmake\n'}
+[5.871348] (my_service_interfaces) StdoutLine: {'line': b'-- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/package.xml\n'}
+[5.875088] (my_service_interfaces) CommandEnded: {'returncode': 0}
+[5.918422] (-) TimerEvent: {}
+[5.987377] (my_service_interfaces) JobEnded: {'identifier': 'my_service_interfaces', 'rc': 0}
+[5.988171] (-) EventReactorShutdown: {}

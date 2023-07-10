@@ -1,0 +1,2 @@
+std_msgs/Float32MultiArray start_pose
+std_msgs/Float32MultiArray goal_pose

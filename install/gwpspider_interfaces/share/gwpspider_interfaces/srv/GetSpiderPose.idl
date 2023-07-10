@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gwpspider_interfaces/srv/GetSpiderPose.srv
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Float32MultiArray.idl"
+#include "std_msgs/msg/Int8MultiArray.idl"
+
+module gwpspider_interfaces {
+  module srv {
+    struct GetSpiderPose_Request {
+      std_msgs::msg::Int8MultiArray legs_ids;
+
+      std_msgs::msg::Float32MultiArray legs_global_positions;
+    };
+    struct GetSpiderPose_Response {
+      std_msgs::msg::Float32MultiArray spider_pose;
+    };
+  };
+};

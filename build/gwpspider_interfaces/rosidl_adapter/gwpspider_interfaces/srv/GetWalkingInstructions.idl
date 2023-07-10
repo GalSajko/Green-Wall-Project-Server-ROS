@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gwpspider_interfaces/srv/GetWalkingInstructions.srv
+// generated code does not contain a copyright notice
+
+#include "gwpspider_interfaces/msg/WalkingInstructions.idl"
+#include "std_msgs/msg/Float32MultiArray.idl"
+
+module gwpspider_interfaces {
+  module srv {
+    struct GetWalkingInstructions_Request {
+      std_msgs::msg::Float32MultiArray start_pose;
+
+      std_msgs::msg::Float32MultiArray goal_pose;
+    };
+    struct GetWalkingInstructions_Response {
+      gwpspider_interfaces::msg::WalkingInstructions walking_instructions;
+    };
+  };
+};

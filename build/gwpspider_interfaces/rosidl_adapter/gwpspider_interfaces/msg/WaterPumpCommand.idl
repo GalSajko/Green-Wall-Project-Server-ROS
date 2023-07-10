@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from gwpspider_interfaces/msg/WaterPumpCommand.msg
+// generated code does not contain a copyright notice
+
+
+module gwpspider_interfaces {
+  module msg {
+    struct WaterPumpCommand {
+      int64 pump;
+
+      string command;
+    };
+  };
+};

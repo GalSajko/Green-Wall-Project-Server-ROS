@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gwpspider_interfaces/srv/GetLegTrajectory.srv
+// generated code does not contain a copyright notice
+
+#include "gwpspider_interfaces/msg/LegTrajectory.idl"
+#include "std_msgs/msg/Float32MultiArray.idl"
+
+module gwpspider_interfaces {
+  module srv {
+    struct GetLegTrajectory_Request {
+      std_msgs::msg::Float32MultiArray current_position;
+
+      std_msgs::msg::Float32MultiArray goal_position;
+
+      float duration;
+
+      string trajectory_type;
+    };
+    struct GetLegTrajectory_Response {
+      gwpspider_interfaces::msg::LegTrajectory trajectories;
+    };
+  };
+};

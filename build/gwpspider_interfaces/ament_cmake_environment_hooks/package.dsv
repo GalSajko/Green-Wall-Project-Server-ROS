@@ -1,0 +1,4 @@
+source;share/gwpspider_interfaces/local_setup.bash
+source;share/gwpspider_interfaces/local_setup.dsv
+source;share/gwpspider_interfaces/local_setup.sh
+source;share/gwpspider_interfaces/local_setup.zsh

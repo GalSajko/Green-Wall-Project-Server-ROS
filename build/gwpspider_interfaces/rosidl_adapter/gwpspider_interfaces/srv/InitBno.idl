@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gwpspider_interfaces/srv/InitBno.srv
+// generated code does not contain a copyright notice
+
+
+module gwpspider_interfaces {
+  module srv {
+    struct InitBno_Request {
+      string command;
+    };
+    struct InitBno_Response {
+      boolean success;
+    };
+  };
+};

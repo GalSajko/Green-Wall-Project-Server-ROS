@@ -1,0 +1,3 @@
+string switch_state
+string fingers_state
+bool is_attached

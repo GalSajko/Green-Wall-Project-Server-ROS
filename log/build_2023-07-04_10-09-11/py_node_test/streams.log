@@ -1,0 +1,38 @@
+[1.228s] Invoking command in '/home/spider/ros2_ws/src/py_node_test': PYTHONPATH=/home/spider/ros2_ws/build/py_node_test/prefix_override:/home/spider/ros2_ws/install/py_node_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_node_test build --build-base /home/spider/ros2_ws/build/py_node_test/build install --record /home/spider/ros2_ws/build/py_node_test/install.log --single-version-externally-managed
+[1.533s] running egg_info
+[1.534s] creating ../../build/py_node_test/py_node_test.egg-info
+[1.535s] writing ../../build/py_node_test/py_node_test.egg-info/PKG-INFO
+[1.535s] writing dependency_links to ../../build/py_node_test/py_node_test.egg-info/dependency_links.txt
+[1.535s] writing entry points to ../../build/py_node_test/py_node_test.egg-info/entry_points.txt
+[1.535s] writing requirements to ../../build/py_node_test/py_node_test.egg-info/requires.txt
+[1.535s] writing top-level names to ../../build/py_node_test/py_node_test.egg-info/top_level.txt
+[1.536s] writing manifest file '../../build/py_node_test/py_node_test.egg-info/SOURCES.txt'
+[1.537s] reading manifest file '../../build/py_node_test/py_node_test.egg-info/SOURCES.txt'
+[1.538s] writing manifest file '../../build/py_node_test/py_node_test.egg-info/SOURCES.txt'
+[1.538s] running build
+[1.538s] running build_py
+[1.538s] creating /home/spider/ros2_ws/build/py_node_test/build
+[1.538s] creating /home/spider/ros2_ws/build/py_node_test/build/lib
+[1.538s] creating /home/spider/ros2_ws/build/py_node_test/build/lib/py_node_test
+[1.539s] copying py_node_test/__init__.py -> /home/spider/ros2_ws/build/py_node_test/build/lib/py_node_test
+[1.539s] copying py_node_test/test_node.py -> /home/spider/ros2_ws/build/py_node_test/build/lib/py_node_test
+[1.539s] running install
+[1.539s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.539s]   warnings.warn(
+[1.539s] running install_lib
+[1.539s] creating /home/spider/ros2_ws/install/py_node_test/lib/python3.10/site-packages/py_node_test
+[1.540s] copying /home/spider/ros2_ws/build/py_node_test/build/lib/py_node_test/__init__.py -> /home/spider/ros2_ws/install/py_node_test/lib/python3.10/site-packages/py_node_test
+[1.540s] copying /home/spider/ros2_ws/build/py_node_test/build/lib/py_node_test/test_node.py -> /home/spider/ros2_ws/install/py_node_test/lib/python3.10/site-packages/py_node_test
+[1.540s] byte-compiling /home/spider/ros2_ws/install/py_node_test/lib/python3.10/site-packages/py_node_test/__init__.py to __init__.cpython-310.pyc
+[1.540s] byte-compiling /home/spider/ros2_ws/install/py_node_test/lib/python3.10/site-packages/py_node_test/test_node.py to test_node.cpython-310.pyc
+[1.541s] running install_data
+[1.541s] creating /home/spider/ros2_ws/install/py_node_test/share/ament_index
+[1.542s] creating /home/spider/ros2_ws/install/py_node_test/share/ament_index/resource_index
+[1.542s] creating /home/spider/ros2_ws/install/py_node_test/share/ament_index/resource_index/packages
+[1.542s] copying resource/py_node_test -> /home/spider/ros2_ws/install/py_node_test/share/ament_index/resource_index/packages
+[1.542s] copying package.xml -> /home/spider/ros2_ws/install/py_node_test/share/py_node_test
+[1.542s] running install_egg_info
+[1.543s] Copying ../../build/py_node_test/py_node_test.egg-info to /home/spider/ros2_ws/install/py_node_test/lib/python3.10/site-packages/py_node_test-0.0.0-py3.10.egg-info
+[1.544s] running install_scripts
+[1.570s] writing list of installed files to '/home/spider/ros2_ws/build/py_node_test/install.log'
+[1.619s] Invoked command in '/home/spider/ros2_ws/src/py_node_test' returned '0': PYTHONPATH=/home/spider/ros2_ws/build/py_node_test/prefix_override:/home/spider/ros2_ws/install/py_node_test/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_node_test build --build-base /home/spider/ros2_ws/build/py_node_test/build install --record /home/spider/ros2_ws/build/py_node_test/install.log --single-version-externally-managed

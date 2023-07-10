@@ -1,0 +1,6 @@
+msg/TargetCoordinates.idl
+msg/TargetCoordinates.msg
+srv/SetValue.idl
+srv/SetValue.srv
+srv/SetValue_Request.msg
+srv/SetValue_Response.msg

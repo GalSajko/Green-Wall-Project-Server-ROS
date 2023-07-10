@@ -1,0 +1,2 @@
+std_msgs/Float32MultiArray start_legs_positions
+std_msgs/Float32MultiArray goal_pose

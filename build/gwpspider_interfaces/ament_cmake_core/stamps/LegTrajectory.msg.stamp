@@ -1,0 +1,3 @@
+std_msgs/Float32MultiArray position_trajectory
+std_msgs/Float32MultiArray velocity_trajectory
+std_msgs/Float32MultiArray acceleration_trajectory

@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gwpspider_interfaces/srv/MoveSpider.srv
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Float32MultiArray.idl"
+#include "std_msgs/msg/Int8MultiArray.idl"
+
+module gwpspider_interfaces {
+  module srv {
+    struct MoveSpider_Request {
+      std_msgs::msg::Int8MultiArray legs_ids;
+
+      std_msgs::msg::Float32MultiArray used_pins_positions;
+
+      std_msgs::msg::Float32MultiArray goal_spider_pose;
+
+      float duration;
+    };
+    struct MoveSpider_Response {
+      boolean success;
+    };
+  };
+};

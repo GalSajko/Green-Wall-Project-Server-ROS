@@ -1,0 +1,4 @@
+std_msgs/Float32MultiArray positions
+std_msgs/Float32MultiArray currents
+std_msgs/Float32MultiArray motor_errors
+std_msgs/Float32MultiArray temperatures

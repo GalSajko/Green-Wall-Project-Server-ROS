@@ -1,0 +1,4 @@
+std_msgs/Float32MultiArray current_position
+std_msgs/Float32MultiArray goal_position
+float32 duration
+string trajectory_type

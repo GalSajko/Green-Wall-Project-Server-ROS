@@ -1,0 +1,32 @@
+{
+  "package_name": "gwpspider_interfaces",
+  "non_idl_tuples": [
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:msg/GripperCommand.msg",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:msg/WaterPumpCommand.msg",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:msg/BnoData.msg",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:msg/DynamixelMotorsData.msg",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:msg/WalkingInstructions.msg",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:msg/LegTrajectory.msg",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:msg/LegsStates.msg",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:msg/GripperState.msg",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:msg/GrippersStates.msg",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/MoveGripper.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/ControlWaterPump.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/InitBno.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/ToggleMotorsTorque.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/SetBusWatchdog.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/GetWalkingInstructions.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/GetModifiedWalkingInstructions.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/GetLegTrajectory.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/RebootMotors.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/MoveLeg.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/MoveSpider.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/ToggleController.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/DistributeForces.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/ApplyForceLeg.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/GetSpiderPose.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/MoveLegVelocityMode.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/ToggleAdditionalControllerMode.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/SpiderGoal.srv"
+  ]
+}

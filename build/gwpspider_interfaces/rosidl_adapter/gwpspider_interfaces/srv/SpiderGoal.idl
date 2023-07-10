@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gwpspider_interfaces/srv/SpiderGoal.srv
+// generated code does not contain a copyright notice
+
+
+module gwpspider_interfaces {
+  module srv {
+    struct SpiderGoal_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct SpiderGoal_Response {
+      sequence<float> data;
+
+      boolean go_refill;
+
+      int32 volume;
+    };
+  };
+};

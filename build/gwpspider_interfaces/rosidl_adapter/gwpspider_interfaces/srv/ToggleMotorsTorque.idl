@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gwpspider_interfaces/srv/ToggleMotorsTorque.srv
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Int8MultiArray.idl"
+
+module gwpspider_interfaces {
+  module srv {
+    struct ToggleMotorsTorque_Request {
+      std_msgs::msg::Int8MultiArray legs_ids;
+
+      string command;
+    };
+    struct ToggleMotorsTorque_Response {
+      boolean success;
+    };
+  };
+};

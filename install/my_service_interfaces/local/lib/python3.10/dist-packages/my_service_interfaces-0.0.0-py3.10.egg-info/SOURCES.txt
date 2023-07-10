@@ -1,0 +1,11 @@
+setup.py
+my_service_interfaces/__init__.py
+my_service_interfaces.egg-info/PKG-INFO
+my_service_interfaces.egg-info/SOURCES.txt
+my_service_interfaces.egg-info/dependency_links.txt
+my_service_interfaces.egg-info/top_level.txt
+my_service_interfaces/msg/__init__.py
+my_service_interfaces/msg/_target_coordinates.py
+my_service_interfaces/srv/__init__.py
+my_service_interfaces/srv/_set_value.py
+my_service_interfaces/srv/_spider_goal.py

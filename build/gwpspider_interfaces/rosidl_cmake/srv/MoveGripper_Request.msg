@@ -1,0 +1,1 @@
+gwpspider_interfaces/GripperCommand instructions

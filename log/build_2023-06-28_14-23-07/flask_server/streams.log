@@ -1,0 +1,35 @@
+[0.560s] Invoking command in '/home/spider/ros2_ws/src/flask_server': PYTHONPATH=/home/spider/ros2_ws/build/flask_server/prefix_override:/home/spider/ros2_ws/install/flask_server/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/flask_server build --build-base /home/spider/ros2_ws/build/flask_server/build install --record /home/spider/ros2_ws/build/flask_server/install.log --single-version-externally-managed
+[0.779s] running egg_info
+[0.779s] creating ../../build/flask_server/flask_server.egg-info
+[0.779s] writing ../../build/flask_server/flask_server.egg-info/PKG-INFO
+[0.779s] writing dependency_links to ../../build/flask_server/flask_server.egg-info/dependency_links.txt
+[0.780s] writing entry points to ../../build/flask_server/flask_server.egg-info/entry_points.txt
+[0.780s] writing requirements to ../../build/flask_server/flask_server.egg-info/requires.txt
+[0.780s] writing top-level names to ../../build/flask_server/flask_server.egg-info/top_level.txt
+[0.780s] writing manifest file '../../build/flask_server/flask_server.egg-info/SOURCES.txt'
+[0.781s] reading manifest file '../../build/flask_server/flask_server.egg-info/SOURCES.txt'
+[0.781s] writing manifest file '../../build/flask_server/flask_server.egg-info/SOURCES.txt'
+[0.781s] running build
+[0.781s] running build_py
+[0.782s] creating /home/spider/ros2_ws/build/flask_server/build
+[0.782s] creating /home/spider/ros2_ws/build/flask_server/build/lib
+[0.782s] creating /home/spider/ros2_ws/build/flask_server/build/lib/flask_server
+[0.782s] copying flask_server/__init__.py -> /home/spider/ros2_ws/build/flask_server/build/lib/flask_server
+[0.782s] running install
+[0.782s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.782s]   warnings.warn(
+[0.782s] running install_lib
+[0.783s] creating /home/spider/ros2_ws/install/flask_server/lib/python3.10/site-packages/flask_server
+[0.783s] copying /home/spider/ros2_ws/build/flask_server/build/lib/flask_server/__init__.py -> /home/spider/ros2_ws/install/flask_server/lib/python3.10/site-packages/flask_server
+[0.783s] byte-compiling /home/spider/ros2_ws/install/flask_server/lib/python3.10/site-packages/flask_server/__init__.py to __init__.cpython-310.pyc
+[0.783s] running install_data
+[0.784s] creating /home/spider/ros2_ws/install/flask_server/share/ament_index
+[0.784s] creating /home/spider/ros2_ws/install/flask_server/share/ament_index/resource_index
+[0.784s] creating /home/spider/ros2_ws/install/flask_server/share/ament_index/resource_index/packages
+[0.784s] copying resource/flask_server -> /home/spider/ros2_ws/install/flask_server/share/ament_index/resource_index/packages
+[0.784s] copying package.xml -> /home/spider/ros2_ws/install/flask_server/share/flask_server
+[0.784s] running install_egg_info
+[0.785s] Copying ../../build/flask_server/flask_server.egg-info to /home/spider/ros2_ws/install/flask_server/lib/python3.10/site-packages/flask_server-0.0.0-py3.10.egg-info
+[0.786s] running install_scripts
+[0.803s] writing list of installed files to '/home/spider/ros2_ws/build/flask_server/install.log'
+[0.826s] Invoked command in '/home/spider/ros2_ws/src/flask_server' returned '0': PYTHONPATH=/home/spider/ros2_ws/build/flask_server/prefix_override:/home/spider/ros2_ws/install/flask_server/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/flask_server build --build-base /home/spider/ros2_ws/build/flask_server/build install --record /home/spider/ros2_ws/build/flask_server/install.log --single-version-externally-managed

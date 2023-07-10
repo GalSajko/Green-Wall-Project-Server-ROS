@@ -1,0 +1,2 @@
+int8 leg_id
+std_msgs/Float32MultiArray velocity_mode_direction
