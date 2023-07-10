@@ -1,2 +1,0 @@
-CHATBOT_TOKEN = ""
-CHAT_ID = ""
