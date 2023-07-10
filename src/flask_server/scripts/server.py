@@ -11,8 +11,6 @@ import config
 import time
 from std_msgs.msg import String
 import rclpy
-#import rospy
-#from std_msgs.msg import String
 import json
 import threading
 from logging import FileHandler, WARNING
@@ -46,7 +44,7 @@ config.deleted = []
 config.arduino_pings = [False for i in range(6)]
 TOKEN = chatbot.CHATBOT_TOKEN
 CHAT_ID = chatbot.CHAT_ID
-#priasd
+
 
 #ROS2 node classes
 class MinimalService(Node):
