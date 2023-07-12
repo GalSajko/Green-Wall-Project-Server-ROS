@@ -1,0 +1,7 @@
+Error copying directory from "/home/spider/ros2_ws/src/gwpspider_interfaces/gwpspider_interfaces" to "/home/spider/ros2_ws/build/gwpspider_interfaces/ament_cmake_python/gwpspider_interfaces/gwpspider_interfaces".
+gmake[2]: *** [CMakeFiles/ament_cmake_python_copy_gwpspider_interfaces.dir/build.make:70: CMakeFiles/ament_cmake_python_copy_gwpspider_interfaces] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:396: CMakeFiles/ament_cmake_python_copy_gwpspider_interfaces.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[  0%] Built target gwpspider_interfaces__cpp
+[ 14%] Built target gwpspider_interfaces__rosidl_generator_c
+gmake: *** [Makefile:146: all] Error 2

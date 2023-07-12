@@ -90,6 +90,13 @@ inline void to_flow_style_yaml(
   {
     out << "close_gripper: ";
     rosidl_generator_traits::value_to_yaml(msg.close_gripper, out);
+    out << ", ";
+  }
+
+  // member: use_prediction_model
+  {
+    out << "use_prediction_model: ";
+    rosidl_generator_traits::value_to_yaml(msg.use_prediction_model, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -183,6 +190,16 @@ inline void to_block_style_yaml(
     }
     out << "close_gripper: ";
     rosidl_generator_traits::value_to_yaml(msg.close_gripper, out);
+    out << "\n";
+  }
+
+  // member: use_prediction_model
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "use_prediction_model: ";
+    rosidl_generator_traits::value_to_yaml(msg.use_prediction_model, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

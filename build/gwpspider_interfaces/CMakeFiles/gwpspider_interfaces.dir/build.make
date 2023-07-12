@@ -129,6 +129,9 @@ CMakeFiles/gwpspider_interfaces: rosidl_cmake/srv/ToggleAdditionalControllerMode
 CMakeFiles/gwpspider_interfaces: /home/spider/ros2_ws/src/gwpspider_interfaces/srv/SpiderGoal.srv
 CMakeFiles/gwpspider_interfaces: rosidl_cmake/srv/SpiderGoal_Request.msg
 CMakeFiles/gwpspider_interfaces: rosidl_cmake/srv/SpiderGoal_Response.msg
+CMakeFiles/gwpspider_interfaces: /home/spider/ros2_ws/src/gwpspider_interfaces/srv/GetCorrectionOffset.srv
+CMakeFiles/gwpspider_interfaces: rosidl_cmake/srv/GetCorrectionOffset_Request.msg
+CMakeFiles/gwpspider_interfaces: rosidl_cmake/srv/GetCorrectionOffset_Response.msg
 CMakeFiles/gwpspider_interfaces: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 CMakeFiles/gwpspider_interfaces: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 CMakeFiles/gwpspider_interfaces: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl

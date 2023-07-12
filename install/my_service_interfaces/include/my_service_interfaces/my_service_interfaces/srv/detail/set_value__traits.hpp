@@ -24,28 +24,17 @@ inline void to_flow_style_yaml(
   const SetValue_Request & msg,
   std::ostream & out)
 {
-  out << "{";
-  // member: value
-  {
-    out << "value: ";
-    rosidl_generator_traits::value_to_yaml(msg.value, out);
-  }
-  out << "}";
+  (void)msg;
+  out << "null";
 }  // NOLINT(readability/fn_size)
 
 inline void to_block_style_yaml(
   const SetValue_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: value
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "value: ";
-    rosidl_generator_traits::value_to_yaml(msg.value, out);
-    out << "\n";
-  }
+  (void)msg;
+  (void)indentation;
+  out << "null\n";
 }  // NOLINT(readability/fn_size)
 
 inline std::string to_yaml(const SetValue_Request & msg, bool use_flow_style = false)
@@ -94,11 +83,11 @@ inline const char * name<my_service_interfaces::srv::SetValue_Request>()
 
 template<>
 struct has_fixed_size<my_service_interfaces::srv::SetValue_Request>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct has_bounded_size<my_service_interfaces::srv::SetValue_Request>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct is_message<my_service_interfaces::srv::SetValue_Request>
@@ -117,10 +106,35 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: succes
+  // member: data
   {
-    out << "succes: ";
-    rosidl_generator_traits::value_to_yaml(msg.succes, out);
+    if (msg.data.size() == 0) {
+      out << "data: []";
+    } else {
+      out << "data: [";
+      size_t pending_items = msg.data.size();
+      for (auto item : msg.data) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: go_refill
+  {
+    out << "go_refill: ";
+    rosidl_generator_traits::value_to_yaml(msg.go_refill, out);
+    out << ", ";
+  }
+
+  // member: volume
+  {
+    out << "volume: ";
+    rosidl_generator_traits::value_to_yaml(msg.volume, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -129,13 +143,43 @@ inline void to_block_style_yaml(
   const SetValue_Response & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: succes
+  // member: data
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "succes: ";
-    rosidl_generator_traits::value_to_yaml(msg.succes, out);
+    if (msg.data.size() == 0) {
+      out << "data: []\n";
+    } else {
+      out << "data:\n";
+      for (auto item : msg.data) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
+  }
+
+  // member: go_refill
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "go_refill: ";
+    rosidl_generator_traits::value_to_yaml(msg.go_refill, out);
+    out << "\n";
+  }
+
+  // member: volume
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "volume: ";
+    rosidl_generator_traits::value_to_yaml(msg.volume, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
@@ -186,11 +230,11 @@ inline const char * name<my_service_interfaces::srv::SetValue_Response>()
 
 template<>
 struct has_fixed_size<my_service_interfaces::srv::SetValue_Response>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct has_bounded_size<my_service_interfaces::srv::SetValue_Response>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct is_message<my_service_interfaces::srv::SetValue_Response>

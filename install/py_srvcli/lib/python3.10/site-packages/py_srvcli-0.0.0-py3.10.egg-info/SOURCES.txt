@@ -13,6 +13,7 @@ py_srvcli/client.py
 py_srvcli/listener.py
 py_srvcli/publicher.py
 py_srvcli/server.py
+py_srvcli/talker2.py
 resource/py_srvcli
 test/test_copyright.py
 test/test_flake8.py

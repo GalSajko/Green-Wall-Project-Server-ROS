@@ -37,6 +37,7 @@ typedef struct gwpspider_interfaces__srv__MoveLeg_Request
   std_msgs__msg__Float32MultiArray spider_pose;
   bool open_gripper;
   bool close_gripper;
+  bool use_prediction_model;
 } gwpspider_interfaces__srv__MoveLeg_Request;
 
 // Struct for a sequence of gwpspider_interfaces__srv__MoveLeg_Request.

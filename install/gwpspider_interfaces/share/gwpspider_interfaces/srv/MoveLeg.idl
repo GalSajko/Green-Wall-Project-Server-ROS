@@ -24,6 +24,8 @@ module gwpspider_interfaces {
       boolean open_gripper;
 
       boolean close_gripper;
+
+      boolean use_prediction_model;
     };
     struct MoveLeg_Response {
       boolean success;

@@ -39,14 +39,14 @@ void SetValue_Request_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember SetValue_Request_message_member_array[1] = {
   {
-    "value",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    "structure_needs_at_least_one_member",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_service_interfaces::srv::SetValue_Request, value),  // bytes offset in struct
+    offsetof(my_service_interfaces::srv::SetValue_Request, structure_needs_at_least_one_member),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -156,16 +156,95 @@ void SetValue_Response_fini_function(void * message_memory)
   typed_message->~SetValue_Response();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember SetValue_Response_message_member_array[1] = {
+size_t size_function__SetValue_Response__data(const void * untyped_member)
+{
+  const auto * member = reinterpret_cast<const std::vector<float> *>(untyped_member);
+  return member->size();
+}
+
+const void * get_const_function__SetValue_Response__data(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::vector<float> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__SetValue_Response__data(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::vector<float> *>(untyped_member);
+  return &member[index];
+}
+
+void fetch_function__SetValue_Response__data(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const float *>(
+    get_const_function__SetValue_Response__data(untyped_member, index));
+  auto & value = *reinterpret_cast<float *>(untyped_value);
+  value = item;
+}
+
+void assign_function__SetValue_Response__data(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<float *>(
+    get_function__SetValue_Response__data(untyped_member, index));
+  const auto & value = *reinterpret_cast<const float *>(untyped_value);
+  item = value;
+}
+
+void resize_function__SetValue_Response__data(void * untyped_member, size_t size)
+{
+  auto * member =
+    reinterpret_cast<std::vector<float> *>(untyped_member);
+  member->resize(size);
+}
+
+static const ::rosidl_typesupport_introspection_cpp::MessageMember SetValue_Response_message_member_array[3] = {
   {
-    "succes",  // name
+    "data",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    true,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(my_service_interfaces::srv::SetValue_Response, data),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__SetValue_Response__data,  // size() function pointer
+    get_const_function__SetValue_Response__data,  // get_const(index) function pointer
+    get_function__SetValue_Response__data,  // get(index) function pointer
+    fetch_function__SetValue_Response__data,  // fetch(index, &value) function pointer
+    assign_function__SetValue_Response__data,  // assign(index, value) function pointer
+    resize_function__SetValue_Response__data  // resize(index) function pointer
+  },
+  {
+    "go_refill",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_service_interfaces::srv::SetValue_Response, succes),  // bytes offset in struct
+    offsetof(my_service_interfaces::srv::SetValue_Response, go_refill),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "volume",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(my_service_interfaces::srv::SetValue_Response, volume),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -179,7 +258,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember SetValue_Resp
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers SetValue_Response_message_members = {
   "my_service_interfaces::srv",  // message namespace
   "SetValue_Response",  // message name
-  1,  // number of fields
+  3,  // number of fields
   sizeof(my_service_interfaces::srv::SetValue_Response),
   SetValue_Response_message_member_array,  // message members
   SetValue_Response_init_function,  // function to initialize message memory (memory has to be allocated)

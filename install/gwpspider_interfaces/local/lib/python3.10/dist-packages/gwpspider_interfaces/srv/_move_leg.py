@@ -70,6 +70,7 @@ class MoveLeg_Request(metaclass=Metaclass_MoveLeg_Request):
         '_spider_pose',
         '_open_gripper',
         '_close_gripper',
+        '_use_prediction_model',
     ]
 
     _fields_and_field_types = {
@@ -82,6 +83,7 @@ class MoveLeg_Request(metaclass=Metaclass_MoveLeg_Request):
         'spider_pose': 'std_msgs/Float32MultiArray',
         'open_gripper': 'boolean',
         'close_gripper': 'boolean',
+        'use_prediction_model': 'boolean',
     }
 
     SLOT_TYPES = (
@@ -92,6 +94,7 @@ class MoveLeg_Request(metaclass=Metaclass_MoveLeg_Request):
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['std_msgs', 'msg'], 'Float32MultiArray'),  # noqa: E501
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
@@ -111,6 +114,7 @@ class MoveLeg_Request(metaclass=Metaclass_MoveLeg_Request):
         self.spider_pose = kwargs.get('spider_pose', Float32MultiArray())
         self.open_gripper = kwargs.get('open_gripper', bool())
         self.close_gripper = kwargs.get('close_gripper', bool())
+        self.use_prediction_model = kwargs.get('use_prediction_model', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -158,6 +162,8 @@ class MoveLeg_Request(metaclass=Metaclass_MoveLeg_Request):
         if self.open_gripper != other.open_gripper:
             return False
         if self.close_gripper != other.close_gripper:
+            return False
+        if self.use_prediction_model != other.use_prediction_model:
             return False
         return True
 
@@ -288,6 +294,19 @@ class MoveLeg_Request(metaclass=Metaclass_MoveLeg_Request):
                 isinstance(value, bool), \
                 "The 'close_gripper' field must be of type 'bool'"
         self._close_gripper = value
+
+    @builtins.property
+    def use_prediction_model(self):
+        """Message field 'use_prediction_model'."""
+        return self._use_prediction_model
+
+    @use_prediction_model.setter
+    def use_prediction_model(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'use_prediction_model' field must be of type 'bool'"
+        self._use_prediction_model = value
 
 
 # Import statements for member types

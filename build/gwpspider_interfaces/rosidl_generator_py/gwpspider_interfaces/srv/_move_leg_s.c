@@ -158,6 +158,15 @@ bool gwpspider_interfaces__srv__move_leg__request__convert_from_py(PyObject * _p
     ros_message->close_gripper = (Py_True == field);
     Py_DECREF(field);
   }
+  {  // use_prediction_model
+    PyObject * field = PyObject_GetAttrString(_pymsg, "use_prediction_model");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->use_prediction_model = (Py_True == field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -291,6 +300,17 @@ PyObject * gwpspider_interfaces__srv__move_leg__request__convert_to_py(void * ra
     field = PyBool_FromLong(ros_message->close_gripper ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "close_gripper", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // use_prediction_model
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->use_prediction_model ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "use_prediction_model", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

@@ -18,26 +18,6 @@ namespace my_service_interfaces
 namespace srv
 {
 
-namespace builder
-{
-
-class Init_SetValue_Request_value
-{
-public:
-  Init_SetValue_Request_value()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
-  {}
-  ::my_service_interfaces::srv::SetValue_Request value(::my_service_interfaces::srv::SetValue_Request::_value_type arg)
-  {
-    msg_.value = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::my_service_interfaces::srv::SetValue_Request msg_;
-};
-
-}  // namespace builder
 
 }  // namespace srv
 
@@ -48,7 +28,7 @@ template<>
 inline
 auto build<::my_service_interfaces::srv::SetValue_Request>()
 {
-  return my_service_interfaces::srv::builder::Init_SetValue_Request_value();
+  return ::my_service_interfaces::srv::SetValue_Request(rosidl_runtime_cpp::MessageInitialization::ZERO);
 }
 
 }  // namespace my_service_interfaces
@@ -63,16 +43,48 @@ namespace srv
 namespace builder
 {
 
-class Init_SetValue_Response_succes
+class Init_SetValue_Response_volume
 {
 public:
-  Init_SetValue_Response_succes()
+  explicit Init_SetValue_Response_volume(::my_service_interfaces::srv::SetValue_Response & msg)
+  : msg_(msg)
+  {}
+  ::my_service_interfaces::srv::SetValue_Response volume(::my_service_interfaces::srv::SetValue_Response::_volume_type arg)
+  {
+    msg_.volume = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::my_service_interfaces::srv::SetValue_Response msg_;
+};
+
+class Init_SetValue_Response_go_refill
+{
+public:
+  explicit Init_SetValue_Response_go_refill(::my_service_interfaces::srv::SetValue_Response & msg)
+  : msg_(msg)
+  {}
+  Init_SetValue_Response_volume go_refill(::my_service_interfaces::srv::SetValue_Response::_go_refill_type arg)
+  {
+    msg_.go_refill = std::move(arg);
+    return Init_SetValue_Response_volume(msg_);
+  }
+
+private:
+  ::my_service_interfaces::srv::SetValue_Response msg_;
+};
+
+class Init_SetValue_Response_data
+{
+public:
+  Init_SetValue_Response_data()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::my_service_interfaces::srv::SetValue_Response succes(::my_service_interfaces::srv::SetValue_Response::_succes_type arg)
+  Init_SetValue_Response_go_refill data(::my_service_interfaces::srv::SetValue_Response::_data_type arg)
   {
-    msg_.succes = std::move(arg);
-    return std::move(msg_);
+    msg_.data = std::move(arg);
+    return Init_SetValue_Response_go_refill(msg_);
   }
 
 private:
@@ -90,7 +102,7 @@ template<>
 inline
 auto build<::my_service_interfaces::srv::SetValue_Response>()
 {
-  return my_service_interfaces::srv::builder::Init_SetValue_Response_succes();
+  return my_service_interfaces::srv::builder::Init_SetValue_Response_data();
 }
 
 }  // namespace my_service_interfaces

@@ -28,6 +28,10 @@ srv/DistributeForces.idl
 srv/DistributeForces.srv
 srv/DistributeForces_Request.msg
 srv/DistributeForces_Response.msg
+srv/GetCorrectionOffset.idl
+srv/GetCorrectionOffset.srv
+srv/GetCorrectionOffset_Request.msg
+srv/GetCorrectionOffset_Response.msg
 srv/GetLegTrajectory.idl
 srv/GetLegTrajectory.srv
 srv/GetLegTrajectory_Request.msg

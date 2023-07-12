@@ -1,0 +1,4 @@
+std_msgs/Float32MultiArray legs_positions
+std_msgs/Float32MultiArray rpy
+std_msgs/Float32MultiArray commanded_position
+std_msgs/Int8MultiArray one_hot_legs

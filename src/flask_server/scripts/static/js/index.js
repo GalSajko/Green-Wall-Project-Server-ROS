@@ -43,7 +43,7 @@ $(".link").on("click", function(e) {
 function updateOpacity(){
     for(let x = 0; x< positions.length; x++){
         if(x<=posInd)
-        positions[x].setAttribute('opacity', 1 / (i + 1))
+        positions[x].setAttribute('opacity', 1 - (x)*0.02)
     }
 }
 
@@ -239,79 +239,29 @@ for(let i = 0; i<50; i++){
         $("svg").append(circle);
         positions.unshift(circle)
 }
-//Funkcija vsake 2 sekundi pridobi podatke iz strežnika in jih posodobi
-function update(){
-    
-    //Pridobivanje informacij o aktivnih senzorjih
-    $.get("./update", function (data) {
-        for(let i = 0; i<data.length;i++){
-            let arduino = data[i]['arduino']
-            let line = data[i]['line']
-            let sensor = data[i]['sensorID']
-            let cap = data[i]['cap']
-            let name = data[i]['plantName']
-            let index = ((arduino-1)*36+line*6+sensor)
-            
-                if(cap == null && empty_slots[index].getAttribute('fill')!="pink"){
-                    empty_slots[index].setAttribute("fill","red");
-                }
-                else if(empty_slots[index].getAttribute('fill')!="pink"){
-                    empty_slots[index].setAttribute("fill","green");
-                }
-                empty_slots[index].setAttribute("stroke","none");
-                if(name != null && empty_slots[index].getAttribute('fill')!="pink"){
-                    empty_slots[index].removeEventListener('click',add)
-                    empty_slots[index].addEventListener('click',updt)
-                }
-                else if(empty_slots[index].getAttribute('fill')!="pink"){
-                    empty_slots[index].setAttribute("fill","yellow");
-                }
+function get_routes(data){
+    try{
+        current = data[6]
+        next = data[7]
+        stringCurrent = ""
+        stringNext = ""
+        for(let i = 1; i<current.length-1;i++){
+            stringCurrent = stringCurrent+" "+JSON.parse(current[i])['index']+","
+            stringNext = stringNext+" "+JSON.parse(next[i])['index']+","
         }
-    });
-
-    //Preverjanje izbrisanih rastlin
-    $.get("./deleted",function(data){
-        
-        for(let i = 0; i<data.length;i++){
-            empty_slots[data[i]].setAttribute("fill","white");
-            empty_slots[data[i]].setAttribute("stroke","black");
-            empty_slots[data[i]].removeEventListener('click',updt)
-            empty_slots[data[i]].addEventListener('click',add)
-        }
-    })
-    $.get('./spider_position',function(data){
-        try{
-        pose = data["pose"]
-        //spiderLocation[i][0] * 100 * scale + pad, (12 * yDim * scale + 20) - (spiderLocation[i][1] * 100 * scale), 10 * scale, 0, 2 * Math.PI
-        if(JSON.stringify(pose)!=lastPose){
-            lastPose = JSON.stringify(pose)
-            if(posInd<50){
-                posInd++;
-                newPos = positions.pop()
-                newPos.setAttribute("cx",pose[0]* 100 * scale + pad)
-                newPos.setAttribute("fill","#2f547d")
-                newPos.setAttribute("cy",(12 * yDim * scale + 20) - (pose[1] * 100 * scale))  
-                positions.unshift(newPos)
-            }
-            else{
-                newPos = positions.pop()
-                newPos.setAttribute("cx",pose[0]* 100 * scale + pad)
-                newPos.setAttribute("cy",(12 * yDim * scale + 20) - (pose[1] * 100 * scale))
-                positions.unshift(newPos)
-            }
-            updateOpacity()
+        stringCurrent = stringCurrent+" "+JSON.parse(current[current.length-1])['index']
+        stringNext = stringNext+" "+JSON.parse(next[current.length-1])['index']
+        document.getElementById("routeCurr").innerHTML = stringCurrent
+        document.getElementById("routeNext").innerHTML = stringNext
+    }
+    catch{
+        console.log("NO ROUTE WAS GIVEN")
     }
 }
-    catch{
-        console.log("ERROR GETTING SPIDER POSITION")
-    }
-        
-    })
-    //Risanje poti in oblačka
-    $.get("./goal", function(data){
-        try{
-        coords = data[0]
-        index = data[1]
+function goal(data){
+    try{
+        coords = data[1]
+        index = data[2]
         let txtCont1 = ""
         let txtCont2 = ""
         let name_latin =""
@@ -390,7 +340,61 @@ function update(){
             goalPos.setAttribute("r", 2*Math.PI); 
             goalPos.setAttribute("fill","blue")
             $("svg").append(goalPos);
+            if (goalPos.getAttribute("cy")<150){
+                //Kvadrat za oblaček
+            var bubble = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+            bubble.setAttribute("x", goalPos.getAttribute('cx')-50);
+            bubble.setAttribute("y", parseInt(goalPos.getAttribute('cy'))+15);
+            bubble.setAttribute("width", "100");
+            bubble.setAttribute("height", "100");
+            bubble.setAttribute("rx", "10");
+            bubble.setAttribute("fill","white")
+            bubble.setAttribute("stroke","black")
+            $("svg").append(bubble);
+            bubbleElems.push(bubble)
 
+            //Obroba puščice
+            var arrow = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+            arrow.setAttribute("stroke","black")
+            arrow.setAttribute("fill","white")
+            arrow.setAttribute("points",(goalPos.getAttribute('cx')-7)+","+(parseInt(goalPos.getAttribute('cy'))+15)+" " +goalPos.getAttribute('cx')+","+goalPos.getAttribute('cy')+" "+(parseInt(goalPos.getAttribute('cx'))+7)+","+(parseInt(goalPos.getAttribute('cy'))+15));
+            $("svg").append(arrow);
+            bubbleElems.push(arrow)
+
+            //Puščica
+            var arrow2 = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+            arrow2.setAttribute("stroke","none")
+            arrow2.setAttribute("fill","white")
+            arrow2.setAttribute("points", (goalPos.getAttribute('cx')-7)+","+(parseInt(goalPos.getAttribute('cy'))+16)+" " +goalPos.getAttribute('cx')+","+goalPos.getAttribute('cy')+" "+(parseInt(goalPos.getAttribute('cx'))+7)+","+(parseInt(goalPos.getAttribute('cy'))+16));
+            $("svg").append(arrow2);
+            bubbleElems.push(arrow2)
+
+            //Text za ime oz. informacijo o polnjenju
+            var text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            text.setAttribute("x", goalPos.getAttribute('cx'));
+            text.setAttribute("y", goalPos.getAttribute('cy')+75);
+            text.setAttribute("text-anchor", "middle");
+            text.setAttribute("alignment-baseline", "middle");
+            
+            $("svg").append(text);
+            document.getElementById("plantName").innerHTML = txtCont1
+            document.getElementById("plantNameLatin").innerHTML = name_latin
+            document.getElementById("areas").innerHTML = areas
+            document.getElementById("needs").innerHTML = needs
+            document.getElementById("cha").innerHTML = charact
+
+            //Text za prikaz vlažnosti zemlje
+            bubbleElems.push(text)
+            var text2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            text2.setAttribute("x", goalPos.getAttribute('cx'));
+            text2.setAttribute("y", parseInt(goalPos.getAttribute('cy'))+65);
+            text2.setAttribute("text-anchor", "middle");
+            text2.setAttribute("alignment-baseline", "middle");
+            text2.textContent = txtCont2;
+            $("svg").append(text2);
+            bubbleElems.push(text2)  
+            }
+            else{
             //Kvadrat za oblaček
             var bubble = document.createElementNS("http://www.w3.org/2000/svg", "rect");
             bubble.setAttribute("x", goalPos.getAttribute('cx')-50);
@@ -422,7 +426,7 @@ function update(){
             //Text za ime oz. informacijo o polnjenju
             var text = document.createElementNS("http://www.w3.org/2000/svg", "text");
             text.setAttribute("x", goalPos.getAttribute('cx'));
-            text.setAttribute("y", goalPos.getAttribute('cy')-75);
+            text.setAttribute("y", goalPos.getAttribute('cy')-65);
             text.setAttribute("text-anchor", "middle");
             text.setAttribute("alignment-baseline", "middle");
             
@@ -437,12 +441,13 @@ function update(){
             bubbleElems.push(text)
             var text2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
             text2.setAttribute("x", goalPos.getAttribute('cx'));
-            text2.setAttribute("y", goalPos.getAttribute('cy')-55);
+            text2.setAttribute("y", goalPos.getAttribute('cy')-65);
             text2.setAttribute("text-anchor", "middle");
             text2.setAttribute("alignment-baseline", "middle");
             text2.textContent = txtCont2;
             $("svg").append(text2);
             bubbleElems.push(text2)  
+            }
         }
     
         else{
@@ -521,31 +526,77 @@ function update(){
     catch (error){
         console.log("ERROR GETTING GOAL POSITION "+ error)
     }
-    })
-    $.get('./get_routes', function(data){
-        try{
-        current = data[0]
-        next = data[1]
-        stringCurrent = ""
-        stringNext = ""
-        for(let i = 1; i<current.length-1;i++){
-            stringCurrent = stringCurrent+" "+JSON.parse(current[i])['index']+","
-            stringNext = stringNext+" "+JSON.parse(next[i])['index']+","
+}
+function spiderPos(data){
+    try{
+        pose = data[3]
+        //spiderLocation[i][0] * 100 * scale + pad, (12 * yDim * scale + 20) - (spiderLocation[i][1] * 100 * scale), 10 * scale, 0, 2 * Math.PI
+        if(JSON.stringify(pose)!=lastPose){
+            lastPose = JSON.stringify(pose)
+            if(posInd<50){
+                posInd++;
+                newPos = positions.pop()
+                newPos.setAttribute("cx",pose[0]* 100 * scale + pad)
+                newPos.setAttribute("fill","#2f547d")
+                newPos.setAttribute("cy",(12 * yDim * scale + 20) - (pose[1] * 100 * scale))  
+                positions.unshift(newPos)
+            }
+            else{
+                newPos = positions.pop()
+                newPos.setAttribute("cx",pose[0]* 100 * scale + pad)
+                newPos.setAttribute("cy",(12 * yDim * scale + 20) - (pose[1] * 100 * scale))
+                positions.unshift(newPos)
+            }
+            updateOpacity()
+    }
+}
+    catch(error){
+        console.log("ERROR GETTING SPIDER POSITION "+ error)
+    }
+}
+//Funkcija vsake 2 sekundi pridobi podatke iz strežnika in jih posodobi
+function update(){
+    
+    //Pridobivanje informacij o aktivnih senzorjih
+    $.get("./update", function (data) {
+        for(let i = 0; i<data[4].length;i++){
+            let arduino = data[4][i]['arduino']
+            let line = data[4][i]['line']
+            let sensor = data[4][i]['sensorID']
+            let cap = data[4][i]['cap']
+            let name = data[4][i]['plantName']
+            let index = ((arduino-1)*36+line*6+sensor)
+            
+                if(cap == null && empty_slots[index].getAttribute('fill')!="pink"){
+                    empty_slots[index].setAttribute("fill","red");
+                }
+                else if(empty_slots[index].getAttribute('fill')!="pink"){
+                    empty_slots[index].setAttribute("fill","green");
+                }
+                empty_slots[index].setAttribute("stroke","none");
+                if(name != null && empty_slots[index].getAttribute('fill')!="pink"){
+                    empty_slots[index].removeEventListener('click',add)
+                    empty_slots[index].addEventListener('click',updt)
+                }
+                else if(empty_slots[index].getAttribute('fill')!="pink"){
+                    empty_slots[index].setAttribute("fill","yellow");
+                }
         }
-        stringCurrent = stringCurrent+" "+JSON.parse(current[current.length-1])['index']
-        stringNext = stringNext+" "+JSON.parse(next[current.length-1])['index']
-        document.getElementById("routeCurr").innerHTML = stringCurrent
-        document.getElementById("routeNext").innerHTML = stringNext
-    }
-    catch{
-        console.log("NO ROUTE WAS GIVEN")
-    }
-    })
-    $.get('./get_plant_num', function(data){
-        document.getElementById("plantsNo").innerHTML= JSON.parse(data)
-    })
-    $.get('./get_status', function(data){
-        document.getElementById("status").innerHTML = data
+        document.getElementById("plantsNo").innerHTML= JSON.parse(data[5])
+        document.getElementById("status").innerHTML = data[0]
+        goal(data)
+        spiderPos(data)
+    });
+
+    //Preverjanje izbrisanih rastlin
+    $.get("./deleted",function(data){
+        
+        for(let i = 0; i<data.length;i++){
+            empty_slots[data[i]].setAttribute("fill","white");
+            empty_slots[data[i]].setAttribute("stroke","black");
+            empty_slots[data[i]].removeEventListener('click',updt)
+            empty_slots[data[i]].addEventListener('click',add)
+        }
     })
 }
 var inrvalId = setInterval(function () {

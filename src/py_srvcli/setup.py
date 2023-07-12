@@ -23,6 +23,7 @@ setup(
             'service = py_srvcli.server:main',
             'client = py_srvcli.client:main',
             'talker = py_srvcli.publicher:main',
+            'talker2 = py_srvcli.talker2:main',
         ],
     },
 )

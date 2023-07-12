@@ -1,0 +1,207 @@
+[0.021s] Invoking command in '/home/spider/ros2_ws/build/my_service_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spider/ros2_ws/install/py_srvcli:/home/spider/ros2_ws/install/py_node_test:/home/spider/ros2_ws/install/flask_server:/opt/ros/humble /usr/bin/cmake --build /home/spider/ros2_ws/build/my_service_interfaces -- -j8 -l8
+[0.066s] [35m[1mConsolidate compiler generated dependencies of target my_service_interfaces__rosidl_generator_c[0m
+[0.077s] [  2%] Built target my_service_interfaces__cpp
+[0.081s] [ 12%] Built target my_service_interfaces__rosidl_generator_c
+[0.092s] [ 12%] Built target ament_cmake_python_copy_my_service_interfaces
+[0.096s] [35m[1mConsolidate compiler generated dependencies of target my_service_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[0.098s] [35m[1mConsolidate compiler generated dependencies of target my_service_interfaces__rosidl_typesupport_c[0m
+[0.098s] [35m[1mConsolidate compiler generated dependencies of target my_service_interfaces__rosidl_typesupport_introspection_cpp[0m
+[0.098s] [35m[1mConsolidate compiler generated dependencies of target my_service_interfaces__rosidl_typesupport_introspection_c[0m
+[0.101s] [35m[1mConsolidate compiler generated dependencies of target my_service_interfaces__rosidl_typesupport_cpp[0m
+[0.109s] [35m[1mConsolidate compiler generated dependencies of target my_service_interfaces__rosidl_typesupport_fastrtps_c[0m
+[0.123s] [ 23%] Built target my_service_interfaces__rosidl_typesupport_c
+[0.125s] [ 33%] Built target my_service_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.127s] [ 43%] Built target my_service_interfaces__rosidl_typesupport_introspection_c
+[0.128s] [ 53%] Built target my_service_interfaces__rosidl_typesupport_introspection_cpp
+[0.143s] [ 64%] Built target my_service_interfaces__rosidl_typesupport_cpp
+[0.166s] [ 74%] Built target my_service_interfaces__rosidl_typesupport_fastrtps_c
+[0.195s] [ 74%] Built target my_service_interfaces
+[0.218s] [ 76%] Built target my_service_interfaces__py
+[0.232s] [35m[1mConsolidate compiler generated dependencies of target my_service_interfaces__rosidl_generator_py[0m
+[0.249s] [ 84%] Built target my_service_interfaces__rosidl_generator_py
+[0.262s] [35m[1mConsolidate compiler generated dependencies of target my_service_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[0.263s] [35m[1mConsolidate compiler generated dependencies of target my_service_interfaces__rosidl_typesupport_c__pyext[0m
+[0.266s] [35m[1mConsolidate compiler generated dependencies of target my_service_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[0.276s] [ 89%] Built target my_service_interfaces__rosidl_typesupport_c__pyext
+[0.277s] [ 94%] Built target my_service_interfaces__rosidl_typesupport_introspection_c__pyext
+[0.283s] [100%] Built target my_service_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[0.416s] running egg_info
+[0.416s] writing my_service_interfaces.egg-info/PKG-INFO
+[0.416s] writing dependency_links to my_service_interfaces.egg-info/dependency_links.txt
+[0.416s] writing top-level names to my_service_interfaces.egg-info/top_level.txt
+[0.418s] reading manifest file 'my_service_interfaces.egg-info/SOURCES.txt'
+[0.419s] writing manifest file 'my_service_interfaces.egg-info/SOURCES.txt'
+[0.465s] [100%] Built target ament_cmake_python_build_my_service_interfaces_egg
+[0.480s] Invoked command in '/home/spider/ros2_ws/build/my_service_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spider/ros2_ws/install/py_srvcli:/home/spider/ros2_ws/install/py_node_test:/home/spider/ros2_ws/install/flask_server:/opt/ros/humble /usr/bin/cmake --build /home/spider/ros2_ws/build/my_service_interfaces -- -j8 -l8
+[0.595s] Invoking command in '/home/spider/ros2_ws/build/my_service_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spider/ros2_ws/install/py_srvcli:/home/spider/ros2_ws/install/py_node_test:/home/spider/ros2_ws/install/flask_server:/opt/ros/humble /usr/bin/cmake --install /home/spider/ros2_ws/build/my_service_interfaces
+[0.606s] -- Install configuration: ""
+[0.607s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/ament_index/resource_index/rosidl_interfaces/my_service_interfaces
+[0.607s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces
+[0.607s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg
+[0.607s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/rosidl_generator_c__visibility_control.h
+[0.608s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/target_coordinates.h
+[0.608s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail
+[0.608s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__functions.c
+[0.609s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__type_support.h
+[0.609s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__struct.h
+[0.609s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__functions.h
+[0.609s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv
+[0.609s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail
+[0.609s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/spider_goal__type_support.h
+[0.609s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/set_value__struct.h
+[0.609s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/spider_goal__struct.h
+[0.610s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/set_value__functions.h
+[0.610s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/set_value__functions.c
+[0.610s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/set_value__type_support.h
+[0.610s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/spider_goal__functions.h
+[0.610s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/spider_goal__functions.c
+[0.610s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/spider_goal.h
+[0.611s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/set_value.h
+[0.611s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/environment/library_path.sh
+[0.611s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/environment/library_path.dsv
+[0.611s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_generator_c.so
+[0.611s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces
+[0.612s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg
+[0.612s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail
+[0.612s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__rosidl_typesupport_fastrtps_c.h
+[0.612s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.613s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv
+[0.613s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail
+[0.613s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/spider_goal__rosidl_typesupport_fastrtps_c.h
+[0.613s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/set_value__rosidl_typesupport_fastrtps_c.h
+[0.613s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_fastrtps_c.so
+[0.614s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces
+[0.614s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg
+[0.614s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.614s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail
+[0.614s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__type_support.c
+[0.615s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__rosidl_typesupport_introspection_c.h
+[0.615s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv
+[0.615s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail
+[0.615s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/spider_goal__rosidl_typesupport_introspection_c.h
+[0.615s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/set_value__type_support.c
+[0.616s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/set_value__rosidl_typesupport_introspection_c.h
+[0.616s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/spider_goal__type_support.c
+[0.616s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_introspection_c.so
+[0.616s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_c.so
+[0.616s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces
+[0.617s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg
+[0.617s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail
+[0.617s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__struct.hpp
+[0.617s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__traits.hpp
+[0.617s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__builder.hpp
+[0.618s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/target_coordinates.hpp
+[0.618s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv
+[0.618s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail
+[0.618s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/spider_goal__builder.hpp
+[0.618s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/set_value__struct.hpp
+[0.619s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/set_value__builder.hpp
+[0.619s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/set_value__traits.hpp
+[0.619s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/spider_goal__struct.hpp
+[0.619s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/spider_goal__traits.hpp
+[0.619s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/set_value.hpp
+[0.619s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/spider_goal.hpp
+[0.620s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces
+[0.620s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg
+[0.620s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail
+[0.620s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__rosidl_typesupport_fastrtps_cpp.hpp
+[0.620s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/dds_fastrtps
+[0.621s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.621s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv
+[0.621s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail
+[0.621s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/set_value__rosidl_typesupport_fastrtps_cpp.hpp
+[0.621s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/spider_goal__rosidl_typesupport_fastrtps_cpp.hpp
+[0.621s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/dds_fastrtps
+[0.621s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[0.621s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces
+[0.622s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg
+[0.622s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail
+[0.622s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__type_support.cpp
+[0.622s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/msg/detail/target_coordinates__rosidl_typesupport_introspection_cpp.hpp
+[0.622s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv
+[0.622s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail
+[0.623s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/set_value__type_support.cpp
+[0.623s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/set_value__rosidl_typesupport_introspection_cpp.hpp
+[0.623s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/spider_goal__rosidl_typesupport_introspection_cpp.hpp
+[0.623s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/include/my_service_interfaces/my_service_interfaces/srv/detail/spider_goal__type_support.cpp
+[0.623s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_introspection_cpp.so
+[0.623s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_typesupport_cpp.so
+[0.624s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/environment/pythonpath.sh
+[0.624s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/environment/pythonpath.dsv
+[0.624s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces-0.0.0-py3.10.egg-info
+[0.624s] -- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[0.624s] -- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[0.624s] -- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.625s] -- Installing: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.625s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces
+[0.625s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.625s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.625s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/msg
+[0.625s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/msg/_target_coordinates_s.c
+[0.625s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/msg/__init__.py
+[0.625s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/msg/_target_coordinates.py
+[0.625s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/_my_service_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[0.625s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/_my_service_interfaces_s.ep.rosidl_typesupport_c.c
+[0.626s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/srv
+[0.626s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/srv/_set_value.py
+[0.626s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/srv/_spider_goal.py
+[0.626s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/srv/_spider_goal_s.c
+[0.626s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/srv/_set_value_s.c
+[0.626s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/srv/__init__.py
+[0.626s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/__init__.py
+[0.626s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/_my_service_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.627s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/libmy_service_interfaces__rosidl_generator_py.so
+[0.627s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.662s] Listing '/home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces'...
+[0.662s] Listing '/home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/msg'...
+[0.662s] Listing '/home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/srv'...
+[0.666s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.667s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.667s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages/my_service_interfaces/my_service_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.668s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/lib/libmy_service_interfaces__rosidl_generator_py.so
+[0.668s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/msg/TargetCoordinates.idl
+[0.668s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/srv/SetValue.idl
+[0.668s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/msg/TargetCoordinates.msg
+[0.669s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/srv/SetValue.srv
+[0.669s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/srv/SetValue_Request.msg
+[0.669s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/srv/SetValue_Response.msg
+[0.669s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/ament_index/resource_index/package_run_dependencies/my_service_interfaces
+[0.669s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/ament_index/resource_index/parent_prefix_path/my_service_interfaces
+[0.670s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/environment/ament_prefix_path.sh
+[0.670s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/environment/ament_prefix_path.dsv
+[0.670s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/environment/path.sh
+[0.670s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/environment/path.dsv
+[0.670s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/local_setup.bash
+[0.670s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/local_setup.sh
+[0.671s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/local_setup.zsh
+[0.671s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/local_setup.dsv
+[0.671s] -- Installing: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/package.dsv
+[0.671s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/ament_index/resource_index/packages/my_service_interfaces
+[0.671s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_generator_cExport.cmake
+[0.672s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_generator_cExport-noconfig.cmake
+[0.672s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[0.672s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.672s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[0.672s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.672s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfaces__rosidl_typesupport_cExport.cmake
+[0.673s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[0.673s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_generator_cppExport.cmake
+[0.673s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.673s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.673s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[0.673s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.673s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfaces__rosidl_typesupport_cppExport.cmake
+[0.674s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[0.674s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_generator_pyExport.cmake
+[0.674s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/export_my_service_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[0.674s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/rosidl_cmake-extras.cmake
+[0.674s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.674s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.674s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[0.675s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[0.675s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.676s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.676s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfacesConfig.cmake
+[0.676s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/cmake/my_service_interfacesConfig-version.cmake
+[0.677s] -- Up-to-date: /home/spider/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/package.xml
+[0.677s] Invoked command in '/home/spider/ros2_ws/build/my_service_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spider/ros2_ws/install/py_srvcli:/home/spider/ros2_ws/install/py_node_test:/home/spider/ros2_ws/install/flask_server:/opt/ros/humble /usr/bin/cmake --install /home/spider/ros2_ws/build/my_service_interfaces

@@ -251,15 +251,8 @@ CMakeFiles/my_service_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosid
   rosidl_generator_c/my_service_interfaces/msg/detail/target_coordinates__functions.h \
   rosidl_generator_c/my_service_interfaces/srv/detail/set_value__type_support.h \
   rosidl_generator_c/my_service_interfaces/srv/detail/set_value__struct.h \
-  rosidl_generator_c/my_service_interfaces/srv/detail/set_value__functions.h \
-  rosidl_generator_c/my_service_interfaces/srv/detail/spider_goal__type_support.h \
-  rosidl_generator_c/my_service_interfaces/srv/detail/spider_goal__struct.h \
-  rosidl_generator_c/my_service_interfaces/srv/detail/spider_goal__functions.h
+  rosidl_generator_c/my_service_interfaces/srv/detail/set_value__functions.h
 
-
-rosidl_generator_c/my_service_interfaces/srv/detail/spider_goal__struct.h:
-
-rosidl_generator_c/my_service_interfaces/srv/detail/spider_goal__type_support.h:
 
 rosidl_generator_c/my_service_interfaces/srv/detail/set_value__functions.h:
 
@@ -608,8 +601,6 @@ rosidl_generator_py/my_service_interfaces/_my_service_interfaces_s.ep.rosidl_typ
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-
-rosidl_generator_c/my_service_interfaces/srv/detail/spider_goal__functions.h:
 
 /usr/include/python3.10/funcobject.h:
 

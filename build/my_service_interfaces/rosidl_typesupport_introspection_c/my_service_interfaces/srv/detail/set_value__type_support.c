@@ -12,10 +12,6 @@
 #include "my_service_interfaces/srv/detail/set_value__struct.h"
 
 
-// Include directives for member types
-// Member `value`
-#include "rosidl_runtime_c/string_functions.h"
-
 #ifdef __cplusplus
 extern "C"
 {
@@ -37,14 +33,14 @@ void my_service_interfaces__srv__SetValue_Request__rosidl_typesupport_introspect
 
 static rosidl_typesupport_introspection_c__MessageMember my_service_interfaces__srv__SetValue_Request__rosidl_typesupport_introspection_c__SetValue_Request_message_member_array[1] = {
   {
-    "value",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    "structure_needs_at_least_one_member",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_service_interfaces__srv__SetValue_Request, value),  // bytes offset in struct
+    offsetof(my_service_interfaces__srv__SetValue_Request, structure_needs_at_least_one_member),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -104,6 +100,10 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 // #include "my_service_interfaces/srv/detail/set_value__struct.h"
 
 
+// Include directives for member types
+// Member `data`
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -123,16 +123,105 @@ void my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspec
   my_service_interfaces__srv__SetValue_Response__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__SetValue_Response_message_member_array[1] = {
+size_t my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__size_function__SetValue_Response__data(
+  const void * untyped_member)
+{
+  const rosidl_runtime_c__float__Sequence * member =
+    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__get_const_function__SetValue_Response__data(
+  const void * untyped_member, size_t index)
+{
+  const rosidl_runtime_c__float__Sequence * member =
+    (const rosidl_runtime_c__float__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__get_function__SetValue_Response__data(
+  void * untyped_member, size_t index)
+{
+  rosidl_runtime_c__float__Sequence * member =
+    (rosidl_runtime_c__float__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__fetch_function__SetValue_Response__data(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const float * item =
+    ((const float *)
+    my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__get_const_function__SetValue_Response__data(untyped_member, index));
+  float * value =
+    (float *)(untyped_value);
+  *value = *item;
+}
+
+void my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__assign_function__SetValue_Response__data(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  float * item =
+    ((float *)
+    my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__get_function__SetValue_Response__data(untyped_member, index));
+  const float * value =
+    (const float *)(untyped_value);
+  *item = *value;
+}
+
+bool my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__resize_function__SetValue_Response__data(
+  void * untyped_member, size_t size)
+{
+  rosidl_runtime_c__float__Sequence * member =
+    (rosidl_runtime_c__float__Sequence *)(untyped_member);
+  rosidl_runtime_c__float__Sequence__fini(member);
+  return rosidl_runtime_c__float__Sequence__init(member, size);
+}
+
+static rosidl_typesupport_introspection_c__MessageMember my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__SetValue_Response_message_member_array[3] = {
   {
-    "succes",  // name
+    "data",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    true,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(my_service_interfaces__srv__SetValue_Response, data),  // bytes offset in struct
+    NULL,  // default value
+    my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__size_function__SetValue_Response__data,  // size() function pointer
+    my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__get_const_function__SetValue_Response__data,  // get_const(index) function pointer
+    my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__get_function__SetValue_Response__data,  // get(index) function pointer
+    my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__fetch_function__SetValue_Response__data,  // fetch(index, &value) function pointer
+    my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__assign_function__SetValue_Response__data,  // assign(index, value) function pointer
+    my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__resize_function__SetValue_Response__data  // resize(index) function pointer
+  },
+  {
+    "go_refill",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_service_interfaces__srv__SetValue_Response, succes),  // bytes offset in struct
+    offsetof(my_service_interfaces__srv__SetValue_Response, go_refill),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "volume",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(my_service_interfaces__srv__SetValue_Response, volume),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -146,7 +235,7 @@ static rosidl_typesupport_introspection_c__MessageMember my_service_interfaces__
 static const rosidl_typesupport_introspection_c__MessageMembers my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__SetValue_Response_message_members = {
   "my_service_interfaces__srv",  // message namespace
   "SetValue_Response",  // message name
-  1,  // number of fields
+  3,  // number of fields
   sizeof(my_service_interfaces__srv__SetValue_Response),
   my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__SetValue_Response_message_member_array,  // message members
   my_service_interfaces__srv__SetValue_Response__rosidl_typesupport_introspection_c__SetValue_Response_init_function,  // function to initialize message memory (memory has to be allocated)

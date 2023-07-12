@@ -208,8 +208,7 @@ CMakeFiles/my_service_interfaces__rosidl_generator_py.dir/rosidl_generator_py/my
  /usr/include/python3.10/numpy/__multiarray_api.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
  /home/spider/ros2_ws/build/my_service_interfaces/rosidl_generator_c/my_service_interfaces/srv/detail/set_value__struct.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
  /home/spider/ros2_ws/build/my_service_interfaces/rosidl_generator_c/my_service_interfaces/srv/detail/set_value__functions.h \
  /home/spider/ros2_ws/build/my_service_interfaces/rosidl_generator_c/my_service_interfaces/msg/rosidl_generator_c__visibility_control.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h

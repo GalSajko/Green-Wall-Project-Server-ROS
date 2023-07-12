@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gwpspider_interfaces/srv/GetCorrectionOffset.srv
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Float32MultiArray.idl"
+#include "std_msgs/msg/Int8MultiArray.idl"
+
+module gwpspider_interfaces {
+  module srv {
+    struct GetCorrectionOffset_Request {
+      std_msgs::msg::Float32MultiArray legs_positions;
+
+      std_msgs::msg::Float32MultiArray rpy;
+
+      std_msgs::msg::Float32MultiArray commanded_position;
+
+      std_msgs::msg::Int8MultiArray one_hot_legs;
+    };
+    struct GetCorrectionOffset_Response {
+      std_msgs::msg::Float32MultiArray correction_offset;
+    };
+  };
+};

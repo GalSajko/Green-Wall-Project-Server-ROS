@@ -38,32 +38,25 @@ struct SetValue_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->value = "";
+      this->structure_needs_at_least_one_member = 0;
     }
   }
 
   explicit SetValue_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : value(_alloc)
   {
+    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->value = "";
+      this->structure_needs_at_least_one_member = 0;
     }
   }
 
   // field types and members
-  using _value_type =
-    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
-  _value_type value;
+  using _structure_needs_at_least_one_member_type =
+    uint8_t;
+  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
 
-  // setters for named parameter idiom
-  Type & set__value(
-    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
-  {
-    this->value = _arg;
-    return *this;
-  }
 
   // constant declarations
 
@@ -107,7 +100,7 @@ struct SetValue_Request_
   // comparison operators
   bool operator==(const SetValue_Request_ & other) const
   {
-    if (this->value != other.value) {
+    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
       return false;
     }
     return true;
@@ -152,7 +145,8 @@ struct SetValue_Response_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->succes = false;
+      this->go_refill = false;
+      this->volume = 0l;
     }
   }
 
@@ -162,20 +156,39 @@ struct SetValue_Response_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->succes = false;
+      this->go_refill = false;
+      this->volume = 0l;
     }
   }
 
   // field types and members
-  using _succes_type =
+  using _data_type =
+    std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>>;
+  _data_type data;
+  using _go_refill_type =
     bool;
-  _succes_type succes;
+  _go_refill_type go_refill;
+  using _volume_type =
+    int32_t;
+  _volume_type volume;
 
   // setters for named parameter idiom
-  Type & set__succes(
+  Type & set__data(
+    const std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>> & _arg)
+  {
+    this->data = _arg;
+    return *this;
+  }
+  Type & set__go_refill(
     const bool & _arg)
   {
-    this->succes = _arg;
+    this->go_refill = _arg;
+    return *this;
+  }
+  Type & set__volume(
+    const int32_t & _arg)
+  {
+    this->volume = _arg;
     return *this;
   }
 
@@ -221,7 +234,13 @@ struct SetValue_Response_
   // comparison operators
   bool operator==(const SetValue_Response_ & other) const
   {
-    if (this->succes != other.succes) {
+    if (this->data != other.data) {
+      return false;
+    }
+    if (this->go_refill != other.go_refill) {
+      return false;
+    }
+    if (this->volume != other.volume) {
       return false;
     }
     return true;

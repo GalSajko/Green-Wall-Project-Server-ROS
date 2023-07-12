@@ -9,7 +9,7 @@ from GeneticAlgorithm import geneticAlgorithm
 from sensor import Sensor
 import config
 import time
-from std_msgs.msg import String
+from std_msgs.msg import String, Float32MultiArray
 import rclpy 
 import json
 import threading
@@ -40,6 +40,7 @@ migrate = Migrate(app, db)
 config.sensorBase = [None for i in range(6*36)]
 config.arduino_times = [None for i in range(6)]
 config.arduino_status = [None for i in range(6)]
+config.update_data = [None for i in range(8)]
 config.deleted = []
 config.arduino_pings = [False for i in range(6)]
 TOKEN = chatbot.CHATBOT_TOKEN
@@ -77,14 +78,16 @@ class PositionSubscriber(Node):
     def __init__(self):
         super().__init__('position_subscriber')
         self.subscription = self.create_subscription(
-            String,
+            Float32MultiArray,
             'position',
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
 
     def listener_callback(self, msg):
-        self.get_logger().info(msg.data)
+        x, y = msg.data[0], msg.data[1]
+        self.get_logger().info("Received data: x={}, y={}".format(x, y))
+        config.poseData = [x,y]
 
 class MessagesSubscriber(Node):
 
@@ -363,7 +366,7 @@ config.nextRoute = []
 config.status = "OFF"
 config.refill_volume = 0
 config.lastOrderIndex = 1
-
+config.poseData = []
 #ROS2 initialization
 rclpy.init(args=None)
 ros2_service_node = MinimalService()
@@ -670,43 +673,7 @@ def check_arduino_sensor_status():
         except Exception as e:
             #print(e)
             continue
-    
 
-#Server routes
-@app.route('/deleted', methods=['GET'])
-def deleted():
-    """Sends indexes of deleted entries to the frontend.
-
-    Returns:
-       list: indexes of deleted entries.
-    """
-    temp = config.deleted.copy()
-    config.deleted.clear()
-    return jsonify(temp)
-
-@app.route('/get_status', methods=['POST', 'GET'])
-def status():
-    return config.status
-
-@app.route('/spider_position', methods=['POST', 'GET'])
-def get_spider_pos():
-    """Gets data from the spider and forwards it to the frontend for visualisation.
-
-    Returns:
-        JSON: Position of the spider.
-    """
-    pins = []
-    if request.method == 'POST':
-        pins = json.loads(request.get_data().decode())
-        config.poseData = pins
-        return 'OK'
-    elif request.method == 'GET':
-        try:
-            return jsonify(config.poseData), 200, {"Access-Control-Allow-Origin": "*"}
-        except Exception:
-            return jsonify([]), 200, {"Access-Control-Allow-Origin": "*"}
-
-@app.route('/goal', methods=["GET"])
 def send_goal():
     """Sends data about the path and goal points to the frontend.
 
@@ -717,73 +684,12 @@ def send_goal():
         data = []
         for i in config.order:
             data.append(i.toJson())
-        return jsonify(data, config.orderIndex), 200, {"Access-Control-Allow-Origin": "*"}
+        config.update_data[1] = data
+        config.update_data[2] = config.orderIndex
+        
     except Exception:
-        print("ERROR TRYING TO SEND GOAL VALUE TO FRONTEND")
-        return jsonify([]), 200, {"Access-Control-Allow-Origin": "*"}
+        print("ERROR TRYING TO SEND GOAL VALUE TO FRONTEND")    
 
-@app.route('/watering', methods=["GET"])
-def get_val():
-    """Sends the location of the currently selected sensor.
-
-    Returns:
-       list: Information about selected sensor.
-    """
-    try:
-        if config.orderIndex != 0:
-            array_ind = config.order[config.orderIndex].index
-            config.sensorBase[array_ind].lastWater = time.time()
-            plant = Plants.query.get(config.sensorBase[array_ind].db_id)
-            plant.date_time = datetime.fromtimestamp(config.sensorBase[array_ind].lastWater)
-            db.session.commit()
-        config.orderIndex += 1
-        if config.orderIndex<len(config.order):
-            return jsonify([config.order[config.orderIndex].x,config.order[config.orderIndex].y,0,config.order[config.orderIndex].water]), 200, {"Access-Control-Allow-Origin": "*"}
-        else:
-            refill()
-            return jsonify([startPos.x,startPos.y,1,config.refill_volume]), 200, {"Access-Control-Allow-Origin": "*"}
-    except Exception as e:
-        msg = String()
-        msg.data = "STOP"
-        publisher.publish(msg)
-        send_error_notif("Error sending value to robot: "+str(e))
-     #   print(e)
-      #  return jsonify([]), 200, {"Access-Control-Allow-Origin": "*"}
-
-@app.route('/update')
-def update():
-    """Sends locations of active sensors to frontend.
-
-    Returns:
-        JSON: Information about active sensors.
-    """
-    if config.lastOrderIndex != config.orderIndex and config.orderIndex != 0:
-        array_ind = config.order[config.lastOrderIndex].index
-        config.sensorBase[array_ind].lastWater = time.time()
-        plant = Plants.query.get(config.sensorBase[array_ind].db_id)
-        plant.date_time = datetime.fromtimestamp(config.sensorBase[array_ind].lastWater)
-        db.session.commit()
-        config.lastOrderIndex = config.orderIndex
-    config.jsons.clear()
-    for i in config.sensorBase:
-        if i is not None:
-            config.jsons.append(json.loads(i.toJson()))
-    check_arduino_sensor_status()
-    try:
-        return jsonify(config.jsons), 200, {"Access-Control-Allow-Origin": "*"}
-    except Exception:
-        return jsonify([]), 200, {"Access-Control-Allow-Origin": "*"}
-
-@app.route('/ping', methods=["GET"])
-def ping_pong():
-    """Route for testing connection.
-
-    Returns:
-        JSON: Sends the string 'pong!'
-    """
-    return jsonify('pong!'), 200, {"Access-Control-Allow-Origin": "*"}    
-
-@app.route('/get_plant_num')
 def get_plant_num():
     """Funtion counts the number of active sensors.
 
@@ -794,9 +700,8 @@ def get_plant_num():
     for i in config.sensorBase:
         if i is not None:
             count+=1
-    return jsonify(count)
+    config.update_data[5] = count
 
-@app.route('/get_routes', methods=["GET"])
 def get_routes():
     """Function sends data about routes to the frontend
 
@@ -812,7 +717,60 @@ def get_routes():
             data_next.append(config.nextRoute[i].toJson())
     except Exception as e:
         pass
-    return jsonify([data_curr,data_next])
+    config.update_data[6] = data_curr
+    config.update_data[7] = data_next
+
+#Server routes
+@app.route('/deleted', methods=['GET'])
+def deleted():
+    """Sends indexes of deleted entries to the frontend.
+
+    Returns:
+       list: indexes of deleted entries.
+    """
+    temp = config.deleted.copy()
+    config.deleted.clear()
+    return jsonify(temp)
+        
+@app.route('/update')
+def update():
+    """Sends locations of active sensors to frontend.
+
+    Returns:
+        JSON: Information about active sensors.
+    """
+    config.update_data[0] = config.status
+    send_goal()
+    if config.lastOrderIndex != config.orderIndex and config.orderIndex != 0:
+        array_ind = config.order[config.lastOrderIndex].index
+        config.sensorBase[array_ind].lastWater = time.time()
+        plant = Plants.query.get(config.sensorBase[array_ind].db_id)
+        plant.date_time = datetime.fromtimestamp(config.sensorBase[array_ind].lastWater)
+        db.session.commit()
+        config.lastOrderIndex = config.orderIndex
+    config.jsons.clear()
+    for i in config.sensorBase:
+        if i is not None:
+            config.jsons.append(json.loads(i.toJson()))
+    check_arduino_sensor_status()
+    config.update_data[4] = config.jsons
+    get_plant_num()
+    get_routes()
+    if len(config.poseData) == 2:
+        config.update_data[3] = config.poseData
+    try:
+        return jsonify(config.update_data), 200, {"Access-Control-Allow-Origin": "*"}
+    except Exception:
+        return jsonify([]), 200, {"Access-Control-Allow-Origin": "*"}
+
+@app.route('/ping', methods=["GET"])
+def ping_pong():
+    """Route for testing connection.
+
+    Returns:
+        JSON: Sends the string 'pong!'
+    """
+    return jsonify('pong!'), 200, {"Access-Control-Allow-Origin": "*"}    
 
 @app.route('/test', methods=['POST'])
 def handle_data():
@@ -827,8 +785,6 @@ def handle_data():
         config.arduino_status[int(ip_address[len(ip_address)-1])-1] = False
         config.arduino_pings[int(ip_address[len(ip_address)-1])-1] = False
     data = request.get_json()
-    if panel == 5:
-        print(data)
     try:
         setup_sensor_list(panel,data)
     except Exception:

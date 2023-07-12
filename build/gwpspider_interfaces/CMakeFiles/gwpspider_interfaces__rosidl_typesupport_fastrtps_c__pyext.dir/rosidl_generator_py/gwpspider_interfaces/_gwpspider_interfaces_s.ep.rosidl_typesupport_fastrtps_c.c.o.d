@@ -288,4 +288,7 @@ CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl
  /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__functions.h \
  /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/spider_goal__type_support.h \
  /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/spider_goal__struct.h \
- /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/spider_goal__functions.h
+ /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/spider_goal__functions.h \
+ /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/get_correction_offset__type_support.h \
+ /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/get_correction_offset__struct.h \
+ /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/get_correction_offset__functions.h

@@ -1,0 +1,7 @@
+[0.000000] (-) TimerEvent: {}
+[0.000352] (-) JobUnselected: {'identifier': 'flask_server'}
+[0.000603] (-) JobUnselected: {'identifier': 'gwpspider_interfaces'}
+[0.000630] (-) JobUnselected: {'identifier': 'my_service_interfaces'}
+[0.000647] (-) JobUnselected: {'identifier': 'py_node_test'}
+[0.000675] (-) JobUnselected: {'identifier': 'py_srvcli'}
+[0.000835] (-) EventReactorShutdown: {}

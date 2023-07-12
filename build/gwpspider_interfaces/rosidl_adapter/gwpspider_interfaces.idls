@@ -25,3 +25,4 @@
 /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_adapter/gwpspider_interfaces:srv/MoveLegVelocityMode.idl
 /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_adapter/gwpspider_interfaces:srv/ToggleAdditionalControllerMode.idl
 /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_adapter/gwpspider_interfaces:srv/SpiderGoal.idl
+/home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_adapter/gwpspider_interfaces:srv/GetCorrectionOffset.idl

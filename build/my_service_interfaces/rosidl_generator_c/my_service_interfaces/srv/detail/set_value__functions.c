@@ -10,21 +10,13 @@
 
 #include "rcutils/allocator.h"
 
-// Include directives for member types
-// Member `value`
-#include "rosidl_runtime_c/string_functions.h"
-
 bool
 my_service_interfaces__srv__SetValue_Request__init(my_service_interfaces__srv__SetValue_Request * msg)
 {
   if (!msg) {
     return false;
   }
-  // value
-  if (!rosidl_runtime_c__String__init(&msg->value)) {
-    my_service_interfaces__srv__SetValue_Request__fini(msg);
-    return false;
-  }
+  // structure_needs_at_least_one_member
   return true;
 }
 
@@ -34,8 +26,7 @@ my_service_interfaces__srv__SetValue_Request__fini(my_service_interfaces__srv__S
   if (!msg) {
     return;
   }
-  // value
-  rosidl_runtime_c__String__fini(&msg->value);
+  // structure_needs_at_least_one_member
 }
 
 bool
@@ -44,10 +35,8 @@ my_service_interfaces__srv__SetValue_Request__are_equal(const my_service_interfa
   if (!lhs || !rhs) {
     return false;
   }
-  // value
-  if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->value), &(rhs->value)))
-  {
+  // structure_needs_at_least_one_member
+  if (lhs->structure_needs_at_least_one_member != rhs->structure_needs_at_least_one_member) {
     return false;
   }
   return true;
@@ -61,12 +50,8 @@ my_service_interfaces__srv__SetValue_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // value
-  if (!rosidl_runtime_c__String__copy(
-      &(input->value), &(output->value)))
-  {
-    return false;
-  }
+  // structure_needs_at_least_one_member
+  output->structure_needs_at_least_one_member = input->structure_needs_at_least_one_member;
   return true;
 }
 
@@ -250,13 +235,23 @@ my_service_interfaces__srv__SetValue_Request__Sequence__copy(
 }
 
 
+// Include directives for member types
+// Member `data`
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
+
 bool
 my_service_interfaces__srv__SetValue_Response__init(my_service_interfaces__srv__SetValue_Response * msg)
 {
   if (!msg) {
     return false;
   }
-  // succes
+  // data
+  if (!rosidl_runtime_c__float__Sequence__init(&msg->data, 0)) {
+    my_service_interfaces__srv__SetValue_Response__fini(msg);
+    return false;
+  }
+  // go_refill
+  // volume
   return true;
 }
 
@@ -266,7 +261,10 @@ my_service_interfaces__srv__SetValue_Response__fini(my_service_interfaces__srv__
   if (!msg) {
     return;
   }
-  // succes
+  // data
+  rosidl_runtime_c__float__Sequence__fini(&msg->data);
+  // go_refill
+  // volume
 }
 
 bool
@@ -275,8 +273,18 @@ my_service_interfaces__srv__SetValue_Response__are_equal(const my_service_interf
   if (!lhs || !rhs) {
     return false;
   }
-  // succes
-  if (lhs->succes != rhs->succes) {
+  // data
+  if (!rosidl_runtime_c__float__Sequence__are_equal(
+      &(lhs->data), &(rhs->data)))
+  {
+    return false;
+  }
+  // go_refill
+  if (lhs->go_refill != rhs->go_refill) {
+    return false;
+  }
+  // volume
+  if (lhs->volume != rhs->volume) {
     return false;
   }
   return true;
@@ -290,8 +298,16 @@ my_service_interfaces__srv__SetValue_Response__copy(
   if (!input || !output) {
     return false;
   }
-  // succes
-  output->succes = input->succes;
+  // data
+  if (!rosidl_runtime_c__float__Sequence__copy(
+      &(input->data), &(output->data)))
+  {
+    return false;
+  }
+  // go_refill
+  output->go_refill = input->go_refill;
+  // volume
+  output->volume = input->volume;
   return true;
 }
 

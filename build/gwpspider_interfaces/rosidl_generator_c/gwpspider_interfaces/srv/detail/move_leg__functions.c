@@ -49,6 +49,7 @@ gwpspider_interfaces__srv__MoveLeg_Request__init(gwpspider_interfaces__srv__Move
   }
   // open_gripper
   // close_gripper
+  // use_prediction_model
   return true;
 }
 
@@ -71,6 +72,7 @@ gwpspider_interfaces__srv__MoveLeg_Request__fini(gwpspider_interfaces__srv__Move
   std_msgs__msg__Float32MultiArray__fini(&msg->spider_pose);
   // open_gripper
   // close_gripper
+  // use_prediction_model
 }
 
 bool
@@ -123,6 +125,10 @@ gwpspider_interfaces__srv__MoveLeg_Request__are_equal(const gwpspider_interfaces
   if (lhs->close_gripper != rhs->close_gripper) {
     return false;
   }
+  // use_prediction_model
+  if (lhs->use_prediction_model != rhs->use_prediction_model) {
+    return false;
+  }
   return true;
 }
 
@@ -168,6 +174,8 @@ gwpspider_interfaces__srv__MoveLeg_Request__copy(
   output->open_gripper = input->open_gripper;
   // close_gripper
   output->close_gripper = input->close_gripper;
+  // use_prediction_model
+  output->use_prediction_model = input->use_prediction_model;
   return true;
 }
 

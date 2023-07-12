@@ -174,6 +174,10 @@ CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/
 CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/spider_goal__builder.hpp
 CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/spider_goal__struct.hpp
 CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/spider_goal__traits.hpp
+CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/get_correction_offset.hpp
+CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__builder.hpp
+CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__struct.hpp
+CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__traits.hpp
 
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
@@ -217,6 +221,7 @@ rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: rosidl_adapte
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: rosidl_adapter/gwpspider_interfaces/srv/MoveLegVelocityMode.idl
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: rosidl_adapter/gwpspider_interfaces/srv/ToggleAdditionalControllerMode.idl
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: rosidl_adapter/gwpspider_interfaces/srv/SpiderGoal.idl
+rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: rosidl_adapter/gwpspider_interfaces/srv/GetCorrectionOffset.idl
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -573,6 +578,18 @@ rosidl_generator_cpp/gwpspider_interfaces/srv/detail/spider_goal__struct.hpp: ro
 rosidl_generator_cpp/gwpspider_interfaces/srv/detail/spider_goal__traits.hpp: rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/gwpspider_interfaces/srv/detail/spider_goal__traits.hpp
 
+rosidl_generator_cpp/gwpspider_interfaces/srv/get_correction_offset.hpp: rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/gwpspider_interfaces/srv/get_correction_offset.hpp
+
+rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__builder.hpp: rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__builder.hpp
+
+rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__struct.hpp: rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__struct.hpp
+
+rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__traits.hpp: rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__traits.hpp
+
 gwpspider_interfaces__cpp: CMakeFiles/gwpspider_interfaces__cpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/msg/bno_data.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/msg/detail/bno_data__builder.hpp
@@ -621,6 +638,9 @@ gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/distribute_forces__builder.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/distribute_forces__struct.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/distribute_forces__traits.hpp
+gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__builder.hpp
+gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__struct.hpp
+gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__traits.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_leg_trajectory__builder.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_leg_trajectory__struct.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_leg_trajectory__traits.hpp
@@ -667,6 +687,7 @@ gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/toggle_motors_torque__struct.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/toggle_motors_torque__traits.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/distribute_forces.hpp
+gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/get_correction_offset.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/get_leg_trajectory.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/get_modified_walking_instructions.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/get_spider_pose.hpp

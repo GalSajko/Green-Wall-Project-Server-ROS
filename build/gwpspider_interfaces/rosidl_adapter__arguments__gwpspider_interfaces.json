@@ -27,6 +27,7 @@
     "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/GetSpiderPose.srv",
     "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/MoveLegVelocityMode.srv",
     "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/ToggleAdditionalControllerMode.srv",
-    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/SpiderGoal.srv"
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/SpiderGoal.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/GetCorrectionOffset.srv"
   ]
 }

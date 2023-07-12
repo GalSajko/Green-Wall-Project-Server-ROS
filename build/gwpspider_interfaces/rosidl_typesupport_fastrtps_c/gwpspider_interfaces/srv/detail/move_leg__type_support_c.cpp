@@ -147,6 +147,11 @@ static bool _MoveLeg_Request__cdr_serialize(
     cdr << (ros_message->close_gripper ? true : false);
   }
 
+  // Field name: use_prediction_model
+  {
+    cdr << (ros_message->use_prediction_model ? true : false);
+  }
+
   return true;
 }
 
@@ -250,6 +255,13 @@ static bool _MoveLeg_Request__cdr_deserialize(
     ros_message->close_gripper = tmp ? true : false;
   }
 
+  // Field name: use_prediction_model
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->use_prediction_model = tmp ? true : false;
+  }
+
   return true;
 }  // NOLINT(readability/fn_size)
 
@@ -310,6 +322,12 @@ size_t get_serialized_size_gwpspider_interfaces__srv__MoveLeg_Request(
   // field.name close_gripper
   {
     size_t item_size = sizeof(ros_message->close_gripper);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name use_prediction_model
+  {
+    size_t item_size = sizeof(ros_message->use_prediction_model);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -420,6 +438,12 @@ size_t max_serialized_size_gwpspider_interfaces__srv__MoveLeg_Request(
     current_alignment += array_size * sizeof(uint8_t);
   }
   // member: close_gripper
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+  // member: use_prediction_model
   {
     size_t array_size = 1;
 

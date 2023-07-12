@@ -2,4 +2,5 @@
 client = py_srvcli.client:main
 service = py_srvcli.server:main
 talker = py_srvcli.publicher:main
+talker2 = py_srvcli.talker2:main
 

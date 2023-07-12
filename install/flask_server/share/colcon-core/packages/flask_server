@@ -1,1 +1,1 @@
-gwpspider_interfaces:rclpy
+gwpspider_interfaces:my_service_interfaces:rclcpp:rclpy

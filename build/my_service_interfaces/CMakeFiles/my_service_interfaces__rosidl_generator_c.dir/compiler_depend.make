@@ -136,7 +136,6 @@ CMakeFiles/my_service_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_s
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   /usr/include/assert.h \
   /usr/include/string.h \
@@ -158,7 +157,7 @@ CMakeFiles/my_service_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_s
   /opt/ros/humble/include/rcutils/rcutils/visibility_control.h \
   /opt/ros/humble/include/rcutils/rcutils/visibility_control_macros.h \
   /opt/ros/humble/include/rcutils/rcutils/types/rcutils_ret.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h
 
 
 rosidl_generator_c/my_service_interfaces/srv/detail/set_value__struct.h:
@@ -254,6 +253,8 @@ rosidl_generator_c/my_service_interfaces/msg/detail/target_coordinates__function
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 

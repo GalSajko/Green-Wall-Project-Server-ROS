@@ -1,8 +1,10 @@
+/home/spider/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/talker2.py
 /home/spider/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/client.py
 /home/spider/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/server.py
 /home/spider/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/listener.py
 /home/spider/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/__init__.py
 /home/spider/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/publicher.py
+/home/spider/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/__pycache__/talker2.cpython-310.pyc
 /home/spider/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/__pycache__/client.cpython-310.pyc
 /home/spider/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/__pycache__/server.cpython-310.pyc
 /home/spider/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/__pycache__/listener.cpython-310.pyc
@@ -20,3 +22,4 @@
 /home/spider/ros2_ws/install/py_srvcli/lib/py_srvcli/client
 /home/spider/ros2_ws/install/py_srvcli/lib/py_srvcli/service
 /home/spider/ros2_ws/install/py_srvcli/lib/py_srvcli/talker
+/home/spider/ros2_ws/install/py_srvcli/lib/py_srvcli/talker2

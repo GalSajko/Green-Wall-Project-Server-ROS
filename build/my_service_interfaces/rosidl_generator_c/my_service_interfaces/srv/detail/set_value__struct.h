@@ -17,14 +17,10 @@ extern "C"
 
 // Constants defined in the message
 
-// Include directives for member types
-// Member 'value'
-#include "rosidl_runtime_c/string.h"
-
 /// Struct defined in srv/SetValue in the package my_service_interfaces.
 typedef struct my_service_interfaces__srv__SetValue_Request
 {
-  rosidl_runtime_c__String value;
+  uint8_t structure_needs_at_least_one_member;
 } my_service_interfaces__srv__SetValue_Request;
 
 // Struct for a sequence of my_service_interfaces__srv__SetValue_Request.
@@ -40,10 +36,16 @@ typedef struct my_service_interfaces__srv__SetValue_Request__Sequence
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'data'
+#include "rosidl_runtime_c/primitives_sequence.h"
+
 /// Struct defined in srv/SetValue in the package my_service_interfaces.
 typedef struct my_service_interfaces__srv__SetValue_Response
 {
-  bool succes;
+  rosidl_runtime_c__float__Sequence data;
+  bool go_refill;
+  int32_t volume;
 } my_service_interfaces__srv__SetValue_Response;
 
 // Struct for a sequence of my_service_interfaces__srv__SetValue_Response.

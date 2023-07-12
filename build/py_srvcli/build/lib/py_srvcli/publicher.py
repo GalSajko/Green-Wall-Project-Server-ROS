@@ -1,23 +1,26 @@
 import rclpy
 from rclpy.node import Node
 from gwpconfig import commconstants
-from std_msgs.msg import String
+from std_msgs.msg import String, Float32MultiArray
+import random
 
 
 class MinimalPublisher(Node):
 
     def __init__(self):
         super().__init__('minimal_publisher')
-        self.publisher_ = self.create_publisher(String, 'messages', 10)
-        timer_period = 60  # seconds
+        self.publisher_ = self.create_publisher(Float32MultiArray, 'position', 10)
+        timer_period = 1  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0
 
     def timer_callback(self):
-        msg = String()
-        msg.data = "E05"
+        x = random.uniform(0, 3)
+        y = random.uniform(0, 3)
+        msg = Float32MultiArray()
+        msg.data = [x,y]
         self.publisher_.publish(msg)
-        self.get_logger().info('Publishing: "%s"' % msg.data)
+        self.get_logger().info("Published data: x={}, y={}".format(x, y))
         self.i += 1
 
 

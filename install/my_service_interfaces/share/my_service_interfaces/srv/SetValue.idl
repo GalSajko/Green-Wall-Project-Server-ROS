@@ -6,10 +6,14 @@
 module my_service_interfaces {
   module srv {
     struct SetValue_Request {
-      string value;
+      uint8 structure_needs_at_least_one_member;
     };
     struct SetValue_Response {
-      boolean succes;
+      sequence<float> data;
+
+      boolean go_refill;
+
+      int32 volume;
     };
   };
 };

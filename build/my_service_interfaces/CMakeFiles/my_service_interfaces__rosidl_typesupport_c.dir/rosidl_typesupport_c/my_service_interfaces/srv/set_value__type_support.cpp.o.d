@@ -25,7 +25,6 @@ CMakeFiles/my_service_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
  /home/spider/ros2_ws/build/my_service_interfaces/rosidl_generator_c/my_service_interfaces/srv/detail/set_value__type_support.h \
  /home/spider/ros2_ws/build/my_service_interfaces/rosidl_generator_c/my_service_interfaces/msg/rosidl_generator_c__visibility_control.h \

@@ -5,8 +5,6 @@
 
 # Import statements for member types
 
-import builtins  # noqa: E402, I100
-
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -55,22 +53,18 @@ class SetValue_Request(metaclass=Metaclass_SetValue_Request):
     """Message class 'SetValue_Request'."""
 
     __slots__ = [
-        '_value',
     ]
 
     _fields_and_field_types = {
-        'value': 'string',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.UnboundedString(),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.value = kwargs.get('value', str())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -101,8 +95,6 @@ class SetValue_Request(metaclass=Metaclass_SetValue_Request):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.value != other.value:
-            return False
         return True
 
     @classmethod
@@ -110,24 +102,15 @@ class SetValue_Request(metaclass=Metaclass_SetValue_Request):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @builtins.property
-    def value(self):
-        """Message field 'value'."""
-        return self._value
-
-    @value.setter
-    def value(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, str), \
-                "The 'value' field must be of type 'str'"
-        self._value = value
-
 
 # Import statements for member types
 
-# already imported above
-# import builtins
+# Member 'data'
+import array  # noqa: E402, I100
+
+import builtins  # noqa: E402, I100
+
+import math  # noqa: E402, I100
 
 # already imported above
 # import rosidl_parser.definition
@@ -178,22 +161,30 @@ class SetValue_Response(metaclass=Metaclass_SetValue_Response):
     """Message class 'SetValue_Response'."""
 
     __slots__ = [
-        '_succes',
+        '_data',
+        '_go_refill',
+        '_volume',
     ]
 
     _fields_and_field_types = {
-        'succes': 'boolean',
+        'data': 'sequence<float>',
+        'go_refill': 'boolean',
+        'volume': 'int32',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.succes = kwargs.get('succes', bool())
+        self.data = array.array('f', kwargs.get('data', []))
+        self.go_refill = kwargs.get('go_refill', bool())
+        self.volume = kwargs.get('volume', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -224,7 +215,11 @@ class SetValue_Response(metaclass=Metaclass_SetValue_Response):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.succes != other.succes:
+        if self.data != other.data:
+            return False
+        if self.go_refill != other.go_refill:
+            return False
+        if self.volume != other.volume:
             return False
         return True
 
@@ -234,17 +229,60 @@ class SetValue_Response(metaclass=Metaclass_SetValue_Response):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def succes(self):
-        """Message field 'succes'."""
-        return self._succes
+    def data(self):
+        """Message field 'data'."""
+        return self._data
 
-    @succes.setter
-    def succes(self, value):
+    @data.setter
+    def data(self, value):
+        if isinstance(value, array.array):
+            assert value.typecode == 'f', \
+                "The 'data' array.array() must have the type code of 'f'"
+            self._data = value
+            return
+        if __debug__:
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
+            assert \
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 all(isinstance(v, float) for v in value) and
+                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
+                "The 'data' field must be a set or sequence and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
+        self._data = array.array('f', value)
+
+    @builtins.property
+    def go_refill(self):
+        """Message field 'go_refill'."""
+        return self._go_refill
+
+    @go_refill.setter
+    def go_refill(self, value):
         if __debug__:
             assert \
                 isinstance(value, bool), \
-                "The 'succes' field must be of type 'bool'"
-        self._succes = value
+                "The 'go_refill' field must be of type 'bool'"
+        self._go_refill = value
+
+    @builtins.property
+    def volume(self):
+        """Message field 'volume'."""
+        return self._volume
+
+    @volume.setter
+    def volume(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'volume' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'volume' field must be an integer in [-2147483648, 2147483647]"
+        self._volume = value
 
 
 class Metaclass_SetValue(type):

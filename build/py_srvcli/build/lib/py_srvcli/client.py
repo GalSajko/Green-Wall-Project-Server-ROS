@@ -1,7 +1,7 @@
 import sys
 
-from my_service_interfaces.srv import SetValue
 from gwpspider_interfaces.srv import SpiderGoal
+
 import rclpy
 from rclpy.node import Node
 

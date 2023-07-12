@@ -52,6 +52,7 @@ struct MoveLeg_Request_
       this->is_offset = false;
       this->open_gripper = false;
       this->close_gripper = false;
+      this->use_prediction_model = false;
     }
   }
 
@@ -71,6 +72,7 @@ struct MoveLeg_Request_
       this->is_offset = false;
       this->open_gripper = false;
       this->close_gripper = false;
+      this->use_prediction_model = false;
     }
   }
 
@@ -102,6 +104,9 @@ struct MoveLeg_Request_
   using _close_gripper_type =
     bool;
   _close_gripper_type close_gripper;
+  using _use_prediction_model_type =
+    bool;
+  _use_prediction_model_type use_prediction_model;
 
   // setters for named parameter idiom
   Type & set__leg_id(
@@ -156,6 +161,12 @@ struct MoveLeg_Request_
     const bool & _arg)
   {
     this->close_gripper = _arg;
+    return *this;
+  }
+  Type & set__use_prediction_model(
+    const bool & _arg)
+  {
+    this->use_prediction_model = _arg;
     return *this;
   }
 
@@ -226,6 +237,9 @@ struct MoveLeg_Request_
       return false;
     }
     if (this->close_gripper != other.close_gripper) {
+      return false;
+    }
+    if (this->use_prediction_model != other.use_prediction_model) {
       return false;
     }
     return true;

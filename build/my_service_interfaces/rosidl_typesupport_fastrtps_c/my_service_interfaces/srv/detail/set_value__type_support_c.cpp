@@ -34,8 +34,6 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // value
-#include "rosidl_runtime_c/string_functions.h"  // value
 
 // forward declare type support functions
 
@@ -51,18 +49,9 @@ static bool _SetValue_Request__cdr_serialize(
     return false;
   }
   const _SetValue_Request__ros_msg_type * ros_message = static_cast<const _SetValue_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: value
+  // Field name: structure_needs_at_least_one_member
   {
-    const rosidl_runtime_c__String * str = &ros_message->value;
-    if (str->capacity == 0 || str->capacity <= str->size) {
-      fprintf(stderr, "string capacity not greater than size\n");
-      return false;
-    }
-    if (str->data[str->size] != '\0') {
-      fprintf(stderr, "string not null-terminated\n");
-      return false;
-    }
-    cdr << str->data;
+    cdr << ros_message->structure_needs_at_least_one_member;
   }
 
   return true;
@@ -77,20 +66,9 @@ static bool _SetValue_Request__cdr_deserialize(
     return false;
   }
   _SetValue_Request__ros_msg_type * ros_message = static_cast<_SetValue_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: value
+  // Field name: structure_needs_at_least_one_member
   {
-    std::string tmp;
-    cdr >> tmp;
-    if (!ros_message->value.data) {
-      rosidl_runtime_c__String__init(&ros_message->value);
-    }
-    bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->value,
-      tmp.c_str());
-    if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'value'\n");
-      return false;
-    }
+    cdr >> ros_message->structure_needs_at_least_one_member;
   }
 
   return true;
@@ -110,10 +88,12 @@ size_t get_serialized_size_my_service_interfaces__srv__SetValue_Request(
   (void)padding;
   (void)wchar_size;
 
-  // field.name value
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->value.size + 1);
+  // field.name structure_needs_at_least_one_member
+  {
+    size_t item_size = sizeof(ros_message->structure_needs_at_least_one_member);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -141,17 +121,11 @@ size_t max_serialized_size_my_service_interfaces__srv__SetValue_Request(
   full_bounded = true;
   is_plain = true;
 
-  // member: value
+  // member: structure_needs_at_least_one_member
   {
     size_t array_size = 1;
 
-    full_bounded = false;
-    is_plain = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   return current_alignment - initial_alignment;
@@ -237,6 +211,8 @@ extern "C"
 {
 #endif
 
+#include "rosidl_runtime_c/primitives_sequence.h"  // data
+#include "rosidl_runtime_c/primitives_sequence_functions.h"  // data
 
 // forward declare type support functions
 
@@ -252,9 +228,22 @@ static bool _SetValue_Response__cdr_serialize(
     return false;
   }
   const _SetValue_Response__ros_msg_type * ros_message = static_cast<const _SetValue_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: succes
+  // Field name: data
   {
-    cdr << (ros_message->succes ? true : false);
+    size_t size = ros_message->data.size;
+    auto array_ptr = ros_message->data.data;
+    cdr << static_cast<uint32_t>(size);
+    cdr.serializeArray(array_ptr, size);
+  }
+
+  // Field name: go_refill
+  {
+    cdr << (ros_message->go_refill ? true : false);
+  }
+
+  // Field name: volume
+  {
+    cdr << ros_message->volume;
   }
 
   return true;
@@ -269,11 +258,32 @@ static bool _SetValue_Response__cdr_deserialize(
     return false;
   }
   _SetValue_Response__ros_msg_type * ros_message = static_cast<_SetValue_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: succes
+  // Field name: data
+  {
+    uint32_t cdrSize;
+    cdr >> cdrSize;
+    size_t size = static_cast<size_t>(cdrSize);
+    if (ros_message->data.data) {
+      rosidl_runtime_c__float__Sequence__fini(&ros_message->data);
+    }
+    if (!rosidl_runtime_c__float__Sequence__init(&ros_message->data, size)) {
+      fprintf(stderr, "failed to create array for field 'data'");
+      return false;
+    }
+    auto array_ptr = ros_message->data.data;
+    cdr.deserializeArray(array_ptr, size);
+  }
+
+  // Field name: go_refill
   {
     uint8_t tmp;
     cdr >> tmp;
-    ros_message->succes = tmp ? true : false;
+    ros_message->go_refill = tmp ? true : false;
+  }
+
+  // Field name: volume
+  {
+    cdr >> ros_message->volume;
   }
 
   return true;
@@ -293,9 +303,26 @@ size_t get_serialized_size_my_service_interfaces__srv__SetValue_Response(
   (void)padding;
   (void)wchar_size;
 
-  // field.name succes
+  // field.name data
   {
-    size_t item_size = sizeof(ros_message->succes);
+    size_t array_size = ros_message->data.size;
+    auto array_ptr = ros_message->data.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name go_refill
+  {
+    size_t item_size = sizeof(ros_message->go_refill);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name volume
+  {
+    size_t item_size = sizeof(ros_message->volume);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -326,11 +353,29 @@ size_t max_serialized_size_my_service_interfaces__srv__SetValue_Response(
   full_bounded = true;
   is_plain = true;
 
-  // member: succes
+  // member: data
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: go_refill
   {
     size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint8_t);
+  }
+  // member: volume
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   return current_alignment - initial_alignment;
