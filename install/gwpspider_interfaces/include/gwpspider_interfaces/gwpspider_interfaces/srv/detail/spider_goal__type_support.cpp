@@ -39,14 +39,14 @@ void SpiderGoal_Request_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember SpiderGoal_Request_message_member_array[1] = {
   {
-    "structure_needs_at_least_one_member",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
+    "request_new_goal",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(gwpspider_interfaces::srv::SpiderGoal_Request, structure_needs_at_least_one_member),  // bytes offset in struct
+    offsetof(gwpspider_interfaces::srv::SpiderGoal_Request, request_new_goal),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -156,45 +156,45 @@ void SpiderGoal_Response_fini_function(void * message_memory)
   typed_message->~SpiderGoal_Response();
 }
 
-size_t size_function__SpiderGoal_Response__data(const void * untyped_member)
+size_t size_function__SpiderGoal_Response__watering_position(const void * untyped_member)
 {
   const auto * member = reinterpret_cast<const std::vector<float> *>(untyped_member);
   return member->size();
 }
 
-const void * get_const_function__SpiderGoal_Response__data(const void * untyped_member, size_t index)
+const void * get_const_function__SpiderGoal_Response__watering_position(const void * untyped_member, size_t index)
 {
   const auto & member =
     *reinterpret_cast<const std::vector<float> *>(untyped_member);
   return &member[index];
 }
 
-void * get_function__SpiderGoal_Response__data(void * untyped_member, size_t index)
+void * get_function__SpiderGoal_Response__watering_position(void * untyped_member, size_t index)
 {
   auto & member =
     *reinterpret_cast<std::vector<float> *>(untyped_member);
   return &member[index];
 }
 
-void fetch_function__SpiderGoal_Response__data(
+void fetch_function__SpiderGoal_Response__watering_position(
   const void * untyped_member, size_t index, void * untyped_value)
 {
   const auto & item = *reinterpret_cast<const float *>(
-    get_const_function__SpiderGoal_Response__data(untyped_member, index));
+    get_const_function__SpiderGoal_Response__watering_position(untyped_member, index));
   auto & value = *reinterpret_cast<float *>(untyped_value);
   value = item;
 }
 
-void assign_function__SpiderGoal_Response__data(
+void assign_function__SpiderGoal_Response__watering_position(
   void * untyped_member, size_t index, const void * untyped_value)
 {
   auto & item = *reinterpret_cast<float *>(
-    get_function__SpiderGoal_Response__data(untyped_member, index));
+    get_function__SpiderGoal_Response__watering_position(untyped_member, index));
   const auto & value = *reinterpret_cast<const float *>(untyped_value);
   item = value;
 }
 
-void resize_function__SpiderGoal_Response__data(void * untyped_member, size_t size)
+void resize_function__SpiderGoal_Response__watering_position(void * untyped_member, size_t size)
 {
   auto * member =
     reinterpret_cast<std::vector<float> *>(untyped_member);
@@ -203,21 +203,21 @@ void resize_function__SpiderGoal_Response__data(void * untyped_member, size_t si
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember SpiderGoal_Response_message_member_array[3] = {
   {
-    "data",  // name
+    "watering_position",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     true,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(gwpspider_interfaces::srv::SpiderGoal_Response, data),  // bytes offset in struct
+    offsetof(gwpspider_interfaces::srv::SpiderGoal_Response, watering_position),  // bytes offset in struct
     nullptr,  // default value
-    size_function__SpiderGoal_Response__data,  // size() function pointer
-    get_const_function__SpiderGoal_Response__data,  // get_const(index) function pointer
-    get_function__SpiderGoal_Response__data,  // get(index) function pointer
-    fetch_function__SpiderGoal_Response__data,  // fetch(index, &value) function pointer
-    assign_function__SpiderGoal_Response__data,  // assign(index, value) function pointer
-    resize_function__SpiderGoal_Response__data  // resize(index) function pointer
+    size_function__SpiderGoal_Response__watering_position,  // size() function pointer
+    get_const_function__SpiderGoal_Response__watering_position,  // get_const(index) function pointer
+    get_function__SpiderGoal_Response__watering_position,  // get(index) function pointer
+    fetch_function__SpiderGoal_Response__watering_position,  // fetch(index, &value) function pointer
+    assign_function__SpiderGoal_Response__watering_position,  // assign(index, value) function pointer
+    resize_function__SpiderGoal_Response__watering_position  // resize(index) function pointer
   },
   {
     "go_refill",  // name

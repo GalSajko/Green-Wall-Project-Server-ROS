@@ -16,7 +16,7 @@ gwpspider_interfaces__srv__SpiderGoal_Request__init(gwpspider_interfaces__srv__S
   if (!msg) {
     return false;
   }
-  // structure_needs_at_least_one_member
+  // request_new_goal
   return true;
 }
 
@@ -26,7 +26,7 @@ gwpspider_interfaces__srv__SpiderGoal_Request__fini(gwpspider_interfaces__srv__S
   if (!msg) {
     return;
   }
-  // structure_needs_at_least_one_member
+  // request_new_goal
 }
 
 bool
@@ -35,8 +35,8 @@ gwpspider_interfaces__srv__SpiderGoal_Request__are_equal(const gwpspider_interfa
   if (!lhs || !rhs) {
     return false;
   }
-  // structure_needs_at_least_one_member
-  if (lhs->structure_needs_at_least_one_member != rhs->structure_needs_at_least_one_member) {
+  // request_new_goal
+  if (lhs->request_new_goal != rhs->request_new_goal) {
     return false;
   }
   return true;
@@ -50,8 +50,8 @@ gwpspider_interfaces__srv__SpiderGoal_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // structure_needs_at_least_one_member
-  output->structure_needs_at_least_one_member = input->structure_needs_at_least_one_member;
+  // request_new_goal
+  output->request_new_goal = input->request_new_goal;
   return true;
 }
 
@@ -236,7 +236,7 @@ gwpspider_interfaces__srv__SpiderGoal_Request__Sequence__copy(
 
 
 // Include directives for member types
-// Member `data`
+// Member `watering_position`
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
 
 bool
@@ -245,8 +245,8 @@ gwpspider_interfaces__srv__SpiderGoal_Response__init(gwpspider_interfaces__srv__
   if (!msg) {
     return false;
   }
-  // data
-  if (!rosidl_runtime_c__float__Sequence__init(&msg->data, 0)) {
+  // watering_position
+  if (!rosidl_runtime_c__float__Sequence__init(&msg->watering_position, 0)) {
     gwpspider_interfaces__srv__SpiderGoal_Response__fini(msg);
     return false;
   }
@@ -261,8 +261,8 @@ gwpspider_interfaces__srv__SpiderGoal_Response__fini(gwpspider_interfaces__srv__
   if (!msg) {
     return;
   }
-  // data
-  rosidl_runtime_c__float__Sequence__fini(&msg->data);
+  // watering_position
+  rosidl_runtime_c__float__Sequence__fini(&msg->watering_position);
   // go_refill
   // volume
 }
@@ -273,9 +273,9 @@ gwpspider_interfaces__srv__SpiderGoal_Response__are_equal(const gwpspider_interf
   if (!lhs || !rhs) {
     return false;
   }
-  // data
+  // watering_position
   if (!rosidl_runtime_c__float__Sequence__are_equal(
-      &(lhs->data), &(rhs->data)))
+      &(lhs->watering_position), &(rhs->watering_position)))
   {
     return false;
   }
@@ -298,9 +298,9 @@ gwpspider_interfaces__srv__SpiderGoal_Response__copy(
   if (!input || !output) {
     return false;
   }
-  // data
+  // watering_position
   if (!rosidl_runtime_c__float__Sequence__copy(
-      &(input->data), &(output->data)))
+      &(input->watering_position), &(output->watering_position)))
   {
     return false;
   }

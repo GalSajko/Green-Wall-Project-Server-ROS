@@ -1,1 +1,2 @@
-gwpspider_interfaces/WaterPumpCommand instructions
+int64 pump
+float64 volume

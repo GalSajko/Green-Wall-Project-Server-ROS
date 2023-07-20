@@ -34,20 +34,8 @@ extern "C"
 {
 #endif
 
-#include "gwpspider_interfaces/msg/detail/water_pump_command__functions.h"  // instructions
 
 // forward declare type support functions
-size_t get_serialized_size_gwpspider_interfaces__msg__WaterPumpCommand(
-  const void * untyped_ros_message,
-  size_t current_alignment);
-
-size_t max_serialized_size_gwpspider_interfaces__msg__WaterPumpCommand(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-
-const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, gwpspider_interfaces, msg, WaterPumpCommand)();
 
 
 using _ControlWaterPump_Request__ros_msg_type = gwpspider_interfaces__srv__ControlWaterPump_Request;
@@ -61,18 +49,14 @@ static bool _ControlWaterPump_Request__cdr_serialize(
     return false;
   }
   const _ControlWaterPump_Request__ros_msg_type * ros_message = static_cast<const _ControlWaterPump_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: instructions
+  // Field name: pump
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, gwpspider_interfaces, msg, WaterPumpCommand
-      )()->data);
-    if (!callbacks->cdr_serialize(
-        &ros_message->instructions, cdr))
-    {
-      return false;
-    }
+    cdr << ros_message->pump;
+  }
+
+  // Field name: volume
+  {
+    cdr << ros_message->volume;
   }
 
   return true;
@@ -87,18 +71,14 @@ static bool _ControlWaterPump_Request__cdr_deserialize(
     return false;
   }
   _ControlWaterPump_Request__ros_msg_type * ros_message = static_cast<_ControlWaterPump_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: instructions
+  // Field name: pump
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, gwpspider_interfaces, msg, WaterPumpCommand
-      )()->data);
-    if (!callbacks->cdr_deserialize(
-        cdr, &ros_message->instructions))
-    {
-      return false;
-    }
+    cdr >> ros_message->pump;
+  }
+
+  // Field name: volume
+  {
+    cdr >> ros_message->volume;
   }
 
   return true;
@@ -118,10 +98,18 @@ size_t get_serialized_size_gwpspider_interfaces__srv__ControlWaterPump_Request(
   (void)padding;
   (void)wchar_size;
 
-  // field.name instructions
-
-  current_alignment += get_serialized_size_gwpspider_interfaces__msg__WaterPumpCommand(
-    &(ros_message->instructions), current_alignment);
+  // field.name pump
+  {
+    size_t item_size = sizeof(ros_message->pump);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name volume
+  {
+    size_t item_size = sizeof(ros_message->volume);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -149,20 +137,19 @@ size_t max_serialized_size_gwpspider_interfaces__srv__ControlWaterPump_Request(
   full_bounded = true;
   is_plain = true;
 
-  // member: instructions
+  // member: pump
   {
     size_t array_size = 1;
 
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: volume
+  {
+    size_t array_size = 1;
 
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      current_alignment +=
-        max_serialized_size_gwpspider_interfaces__msg__WaterPumpCommand(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   return current_alignment - initial_alignment;

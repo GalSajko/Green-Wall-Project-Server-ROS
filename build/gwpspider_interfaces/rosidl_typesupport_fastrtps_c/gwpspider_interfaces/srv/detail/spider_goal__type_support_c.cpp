@@ -49,9 +49,9 @@ static bool _SpiderGoal_Request__cdr_serialize(
     return false;
   }
   const _SpiderGoal_Request__ros_msg_type * ros_message = static_cast<const _SpiderGoal_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: structure_needs_at_least_one_member
+  // Field name: request_new_goal
   {
-    cdr << ros_message->structure_needs_at_least_one_member;
+    cdr << (ros_message->request_new_goal ? true : false);
   }
 
   return true;
@@ -66,9 +66,11 @@ static bool _SpiderGoal_Request__cdr_deserialize(
     return false;
   }
   _SpiderGoal_Request__ros_msg_type * ros_message = static_cast<_SpiderGoal_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: structure_needs_at_least_one_member
+  // Field name: request_new_goal
   {
-    cdr >> ros_message->structure_needs_at_least_one_member;
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->request_new_goal = tmp ? true : false;
   }
 
   return true;
@@ -88,9 +90,9 @@ size_t get_serialized_size_gwpspider_interfaces__srv__SpiderGoal_Request(
   (void)padding;
   (void)wchar_size;
 
-  // field.name structure_needs_at_least_one_member
+  // field.name request_new_goal
   {
-    size_t item_size = sizeof(ros_message->structure_needs_at_least_one_member);
+    size_t item_size = sizeof(ros_message->request_new_goal);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -121,7 +123,7 @@ size_t max_serialized_size_gwpspider_interfaces__srv__SpiderGoal_Request(
   full_bounded = true;
   is_plain = true;
 
-  // member: structure_needs_at_least_one_member
+  // member: request_new_goal
   {
     size_t array_size = 1;
 
@@ -211,8 +213,8 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/primitives_sequence.h"  // data
-#include "rosidl_runtime_c/primitives_sequence_functions.h"  // data
+#include "rosidl_runtime_c/primitives_sequence.h"  // watering_position
+#include "rosidl_runtime_c/primitives_sequence_functions.h"  // watering_position
 
 // forward declare type support functions
 
@@ -228,10 +230,10 @@ static bool _SpiderGoal_Response__cdr_serialize(
     return false;
   }
   const _SpiderGoal_Response__ros_msg_type * ros_message = static_cast<const _SpiderGoal_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: data
+  // Field name: watering_position
   {
-    size_t size = ros_message->data.size;
-    auto array_ptr = ros_message->data.data;
+    size_t size = ros_message->watering_position.size;
+    auto array_ptr = ros_message->watering_position.data;
     cdr << static_cast<uint32_t>(size);
     cdr.serializeArray(array_ptr, size);
   }
@@ -258,19 +260,19 @@ static bool _SpiderGoal_Response__cdr_deserialize(
     return false;
   }
   _SpiderGoal_Response__ros_msg_type * ros_message = static_cast<_SpiderGoal_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: data
+  // Field name: watering_position
   {
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->data.data) {
-      rosidl_runtime_c__float__Sequence__fini(&ros_message->data);
+    if (ros_message->watering_position.data) {
+      rosidl_runtime_c__float__Sequence__fini(&ros_message->watering_position);
     }
-    if (!rosidl_runtime_c__float__Sequence__init(&ros_message->data, size)) {
-      fprintf(stderr, "failed to create array for field 'data'");
+    if (!rosidl_runtime_c__float__Sequence__init(&ros_message->watering_position, size)) {
+      fprintf(stderr, "failed to create array for field 'watering_position'");
       return false;
     }
-    auto array_ptr = ros_message->data.data;
+    auto array_ptr = ros_message->watering_position.data;
     cdr.deserializeArray(array_ptr, size);
   }
 
@@ -303,10 +305,10 @@ size_t get_serialized_size_gwpspider_interfaces__srv__SpiderGoal_Response(
   (void)padding;
   (void)wchar_size;
 
-  // field.name data
+  // field.name watering_position
   {
-    size_t array_size = ros_message->data.size;
-    auto array_ptr = ros_message->data.data;
+    size_t array_size = ros_message->watering_position.size;
+    auto array_ptr = ros_message->watering_position.data;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
     (void)array_ptr;
@@ -353,7 +355,7 @@ size_t max_serialized_size_gwpspider_interfaces__srv__SpiderGoal_Response(
   full_bounded = true;
   is_plain = true;
 
-  // member: data
+  // member: watering_position
   {
     size_t array_size = 0;
     full_bounded = false;

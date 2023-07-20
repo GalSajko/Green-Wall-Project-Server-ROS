@@ -584,6 +584,7 @@ function update(){
         }
         document.getElementById("plantsNo").innerHTML= JSON.parse(data[5])
         document.getElementById("status").innerHTML = data[0]
+        document.getElementById("water").innerHTML = data[8]/1000
         goal(data)
         spiderPos(data)
     });

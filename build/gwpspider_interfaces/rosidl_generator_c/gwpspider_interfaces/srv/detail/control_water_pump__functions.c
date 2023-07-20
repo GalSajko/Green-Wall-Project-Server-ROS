@@ -10,21 +10,14 @@
 
 #include "rcutils/allocator.h"
 
-// Include directives for member types
-// Member `instructions`
-#include "gwpspider_interfaces/msg/detail/water_pump_command__functions.h"
-
 bool
 gwpspider_interfaces__srv__ControlWaterPump_Request__init(gwpspider_interfaces__srv__ControlWaterPump_Request * msg)
 {
   if (!msg) {
     return false;
   }
-  // instructions
-  if (!gwpspider_interfaces__msg__WaterPumpCommand__init(&msg->instructions)) {
-    gwpspider_interfaces__srv__ControlWaterPump_Request__fini(msg);
-    return false;
-  }
+  // pump
+  // volume
   return true;
 }
 
@@ -34,8 +27,8 @@ gwpspider_interfaces__srv__ControlWaterPump_Request__fini(gwpspider_interfaces__
   if (!msg) {
     return;
   }
-  // instructions
-  gwpspider_interfaces__msg__WaterPumpCommand__fini(&msg->instructions);
+  // pump
+  // volume
 }
 
 bool
@@ -44,10 +37,12 @@ gwpspider_interfaces__srv__ControlWaterPump_Request__are_equal(const gwpspider_i
   if (!lhs || !rhs) {
     return false;
   }
-  // instructions
-  if (!gwpspider_interfaces__msg__WaterPumpCommand__are_equal(
-      &(lhs->instructions), &(rhs->instructions)))
-  {
+  // pump
+  if (lhs->pump != rhs->pump) {
+    return false;
+  }
+  // volume
+  if (lhs->volume != rhs->volume) {
     return false;
   }
   return true;
@@ -61,12 +56,10 @@ gwpspider_interfaces__srv__ControlWaterPump_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // instructions
-  if (!gwpspider_interfaces__msg__WaterPumpCommand__copy(
-      &(input->instructions), &(output->instructions)))
-  {
-    return false;
-  }
+  // pump
+  output->pump = input->pump;
+  // volume
+  output->volume = input->volume;
   return true;
 }
 

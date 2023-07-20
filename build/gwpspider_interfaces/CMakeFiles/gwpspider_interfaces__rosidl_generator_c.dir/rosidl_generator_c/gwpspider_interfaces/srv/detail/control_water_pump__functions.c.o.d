@@ -47,11 +47,8 @@ CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpsp
  /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/control_water_pump__struct.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/msg/detail/water_pump_command__struct.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
- /usr/include/assert.h /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h /usr/include/assert.h \
+ /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h \
@@ -68,5 +65,4 @@ CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpsp
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /opt/ros/humble/include/rcutils/rcutils/visibility_control.h \
  /opt/ros/humble/include/rcutils/rcutils/visibility_control_macros.h \
- /opt/ros/humble/include/rcutils/rcutils/types/rcutils_ret.h \
- /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/msg/detail/water_pump_command__functions.h
+ /opt/ros/humble/include/rcutils/rcutils/types/rcutils_ret.h

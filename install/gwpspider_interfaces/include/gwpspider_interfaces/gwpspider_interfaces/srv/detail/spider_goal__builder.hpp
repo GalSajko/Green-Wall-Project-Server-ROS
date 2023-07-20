@@ -18,6 +18,26 @@ namespace gwpspider_interfaces
 namespace srv
 {
 
+namespace builder
+{
+
+class Init_SpiderGoal_Request_request_new_goal
+{
+public:
+  Init_SpiderGoal_Request_request_new_goal()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  ::gwpspider_interfaces::srv::SpiderGoal_Request request_new_goal(::gwpspider_interfaces::srv::SpiderGoal_Request::_request_new_goal_type arg)
+  {
+    msg_.request_new_goal = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::gwpspider_interfaces::srv::SpiderGoal_Request msg_;
+};
+
+}  // namespace builder
 
 }  // namespace srv
 
@@ -28,7 +48,7 @@ template<>
 inline
 auto build<::gwpspider_interfaces::srv::SpiderGoal_Request>()
 {
-  return ::gwpspider_interfaces::srv::SpiderGoal_Request(rosidl_runtime_cpp::MessageInitialization::ZERO);
+  return gwpspider_interfaces::srv::builder::Init_SpiderGoal_Request_request_new_goal();
 }
 
 }  // namespace gwpspider_interfaces
@@ -75,15 +95,15 @@ private:
   ::gwpspider_interfaces::srv::SpiderGoal_Response msg_;
 };
 
-class Init_SpiderGoal_Response_data
+class Init_SpiderGoal_Response_watering_position
 {
 public:
-  Init_SpiderGoal_Response_data()
+  Init_SpiderGoal_Response_watering_position()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_SpiderGoal_Response_go_refill data(::gwpspider_interfaces::srv::SpiderGoal_Response::_data_type arg)
+  Init_SpiderGoal_Response_go_refill watering_position(::gwpspider_interfaces::srv::SpiderGoal_Response::_watering_position_type arg)
   {
-    msg_.data = std::move(arg);
+    msg_.watering_position = std::move(arg);
     return Init_SpiderGoal_Response_go_refill(msg_);
   }
 
@@ -102,7 +122,7 @@ template<>
 inline
 auto build<::gwpspider_interfaces::srv::SpiderGoal_Response>()
 {
-  return gwpspider_interfaces::srv::builder::Init_SpiderGoal_Response_data();
+  return gwpspider_interfaces::srv::builder::Init_SpiderGoal_Response_watering_position();
 }
 
 }  // namespace gwpspider_interfaces

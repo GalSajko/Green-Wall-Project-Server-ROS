@@ -5,6 +5,8 @@
 
 # Import statements for member types
 
+import builtins  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -53,18 +55,22 @@ class SpiderGoal_Request(metaclass=Metaclass_SpiderGoal_Request):
     """Message class 'SpiderGoal_Request'."""
 
     __slots__ = [
+        '_request_new_goal',
     ]
 
     _fields_and_field_types = {
+        'request_new_goal': 'boolean',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.request_new_goal = kwargs.get('request_new_goal', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -95,6 +101,8 @@ class SpiderGoal_Request(metaclass=Metaclass_SpiderGoal_Request):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.request_new_goal != other.request_new_goal:
+            return False
         return True
 
     @classmethod
@@ -102,13 +110,27 @@ class SpiderGoal_Request(metaclass=Metaclass_SpiderGoal_Request):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
+    @builtins.property
+    def request_new_goal(self):
+        """Message field 'request_new_goal'."""
+        return self._request_new_goal
+
+    @request_new_goal.setter
+    def request_new_goal(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'request_new_goal' field must be of type 'bool'"
+        self._request_new_goal = value
+
 
 # Import statements for member types
 
-# Member 'data'
+# Member 'watering_position'
 import array  # noqa: E402, I100
 
-import builtins  # noqa: E402, I100
+# already imported above
+# import builtins
 
 import math  # noqa: E402, I100
 
@@ -161,13 +183,13 @@ class SpiderGoal_Response(metaclass=Metaclass_SpiderGoal_Response):
     """Message class 'SpiderGoal_Response'."""
 
     __slots__ = [
-        '_data',
+        '_watering_position',
         '_go_refill',
         '_volume',
     ]
 
     _fields_and_field_types = {
-        'data': 'sequence<float>',
+        'watering_position': 'sequence<float>',
         'go_refill': 'boolean',
         'volume': 'int32',
     }
@@ -182,7 +204,7 @@ class SpiderGoal_Response(metaclass=Metaclass_SpiderGoal_Response):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.data = array.array('f', kwargs.get('data', []))
+        self.watering_position = array.array('f', kwargs.get('watering_position', []))
         self.go_refill = kwargs.get('go_refill', bool())
         self.volume = kwargs.get('volume', int())
 
@@ -215,7 +237,7 @@ class SpiderGoal_Response(metaclass=Metaclass_SpiderGoal_Response):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.data != other.data:
+        if self.watering_position != other.watering_position:
             return False
         if self.go_refill != other.go_refill:
             return False
@@ -229,16 +251,16 @@ class SpiderGoal_Response(metaclass=Metaclass_SpiderGoal_Response):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def data(self):
-        """Message field 'data'."""
-        return self._data
+    def watering_position(self):
+        """Message field 'watering_position'."""
+        return self._watering_position
 
-    @data.setter
-    def data(self, value):
+    @watering_position.setter
+    def watering_position(self, value):
         if isinstance(value, array.array):
             assert value.typecode == 'f', \
-                "The 'data' array.array() must have the type code of 'f'"
-            self._data = value
+                "The 'watering_position' array.array() must have the type code of 'f'"
+            self._watering_position = value
             return
         if __debug__:
             from collections.abc import Sequence
@@ -253,8 +275,8 @@ class SpiderGoal_Response(metaclass=Metaclass_SpiderGoal_Response):
                  not isinstance(value, UserString) and
                  all(isinstance(v, float) for v in value) and
                  all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'data' field must be a set or sequence and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._data = array.array('f', value)
+                "The 'watering_position' field must be a set or sequence and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
+        self._watering_position = array.array('f', value)
 
     @builtins.property
     def go_refill(self):

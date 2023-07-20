@@ -38,7 +38,7 @@ struct SpiderGoal_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->structure_needs_at_least_one_member = 0;
+      this->request_new_goal = false;
     }
   }
 
@@ -48,15 +48,22 @@ struct SpiderGoal_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->structure_needs_at_least_one_member = 0;
+      this->request_new_goal = false;
     }
   }
 
   // field types and members
-  using _structure_needs_at_least_one_member_type =
-    uint8_t;
-  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
+  using _request_new_goal_type =
+    bool;
+  _request_new_goal_type request_new_goal;
 
+  // setters for named parameter idiom
+  Type & set__request_new_goal(
+    const bool & _arg)
+  {
+    this->request_new_goal = _arg;
+    return *this;
+  }
 
   // constant declarations
 
@@ -100,7 +107,7 @@ struct SpiderGoal_Request_
   // comparison operators
   bool operator==(const SpiderGoal_Request_ & other) const
   {
-    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
+    if (this->request_new_goal != other.request_new_goal) {
       return false;
     }
     return true;
@@ -162,9 +169,9 @@ struct SpiderGoal_Response_
   }
 
   // field types and members
-  using _data_type =
+  using _watering_position_type =
     std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>>;
-  _data_type data;
+  _watering_position_type watering_position;
   using _go_refill_type =
     bool;
   _go_refill_type go_refill;
@@ -173,10 +180,10 @@ struct SpiderGoal_Response_
   _volume_type volume;
 
   // setters for named parameter idiom
-  Type & set__data(
+  Type & set__watering_position(
     const std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>> & _arg)
   {
-    this->data = _arg;
+    this->watering_position = _arg;
     return *this;
   }
   Type & set__go_refill(
@@ -234,7 +241,7 @@ struct SpiderGoal_Response_
   // comparison operators
   bool operator==(const SpiderGoal_Response_ & other) const
   {
-    if (this->data != other.data) {
+    if (this->watering_position != other.watering_position) {
       return false;
     }
     if (this->go_refill != other.go_refill) {

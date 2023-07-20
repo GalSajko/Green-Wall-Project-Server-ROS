@@ -1,0 +1,9 @@
+from gwpspider_interfaces.msg._bno_data import BnoData  # noqa: F401
+from gwpspider_interfaces.msg._dynamixel_motors_data import DynamixelMotorsData  # noqa: F401
+from gwpspider_interfaces.msg._gripper_command import GripperCommand  # noqa: F401
+from gwpspider_interfaces.msg._gripper_state import GripperState  # noqa: F401
+from gwpspider_interfaces.msg._grippers_states import GrippersStates  # noqa: F401
+from gwpspider_interfaces.msg._leg_trajectory import LegTrajectory  # noqa: F401
+from gwpspider_interfaces.msg._legs_states import LegsStates  # noqa: F401
+from gwpspider_interfaces.msg._walking_instructions import WalkingInstructions  # noqa: F401
+from gwpspider_interfaces.msg._water_pump_command import WaterPumpCommand  # noqa: F401

@@ -21,6 +21,7 @@ import chatbot
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import random
+from gwpspider_interfaces import gwp_interfaces_data as gid
 from datetime import datetime
 from gwpspider_interfaces.srv import SpiderGoal
 from rclpy.node import Node
@@ -40,11 +41,18 @@ migrate = Migrate(app, db)
 config.sensorBase = [None for i in range(6*36)]
 config.arduino_times = [None for i in range(6)]
 config.arduino_status = [None for i in range(6)]
-config.update_data = [None for i in range(8)]
+config.update_data = [None for i in range(10)]
 config.deleted = []
+config.orderIndex = 0
+config.no_of_moves = 0
 config.arduino_pings = [False for i in range(6)]
 TOKEN = chatbot.CHATBOT_TOKEN
 CHAT_ID = chatbot.CHAT_ID
+f = open("volume.txt", "r")
+lines = f.readlines()
+config.used_volume = int(lines[0])
+print(config.used_volume )
+f.close()
 
 
 #ROS2 node classes
@@ -52,20 +60,31 @@ class MinimalService(Node):
 
     def __init__(self):
         super().__init__('minimal_service')
-        self.srv = self.create_service(SpiderGoal, 'spider_goal', self.spider_goal_callback)
+        self.srv = self.create_service(SpiderGoal, gid.SEND_GOAL_SERVICE ,self.spider_goal_callback)
 
     def spider_goal_callback(self, request, response):
         try:
             if config.orderIndex != 0:
                 array_ind = config.order[config.orderIndex].index
-            config.orderIndex += 1
+            if request.request_new_goal :
+                try:
+                    config.used_volume += config.order[config.orderIndex].water
+                    f = open("volume.txt", "w")
+                    f.write(str(config.used_volume))
+                    f.close()
+                except Exception as e:
+                    print(e)
+                config.orderIndex += 1
+            print(len(config.order))
+            print(config.orderIndex)
             if config.orderIndex<len(config.order):
-                response.data = [config.order[config.orderIndex].x, config.order[config.orderIndex].y, 0.0]
+                response.watering_position = [config.order[config.orderIndex].x, config.order[config.orderIndex].y, 0.0]
                 response.go_refill = False
+                print(config.order[config.orderIndex].plantName)
                 response.volume = config.order[config.orderIndex].water
             else:
                 refill()
-                response.data =[startPos.x, startPos.y, 0.0]
+                response.watering_position =[]
                 response.go_refill = True
                 response.volume = config.refill_volume
             return response
@@ -79,7 +98,7 @@ class PositionSubscriber(Node):
         super().__init__('position_subscriber')
         self.subscription = self.create_subscription(
             Float32MultiArray,
-            'position',
+            gid.SPIDER_POSE_TOPIC,
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
@@ -87,7 +106,8 @@ class PositionSubscriber(Node):
     def listener_callback(self, msg):
         x, y = msg.data[0], msg.data[1]
         self.get_logger().info("Received data: x={}, y={}".format(x, y))
-        config.poseData = [x,y]
+        if config.poseData != [x,y]:
+            config.poseData = [x,y]
 
 class MessagesSubscriber(Node):
 
@@ -102,6 +122,8 @@ class MessagesSubscriber(Node):
 
     def listener_callback(self, msg):
         self.get_logger().info(msg.data)
+        if msg.data == "LEG":
+            config.no_of_moves += 1
         messages(msg.data)
 
 #Database table classes
@@ -357,16 +379,16 @@ startPos = Sensor()
 startPos.x = 1.9
 startPos.y = 0.1
 config.jsons = []
-
-config.orderIndex = 0
 config.order = []
 config.need_watering = []
 config.watering_queue = []
 config.nextRoute = []
 config.status = "OFF"
 config.refill_volume = 0
+config.next_refill_volume = 0
 config.lastOrderIndex = 1
 config.poseData = []
+
 #ROS2 initialization
 rclpy.init(args=None)
 ros2_service_node = MinimalService()
@@ -380,7 +402,6 @@ executor_thread = threading.Thread(target=executor.spin, daemon=True)
 executor_thread.start()
 
 #Arduino data thread
-
 def get_data_thread():
     """Function pings arduinos so they can start sending data
 
@@ -513,6 +534,7 @@ def setup_sensor_list(panel, arduino):
         for j in sensor_ids:
             start = 0
             try:
+                offset = 24
                 sensor_id = config.SENSOR_IDS.index(arduino["vrstica" + str(i)]["senzor" + str(j)]["id"])
                 vrstica = i
                 x_dim = 20
@@ -523,10 +545,12 @@ def setup_sensor_list(panel, arduino):
                 elif panel == 3 or panel == 6:
                     start = -20
                 if panel < 4:
-                    y_coordinate = (((5 - vrstica) + 6) * y_dim + 24.0) / 100.0
+                    y_coordinate = (((5 - vrstica) + 6) * y_dim + offset) / 100.0
                     x_coordinate = (start + ((panel - 1) * 7 + (sensor_id)) * x_dim + x_dim / 2) / 100.0
                 else:
-                    y_coordinate = (((5 - vrstica)) * y_dim + 24.0) / 100.0
+                    if (5-vrstica) == 0:
+                        offset = 20
+                    y_coordinate = (((5 - vrstica)) * y_dim + offset) / 100.0
                     x_coordinate = (start + ((panel - 4) * 7 + (sensor_id)) * x_dim + x_dim / 2) / 100.0
                 sensor = Sensor()
                 sensor.arduino = panel
@@ -568,7 +592,10 @@ def create_order():
                     sol.append(i)
                     i+=1
                 else:
-                    config.refill_volume = water_sum
+                    if config.refill_volume == 0:
+                        config.refill_volume = water_sum
+                    else:
+                        config.next_refill_volume = water_sum
                     break
             else:
                 print("no entries")
@@ -599,13 +626,14 @@ def check_moisture():
     for i in config.sensorBase:
         if i is not None:
             try:
-                a = datetime.fromtimestamp(i.lastWater)
-                b = datetime.now()
-                delta = b- a
-                if delta.days >=5:
-                    must_water.append(i)
-                elif delta.days == 4 and i.cap <= 10:
-                    can_wait.append(i)
+                if i.cap != None:
+                    a = datetime.fromtimestamp(i.lastWater)
+                    b = datetime.now()
+                    delta = b- a
+                    if delta.days >=5:
+                        must_water.append(i)
+                    elif delta.days == 4 and i.cap <= 10:
+                        can_wait.append(i)
             except Exception as e:
                 print("There is a database entry without senosr or sensor without database entry" ,e)
     random.shuffle(must_water)
@@ -628,12 +656,13 @@ def refill():
             plant = Plants.query.get(config.sensorBase[array_ind].db_id)
             plant.date_time = datetime.fromtimestamp(config.sensorBase[array_ind].lastWater)
             db.session.commit()
-        config.orderIndex = 0
-        
         config.jsons=[]
         config.orderIndex = 0
         config.order = config.nextRoute.copy()
+        #config.used_volume += config.refill_volume
+        config.refill_volume = config.next_refill_volume
         config.nextRoute = create_order()
+        config.no_of_moves = 0
     except Exception as e:
         send_error_notif("Refill stup error: "+str(e))
 
@@ -758,6 +787,7 @@ def update():
     get_routes()
     if len(config.poseData) == 2:
         config.update_data[3] = config.poseData
+    config.update_data[8] = config.used_volume
     try:
         return jsonify(config.update_data), 200, {"Access-Control-Allow-Origin": "*"}
     except Exception:

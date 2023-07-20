@@ -16,8 +16,6 @@
 #include "gwpspider_interfaces/srv/detail/control_water_pump__struct.h"
 #include "gwpspider_interfaces/srv/detail/control_water_pump__functions.h"
 
-bool gwpspider_interfaces__msg__water_pump_command__convert_from_py(PyObject * _pymsg, void * _ros_message);
-PyObject * gwpspider_interfaces__msg__water_pump_command__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool gwpspider_interfaces__srv__control_water_pump__request__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -52,15 +50,22 @@ bool gwpspider_interfaces__srv__control_water_pump__request__convert_from_py(PyO
     assert(strncmp("gwpspider_interfaces.srv._control_water_pump.ControlWaterPump_Request", full_classname_dest, 69) == 0);
   }
   gwpspider_interfaces__srv__ControlWaterPump_Request * ros_message = _ros_message;
-  {  // instructions
-    PyObject * field = PyObject_GetAttrString(_pymsg, "instructions");
+  {  // pump
+    PyObject * field = PyObject_GetAttrString(_pymsg, "pump");
     if (!field) {
       return false;
     }
-    if (!gwpspider_interfaces__msg__water_pump_command__convert_from_py(field, &ros_message->instructions)) {
-      Py_DECREF(field);
+    assert(PyLong_Check(field));
+    ros_message->pump = PyLong_AsLongLong(field);
+    Py_DECREF(field);
+  }
+  {  // volume
+    PyObject * field = PyObject_GetAttrString(_pymsg, "volume");
+    if (!field) {
       return false;
     }
+    assert(PyFloat_Check(field));
+    ros_message->volume = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 
@@ -85,14 +90,22 @@ PyObject * gwpspider_interfaces__srv__control_water_pump__request__convert_to_py
     }
   }
   gwpspider_interfaces__srv__ControlWaterPump_Request * ros_message = (gwpspider_interfaces__srv__ControlWaterPump_Request *)raw_ros_message;
-  {  // instructions
+  {  // pump
     PyObject * field = NULL;
-    field = gwpspider_interfaces__msg__water_pump_command__convert_to_py(&ros_message->instructions);
-    if (!field) {
-      return NULL;
-    }
+    field = PyLong_FromLongLong(ros_message->pump);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "instructions", field);
+      int rc = PyObject_SetAttrString(_pymessage, "pump", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // volume
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->volume);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "volume", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

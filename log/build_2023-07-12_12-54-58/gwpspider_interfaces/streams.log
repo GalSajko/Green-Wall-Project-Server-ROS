@@ -1,0 +1,53 @@
+[0.012s] Invoking command in '/home/spider/ros2_ws/build/gwpspider_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spider/ros2_ws/install/py_srvcli:/home/spider/ros2_ws/install/py_node_test:/home/spider/ros2_ws/install/flask_server:/opt/ros/humble /usr/bin/cmake --build /home/spider/ros2_ws/build/gwpspider_interfaces -- -j8 -l8
+[0.047s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.186s] -- Found rclcpp: 16.0.4 (/opt/ros/humble/share/rclcpp/cmake)
+[0.214s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.216s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.222s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.232s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.247s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.302s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.303s] -- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.411s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.563s] -- Found rclpy: 3.3.8 (/opt/ros/humble/share/rclpy/cmake)
+[0.563s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.987s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.333s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.470s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.492s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.514s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.514s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.514s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.545s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_python/cmake/ament_python_install_package.cmake:122 (add_custom_target):
+[1.545s]   add_custom_target cannot create target
+[1.545s]   "ament_cmake_python_copy_gwpspider_interfaces" because another target with
+[1.545s]   the same name already exists.  The existing target is a custom target
+[1.545s]   created in source directory
+[1.545s]   "/home/spider/ros2_ws/src/gwpspider_interfaces".  See documentation for
+[1.545s]   policy CMP0002 for more details.
+[1.545s] Call Stack (most recent call first):
+[1.545s]   /opt/ros/humble/share/ament_cmake_python/cmake/ament_python_install_package.cmake:39 (_ament_cmake_python_install_package)
+[1.545s]   CMakeLists.txt:58 (ament_python_install_package)
+[1.545s] 
+[1.545s] [0m
+[1.545s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_python/cmake/ament_python_install_package.cmake:141 (add_custom_target):
+[1.545s]   add_custom_target cannot create target
+[1.545s]   "ament_cmake_python_build_gwpspider_interfaces_egg" because another target
+[1.545s]   with the same name already exists.  The existing target is a custom target
+[1.546s]   created in source directory
+[1.546s]   "/home/spider/ros2_ws/src/gwpspider_interfaces".  See documentation for
+[1.546s]   policy CMP0002 for more details.
+[1.546s] Call Stack (most recent call first):
+[1.546s]   /opt/ros/humble/share/ament_cmake_python/cmake/ament_python_install_package.cmake:39 (_ament_cmake_python_install_package)
+[1.546s]   CMakeLists.txt:58 (ament_python_install_package)
+[1.546s] 
+[1.546s] [0m
+[1.546s] -- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.554s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.555s] -- Added test 'lint_cmake' to check CMake code style
+[1.555s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.557s] -- Added test 'xmllint' to check XML markup files
+[1.558s] -- Configuring incomplete, errors occurred!
+[1.558s] See also "/home/spider/ros2_ws/build/gwpspider_interfaces/CMakeFiles/CMakeOutput.log".
+[1.567s] gmake: *** [Makefile:6579: cmake_check_build_system] Error 1
+[1.569s] Invoked command in '/home/spider/ros2_ws/build/gwpspider_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spider/ros2_ws/install/py_srvcli:/home/spider/ros2_ws/install/py_node_test:/home/spider/ros2_ws/install/flask_server:/opt/ros/humble /usr/bin/cmake --build /home/spider/ros2_ws/build/gwpspider_interfaces -- -j8 -l8

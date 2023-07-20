@@ -1139,3 +1139,14 @@ LINE 1: ... line, "sensorNum") VALUES ('Bostonski praprot ', '', '2023-...
 [SQL: INSERT INTO plants (name, "waterInterval", date_time, panel, line, "sensorNum") VALUES (%(name)s, %(waterInterval)s, %(date_time)s, %(panel)s, %(line)s, %(sensorNum)s) RETURNING plants.id]
 [parameters: {'name': 'Bostonski praprot ', 'waterInterval': '', 'date_time': '2023-07-10T12:30', 'panel': '5', 'line': '4', 'sensorNum': '6'}]
 (Background on this error at: https://sqlalche.me/e/20/9h9h)
+Exception on /plantData [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1487, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1506, in finalize_request
+    response = self.make_response(rv)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1801, in make_response
+    raise TypeError(
+TypeError: The view function for 'add_plant_data' did not return a valid response. The function either returned None or ended without a return statement.

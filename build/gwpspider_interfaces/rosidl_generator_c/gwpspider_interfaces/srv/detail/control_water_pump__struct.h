@@ -17,14 +17,11 @@ extern "C"
 
 // Constants defined in the message
 
-// Include directives for member types
-// Member 'instructions'
-#include "gwpspider_interfaces/msg/detail/water_pump_command__struct.h"
-
 /// Struct defined in srv/ControlWaterPump in the package gwpspider_interfaces.
 typedef struct gwpspider_interfaces__srv__ControlWaterPump_Request
 {
-  gwpspider_interfaces__msg__WaterPumpCommand instructions;
+  int64_t pump;
+  double volume;
 } gwpspider_interfaces__srv__ControlWaterPump_Request;
 
 // Struct for a sequence of gwpspider_interfaces__srv__ControlWaterPump_Request.

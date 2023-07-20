@@ -16,30 +16,6 @@
 
 
 // forward declaration of message dependencies and their conversion functions
-namespace gwpspider_interfaces
-{
-namespace msg
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const gwpspider_interfaces::msg::WaterPumpCommand &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  gwpspider_interfaces::msg::WaterPumpCommand &);
-size_t get_serialized_size(
-  const gwpspider_interfaces::msg::WaterPumpCommand &,
-  size_t current_alignment);
-size_t
-max_serialized_size_WaterPumpCommand(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace msg
-}  // namespace gwpspider_interfaces
-
 
 namespace gwpspider_interfaces
 {
@@ -56,10 +32,10 @@ cdr_serialize(
   const gwpspider_interfaces::srv::ControlWaterPump_Request & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: instructions
-  gwpspider_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.instructions,
-    cdr);
+  // Member: pump
+  cdr << ros_message.pump;
+  // Member: volume
+  cdr << ros_message.volume;
   return true;
 }
 
@@ -69,9 +45,11 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   gwpspider_interfaces::srv::ControlWaterPump_Request & ros_message)
 {
-  // Member: instructions
-  gwpspider_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.instructions);
+  // Member: pump
+  cdr >> ros_message.pump;
+
+  // Member: volume
+  cdr >> ros_message.volume;
 
   return true;
 }
@@ -89,11 +67,18 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: instructions
-
-  current_alignment +=
-    gwpspider_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.instructions, current_alignment);
+  // Member: pump
+  {
+    size_t item_size = sizeof(ros_message.pump);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: volume
+  {
+    size_t item_size = sizeof(ros_message.volume);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -116,20 +101,20 @@ max_serialized_size_ControlWaterPump_Request(
   is_plain = true;
 
 
-  // Member: instructions
+  // Member: pump
   {
     size_t array_size = 1;
 
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
 
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      current_alignment +=
-        gwpspider_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_WaterPumpCommand(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
+  // Member: volume
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   return current_alignment - initial_alignment;

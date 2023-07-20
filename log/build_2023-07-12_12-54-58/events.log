@@ -1,0 +1,84 @@
+[0.000000] (-) TimerEvent: {}
+[0.000093] (-) JobUnselected: {'identifier': 'flask_server'}
+[0.000120] (-) JobUnselected: {'identifier': 'my_service_interfaces'}
+[0.000140] (-) JobUnselected: {'identifier': 'py_node_test'}
+[0.000156] (-) JobUnselected: {'identifier': 'py_srvcli'}
+[0.000173] (gwpspider_interfaces) JobQueued: {'identifier': 'gwpspider_interfaces', 'dependencies': OrderedDict()}
+[0.000190] (gwpspider_interfaces) JobStarted: {'identifier': 'gwpspider_interfaces'}
+[0.008791] (gwpspider_interfaces) JobProgress: {'identifier': 'gwpspider_interfaces', 'progress': 'cmake'}
+[0.009399] (gwpspider_interfaces) JobProgress: {'identifier': 'gwpspider_interfaces', 'progress': 'build'}
+[0.009998] (gwpspider_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/spider/ros2_ws/build/gwpspider_interfaces', '--', '-j8', '-l8'], 'cwd': '/home/spider/ros2_ws/build/gwpspider_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('USER', 'spider'), ('LC_TIME', 'en_GB.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/spider/ros2_ws/install/my_service_interfaces/lib:/home/spider/ros2_ws/install/gwpspider_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/spider'), ('OLDPWD', '/home/spider/ros2_ws/src/flask_server/scripts'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/spider/.nvm/versions/node/v16.15.1/bin'), ('NVM_INC', '/home/spider/.nvm/versions/node/v16.15.1/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_GB.UTF-8'), ('SYSTEMD_EXEC_PID', '1912'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/spider/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/spider/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'spider'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'spider'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/spider/.nvm/versions/node/v16.15.1/bin:/home/spider/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/spider-ThinkPad-T480:@/tmp/.ICE-unix/1893,unix/spider-ThinkPad-T480:/tmp/.ICE-unix/1893'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_GB.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9c471251_b2fe_4cf3_9664_65e6e302279f'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_GB.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.TN4P71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/spider/ros2_ws/install/py_srvcli:/home/spider/ros2_ws/install/py_node_test:/home/spider/ros2_ws/install/flask_server:/home/spider/ros2_ws/install/my_service_interfaces:/home/spider/ros2_ws/install/gwpspider_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_GB.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_GB.UTF-8'), ('LC_IDENTIFICATION', 'en_GB.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/spider/ros2_ws/build/gwpspider_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/spider/ros2_ws/install/py_srvcli/lib/python3.10/site-packages:/home/spider/ros2_ws/install/py_node_test/lib/python3.10/site-packages:/home/spider/ros2_ws/install/flask_server/lib/python3.10/site-packages:/home/spider/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages:/home/spider/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_GB.UTF-8'), ('LC_PAPER', 'en_GB.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/spider/ros2_ws/install/my_service_interfaces:/home/spider/ros2_ws/install/gwpspider_interfaces:/home/spider/ros2_ws/install/py_srvcli:/home/spider/ros2_ws/install/py_node_test:/home/spider/ros2_ws/install/flask_server:/opt/ros/humble')]), 'shell': False}
+[0.046810] (gwpspider_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.098793] (-) TimerEvent: {}
+[0.186203] (gwpspider_interfaces) StdoutLine: {'line': b'-- Found rclcpp: 16.0.4 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.198893] (-) TimerEvent: {}
+[0.213856] (gwpspider_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.216170] (gwpspider_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.221657] (gwpspider_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.232144] (gwpspider_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.247062] (gwpspider_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.299030] (-) TimerEvent: {}
+[0.301681] (gwpspider_interfaces) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.302981] (gwpspider_interfaces) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.399154] (-) TimerEvent: {}
+[0.411110] (gwpspider_interfaces) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.499289] (-) TimerEvent: {}
+[0.562854] (gwpspider_interfaces) StdoutLine: {'line': b'-- Found rclpy: 3.3.8 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[0.563132] (gwpspider_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.599404] (-) TimerEvent: {}
+[0.699666] (-) TimerEvent: {}
+[0.799914] (-) TimerEvent: {}
+[0.900163] (-) TimerEvent: {}
+[0.986772] (gwpspider_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.000265] (-) TimerEvent: {}
+[1.100470] (-) TimerEvent: {}
+[1.200733] (-) TimerEvent: {}
+[1.300950] (-) TimerEvent: {}
+[1.332957] (gwpspider_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.401083] (-) TimerEvent: {}
+[1.470093] (gwpspider_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.492289] (gwpspider_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.501177] (-) TimerEvent: {}
+[1.514132] (gwpspider_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.514279] (gwpspider_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.514341] (gwpspider_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.544626] (gwpspider_interfaces) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/ament_cmake_python/cmake/ament_python_install_package.cmake:122 (add_custom_target):\n'}
+[1.544901] (gwpspider_interfaces) StderrLine: {'line': b'  add_custom_target cannot create target\n'}
+[1.544970] (gwpspider_interfaces) StderrLine: {'line': b'  "ament_cmake_python_copy_gwpspider_interfaces" because another target with\n'}
+[1.545028] (gwpspider_interfaces) StderrLine: {'line': b'  the same name already exists.  The existing target is a custom target\n'}
+[1.545081] (gwpspider_interfaces) StderrLine: {'line': b'  created in source directory\n'}
+[1.545133] (gwpspider_interfaces) StderrLine: {'line': b'  "/home/spider/ros2_ws/src/gwpspider_interfaces".  See documentation for\n'}
+[1.545184] (gwpspider_interfaces) StderrLine: {'line': b'  policy CMP0002 for more details.\n'}
+[1.545233] (gwpspider_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.545283] (gwpspider_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_python/cmake/ament_python_install_package.cmake:39 (_ament_cmake_python_install_package)\n'}
+[1.545333] (gwpspider_interfaces) StderrLine: {'line': b'  CMakeLists.txt:58 (ament_python_install_package)\n'}
+[1.545383] (gwpspider_interfaces) StderrLine: {'line': b'\n'}
+[1.545432] (gwpspider_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[1.545481] (gwpspider_interfaces) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/ament_cmake_python/cmake/ament_python_install_package.cmake:141 (add_custom_target):\n'}
+[1.545530] (gwpspider_interfaces) StderrLine: {'line': b'  add_custom_target cannot create target\n'}
+[1.545579] (gwpspider_interfaces) StderrLine: {'line': b'  "ament_cmake_python_build_gwpspider_interfaces_egg" because another target\n'}
+[1.545629] (gwpspider_interfaces) StderrLine: {'line': b'  with the same name already exists.  The existing target is a custom target\n'}
+[1.545700] (gwpspider_interfaces) StderrLine: {'line': b'  created in source directory\n'}
+[1.545792] (gwpspider_interfaces) StderrLine: {'line': b'  "/home/spider/ros2_ws/src/gwpspider_interfaces".  See documentation for\n'}
+[1.545859] (gwpspider_interfaces) StderrLine: {'line': b'  policy CMP0002 for more details.\n'}
+[1.545914] (gwpspider_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.545968] (gwpspider_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_python/cmake/ament_python_install_package.cmake:39 (_ament_cmake_python_install_package)\n'}
+[1.546019] (gwpspider_interfaces) StderrLine: {'line': b'  CMakeLists.txt:58 (ament_python_install_package)\n'}
+[1.546069] (gwpspider_interfaces) StderrLine: {'line': b'\n'}
+[1.546120] (gwpspider_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[1.546202] (gwpspider_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.554580] (gwpspider_interfaces) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.555083] (gwpspider_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.555460] (gwpspider_interfaces) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.557086] (gwpspider_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.558562] (gwpspider_interfaces) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.558646] (gwpspider_interfaces) StdoutLine: {'line': b'See also "/home/spider/ros2_ws/build/gwpspider_interfaces/CMakeFiles/CMakeOutput.log".\n'}
+[1.566831] (gwpspider_interfaces) StderrLine: {'line': b'gmake: *** [Makefile:6579: cmake_check_build_system] Error 1\n'}
+[1.568835] (gwpspider_interfaces) CommandEnded: {'returncode': 2}
+[1.601277] (-) TimerEvent: {}
+[1.701519] (-) TimerEvent: {}
+[1.801850] (-) TimerEvent: {}
+[1.902075] (-) TimerEvent: {}
+[2.002330] (-) TimerEvent: {}
+[2.044603] (gwpspider_interfaces) JobEnded: {'identifier': 'gwpspider_interfaces', 'rc': 2}
+[2.055206] (-) EventReactorShutdown: {}

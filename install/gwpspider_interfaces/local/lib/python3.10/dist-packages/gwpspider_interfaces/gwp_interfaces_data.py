@@ -10,6 +10,9 @@ COMMANDED_JOINTS_VELOCITIES_TOPIC = 'commanded_joint_velocities_topic'
 # Dynamixel
 DYNAMIXEL_MOTORS_DATA_TOPIC = 'dynamixel_motors_data'
 
+# App
+SPIDER_POSE_TOPIC = 'spider_pose_topic'
+
 
 # SERVICES
 # Arduino
@@ -28,6 +31,9 @@ GET_SPIDER_POSE_SERVICE = 'get_spider_pose_service'
 MOVE_LEG_VELOCITY_MODE_SERVICE = 'move_leg_velocity_mode_service'
 TOGGLE_ADDITIONAL_CONTROLLER_MODE_SERVICE = 'toggle_additional_controller_mode_service'
 
+#Server
+SEND_GOAL_SERVICE = 'spider_goal_service'
+
 # Dynamixel
 TOGGLE_MOTORS_TORQUE_SERVICE = 'toggle_motors_torque_service'
 SET_BUS_WATCHDOG_SERVICE = 'set_bus_watchdog_service'
@@ -37,3 +43,6 @@ REBOOT_MOTORS_SERVICE = 'reboot_motors_service'
 GET_WALKING_INSTRUCTIONS_SERVICE = 'get_walking_instructions_service'
 GET_MODIFIED_WALKING_INSTRUCTION_SERVICE = 'get_modified_walking_instructions_service'
 GET_LEG_TRAJECTORY_SERVICE = 'get_leg_trajectory_service'
+
+# Offset Predictor
+GET_CORRECTION_OFFSET_SERVICE = 'get_correction_offset_service'

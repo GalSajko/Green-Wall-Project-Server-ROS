@@ -50,7 +50,15 @@ bool gwpspider_interfaces__srv__spider_goal__request__convert_from_py(PyObject *
     assert(strncmp("gwpspider_interfaces.srv._spider_goal.SpiderGoal_Request", full_classname_dest, 56) == 0);
   }
   gwpspider_interfaces__srv__SpiderGoal_Request * ros_message = _ros_message;
-  ros_message->structure_needs_at_least_one_member = 0;
+  {  // request_new_goal
+    PyObject * field = PyObject_GetAttrString(_pymsg, "request_new_goal");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->request_new_goal = (Py_True == field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -72,7 +80,18 @@ PyObject * gwpspider_interfaces__srv__spider_goal__request__convert_to_py(void *
       return NULL;
     }
   }
-  (void)raw_ros_message;
+  gwpspider_interfaces__srv__SpiderGoal_Request * ros_message = (gwpspider_interfaces__srv__SpiderGoal_Request *)raw_ros_message;
+  {  // request_new_goal
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->request_new_goal ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "request_new_goal", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
 
   // ownership of _pymessage is transferred to the caller
   return _pymessage;
@@ -129,8 +148,8 @@ bool gwpspider_interfaces__srv__spider_goal__response__convert_from_py(PyObject 
     assert(strncmp("gwpspider_interfaces.srv._spider_goal.SpiderGoal_Response", full_classname_dest, 57) == 0);
   }
   gwpspider_interfaces__srv__SpiderGoal_Response * ros_message = _ros_message;
-  {  // data
-    PyObject * field = PyObject_GetAttrString(_pymsg, "data");
+  {  // watering_position
+    PyObject * field = PyObject_GetAttrString(_pymsg, "watering_position");
     if (!field) {
       return false;
     }
@@ -143,13 +162,13 @@ bool gwpspider_interfaces__srv__spider_goal__response__convert_from_py(PyObject 
         return false;
       }
       Py_ssize_t size = view.len / sizeof(float);
-      if (!rosidl_runtime_c__float__Sequence__init(&(ros_message->data), size)) {
+      if (!rosidl_runtime_c__float__Sequence__init(&(ros_message->watering_position), size)) {
         PyErr_SetString(PyExc_RuntimeError, "unable to create float__Sequence ros_message");
         PyBuffer_Release(&view);
         Py_DECREF(field);
         return false;
       }
-      float * dest = ros_message->data.data;
+      float * dest = ros_message->watering_position.data;
       rc = PyBuffer_ToContiguous(dest, &view, view.len, 'C');
       if (rc < 0) {
         PyBuffer_Release(&view);
@@ -158,7 +177,7 @@ bool gwpspider_interfaces__srv__spider_goal__response__convert_from_py(PyObject 
       }
       PyBuffer_Release(&view);
     } else {
-      PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'data'");
+      PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'watering_position'");
       if (!seq_field) {
         Py_DECREF(field);
         return false;
@@ -169,13 +188,13 @@ bool gwpspider_interfaces__srv__spider_goal__response__convert_from_py(PyObject 
         Py_DECREF(field);
         return false;
       }
-      if (!rosidl_runtime_c__float__Sequence__init(&(ros_message->data), size)) {
+      if (!rosidl_runtime_c__float__Sequence__init(&(ros_message->watering_position), size)) {
         PyErr_SetString(PyExc_RuntimeError, "unable to create float__Sequence ros_message");
         Py_DECREF(seq_field);
         Py_DECREF(field);
         return false;
       }
-      float * dest = ros_message->data.data;
+      float * dest = ros_message->watering_position.data;
       for (Py_ssize_t i = 0; i < size; ++i) {
         PyObject * item = PySequence_Fast_GET_ITEM(seq_field, i);
         if (!item) {
@@ -231,9 +250,9 @@ PyObject * gwpspider_interfaces__srv__spider_goal__response__convert_to_py(void 
     }
   }
   gwpspider_interfaces__srv__SpiderGoal_Response * ros_message = (gwpspider_interfaces__srv__SpiderGoal_Response *)raw_ros_message;
-  {  // data
+  {  // watering_position
     PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "data");
+    field = PyObject_GetAttrString(_pymessage, "watering_position");
     if (!field) {
       return NULL;
     }
@@ -270,12 +289,12 @@ PyObject * gwpspider_interfaces__srv__spider_goal__response__convert_to_py(void 
       }
       Py_DECREF(pop);
     }
-    if (ros_message->data.size > 0) {
+    if (ros_message->watering_position.size > 0) {
       // populating the array.array using the frombytes method
       PyObject * frombytes = PyObject_GetAttrString(field, "frombytes");
       assert(frombytes != NULL);
-      float * src = &(ros_message->data.data[0]);
-      PyObject * data = PyBytes_FromStringAndSize((const char *)src, ros_message->data.size * sizeof(float));
+      float * src = &(ros_message->watering_position.data[0]);
+      PyObject * data = PyBytes_FromStringAndSize((const char *)src, ros_message->watering_position.size * sizeof(float));
       assert(data != NULL);
       PyObject * ret = PyObject_CallFunctionObjArgs(frombytes, data, NULL);
       Py_DECREF(data);

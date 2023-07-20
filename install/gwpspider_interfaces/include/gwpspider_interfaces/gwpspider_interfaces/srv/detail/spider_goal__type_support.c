@@ -33,14 +33,14 @@ void gwpspider_interfaces__srv__SpiderGoal_Request__rosidl_typesupport_introspec
 
 static rosidl_typesupport_introspection_c__MessageMember gwpspider_interfaces__srv__SpiderGoal_Request__rosidl_typesupport_introspection_c__SpiderGoal_Request_message_member_array[1] = {
   {
-    "structure_needs_at_least_one_member",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
+    "request_new_goal",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(gwpspider_interfaces__srv__SpiderGoal_Request, structure_needs_at_least_one_member),  // bytes offset in struct
+    offsetof(gwpspider_interfaces__srv__SpiderGoal_Request, request_new_goal),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -101,7 +101,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 
 
 // Include directives for member types
-// Member `data`
+// Member `watering_position`
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
 
 #ifdef __cplusplus
@@ -123,7 +123,7 @@ void gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspe
   gwpspider_interfaces__srv__SpiderGoal_Response__fini(message_memory);
 }
 
-size_t gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__size_function__SpiderGoal_Response__data(
+size_t gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__size_function__SpiderGoal_Response__watering_position(
   const void * untyped_member)
 {
   const rosidl_runtime_c__float__Sequence * member =
@@ -131,7 +131,7 @@ size_t gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_intros
   return member->size;
 }
 
-const void * gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__get_const_function__SpiderGoal_Response__data(
+const void * gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__get_const_function__SpiderGoal_Response__watering_position(
   const void * untyped_member, size_t index)
 {
   const rosidl_runtime_c__float__Sequence * member =
@@ -139,7 +139,7 @@ const void * gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_
   return &member->data[index];
 }
 
-void * gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__get_function__SpiderGoal_Response__data(
+void * gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__get_function__SpiderGoal_Response__watering_position(
   void * untyped_member, size_t index)
 {
   rosidl_runtime_c__float__Sequence * member =
@@ -147,29 +147,29 @@ void * gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_intros
   return &member->data[index];
 }
 
-void gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__fetch_function__SpiderGoal_Response__data(
+void gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__fetch_function__SpiderGoal_Response__watering_position(
   const void * untyped_member, size_t index, void * untyped_value)
 {
   const float * item =
     ((const float *)
-    gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__get_const_function__SpiderGoal_Response__data(untyped_member, index));
+    gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__get_const_function__SpiderGoal_Response__watering_position(untyped_member, index));
   float * value =
     (float *)(untyped_value);
   *value = *item;
 }
 
-void gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__assign_function__SpiderGoal_Response__data(
+void gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__assign_function__SpiderGoal_Response__watering_position(
   void * untyped_member, size_t index, const void * untyped_value)
 {
   float * item =
     ((float *)
-    gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__get_function__SpiderGoal_Response__data(untyped_member, index));
+    gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__get_function__SpiderGoal_Response__watering_position(untyped_member, index));
   const float * value =
     (const float *)(untyped_value);
   *item = *value;
 }
 
-bool gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__resize_function__SpiderGoal_Response__data(
+bool gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__resize_function__SpiderGoal_Response__watering_position(
   void * untyped_member, size_t size)
 {
   rosidl_runtime_c__float__Sequence * member =
@@ -180,21 +180,21 @@ bool gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspe
 
 static rosidl_typesupport_introspection_c__MessageMember gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__SpiderGoal_Response_message_member_array[3] = {
   {
-    "data",  // name
+    "watering_position",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     true,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(gwpspider_interfaces__srv__SpiderGoal_Response, data),  // bytes offset in struct
+    offsetof(gwpspider_interfaces__srv__SpiderGoal_Response, watering_position),  // bytes offset in struct
     NULL,  // default value
-    gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__size_function__SpiderGoal_Response__data,  // size() function pointer
-    gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__get_const_function__SpiderGoal_Response__data,  // get_const(index) function pointer
-    gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__get_function__SpiderGoal_Response__data,  // get(index) function pointer
-    gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__fetch_function__SpiderGoal_Response__data,  // fetch(index, &value) function pointer
-    gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__assign_function__SpiderGoal_Response__data,  // assign(index, value) function pointer
-    gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__resize_function__SpiderGoal_Response__data  // resize(index) function pointer
+    gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__size_function__SpiderGoal_Response__watering_position,  // size() function pointer
+    gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__get_const_function__SpiderGoal_Response__watering_position,  // get_const(index) function pointer
+    gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__get_function__SpiderGoal_Response__watering_position,  // get(index) function pointer
+    gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__fetch_function__SpiderGoal_Response__watering_position,  // fetch(index, &value) function pointer
+    gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__assign_function__SpiderGoal_Response__watering_position,  // assign(index, value) function pointer
+    gwpspider_interfaces__srv__SpiderGoal_Response__rosidl_typesupport_introspection_c__resize_function__SpiderGoal_Response__watering_position  // resize(index) function pointer
   },
   {
     "go_refill",  // name

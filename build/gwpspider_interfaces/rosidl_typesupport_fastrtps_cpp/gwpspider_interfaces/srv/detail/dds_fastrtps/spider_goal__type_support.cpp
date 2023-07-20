@@ -32,8 +32,8 @@ cdr_serialize(
   const gwpspider_interfaces::srv::SpiderGoal_Request & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: structure_needs_at_least_one_member
-  cdr << ros_message.structure_needs_at_least_one_member;
+  // Member: request_new_goal
+  cdr << (ros_message.request_new_goal ? true : false);
   return true;
 }
 
@@ -43,8 +43,12 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   gwpspider_interfaces::srv::SpiderGoal_Request & ros_message)
 {
-  // Member: structure_needs_at_least_one_member
-  cdr >> ros_message.structure_needs_at_least_one_member;
+  // Member: request_new_goal
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.request_new_goal = tmp ? true : false;
+  }
 
   return true;
 }
@@ -62,9 +66,9 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: structure_needs_at_least_one_member
+  // Member: request_new_goal
   {
-    size_t item_size = sizeof(ros_message.structure_needs_at_least_one_member);
+    size_t item_size = sizeof(ros_message.request_new_goal);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -90,7 +94,7 @@ max_serialized_size_SpiderGoal_Request(
   is_plain = true;
 
 
-  // Member: structure_needs_at_least_one_member
+  // Member: request_new_goal
   {
     size_t array_size = 1;
 
@@ -228,9 +232,9 @@ cdr_serialize(
   const gwpspider_interfaces::srv::SpiderGoal_Response & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: data
+  // Member: watering_position
   {
-    cdr << ros_message.data;
+    cdr << ros_message.watering_position;
   }
   // Member: go_refill
   cdr << (ros_message.go_refill ? true : false);
@@ -245,9 +249,9 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   gwpspider_interfaces::srv::SpiderGoal_Response & ros_message)
 {
-  // Member: data
+  // Member: watering_position
   {
-    cdr >> ros_message.data;
+    cdr >> ros_message.watering_position;
   }
 
   // Member: go_refill
@@ -276,13 +280,13 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: data
+  // Member: watering_position
   {
-    size_t array_size = ros_message.data.size();
+    size_t array_size = ros_message.watering_position.size();
 
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.data[0]);
+    size_t item_size = sizeof(ros_message.watering_position[0]);
     current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -320,7 +324,7 @@ max_serialized_size_SpiderGoal_Response(
   is_plain = true;
 
 
-  // Member: data
+  // Member: watering_position
   {
     size_t array_size = 0;
     full_bounded = false;

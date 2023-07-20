@@ -20,7 +20,7 @@ extern "C"
 /// Struct defined in srv/SpiderGoal in the package gwpspider_interfaces.
 typedef struct gwpspider_interfaces__srv__SpiderGoal_Request
 {
-  uint8_t structure_needs_at_least_one_member;
+  bool request_new_goal;
 } gwpspider_interfaces__srv__SpiderGoal_Request;
 
 // Struct for a sequence of gwpspider_interfaces__srv__SpiderGoal_Request.
@@ -37,13 +37,13 @@ typedef struct gwpspider_interfaces__srv__SpiderGoal_Request__Sequence
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'data'
+// Member 'watering_position'
 #include "rosidl_runtime_c/primitives_sequence.h"
 
 /// Struct defined in srv/SpiderGoal in the package gwpspider_interfaces.
 typedef struct gwpspider_interfaces__srv__SpiderGoal_Response
 {
-  rosidl_runtime_c__float__Sequence data;
+  rosidl_runtime_c__float__Sequence watering_position;
   bool go_refill;
   int32_t volume;
 } gwpspider_interfaces__srv__SpiderGoal_Response;

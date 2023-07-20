@@ -18,6 +18,10 @@ global lastOrderIndex
 global arduino_status
 global arduino_pings
 global update_data
+global next_refill_volume
+global used_volume
+global no_of_moves
+global travel_distance
 WATER_LIMIT = 450
 SENSOR_IDS = [54, 55, 56, 57, 58, 59]
 GET_SENSOR_POSITION_ADDR = 'http://192.168.1.25:5000/zalij'

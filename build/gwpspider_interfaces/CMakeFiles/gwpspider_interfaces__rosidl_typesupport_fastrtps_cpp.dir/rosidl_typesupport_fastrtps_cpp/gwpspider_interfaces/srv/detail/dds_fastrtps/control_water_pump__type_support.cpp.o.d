@@ -162,7 +162,6 @@ CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_type
  /usr/include/c++/11/stdexcept \
  /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_initialization.hpp \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h \
- /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_cpp/gwpspider_interfaces/msg/detail/water_pump_command__struct.hpp \
  /opt/ros/humble/include/fastcdr/fastcdr/Cdr.h \
  /opt/ros/humble/include/fastcdr/fastcdr/fastcdr_dll.h \
  /opt/ros/humble/include/fastcdr/fastcdr/config.h \

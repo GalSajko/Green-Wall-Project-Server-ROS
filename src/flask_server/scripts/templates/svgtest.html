@@ -23,6 +23,16 @@
       border: none;
       font-size: 45px;
     }
+    .container {
+    display: flex;
+}
+
+.child {
+    flex: 1;
+    border: 2px solid yellow;
+    margin-right: 20px;
+}  
+
     
   </style>
 </head>
@@ -57,12 +67,7 @@
         <h3>Vegetation:</h3>
         <div>
           <p>Number of plants: <span id="plantsNo"></span></p>
-          <p>Water usage total: 152L</p>
-        </div>
-        <h3>Fish pond:</h3>
-        <div>
-          <p>Number of fish: 12</p>
-          <p>Food amount: 42kg</p>
+          <p>Water usage total: <span id="water"></span>L</p>
         </div>
         <h3>Current plant:</h3>
         <div>
@@ -71,7 +76,24 @@
           <p>Areas: <span id="areas"></span></p>
           <p>Needs: <span id="needs"></span></p>
           <p>Charcteristics: <span id="cha"></span></p>
-
+        </div>
+        <h3>Postaje:</h3>
+        <div class="container">
+          <div class="child">postaja 1
+            <p>Temperature: <span id="temp1"></span></p>
+            <p>Light Level: <span id="light1"></span></p>
+            <p>Neki: <span id="neki1"></span></p>
+          </div>
+          <div class="child">postaja 2
+            <p>Temperature: <span id="temp2"></span></p>
+            <p>Light Level: <span id="light2"></span></p>
+            <p>Neki: <span id="neki2"></span></p>
+          </div>
+          <div class="child">postaja 3
+            <p>Temperature: <span id="temp3"></span></p>
+            <p>Light Level: <span id="light3"></span></p>
+            <p>Neki: <span id="neki3"></span></p>
+          </div>
         </div>
       </div>
     </div>

@@ -24,17 +24,28 @@ inline void to_flow_style_yaml(
   const SpiderGoal_Request & msg,
   std::ostream & out)
 {
-  (void)msg;
-  out << "null";
+  out << "{";
+  // member: request_new_goal
+  {
+    out << "request_new_goal: ";
+    rosidl_generator_traits::value_to_yaml(msg.request_new_goal, out);
+  }
+  out << "}";
 }  // NOLINT(readability/fn_size)
 
 inline void to_block_style_yaml(
   const SpiderGoal_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  (void)msg;
-  (void)indentation;
-  out << "null\n";
+  // member: request_new_goal
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "request_new_goal: ";
+    rosidl_generator_traits::value_to_yaml(msg.request_new_goal, out);
+    out << "\n";
+  }
 }  // NOLINT(readability/fn_size)
 
 inline std::string to_yaml(const SpiderGoal_Request & msg, bool use_flow_style = false)
@@ -106,14 +117,14 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: data
+  // member: watering_position
   {
-    if (msg.data.size() == 0) {
-      out << "data: []";
+    if (msg.watering_position.size() == 0) {
+      out << "watering_position: []";
     } else {
-      out << "data: [";
-      size_t pending_items = msg.data.size();
-      for (auto item : msg.data) {
+      out << "watering_position: [";
+      size_t pending_items = msg.watering_position.size();
+      for (auto item : msg.watering_position) {
         rosidl_generator_traits::value_to_yaml(item, out);
         if (--pending_items > 0) {
           out << ", ";
@@ -143,16 +154,16 @@ inline void to_block_style_yaml(
   const SpiderGoal_Response & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: data
+  // member: watering_position
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    if (msg.data.size() == 0) {
-      out << "data: []\n";
+    if (msg.watering_position.size() == 0) {
+      out << "watering_position: []\n";
     } else {
-      out << "data:\n";
-      for (auto item : msg.data) {
+      out << "watering_position:\n";
+      for (auto item : msg.watering_position) {
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }

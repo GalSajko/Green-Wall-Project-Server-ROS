@@ -12,12 +12,6 @@
 #include "gwpspider_interfaces/srv/detail/control_water_pump__struct.h"
 
 
-// Include directives for member types
-// Member `instructions`
-#include "gwpspider_interfaces/msg/water_pump_command.h"
-// Member `instructions`
-#include "gwpspider_interfaces/msg/detail/water_pump_command__rosidl_typesupport_introspection_c.h"
-
 #ifdef __cplusplus
 extern "C"
 {
@@ -37,16 +31,33 @@ void gwpspider_interfaces__srv__ControlWaterPump_Request__rosidl_typesupport_int
   gwpspider_interfaces__srv__ControlWaterPump_Request__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember gwpspider_interfaces__srv__ControlWaterPump_Request__rosidl_typesupport_introspection_c__ControlWaterPump_Request_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember gwpspider_interfaces__srv__ControlWaterPump_Request__rosidl_typesupport_introspection_c__ControlWaterPump_Request_message_member_array[2] = {
   {
-    "instructions",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    "pump",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message (initialized later)
+    NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(gwpspider_interfaces__srv__ControlWaterPump_Request, instructions),  // bytes offset in struct
+    offsetof(gwpspider_interfaces__srv__ControlWaterPump_Request, pump),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "volume",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(gwpspider_interfaces__srv__ControlWaterPump_Request, volume),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -60,7 +71,7 @@ static rosidl_typesupport_introspection_c__MessageMember gwpspider_interfaces__s
 static const rosidl_typesupport_introspection_c__MessageMembers gwpspider_interfaces__srv__ControlWaterPump_Request__rosidl_typesupport_introspection_c__ControlWaterPump_Request_message_members = {
   "gwpspider_interfaces__srv",  // message namespace
   "ControlWaterPump_Request",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(gwpspider_interfaces__srv__ControlWaterPump_Request),
   gwpspider_interfaces__srv__ControlWaterPump_Request__rosidl_typesupport_introspection_c__ControlWaterPump_Request_message_member_array,  // message members
   gwpspider_interfaces__srv__ControlWaterPump_Request__rosidl_typesupport_introspection_c__ControlWaterPump_Request_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -78,8 +89,6 @@ static rosidl_message_type_support_t gwpspider_interfaces__srv__ControlWaterPump
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_gwpspider_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, gwpspider_interfaces, srv, ControlWaterPump_Request)() {
-  gwpspider_interfaces__srv__ControlWaterPump_Request__rosidl_typesupport_introspection_c__ControlWaterPump_Request_message_member_array[0].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, gwpspider_interfaces, msg, WaterPumpCommand)();
   if (!gwpspider_interfaces__srv__ControlWaterPump_Request__rosidl_typesupport_introspection_c__ControlWaterPump_Request_message_type_support_handle.typesupport_identifier) {
     gwpspider_interfaces__srv__ControlWaterPump_Request__rosidl_typesupport_introspection_c__ControlWaterPump_Request_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;

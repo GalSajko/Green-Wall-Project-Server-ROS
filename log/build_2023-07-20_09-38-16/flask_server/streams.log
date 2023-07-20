@@ -1,0 +1,22 @@
+[0.578s] Invoking command in '/home/spider/ros2_ws/src/flask_server': PYTHONPATH=/home/spider/ros2_ws/build/flask_server/prefix_override:/home/spider/ros2_ws/install/flask_server/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/flask_server build --build-base /home/spider/ros2_ws/build/flask_server/build install --record /home/spider/ros2_ws/build/flask_server/install.log --single-version-externally-managed
+[0.801s] running egg_info
+[0.801s] writing ../../build/flask_server/flask_server.egg-info/PKG-INFO
+[0.801s] writing dependency_links to ../../build/flask_server/flask_server.egg-info/dependency_links.txt
+[0.801s] writing entry points to ../../build/flask_server/flask_server.egg-info/entry_points.txt
+[0.801s] writing requirements to ../../build/flask_server/flask_server.egg-info/requires.txt
+[0.802s] writing top-level names to ../../build/flask_server/flask_server.egg-info/top_level.txt
+[0.803s] reading manifest file '../../build/flask_server/flask_server.egg-info/SOURCES.txt'
+[0.804s] writing manifest file '../../build/flask_server/flask_server.egg-info/SOURCES.txt'
+[0.804s] running build
+[0.804s] running build_py
+[0.804s] running install
+[0.804s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.804s]   warnings.warn(
+[0.804s] running install_lib
+[0.805s] running install_data
+[0.806s] running install_egg_info
+[0.807s] removing '/home/spider/ros2_ws/install/flask_server/lib/python3.10/site-packages/flask_server-0.0.0-py3.10.egg-info' (and everything under it)
+[0.807s] Copying ../../build/flask_server/flask_server.egg-info to /home/spider/ros2_ws/install/flask_server/lib/python3.10/site-packages/flask_server-0.0.0-py3.10.egg-info
+[0.808s] running install_scripts
+[0.828s] writing list of installed files to '/home/spider/ros2_ws/build/flask_server/install.log'
+[0.850s] Invoked command in '/home/spider/ros2_ws/src/flask_server' returned '0': PYTHONPATH=/home/spider/ros2_ws/build/flask_server/prefix_override:/home/spider/ros2_ws/install/flask_server/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/flask_server build --build-base /home/spider/ros2_ws/build/flask_server/build install --record /home/spider/ros2_ws/build/flask_server/install.log --single-version-externally-managed

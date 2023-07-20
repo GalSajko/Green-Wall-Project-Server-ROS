@@ -7,6 +7,8 @@
 
 import builtins  # noqa: E402, I100
 
+import math  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -42,10 +44,6 @@ class Metaclass_ControlWaterPump_Request(type):
             cls._TYPE_SUPPORT = module.type_support_msg__srv__control_water_pump__request
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__srv__control_water_pump__request
 
-            from gwpspider_interfaces.msg import WaterPumpCommand
-            if WaterPumpCommand.__class__._TYPE_SUPPORT is None:
-                WaterPumpCommand.__class__.__import_type_support__()
-
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
         # list constant names here so that they appear in the help text of
@@ -59,23 +57,26 @@ class ControlWaterPump_Request(metaclass=Metaclass_ControlWaterPump_Request):
     """Message class 'ControlWaterPump_Request'."""
 
     __slots__ = [
-        '_instructions',
+        '_pump',
+        '_volume',
     ]
 
     _fields_and_field_types = {
-        'instructions': 'gwpspider_interfaces/WaterPumpCommand',
+        'pump': 'int64',
+        'volume': 'double',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.NamespacedType(['gwpspider_interfaces', 'msg'], 'WaterPumpCommand'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        from gwpspider_interfaces.msg import WaterPumpCommand
-        self.instructions = kwargs.get('instructions', WaterPumpCommand())
+        self.pump = kwargs.get('pump', int())
+        self.volume = kwargs.get('volume', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -106,7 +107,9 @@ class ControlWaterPump_Request(metaclass=Metaclass_ControlWaterPump_Request):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.instructions != other.instructions:
+        if self.pump != other.pump:
+            return False
+        if self.volume != other.volume:
             return False
         return True
 
@@ -116,18 +119,34 @@ class ControlWaterPump_Request(metaclass=Metaclass_ControlWaterPump_Request):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def instructions(self):
-        """Message field 'instructions'."""
-        return self._instructions
+    def pump(self):
+        """Message field 'pump'."""
+        return self._pump
 
-    @instructions.setter
-    def instructions(self, value):
+    @pump.setter
+    def pump(self, value):
         if __debug__:
-            from gwpspider_interfaces.msg import WaterPumpCommand
             assert \
-                isinstance(value, WaterPumpCommand), \
-                "The 'instructions' field must be a sub message of type 'WaterPumpCommand'"
-        self._instructions = value
+                isinstance(value, int), \
+                "The 'pump' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'pump' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._pump = value
+
+    @builtins.property
+    def volume(self):
+        """Message field 'volume'."""
+        return self._volume
+
+    @volume.setter
+    def volume(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'volume' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'volume' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._volume = value
 
 
 # Import statements for member types

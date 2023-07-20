@@ -15,10 +15,6 @@
 #include "rosidl_runtime_cpp/message_initialization.hpp"
 
 
-// Include directives for member types
-// Member 'instructions'
-#include "gwpspider_interfaces/msg/detail/water_pump_command__struct.hpp"
-
 #ifndef _WIN32
 # define DEPRECATED__gwpspider_interfaces__srv__ControlWaterPump_Request __attribute__((deprecated))
 #else
@@ -38,27 +34,45 @@ struct ControlWaterPump_Request_
   using Type = ControlWaterPump_Request_<ContainerAllocator>;
 
   explicit ControlWaterPump_Request_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : instructions(_init)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->pump = 0ll;
+      this->volume = 0.0;
+    }
   }
 
   explicit ControlWaterPump_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : instructions(_alloc, _init)
   {
-    (void)_init;
+    (void)_alloc;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->pump = 0ll;
+      this->volume = 0.0;
+    }
   }
 
   // field types and members
-  using _instructions_type =
-    gwpspider_interfaces::msg::WaterPumpCommand_<ContainerAllocator>;
-  _instructions_type instructions;
+  using _pump_type =
+    int64_t;
+  _pump_type pump;
+  using _volume_type =
+    double;
+  _volume_type volume;
 
   // setters for named parameter idiom
-  Type & set__instructions(
-    const gwpspider_interfaces::msg::WaterPumpCommand_<ContainerAllocator> & _arg)
+  Type & set__pump(
+    const int64_t & _arg)
   {
-    this->instructions = _arg;
+    this->pump = _arg;
+    return *this;
+  }
+  Type & set__volume(
+    const double & _arg)
+  {
+    this->volume = _arg;
     return *this;
   }
 
@@ -104,7 +118,10 @@ struct ControlWaterPump_Request_
   // comparison operators
   bool operator==(const ControlWaterPump_Request_ & other) const
   {
-    if (this->instructions != other.instructions) {
+    if (this->pump != other.pump) {
+      return false;
+    }
+    if (this->volume != other.volume) {
       return false;
     }
     return true;

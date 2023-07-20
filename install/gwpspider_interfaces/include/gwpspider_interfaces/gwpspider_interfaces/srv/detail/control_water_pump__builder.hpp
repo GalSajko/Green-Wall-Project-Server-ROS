@@ -21,16 +21,32 @@ namespace srv
 namespace builder
 {
 
-class Init_ControlWaterPump_Request_instructions
+class Init_ControlWaterPump_Request_volume
 {
 public:
-  Init_ControlWaterPump_Request_instructions()
+  explicit Init_ControlWaterPump_Request_volume(::gwpspider_interfaces::srv::ControlWaterPump_Request & msg)
+  : msg_(msg)
+  {}
+  ::gwpspider_interfaces::srv::ControlWaterPump_Request volume(::gwpspider_interfaces::srv::ControlWaterPump_Request::_volume_type arg)
+  {
+    msg_.volume = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::gwpspider_interfaces::srv::ControlWaterPump_Request msg_;
+};
+
+class Init_ControlWaterPump_Request_pump
+{
+public:
+  Init_ControlWaterPump_Request_pump()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::gwpspider_interfaces::srv::ControlWaterPump_Request instructions(::gwpspider_interfaces::srv::ControlWaterPump_Request::_instructions_type arg)
+  Init_ControlWaterPump_Request_volume pump(::gwpspider_interfaces::srv::ControlWaterPump_Request::_pump_type arg)
   {
-    msg_.instructions = std::move(arg);
-    return std::move(msg_);
+    msg_.pump = std::move(arg);
+    return Init_ControlWaterPump_Request_volume(msg_);
   }
 
 private:
@@ -48,7 +64,7 @@ template<>
 inline
 auto build<::gwpspider_interfaces::srv::ControlWaterPump_Request>()
 {
-  return gwpspider_interfaces::srv::builder::Init_ControlWaterPump_Request_instructions();
+  return gwpspider_interfaces::srv::builder::Init_ControlWaterPump_Request_pump();
 }
 
 }  // namespace gwpspider_interfaces
