@@ -49,9 +49,9 @@ static bool _SpiderGoal_Request__cdr_serialize(
     return false;
   }
   const _SpiderGoal_Request__ros_msg_type * ros_message = static_cast<const _SpiderGoal_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: request_new_goal
+  // Field name: structure_needs_at_least_one_member
   {
-    cdr << (ros_message->request_new_goal ? true : false);
+    cdr << ros_message->structure_needs_at_least_one_member;
   }
 
   return true;
@@ -66,11 +66,9 @@ static bool _SpiderGoal_Request__cdr_deserialize(
     return false;
   }
   _SpiderGoal_Request__ros_msg_type * ros_message = static_cast<_SpiderGoal_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: request_new_goal
+  // Field name: structure_needs_at_least_one_member
   {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message->request_new_goal = tmp ? true : false;
+    cdr >> ros_message->structure_needs_at_least_one_member;
   }
 
   return true;
@@ -90,9 +88,9 @@ size_t get_serialized_size_gwpspider_interfaces__srv__SpiderGoal_Request(
   (void)padding;
   (void)wchar_size;
 
-  // field.name request_new_goal
+  // field.name structure_needs_at_least_one_member
   {
-    size_t item_size = sizeof(ros_message->request_new_goal);
+    size_t item_size = sizeof(ros_message->structure_needs_at_least_one_member);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -123,7 +121,7 @@ size_t max_serialized_size_gwpspider_interfaces__srv__SpiderGoal_Request(
   full_bounded = true;
   is_plain = true;
 
-  // member: request_new_goal
+  // member: structure_needs_at_least_one_member
   {
     size_t array_size = 1;
 

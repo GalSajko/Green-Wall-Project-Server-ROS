@@ -18,26 +18,6 @@ namespace gwpspider_interfaces
 namespace srv
 {
 
-namespace builder
-{
-
-class Init_SpiderGoal_Request_request_new_goal
-{
-public:
-  Init_SpiderGoal_Request_request_new_goal()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
-  {}
-  ::gwpspider_interfaces::srv::SpiderGoal_Request request_new_goal(::gwpspider_interfaces::srv::SpiderGoal_Request::_request_new_goal_type arg)
-  {
-    msg_.request_new_goal = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::gwpspider_interfaces::srv::SpiderGoal_Request msg_;
-};
-
-}  // namespace builder
 
 }  // namespace srv
 
@@ -48,7 +28,7 @@ template<>
 inline
 auto build<::gwpspider_interfaces::srv::SpiderGoal_Request>()
 {
-  return gwpspider_interfaces::srv::builder::Init_SpiderGoal_Request_request_new_goal();
+  return ::gwpspider_interfaces::srv::SpiderGoal_Request(rosidl_runtime_cpp::MessageInitialization::ZERO);
 }
 
 }  // namespace gwpspider_interfaces

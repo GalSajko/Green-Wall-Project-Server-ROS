@@ -24,28 +24,17 @@ inline void to_flow_style_yaml(
   const SpiderGoal_Request & msg,
   std::ostream & out)
 {
-  out << "{";
-  // member: request_new_goal
-  {
-    out << "request_new_goal: ";
-    rosidl_generator_traits::value_to_yaml(msg.request_new_goal, out);
-  }
-  out << "}";
+  (void)msg;
+  out << "null";
 }  // NOLINT(readability/fn_size)
 
 inline void to_block_style_yaml(
   const SpiderGoal_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: request_new_goal
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "request_new_goal: ";
-    rosidl_generator_traits::value_to_yaml(msg.request_new_goal, out);
-    out << "\n";
-  }
+  (void)msg;
+  (void)indentation;
+  out << "null\n";
 }  // NOLINT(readability/fn_size)
 
 inline std::string to_yaml(const SpiderGoal_Request & msg, bool use_flow_style = false)

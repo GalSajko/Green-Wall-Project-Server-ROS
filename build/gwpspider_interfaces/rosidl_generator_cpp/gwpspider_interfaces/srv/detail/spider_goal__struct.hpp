@@ -38,7 +38,7 @@ struct SpiderGoal_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->request_new_goal = false;
+      this->structure_needs_at_least_one_member = 0;
     }
   }
 
@@ -48,22 +48,15 @@ struct SpiderGoal_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->request_new_goal = false;
+      this->structure_needs_at_least_one_member = 0;
     }
   }
 
   // field types and members
-  using _request_new_goal_type =
-    bool;
-  _request_new_goal_type request_new_goal;
+  using _structure_needs_at_least_one_member_type =
+    uint8_t;
+  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
 
-  // setters for named parameter idiom
-  Type & set__request_new_goal(
-    const bool & _arg)
-  {
-    this->request_new_goal = _arg;
-    return *this;
-  }
 
   // constant declarations
 
@@ -107,7 +100,7 @@ struct SpiderGoal_Request_
   // comparison operators
   bool operator==(const SpiderGoal_Request_ & other) const
   {
-    if (this->request_new_goal != other.request_new_goal) {
+    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
       return false;
     }
     return true;

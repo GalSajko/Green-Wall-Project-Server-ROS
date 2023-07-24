@@ -1,4 +1,3 @@
-bool request_new_goal
 ---
 float32[] watering_position
 bool go_refill

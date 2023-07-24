@@ -12,6 +12,7 @@
       margin-left: 50px;
       float: left;
       text-align: start;
+      
     }
 
     #naslov {
@@ -24,12 +25,16 @@
       font-size: 45px;
     }
     .container {
+    width: fit-content;
     display: flex;
 }
+p{font-size: 18px;}
+h3{font-size: 20px;}
 
 .child {
     flex: 1;
-    border: 2px solid yellow;
+    width: 200px;
+    
     margin-right: 20px;
 }  
 
@@ -69,6 +74,11 @@
           <p>Number of plants: <span id="plantsNo"></span></p>
           <p>Water usage total: <span id="water"></span>L</p>
         </div>
+        <h3>Fish pond:</h3>
+        <div>
+          <p>Number of fish: 12</p>
+          <p>Food amount: 42kg</p>
+        </div>
         <h3>Current plant:</h3>
         <div>
           <p>Plant name: <span id="plantName"></span></p>
@@ -79,20 +89,26 @@
         </div>
         <h3>Postaje:</h3>
         <div class="container">
-          <div class="child">postaja 1
-            <p>Temperature: <span id="temp1"></span></p>
-            <p>Light Level: <span id="light1"></span></p>
-            <p>Neki: <span id="neki1"></span></p>
+          <div class="child">Field 1
+            <p>Temperature: <span id="temp1"></span>&deg;C</p>
+            <p>Luminosity: <span id="light1"></span> lx</p>
+            <p>Oxygen: <span id="oxy1"></span> %vol</p>
+            <p>CO2: <span id="co1"></span> ppm</p>
+            <p>Humidity: <span id="tvoc1"></span> %</p>
           </div>
-          <div class="child">postaja 2
-            <p>Temperature: <span id="temp2"></span></p>
-            <p>Light Level: <span id="light2"></span></p>
-            <p>Neki: <span id="neki2"></span></p>
+          <div class="child">Field 2
+            <p>Temperature: <span id="temp2"></span>&deg;C</p>
+            <p>Luminosity: <span id="light2"></span> lx</p>
+            <p>Oxygen: <span id="oxy2"> %vol</span></p>
+            <p>CO2: <span id="co2"></span> ppm</p>
+            <p>Humidity: <span id="tvoc2"></span> %</p>
           </div>
-          <div class="child">postaja 3
-            <p>Temperature: <span id="temp3"></span></p>
-            <p>Light Level: <span id="light3"></span></p>
-            <p>Neki: <span id="neki3"></span></p>
+          <div class="child">Field 3
+            <p>Temperature: <span id="temp3"></span>&deg;C</p>
+            <p>Luminosity: <span id="light3"></span> lx</p>
+            <p>Oxygen: <span id="oxy3"> %vol</span></p>
+            <p>CO2: <span id="co3"></span> ppm</p>
+            <p>Humidity: <span id="tvoc3"></span> %</p>
           </div>
         </div>
       </div>

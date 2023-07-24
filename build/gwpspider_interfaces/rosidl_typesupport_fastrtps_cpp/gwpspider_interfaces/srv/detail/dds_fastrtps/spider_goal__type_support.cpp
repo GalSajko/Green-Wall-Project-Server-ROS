@@ -32,8 +32,8 @@ cdr_serialize(
   const gwpspider_interfaces::srv::SpiderGoal_Request & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: request_new_goal
-  cdr << (ros_message.request_new_goal ? true : false);
+  // Member: structure_needs_at_least_one_member
+  cdr << ros_message.structure_needs_at_least_one_member;
   return true;
 }
 
@@ -43,12 +43,8 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   gwpspider_interfaces::srv::SpiderGoal_Request & ros_message)
 {
-  // Member: request_new_goal
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message.request_new_goal = tmp ? true : false;
-  }
+  // Member: structure_needs_at_least_one_member
+  cdr >> ros_message.structure_needs_at_least_one_member;
 
   return true;
 }
@@ -66,9 +62,9 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: request_new_goal
+  // Member: structure_needs_at_least_one_member
   {
-    size_t item_size = sizeof(ros_message.request_new_goal);
+    size_t item_size = sizeof(ros_message.structure_needs_at_least_one_member);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -94,7 +90,7 @@ max_serialized_size_SpiderGoal_Request(
   is_plain = true;
 
 
-  // Member: request_new_goal
+  // Member: structure_needs_at_least_one_member
   {
     size_t array_size = 1;
 

@@ -1,1 +1,0 @@
-bool request_new_goal

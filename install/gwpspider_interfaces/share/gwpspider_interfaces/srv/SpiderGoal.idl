@@ -6,7 +6,7 @@
 module gwpspider_interfaces {
   module srv {
     struct SpiderGoal_Request {
-      boolean request_new_goal;
+      uint8 structure_needs_at_least_one_member;
     };
     struct SpiderGoal_Response {
       sequence<float> watering_position;

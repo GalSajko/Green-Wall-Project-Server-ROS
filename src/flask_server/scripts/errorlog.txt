@@ -1150,3 +1150,675 @@ Traceback (most recent call last):
   File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1801, in make_response
     raise TypeError(
 TypeError: The view function for 'add_plant_data' did not return a valid response. The function either returned None or ended without a return statement.
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /update [GET]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 784, in update
+    array_ind = config.order[config.lastOrderIndex].index
+IndexError: list index out of range
+Exception on /station [POST]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1487, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1506, in finalize_request
+    response = self.make_response(rv)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1801, in make_response
+    raise TypeError(
+TypeError: The view function for 'station_data' did not return a valid response. The function either returned None or ended without a return statement.
+Exception on /station [POST]
+Traceback (most recent call last):
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1487, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1506, in finalize_request
+    response = self.make_response(rv)
+  File "/home/spider/.local/lib/python3.10/site-packages/flask/app.py", line 1801, in make_response
+    raise TypeError(
+TypeError: The view function for 'station_data' did not return a valid response. The function either returned None or ended without a return statement.

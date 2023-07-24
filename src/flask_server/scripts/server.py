@@ -27,6 +27,7 @@ from gwpspider_interfaces.srv import SpiderGoal
 from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
 from gwpconfig import commconstants
+from std_srvs.srv import Empty
 
 #Environment values
 app = Flask(__name__)
@@ -41,10 +42,11 @@ migrate = Migrate(app, db)
 config.sensorBase = [None for i in range(6*36)]
 config.arduino_times = [None for i in range(6)]
 config.arduino_status = [None for i in range(6)]
-config.update_data = [None for i in range(10)]
+config.update_data = [None for i in range(15)]
 config.deleted = []
 config.orderIndex = 0
 config.no_of_moves = 0
+config.empty_tank = True
 config.arduino_pings = [False for i in range(6)]
 TOKEN = chatbot.CHATBOT_TOKEN
 CHAT_ID = chatbot.CHAT_ID
@@ -54,8 +56,25 @@ config.used_volume = int(lines[0])
 print(config.used_volume )
 f.close()
 
-
 #ROS2 node classes
+class WateringSuccessService(Node):
+
+    def __init__(self):
+        super().__init__('service')
+        self.srv = self.create_service(Empty, gid.SET_WATERING_SUCCESS_SERVICE, self.callback)
+
+    def callback(self, request, response):
+        try:
+            config.used_volume += config.order[config.orderIndex].water
+            f = open("volume.txt", "w")
+            f.write(str(config.used_volume))
+            f.close()
+        except Exception as e:
+            print("here")
+        print("here3")
+        config.orderIndex += 1
+        return response
+
 class MinimalService(Node):
 
     def __init__(self):
@@ -64,29 +83,18 @@ class MinimalService(Node):
 
     def spider_goal_callback(self, request, response):
         try:
-            if config.orderIndex != 0:
-                array_ind = config.order[config.orderIndex].index
-            if request.request_new_goal :
-                try:
-                    config.used_volume += config.order[config.orderIndex].water
-                    f = open("volume.txt", "w")
-                    f.write(str(config.used_volume))
-                    f.close()
-                except Exception as e:
-                    print(e)
-                config.orderIndex += 1
-            print(len(config.order))
-            print(config.orderIndex)
-            if config.orderIndex<len(config.order):
+            if config.orderIndex<len(config.order) and not config.empty_tank and config.orderIndex != 0:
                 response.watering_position = [config.order[config.orderIndex].x, config.order[config.orderIndex].y, 0.0]
                 response.go_refill = False
-                print(config.order[config.orderIndex].plantName)
+                print(response.watering_position)
                 response.volume = config.order[config.orderIndex].water
             else:
-                refill()
+                if not config.empty_tank and config.orderIndex != 0:
+                    refill()
                 response.watering_position =[]
                 response.go_refill = True
                 response.volume = config.refill_volume
+                config.empty_tank = False
             return response
         except Exception as e:
             print(e)
@@ -394,10 +402,12 @@ rclpy.init(args=None)
 ros2_service_node = MinimalService()
 ros2_message_subscriber = MessagesSubscriber()
 ros2_position_subscriber = PositionSubscriber()
+ros2_watering_success_service = WateringSuccessService()
 executor = MultiThreadedExecutor()
 executor.add_node(ros2_message_subscriber)
 executor.add_node(ros2_service_node)
 executor.add_node(ros2_position_subscriber)
+executor.add_node(ros2_watering_success_service)
 executor_thread = threading.Thread(target=executor.spin, daemon=True)
 executor_thread.start()
 
@@ -821,6 +831,16 @@ def handle_data():
         send_error_notif("error processing data")
     return "OK"
 
+@app.route('/station', methods=['POST'])
+def station_data():
+    ip_address = request.remote_addr
+    data = request.get_json()
+    if "192.168.1.33" == ip_address:
+        config.update_data[9] = data
+    else:
+        print(type(ip_address))
+    return "OK"
+
 @app.route('/start', methods=['POST'])
 def start_generating():
     """Function generates current and next route.
@@ -844,7 +864,6 @@ def svg():
     Returns:
         render_template: serves a webpage
     """
-    config.orderIndex = 0
     #pubMotion.publish("Hello World!")
     set_data_from_db()
     return render_template('svgtest.html')

@@ -16,7 +16,7 @@ gwpspider_interfaces__srv__SpiderGoal_Request__init(gwpspider_interfaces__srv__S
   if (!msg) {
     return false;
   }
-  // request_new_goal
+  // structure_needs_at_least_one_member
   return true;
 }
 
@@ -26,7 +26,7 @@ gwpspider_interfaces__srv__SpiderGoal_Request__fini(gwpspider_interfaces__srv__S
   if (!msg) {
     return;
   }
-  // request_new_goal
+  // structure_needs_at_least_one_member
 }
 
 bool
@@ -35,8 +35,8 @@ gwpspider_interfaces__srv__SpiderGoal_Request__are_equal(const gwpspider_interfa
   if (!lhs || !rhs) {
     return false;
   }
-  // request_new_goal
-  if (lhs->request_new_goal != rhs->request_new_goal) {
+  // structure_needs_at_least_one_member
+  if (lhs->structure_needs_at_least_one_member != rhs->structure_needs_at_least_one_member) {
     return false;
   }
   return true;
@@ -50,8 +50,8 @@ gwpspider_interfaces__srv__SpiderGoal_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // request_new_goal
-  output->request_new_goal = input->request_new_goal;
+  // structure_needs_at_least_one_member
+  output->structure_needs_at_least_one_member = input->structure_needs_at_least_one_member;
   return true;
 }
 

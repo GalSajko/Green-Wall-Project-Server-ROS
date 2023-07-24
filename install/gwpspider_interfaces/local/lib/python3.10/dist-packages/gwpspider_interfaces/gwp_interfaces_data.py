@@ -33,6 +33,7 @@ TOGGLE_ADDITIONAL_CONTROLLER_MODE_SERVICE = 'toggle_additional_controller_mode_s
 
 #Server
 SEND_GOAL_SERVICE = 'spider_goal_service'
+SET_WATERING_SUCCESS_SERVICE = 'set_watering_success_service'
 
 # Dynamixel
 TOGGLE_MOTORS_TORQUE_SERVICE = 'toggle_motors_torque_service'
