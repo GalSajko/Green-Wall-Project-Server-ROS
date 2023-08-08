@@ -50,13 +50,13 @@ bool gwpspider_interfaces__srv__spider_goal__request__convert_from_py(PyObject *
     assert(strncmp("gwpspider_interfaces.srv._spider_goal.SpiderGoal_Request", full_classname_dest, 56) == 0);
   }
   gwpspider_interfaces__srv__SpiderGoal_Request * ros_message = _ros_message;
-  {  // watered
-    PyObject * field = PyObject_GetAttrString(_pymsg, "watered");
+  {  // request_new_goal
+    PyObject * field = PyObject_GetAttrString(_pymsg, "request_new_goal");
     if (!field) {
       return false;
     }
     assert(PyBool_Check(field));
-    ros_message->watered = (Py_True == field);
+    ros_message->request_new_goal = (Py_True == field);
     Py_DECREF(field);
   }
 
@@ -81,11 +81,11 @@ PyObject * gwpspider_interfaces__srv__spider_goal__request__convert_to_py(void *
     }
   }
   gwpspider_interfaces__srv__SpiderGoal_Request * ros_message = (gwpspider_interfaces__srv__SpiderGoal_Request *)raw_ros_message;
-  {  // watered
+  {  // request_new_goal
     PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->watered ? 1 : 0);
+    field = PyBool_FromLong(ros_message->request_new_goal ? 1 : 0);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "watered", field);
+      int rc = PyObject_SetAttrString(_pymessage, "request_new_goal", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

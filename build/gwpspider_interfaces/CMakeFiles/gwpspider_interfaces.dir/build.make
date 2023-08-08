@@ -114,9 +114,9 @@ CMakeFiles/gwpspider_interfaces: rosidl_cmake/srv/ToggleController_Response.msg
 CMakeFiles/gwpspider_interfaces: /home/spider/ros2_ws/src/gwpspider_interfaces/srv/DistributeForces.srv
 CMakeFiles/gwpspider_interfaces: rosidl_cmake/srv/DistributeForces_Request.msg
 CMakeFiles/gwpspider_interfaces: rosidl_cmake/srv/DistributeForces_Response.msg
-CMakeFiles/gwpspider_interfaces: /home/spider/ros2_ws/src/gwpspider_interfaces/srv/ApplyForceLeg.srv
-CMakeFiles/gwpspider_interfaces: rosidl_cmake/srv/ApplyForceLeg_Request.msg
-CMakeFiles/gwpspider_interfaces: rosidl_cmake/srv/ApplyForceLeg_Response.msg
+CMakeFiles/gwpspider_interfaces: /home/spider/ros2_ws/src/gwpspider_interfaces/srv/ApplyForcesOnLegs.srv
+CMakeFiles/gwpspider_interfaces: rosidl_cmake/srv/ApplyForcesOnLegs_Request.msg
+CMakeFiles/gwpspider_interfaces: rosidl_cmake/srv/ApplyForcesOnLegs_Response.msg
 CMakeFiles/gwpspider_interfaces: /home/spider/ros2_ws/src/gwpspider_interfaces/srv/GetSpiderPose.srv
 CMakeFiles/gwpspider_interfaces: rosidl_cmake/srv/GetSpiderPose_Request.msg
 CMakeFiles/gwpspider_interfaces: rosidl_cmake/srv/GetSpiderPose_Response.msg

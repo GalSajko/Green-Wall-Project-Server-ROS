@@ -5,8 +5,6 @@
 
 # Import statements for member types
 
-import builtins  # noqa: E402, I100
-
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -55,22 +53,18 @@ class SpiderGoal_Request(metaclass=Metaclass_SpiderGoal_Request):
     """Message class 'SpiderGoal_Request'."""
 
     __slots__ = [
-        '_request_new_goal',
     ]
 
     _fields_and_field_types = {
-        'request_new_goal': 'boolean',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.request_new_goal = kwargs.get('request_new_goal', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -101,8 +95,6 @@ class SpiderGoal_Request(metaclass=Metaclass_SpiderGoal_Request):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.request_new_goal != other.request_new_goal:
-            return False
         return True
 
     @classmethod
@@ -110,27 +102,13 @@ class SpiderGoal_Request(metaclass=Metaclass_SpiderGoal_Request):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @builtins.property
-    def request_new_goal(self):
-        """Message field 'request_new_goal'."""
-        return self._request_new_goal
-
-    @request_new_goal.setter
-    def request_new_goal(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, bool), \
-                "The 'request_new_goal' field must be of type 'bool'"
-        self._request_new_goal = value
-
 
 # Import statements for member types
 
 # Member 'watering_position'
 import array  # noqa: E402, I100
 
-# already imported above
-# import builtins
+import builtins  # noqa: E402, I100
 
 import math  # noqa: E402, I100
 

@@ -9,7 +9,7 @@ from GeneticAlgorithm import geneticAlgorithm
 from sensor import Sensor
 import config
 import time
-from std_msgs.msg import String, Float32MultiArray
+from std_msgs.msg import String, Float32MultiArray, Float32
 import rclpy 
 import json
 import threading
@@ -43,9 +43,11 @@ config.sensorBase = [None for i in range(6*36)]
 config.arduino_times = [None for i in range(6)]
 config.arduino_status = [None for i in range(6)]
 config.update_data = [None for i in range(15)]
+config.update_data[14] = 0.0
 config.deleted = []
 config.orderIndex = 0
 config.no_of_moves = 0
+config.poseData = []
 config.empty_tank = True
 config.arduino_pings = [False for i in range(6)]
 TOKEN = chatbot.CHATBOT_TOKEN
@@ -53,12 +55,17 @@ CHAT_ID = chatbot.CHAT_ID
 f = open("volume.txt", "r")
 lines = f.readlines()
 config.used_volume = int(lines[0])
+config.reset_time = None
 print(config.used_volume )
 f.close()
 
 #ROS2 node classes
 class WateringSuccessService(Node):
+    """Node class for a ROS2 service that updates the index for a plant after it has been watered.
 
+    Args:
+        Node (ROS2 Node): ROS2 service node.
+    """
     def __init__(self):
         super().__init__('service')
         self.srv = self.create_service(Empty, gid.SET_WATERING_SUCCESS_SERVICE, self.callback)
@@ -69,14 +76,35 @@ class WateringSuccessService(Node):
             f = open("volume.txt", "w")
             f.write(str(config.used_volume))
             f.close()
+            
         except Exception as e:
-            print("here")
-        print("here3")
+            print(e)
+        
+        try:
+            if config.orderIndex != 0:
+                with app.app_context():
+                    array_ind = config.order[config.orderIndex].index
+                    print(array_ind)
+                    print(config.orderIndex)
+                    print(config.sensorBase[array_ind].arduino)
+                    print(config.sensorBase[array_ind].line)
+                    print(config.sensorBase[array_ind].sensorID)
+                    config.sensorBase[array_ind].lastWater = time.time()
+                    plant = Plants.query.get(config.sensorBase[array_ind].db_id)
+                    plant.date_time = datetime.fromtimestamp(config.sensorBase[array_ind].lastWater)
+                    db.session.commit()
+        except Exception as e:
+            print("error: "+str(e))
+        
         config.orderIndex += 1
         return response
 
 class MinimalService(Node):
+    """Node class for a ROS2 service that sends plant location to the robot.
 
+    Args:
+        Node (ROS2 Node): ROS2 service node.
+    """
     def __init__(self):
         super().__init__('minimal_service')
         self.srv = self.create_service(SpiderGoal, gid.SEND_GOAL_SERVICE ,self.spider_goal_callback)
@@ -89,7 +117,8 @@ class MinimalService(Node):
                 print(response.watering_position)
                 response.volume = config.order[config.orderIndex].water
             else:
-                if not config.empty_tank and config.orderIndex != 0:
+                if not config.empty_tank or config.orderIndex != 0:
+                    print("refilling")
                     refill()
                 response.watering_position =[]
                 response.go_refill = True
@@ -101,7 +130,11 @@ class MinimalService(Node):
             send_error_notif("service error: "+str(e))
             
 class PositionSubscriber(Node):
+    """ROS2 node that listens to a ROS2 topic where the robot sends its own location.
 
+    Args:
+        Node (ROS2 Node): ROS2 subscriber node.
+    """
     def __init__(self):
         super().__init__('position_subscriber')
         self.subscription = self.create_subscription(
@@ -114,11 +147,25 @@ class PositionSubscriber(Node):
     def listener_callback(self, msg):
         x, y = msg.data[0], msg.data[1]
         self.get_logger().info("Received data: x={}, y={}".format(x, y))
+        if config.poseData == [] or config.update_data[14] == 0.0:
+            config.reset_time = time.time()
+        if config.poseData != []:
+            print(config.poseData)
+            print(x)
+            print(y)
+            print(np.sqrt((config.poseData[0] + x)**2 - (config.poseData[1] - y)**2))
+            config.update_data[14]+= np.sqrt((config.poseData[0] - x)**2 + (config.poseData[1] - y)**2)
+        if time.time() - config.reset_time >= 3600:
+            config.update_data[14] == 0.0
         if config.poseData != [x,y]:
             config.poseData = [x,y]
 
 class MessagesSubscriber(Node):
+    """ROS2 node that listens to a ROS2 topic where the robot sends information about its own workflow. 
 
+    Args:
+        Node (ROS2 Node): ROS2 subscriber node.
+    """
     def __init__(self):
         super().__init__('messages_subscriber')
         self.subscription = self.create_subscription(
@@ -133,6 +180,25 @@ class MessagesSubscriber(Node):
         if msg.data == "LEG":
             config.no_of_moves += 1
         messages(msg.data)
+
+class VoltageSubscriber(Node):
+    """ROS2 node that listens to a ROS2 topic where the robot sends information about the battery voltage. 
+
+    Args:
+        Node (ROS2 Node): ROS2 subscriber node.
+    """
+    def __init__(self):
+        super().__init__('voltage_subscriber')
+        self.subscription = self.create_subscription(
+            Float32,
+            gid.BATTERY_VOLTAGE_TOPIC,
+            self.listener_callback,
+            10)
+        self.subscription  # prevent unused variable warning
+
+    def listener_callback(self, msg):
+        self.get_logger().info('Received message: %f' % msg.data)
+        config.update_data[10] = msg.data
 
 #Database table classes
 class Plants(db.Model):
@@ -288,7 +354,7 @@ def add_posts():
             db.session.commit()
             set_data_from_db()
             flash("Post Added",'success')
-    if request.form['action'] == 'submitData':
+    if request.form['action'] == 'Submit Data':
         return redirect(url_for('show_data'))
     else:
         name  = request.form['name']
@@ -395,7 +461,7 @@ config.status = "OFF"
 config.refill_volume = 0
 config.next_refill_volume = 0
 config.lastOrderIndex = 1
-config.poseData = []
+
 
 #ROS2 initialization
 rclpy.init(args=None)
@@ -403,11 +469,13 @@ ros2_service_node = MinimalService()
 ros2_message_subscriber = MessagesSubscriber()
 ros2_position_subscriber = PositionSubscriber()
 ros2_watering_success_service = WateringSuccessService()
+ros2_voltage_subscriber = VoltageSubscriber()
 executor = MultiThreadedExecutor()
 executor.add_node(ros2_message_subscriber)
 executor.add_node(ros2_service_node)
 executor.add_node(ros2_position_subscriber)
 executor.add_node(ros2_watering_success_service)
+executor.add_node(ros2_voltage_subscriber)
 executor_thread = threading.Thread(target=executor.spin, daemon=True)
 executor_thread.start()
 
@@ -418,24 +486,38 @@ def get_data_thread():
     Returns:
         int : 0
     """
+    try:
+        while True:
+            for i in range(len(config.ARDUIONO_IP_LIST)):
+                try:
+                    requests.get(f'http://{config.ARDUIONO_IP_LIST[i]}:5000/zalij')
+                    config.arduino_pings[i]=True
+                except Exception as e:
+                    print(config.ARDUIONO_IP_LIST[i])
+                    print(e)
+                time.sleep(1)
+            time.sleep(60)
+        return 0
+    except Exception as e:
+        send_error_notif("Error in get_data_thread: "+str(e))
+        return 0
+
+def checking_arduinos():
     while True:
-        for i in range(len(config.ARDUIONO_IP_LIST)):
-            try:
-                requests.get(f'http://{config.ARDUIONO_IP_LIST[i]}:5000/zalij')
-                config.arduino_pings[i]=True
-            except Exception as e:
-                print(config.ARDUIONO_IP_LIST[i])
-                print(e)
-            time.sleep(1)
+        try:
+            check_arduino_sensor_status()
+        except Exception as e:
+            print(e)
         time.sleep(60)
-    return 0
 
 th2 = threading.Thread(target=get_data_thread)
 th2.start()
+th3 = threading.Thread(target=checking_arduinos)
+th3.start()
 
 #Main working loop functions
 def set_data_from_db():
-    """Function takes data from the database and adds it to the sensor list.
+    """Function takes data from the database and adds it to the Sensor objects in the list of Sensor objects.
     """
     start = 0
     x_dim = 20
@@ -533,7 +615,7 @@ def tsp(data, sol):
         send_error_notif("Path generation error: "+str(e))
 
 def setup_sensor_list(panel, arduino):
-    """Function transforms all the sensor data to x, y pair of coordinates and inserts them into a list.
+    """Function transforms all the sensor data to Sensor objects and inserts them into a list.
 
     Args:
         panel (Integer): Id number of arduino
@@ -582,10 +664,10 @@ def setup_sensor_list(panel, arduino):
                 pass
 
 def create_order():
-    """Takes last n sesnors and finds the shortest path from first to last.
+    """Selects the plants that will be watered on the path.
 
     Returns:
-        list: Order of sensors to visit
+        list: Order of plants that will be watered on the path.
     """
     try:
         data = []
@@ -593,8 +675,17 @@ def create_order():
         sol = []
         water_sum = 0
         done = 0
+        first_time = True
         while True:
-            if len(config.watering_queue) != 0:
+            if len(config.watering_queue) < 3 and len(config.watering_queue) != 0 and len(data) == 0:
+                data = config.watering_queue[:]
+                config.watering_queue = []
+                for i in data:
+                    print(i)
+                    water_sum += i.water
+                data.insert(0,startPos) 
+                return data
+            elif len(config.watering_queue) != 0:
                 if water_sum + config.watering_queue[len(config.watering_queue)-1].water <= config.WATER_LIMIT:
                     dot = config.watering_queue.pop()
                     water_sum += dot.water
@@ -609,83 +700,107 @@ def create_order():
                     break
             else:
                 print("no entries")
+                with app.app_context():
+                    set_data_from_db()
                 check_moisture()
-                done+=1
-                if done == 2:
-                    break
+                if first_time:
+                    first_time = False
+                    continue
+                return []
         order = tsp(data,sol)
         return order
     except Exception as e:
+        print(e)
         msg = String()
         msg.data = "STOP"
         publisher.publish(msg)
         send_error_notif("Sequence build error: "+str(e))
 
 def send_error_notif(notif):
-    message = ""
-    if notif in commconstants.STATUS_CODES_DICT:
-        message = commconstants.STATUS_CODES_DICT[notif]
-    else:
-        message = notif
-    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={CHAT_ID}&text={message}"
-    requests.get(url)
+    """Function sends message to a Telegram group chat.
 
-def check_moisture():
-    must_water = []
-    can_wait = []
-    for i in config.sensorBase:
-        if i is not None:
-            try:
-                if i.cap != None:
-                    a = datetime.fromtimestamp(i.lastWater)
-                    b = datetime.now()
-                    delta = b- a
-                    if delta.days >=5:
-                        must_water.append(i)
-                    elif delta.days == 4 and i.cap <= 10:
-                        can_wait.append(i)
-            except Exception as e:
-                print("There is a database entry without senosr or sensor without database entry" ,e)
-    random.shuffle(must_water)
-    random.shuffle(can_wait)
-    config.watering_queue = can_wait+must_water
-    for i in config.watering_queue:
-        print(datetime.fromtimestamp(i.lastWater))
-    print(len(config.watering_queue))
-
-def refill():
-    """Gets request from robot to create a new path.
-
-    Returns:
-        String: Confirmation that request was receieved
+    Args:
+        notif (String): Message or message code for the Telegram group chat.
     """
     try:
-        array_ind = config.order[len(config.order)-1].index
-        config.sensorBase[array_ind].lastWater = time.time()
-        with app.app_context():
-            plant = Plants.query.get(config.sensorBase[array_ind].db_id)
-            plant.date_time = datetime.fromtimestamp(config.sensorBase[array_ind].lastWater)
-            db.session.commit()
-        config.jsons=[]
-        config.orderIndex = 0
-        config.order = config.nextRoute.copy()
-        #config.used_volume += config.refill_volume
-        config.refill_volume = config.next_refill_volume
-        config.nextRoute = create_order()
-        config.no_of_moves = 0
+        message = ""
+        if notif in commconstants.STATUS_CODES_DICT:
+            message = commconstants.STATUS_CODES_DICT[notif]
+        else:
+            message = notif
+        url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={CHAT_ID}&text={message}"
+        requests.get(url)
+    except Exception as e:
+        print("Cant send message to telegram: "+str(e))
+
+def check_moisture():
+    """Function makes a list of plants that need watering.
+    """
+    try:
+        must_water = []
+        can_wait = []
+        for i in config.sensorBase:
+            if i is not None:
+                try:
+                    if i.cap != None:
+                        a = datetime.fromtimestamp(i.lastWater)
+                        b = datetime.now()
+                        delta = b- a
+                        if delta.days >=5:
+                            must_water.append(i)
+                        elif delta.days == 4 and i.cap <= 10:
+                            can_wait.append(i)
+                except Exception as e:
+                    print("There is a database entry without senosr or sensor without database entry" ,e)
+        random.shuffle(must_water)
+        random.shuffle(can_wait)
+        config.watering_queue = can_wait+must_water
+    except Exception as e:
+        send_error_notif("Problem while checking moisture: "+str(e))
+
+def refill():
+    """Function gets the variables ready for a new working loop.
+    """
+    try:
+        if len(config.order) !=0:
+            array_ind = config.order[len(config.order)-1].index
+            config.sensorBase[array_ind].lastWater = time.time()
+            with app.app_context():
+                plant = Plants.query.get(config.sensorBase[array_ind].db_id)
+                plant.date_time = datetime.fromtimestamp(config.sensorBase[array_ind].lastWater)
+                db.session.commit()
+            config.jsons=[]
+            config.orderIndex = 0
+            config.order = config.nextRoute.copy()
+            #config.used_volume += config.refill_volume
+            config.refill_volume = config.next_refill_volume
+            config.nextRoute = create_order()
+            if config.nextRoute == [] and not config.end_loop:
+                send_error_notif("ALL PLANTS WATERED")
+                config.end_loop = True
+            config.update_data[13] = 0
     except Exception as e:
         send_error_notif("Refill stup error: "+str(e))
 
 def messages(message):
+    """Function checks if the received message is describing the status of the robot.
+
+    Args:
+        message (String): Message from robot.
+    """
     if message == commconstants.REFILLING_STARTED_MESSAGE:
         refill()
     elif message == commconstants.WORKING_PHASE_STARTED_MESSAGE:
         config.status = "Working"
     elif message == commconstants.RESTING_PHASE_STARTED_MESSAGE:
         config.status = "Resting"
+    elif message == commconstants.LEG_MOVE_MESSAGE:
+        config.update_data[13]+=1
     send_error_notif(message)
 
 def check_arduino_sensor_status():
+    """Function checks if any arduino or sensor stopped responding.
+    """
     timer = time.time()
     for i in range(len(config.arduino_times)):
         try:
@@ -698,7 +813,6 @@ def check_arduino_sensor_status():
                         if j.arduino == i+1:
                             j.lastAlive = None
                     except Exception as e:
-                        print(e)
                         continue
         except:
             continue
@@ -714,10 +828,7 @@ def check_arduino_sensor_status():
             continue
 
 def send_goal():
-    """Sends data about the path and goal points to the frontend.
-
-    Returns:
-        JSON: list of points and index that points to currently selected point
+    """Updates data about the path and goal points for the frontend.
     """
     try:
         data = []
@@ -731,9 +842,6 @@ def send_goal():
 
 def get_plant_num():
     """Funtion counts the number of active sensors.
-
-    Returns:
-        int: Number of active sensors.
     """
     count = 0
     for i in config.sensorBase:
@@ -742,10 +850,7 @@ def get_plant_num():
     config.update_data[5] = count
 
 def get_routes():
-    """Function sends data about routes to the frontend
-
-    Returns:
-        list: Next and current route.
+    """Function updates data about routes for the frontend
     """
     data_curr = []
     data_next = []
@@ -773,58 +878,47 @@ def deleted():
         
 @app.route('/update')
 def update():
-    """Sends locations of active sensors to frontend.
+    """Collects and sends data to frontend.
 
     Returns:
-        JSON: Information about active sensors.
+        JSON: Data for frontend.
     """
-    config.update_data[0] = config.status
-    send_goal()
-    if config.lastOrderIndex != config.orderIndex and config.orderIndex != 0:
-        array_ind = config.order[config.lastOrderIndex].index
-        config.sensorBase[array_ind].lastWater = time.time()
-        plant = Plants.query.get(config.sensorBase[array_ind].db_id)
-        plant.date_time = datetime.fromtimestamp(config.sensorBase[array_ind].lastWater)
-        db.session.commit()
-        config.lastOrderIndex = config.orderIndex
-    config.jsons.clear()
-    for i in config.sensorBase:
-        if i is not None:
-            config.jsons.append(json.loads(i.toJson()))
-    check_arduino_sensor_status()
-    config.update_data[4] = config.jsons
-    get_plant_num()
-    get_routes()
-    if len(config.poseData) == 2:
-        config.update_data[3] = config.poseData
-    config.update_data[8] = config.used_volume
+    try:
+        config.update_data[0] = config.status
+        send_goal()
+        config.jsons.clear()
+        for i in config.sensorBase:
+            if i is not None:
+                config.jsons.append(json.loads(i.toJson()))
+        config.update_data[4] = config.jsons
+        get_plant_num()
+        get_routes()
+        if len(config.poseData) == 2:
+            config.update_data[3] = config.poseData
+        config.update_data[8] = config.used_volume
+    except Exception as e:
+        send_error_notif("Error updating data: "+str(e))
     try:
         return jsonify(config.update_data), 200, {"Access-Control-Allow-Origin": "*"}
     except Exception:
         return jsonify([]), 200, {"Access-Control-Allow-Origin": "*"}
 
-@app.route('/ping', methods=["GET"])
-def ping_pong():
-    """Route for testing connection.
-
-    Returns:
-        JSON: Sends the string 'pong!'
-    """
-    return jsonify('pong!'), 200, {"Access-Control-Allow-Origin": "*"}    
-
 @app.route('/test', methods=['POST'])
 def handle_data():
-    """receives data and stores it to the appropriate position in the dictionary
+    """Receives data from arduinos and calls the function that creates Sensor objects.
     Returns:
-        string: reply to arduino after getting the data
+        String: Reply to arduino after getting the data.
     """
-    ip_address = request.remote_addr
-    panel = int(ip_address[len(ip_address)-1])
-    if config.arduino_pings[int(ip_address[len(ip_address)-1])-1] == True:
-        config.arduino_times[int(ip_address[len(ip_address)-1])-1] = time.time()
-        config.arduino_status[int(ip_address[len(ip_address)-1])-1] = False
-        config.arduino_pings[int(ip_address[len(ip_address)-1])-1] = False
-    data = request.get_json()
+    try:
+        ip_address = request.remote_addr
+        panel = int(ip_address[len(ip_address)-1])
+        if config.arduino_pings[int(ip_address[len(ip_address)-1])-1] == True:
+            config.arduino_times[int(ip_address[len(ip_address)-1])-1] = time.time()
+            config.arduino_status[int(ip_address[len(ip_address)-1])-1] = False
+            config.arduino_pings[int(ip_address[len(ip_address)-1])-1] = False
+        data = request.get_json()
+    except Exception as e:
+        send_error_notif("Error while receiving sensor data: "+str(e))
     try:
         setup_sensor_list(panel,data)
     except Exception:
@@ -833,12 +927,20 @@ def handle_data():
 
 @app.route('/station', methods=['POST'])
 def station_data():
-    ip_address = request.remote_addr
-    data = request.get_json()
-    if "192.168.1.33" == ip_address:
-        config.update_data[9] = data
-    else:
-        print(type(ip_address))
+    """Function receives data from weather stations.
+
+    Returns:
+        String: Confirmation that data arrived.
+    """
+    try:
+        ip_address = request.remote_addr
+        data = request.get_json()
+        if "192.168.1.33" == ip_address:
+            config.update_data[9] = data
+        else:
+            print(type(ip_address))
+    except Exception as e:
+        send_error_notif("Error while receiving station data: "+str(e))
     return "OK"
 
 @app.route('/start', methods=['POST'])
@@ -848,13 +950,17 @@ def start_generating():
     Returns:
         String: Confirmation string.
     """
-    if config.order == []:
-       check_moisture()
-       config.order = create_order()
-       config.nextRoute = create_order()
-    msg = String()
-    msg.data = "testni publish"
-    publisher.publish(msg)
+    try:
+        config.orderIndex = 0
+        with app.app_context():
+            set_data_from_db()
+        check_moisture()
+        config.empty_tank = True
+        config.order = create_order()
+        config.nextRoute = create_order()
+        config.end_loop = False
+    except Exception as e:
+        send_error_notif("Error at start_generating: "+str(e))
     return 'OK'
 
 @app.route('/svg')
@@ -870,11 +976,16 @@ def svg():
 
 #Init functions
 def ros_init():
+    """Sets up ROS2 publisher.
+    """
     global node, publisher
     node = rclpy.create_node('flask_node')
     publisher = node.create_publisher(String, 'flask_topic', 10)
 
 def run_flask():
+    """Function runs the app.
+    """
+    config.orderIndex = 0
     app.run(host='192.168.1.25', port=5000)
 
 if __name__ == '__main__':
@@ -882,5 +993,3 @@ if __name__ == '__main__':
         db.create_all()
     ros_init()
     run_flask()
-    
-    

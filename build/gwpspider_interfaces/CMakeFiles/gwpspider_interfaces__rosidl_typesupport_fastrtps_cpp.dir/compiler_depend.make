@@ -2204,14 +2204,14 @@ CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_type
   /opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp/message_type_support_decl.hpp \
   /opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp/wstring_conversion.hpp
 
-CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/apply_force_leg__type_support.cpp.o: rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/apply_force_leg__type_support.cpp \
+CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/apply_forces_on_legs__type_support.cpp.o: rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/apply_forces_on_legs__type_support.cpp \
   /usr/include/stdc-predef.h \
-  rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/apply_force_leg__rosidl_typesupport_fastrtps_cpp.hpp \
+  rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/apply_forces_on_legs__rosidl_typesupport_fastrtps_cpp.hpp \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
   rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h \
-  rosidl_generator_cpp/gwpspider_interfaces/srv/detail/apply_force_leg__struct.hpp \
+  rosidl_generator_cpp/gwpspider_interfaces/srv/detail/apply_forces_on_legs__struct.hpp \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/utility \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -2399,9 +2399,10 @@ CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_type
   /usr/include/c++/11/stdexcept \
   /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_initialization.hpp \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8_multi_array__struct.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_layout__struct.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__struct.hpp \
   /opt/ros/humble/include/fastcdr/fastcdr/Cdr.h \
   /opt/ros/humble/include/fastcdr/fastcdr/fastcdr_dll.h \
   /opt/ros/humble/include/fastcdr/fastcdr/config.h \
@@ -7799,6 +7800,8 @@ rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/get
 
 rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/get_correction_offset__type_support.cpp:
 
+rosidl_generator_cpp/gwpspider_interfaces/srv/detail/distribute_forces__struct.hpp:
+
 rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/distribute_forces__rosidl_typesupport_fastrtps_cpp.hpp:
 
 rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/distribute_forces__type_support.cpp:
@@ -7820,8 +7823,6 @@ rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/con
 /opt/ros/humble/include/rmw/rmw/macros.h:
 
 /opt/ros/humble/include/rmw/rmw/localhost.h:
-
-/opt/ros/humble/include/rmw/rmw/domain_id.h:
 
 /opt/ros/humble/include/rmw/rmw/init_options.h:
 
@@ -7877,17 +7878,17 @@ rosidl_generator_cpp/gwpspider_interfaces/srv/detail/init_bno__struct.hpp:
 
 /opt/ros/humble/include/rmw/rmw/types.h:
 
-rosidl_generator_cpp/gwpspider_interfaces/srv/detail/apply_force_leg__struct.hpp:
+/opt/ros/humble/include/rmw/rmw/domain_id.h:
 
-rosidl_generator_cpp/gwpspider_interfaces/srv/detail/distribute_forces__struct.hpp:
+rosidl_generator_cpp/gwpspider_interfaces/srv/detail/apply_forces_on_legs__struct.hpp:
 
-rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/apply_force_leg__rosidl_typesupport_fastrtps_cpp.hpp:
+rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/apply_forces_on_legs__rosidl_typesupport_fastrtps_cpp.hpp:
+
+rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/apply_forces_on_legs__type_support.cpp:
 
 rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/msg/detail/water_pump_command__rosidl_typesupport_fastrtps_cpp.hpp:
 
 rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/msg/detail/dds_fastrtps/water_pump_command__type_support.cpp:
-
-rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/apply_force_leg__type_support.cpp:
 
 rosidl_generator_cpp/gwpspider_interfaces/msg/detail/walking_instructions__struct.hpp:
 

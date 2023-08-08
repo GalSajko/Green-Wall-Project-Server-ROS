@@ -274,9 +274,9 @@ CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c__pyext.dir/r
  /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/distribute_forces__type_support.h \
  /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/distribute_forces__struct.h \
  /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/distribute_forces__functions.h \
- /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_force_leg__type_support.h \
- /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_force_leg__struct.h \
- /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_force_leg__functions.h \
+ /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__type_support.h \
+ /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__struct.h \
+ /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__functions.h \
  /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/get_spider_pose__type_support.h \
  /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/get_spider_pose__struct.h \
  /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_c/gwpspider_interfaces/srv/detail/get_spider_pose__functions.h \

@@ -1,34 +1,64 @@
 import sys
 
 from gwpspider_interfaces.srv import SpiderGoal
-
+from gwpspider_interfaces import gwp_interfaces_data as gid
 import rclpy
 from rclpy.node import Node
+from std_srvs.srv import Empty
+import time
 
 
-class MinimalClientAsync(Node):
-
+class MyNode(Node):
     def __init__(self):
-        super().__init__('minimal_client_async')
-        self.cli = self.create_client(SpiderGoal, 'spider_goal')
-        while not self.cli.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('service not available, waiting again...')
-        self.req = SpiderGoal.Request()
+        super().__init__('my_node')
 
-    def send_request(self):
-        self.future = self.cli.call_async(self.req)
-        rclpy.spin_until_future_complete(self, self.future)
-        return self.future.result()
+    def call_service1(self):
+        client = self.create_client(SpiderGoal, gid.SEND_GOAL_SERVICE)  # Replace 'AddTwoInts' with your actual service type
+        while not client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Service 1 not available, waiting...')
+        request = SpiderGoal.Request()
+        future = client.call_async(request)
+        rclpy.spin_until_future_complete(self, future)
+        future.add_done_callback(self.service1_response_callback)
+    
+    def service1_response_callback(self, future):
+        try:
+            response = future.result()
+            if response.go_refill == True:
+                print("refill sleep")
+                
+        except Exception as e:
+            print(e)
 
+            
+        
+
+    def call_service2(self):
+        client = self.create_client(Empty, gid.SET_WATERING_SUCCESS_SERVICE)  # Replace 'AnotherServiceType' and 'another_service' with your actual service type and name
+        while not client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Service 2 not available, waiting...')
+        request = Empty.Request()
+        future = client.call_async(request)
+        rclpy.spin_until_future_complete(self, future)
+        
 
 def main(args=None):
     rclpy.init(args=args)
+    node = MyNode()
+    node.call_service1()
+    time.sleep(10)
+    while True:
+        try:
+            node.call_service2()
+            time.sleep(3)
+            node.call_service1()
+            time.sleep(3)
+            rclpy.spin_once(node)
+        except Exception as e:
+            print(e)
+            break
 
-    minimal_client = MinimalClientAsync()
-    response = minimal_client.send_request()
-    minimal_client.get_logger().info("x:%s \n y:%s \n Action:%s \n Volume:%s" %(str(response.data[0]),str(response.data[1]),str(response.go_refill),str(response.volume)))
-
-    minimal_client.destroy_node()
+    
     rclpy.shutdown()
 
 

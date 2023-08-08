@@ -16,10 +16,10 @@ msg/WalkingInstructions.idl
 msg/WalkingInstructions.msg
 msg/WaterPumpCommand.idl
 msg/WaterPumpCommand.msg
-srv/ApplyForceLeg.idl
-srv/ApplyForceLeg.srv
-srv/ApplyForceLeg_Request.msg
-srv/ApplyForceLeg_Response.msg
+srv/ApplyForcesOnLegs.idl
+srv/ApplyForcesOnLegs.srv
+srv/ApplyForcesOnLegs_Request.msg
+srv/ApplyForcesOnLegs_Response.msg
 srv/ControlWaterPump.idl
 srv/ControlWaterPump.srv
 srv/ControlWaterPump_Request.msg

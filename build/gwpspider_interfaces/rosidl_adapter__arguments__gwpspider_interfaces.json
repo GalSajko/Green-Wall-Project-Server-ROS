@@ -23,7 +23,7 @@
     "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/MoveSpider.srv",
     "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/ToggleController.srv",
     "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/DistributeForces.srv",
-    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/ApplyForceLeg.srv",
+    "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/ApplyForcesOnLegs.srv",
     "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/GetSpiderPose.srv",
     "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/MoveLegVelocityMode.srv",
     "/home/spider/ros2_ws/src/gwpspider_interfaces:srv/ToggleAdditionalControllerMode.srv",

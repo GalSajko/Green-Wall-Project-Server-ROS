@@ -2,6 +2,7 @@
 # Arduino
 GRIPPER_STATES_TOPIC = 'grippers_states'
 BNO_DATA_TOPIC = 'bno_data_topic'
+BATTERY_VOLTAGE_TOPIC = 'battery_voltage_topic'
 
 # Controller
 LEGS_STATES_TOPIC = 'legs_states_topic'
@@ -25,7 +26,7 @@ MOVE_LEG_SERVICE = 'move_leg_service'
 MOVE_SPIDER_SERVICE = 'move_spider_service'
 TOGGLE_CONTROLLER_SERVICE = 'toggle_controller_service'
 DISTRIBUTE_FORCES_SERVICE = 'distribute_forces_service'
-APPLY_FORCE_ON_LEG_SERVICE = 'apply_force_on_leg_service'
+APPLY_FORCES_ON_LEGS_SERVICE = 'apply_forces_on_legs_service'
 UPDATE_LAST_LEGS_POSITIONS_SERVICE = 'update_last_legs_positions_service'
 GET_SPIDER_POSE_SERVICE = 'get_spider_pose_service'
 MOVE_LEG_VELOCITY_MODE_SERVICE = 'move_leg_velocity_mode_service'

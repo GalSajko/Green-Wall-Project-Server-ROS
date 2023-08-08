@@ -648,10 +648,10 @@ CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_t
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
 
-CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/apply_force_leg__type_support.c.o: rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/apply_force_leg__type_support.c \
+CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__type_support.c.o: rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__type_support.c \
   /usr/include/stdc-predef.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
-  rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/apply_force_leg__rosidl_typesupport_introspection_c.h \
+  rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__rosidl_typesupport_introspection_c.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
@@ -680,7 +680,7 @@ CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_t
   /opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/message_introspection.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h \
-  rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_force_leg__functions.h \
+  rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__functions.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
@@ -711,18 +711,23 @@ CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_t
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   rosidl_generator_c/gwpspider_interfaces/msg/rosidl_generator_c__visibility_control.h \
-  rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_force_leg__struct.h \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__struct.h \
+  rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__struct.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8_multi_array__struct.h \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_layout__struct.h \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__struct.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/int8_multi_array.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8_multi_array__functions.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8_multi_array__type_support.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8_multi_array__rosidl_typesupport_introspection_c.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/float32_multi_array.h \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__functions.h \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__type_support.h \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__rosidl_typesupport_introspection_c.h \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
   /opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/service_introspection.h
 
 CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/control_water_pump__type_support.c.o: rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/control_water_pump__type_support.c \
@@ -2178,19 +2183,17 @@ rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/get_correctio
 
 rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/get_correction_offset__type_support.c:
 
+rosidl_generator_c/gwpspider_interfaces/srv/detail/distribute_forces__struct.h:
+
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
-rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/apply_force_leg__rosidl_typesupport_introspection_c.h:
-
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/apply_force_leg__type_support.c:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
@@ -2239,6 +2242,8 @@ rosidl_generator_c/gwpspider_interfaces/srv/detail/get_modified_walking_instruct
 rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/control_water_pump__rosidl_typesupport_introspection_c.h:
 
 rosidl_generator_c/gwpspider_interfaces/msg/detail/leg_trajectory__functions.h:
+
+rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
@@ -2296,8 +2301,6 @@ rosidl_typesupport_introspection_c/gwpspider_interfaces/msg/detail/grippers_stat
 
 /usr/include/features-time64.h:
 
-rosidl_generator_c/gwpspider_interfaces/srv/detail/distribute_forces__struct.h:
-
 rosidl_generator_c/gwpspider_interfaces/msg/detail/dynamixel_motors_data__functions.h:
 
 /usr/include/stdint.h:
@@ -2310,13 +2313,13 @@ rosidl_typesupport_introspection_c/gwpspider_interfaces/msg/detail/gripper_comma
 
 rosidl_typesupport_introspection_c/gwpspider_interfaces/msg/detail/bno_data__rosidl_typesupport_introspection_c.h:
 
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8_multi_array__struct.h:
+
 rosidl_generator_c/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__struct.h:
 
 rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/get_walking_instructions__type_support.c:
 
 /opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/service_introspection.h:
-
-/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8_multi_array__struct.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
 
@@ -2368,8 +2371,6 @@ rosidl_typesupport_introspection_c/gwpspider_interfaces/msg/detail/legs_states__
 
 rosidl_generator_c/gwpspider_interfaces/msg/detail/gripper_state__type_support.h:
 
-rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_force_leg__functions.h:
-
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h:
 
 rosidl_typesupport_introspection_c/gwpspider_interfaces/msg/detail/leg_trajectory__type_support.c:
@@ -2395,12 +2396,6 @@ rosidl_generator_c/gwpspider_interfaces/srv/detail/move_leg__functions.h:
 rosidl_generator_c/gwpspider_interfaces/srv/detail/set_bus_watchdog__functions.h:
 
 /usr/include/alloca.h:
-
-/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8_multi_array__rosidl_typesupport_introspection_c.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-
-rosidl_generator_c/gwpspider_interfaces/msg/rosidl_generator_c__visibility_control.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
@@ -2458,6 +2453,10 @@ rosidl_generator_c/gwpspider_interfaces/msg/detail/water_pump_command__struct.h:
 
 rosidl_generator_c/gwpspider_interfaces/msg/detail/legs_states__functions.h:
 
+rosidl_generator_c/gwpspider_interfaces/msg/detail/gripper_state__functions.h:
+
+rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__type_support.c:
+
 rosidl_generator_c/gwpspider_interfaces/msg/detail/legs_states__struct.h:
 
 rosidl_typesupport_introspection_c/gwpspider_interfaces/msg/detail/walking_instructions__type_support.c:
@@ -2468,9 +2467,19 @@ rosidl_typesupport_introspection_c/gwpspider_interfaces/msg/detail/legs_states__
 
 rosidl_typesupport_introspection_c/gwpspider_interfaces/msg/detail/walking_instructions__rosidl_typesupport_introspection_c.h:
 
-rosidl_generator_c/gwpspider_interfaces/msg/detail/gripper_state__functions.h:
+rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__rosidl_typesupport_introspection_c.h:
 
-rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_force_leg__struct.h:
+rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__functions.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__rosidl_typesupport_introspection_c.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/int8_multi_array.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
+rosidl_generator_c/gwpspider_interfaces/msg/rosidl_generator_c__visibility_control.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8_multi_array__rosidl_typesupport_introspection_c.h:
 
 rosidl_generator_c/gwpspider_interfaces/srv/detail/control_water_pump__functions.h:
 
@@ -2479,7 +2488,3 @@ rosidl_generator_c/gwpspider_interfaces/msg/detail/walking_instructions__type_su
 rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/distribute_forces__type_support.c:
 
 rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/distribute_forces__rosidl_typesupport_introspection_c.h:
-
-/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__rosidl_typesupport_introspection_c.h:
-
-/opt/ros/humble/include/std_msgs/std_msgs/msg/int8_multi_array.h:

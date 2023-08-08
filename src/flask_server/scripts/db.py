@@ -1,3 +1,5 @@
+"""Resets dates in database. ONLY USE FOR TESTING
+"""
 import psycopg2
 from datetime import datetime
 

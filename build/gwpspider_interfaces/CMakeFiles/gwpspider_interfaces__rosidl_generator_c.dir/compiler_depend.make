@@ -724,9 +724,9 @@ CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpsp
   /opt/ros/humble/include/rcutils/rcutils/types/rcutils_ret.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
 
-CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_force_leg__functions.c.o: rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_force_leg__functions.c \
+CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__functions.c.o: rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__functions.c \
   /usr/include/stdc-predef.h \
-  rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_force_leg__functions.h \
+  rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__functions.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -773,16 +773,17 @@ CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpsp
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   rosidl_generator_c/gwpspider_interfaces/msg/rosidl_generator_c__visibility_control.h \
-  rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_force_leg__struct.h \
+  rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__struct.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__struct.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8_multi_array__struct.h \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_layout__struct.h \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__struct.h \
   /usr/include/assert.h \
   /usr/include/string.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
@@ -803,8 +804,9 @@ CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpsp
   /opt/ros/humble/include/rcutils/rcutils/visibility_control.h \
   /opt/ros/humble/include/rcutils/rcutils/visibility_control_macros.h \
   /opt/ros/humble/include/rcutils/rcutils/types/rcutils_ret.h \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__functions.h \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8_multi_array__functions.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__functions.h
 
 CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/control_water_pump__functions.c.o: rosidl_generator_c/gwpspider_interfaces/srv/detail/control_water_pump__functions.c \
   /usr/include/stdc-predef.h \
@@ -2360,8 +2362,6 @@ rosidl_generator_c/gwpspider_interfaces/srv/detail/set_bus_watchdog__functions.h
 
 /usr/include/alloca.h:
 
-rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_force_leg__functions.c:
-
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
 rosidl_generator_c/gwpspider_interfaces/srv/detail/control_water_pump__struct.h:
@@ -2412,8 +2412,6 @@ rosidl_generator_c/gwpspider_interfaces/srv/detail/get_modified_walking_instruct
 
 rosidl_generator_c/gwpspider_interfaces/msg/detail/dynamixel_motors_data__functions.c:
 
-rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_force_leg__functions.h:
-
 rosidl_generator_c/gwpspider_interfaces/srv/detail/get_correction_offset__struct.h:
 
 rosidl_generator_c/gwpspider_interfaces/srv/detail/get_correction_offset__functions.c:
@@ -2431,6 +2429,8 @@ rosidl_generator_c/gwpspider_interfaces/srv/detail/set_bus_watchdog__functions.c
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 rosidl_generator_c/gwpspider_interfaces/msg/detail/leg_trajectory__functions.h:
+
+rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__struct.h:
 
 rosidl_generator_c/gwpspider_interfaces/srv/detail/get_leg_trajectory__functions.c:
 
@@ -2457,8 +2457,6 @@ rosidl_generator_c/gwpspider_interfaces/srv/detail/distribute_forces__functions.
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
-
-/opt/ros/humble/include/rcutils/rcutils/macros.h:
 
 /opt/ros/humble/include/rcutils/rcutils/visibility_control.h:
 
@@ -2514,10 +2512,6 @@ rosidl_generator_c/gwpspider_interfaces/msg/detail/grippers_states__functions.c:
 
 rosidl_generator_c/gwpspider_interfaces/msg/detail/grippers_states__functions.h:
 
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-rosidl_generator_c/gwpspider_interfaces/msg/detail/walking_instructions__struct.h:
-
 rosidl_generator_c/gwpspider_interfaces/srv/detail/move_leg__functions.c:
 
 rosidl_generator_c/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__functions.h:
@@ -2539,6 +2533,10 @@ rosidl_generator_c/gwpspider_interfaces/msg/detail/gripper_command__functions.h:
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
 rosidl_generator_c/gwpspider_interfaces/msg/detail/gripper_state__functions.c:
+
+rosidl_generator_c/gwpspider_interfaces/msg/detail/bno_data__functions.c:
+
+rosidl_generator_c/gwpspider_interfaces/msg/detail/gripper_state__functions.h:
 
 rosidl_generator_c/gwpspider_interfaces/msg/detail/gripper_state__struct.h:
 
@@ -2576,11 +2574,21 @@ rosidl_generator_c/gwpspider_interfaces/srv/detail/reboot_motors__functions.c:
 
 rosidl_generator_c/gwpspider_interfaces/msg/detail/water_pump_command__functions.c:
 
-rosidl_generator_c/gwpspider_interfaces/msg/detail/bno_data__functions.c:
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
 
-rosidl_generator_c/gwpspider_interfaces/msg/detail/gripper_state__functions.h:
+rosidl_generator_c/gwpspider_interfaces/msg/detail/walking_instructions__struct.h:
 
-rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_force_leg__struct.h:
+rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__functions.c:
+
+/opt/ros/humble/include/rcutils/rcutils/macros.h:
+
+rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__functions.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8_multi_array__struct.h:
+
+rosidl_generator_c/gwpspider_interfaces/srv/detail/get_correction_offset__functions.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8_multi_array__functions.h:
 
 rosidl_generator_c/gwpspider_interfaces/srv/detail/move_spider__struct.h:
 
@@ -2589,9 +2597,3 @@ rosidl_generator_c/gwpspider_interfaces/srv/detail/move_spider__functions.h:
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__struct.h:
 
 rosidl_generator_c/gwpspider_interfaces/srv/detail/control_water_pump__functions.c:
-
-/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8_multi_array__struct.h:
-
-rosidl_generator_c/gwpspider_interfaces/srv/detail/get_correction_offset__functions.h:
-
-/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8_multi_array__functions.h:
