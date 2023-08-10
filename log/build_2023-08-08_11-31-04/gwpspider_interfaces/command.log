@@ -1,0 +1,2 @@
+Invoking command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces': /usr/bin/cmake /home/spiderpi/ros2_ws/src/gwpspider_interfaces -DCMAKE_INSTALL_PREFIX=/home/spiderpi/ros2_ws/install/gwpspider_interfaces
+Invoked command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces' returned '1': /usr/bin/cmake /home/spiderpi/ros2_ws/src/gwpspider_interfaces -DCMAKE_INSTALL_PREFIX=/home/spiderpi/ros2_ws/install/gwpspider_interfaces

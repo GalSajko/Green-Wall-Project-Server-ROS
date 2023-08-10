@@ -4436,3 +4436,234 @@ Traceback (most recent call last):
   File "/home/spider/ros2_ws/src/flask_server/scripts/server.py", line 836, in get_routes
     length = len(config.order)
 TypeError: object of type 'NoneType' has no len()
+Exception on /posts [POST]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: ""
+LINE 1: ... line, "sensorNum") VALUES ('Bostonski praprot ', '', '2023-...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 354, in add_posts
+    db.session.commit()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 552, in commit
+    return self._proxied.commit()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1920, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1236, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1211, in _prepare_impl
+    self.session.flush()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4163, in flush
+    self._flush(objects)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4298, in _flush
+    with util.safe_reraise():
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4259, in _flush
+    flush_context.execute()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 1226, in _emit_insert_statements
+    result = connection.execute(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1412, in execute
+    return meth(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1844, in _execute_context
+    return self._exec_single_context(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1984, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: ""
+LINE 1: ... line, "sensorNum") VALUES ('Bostonski praprot ', '', '2023-...
+                                                             ^
+
+[SQL: INSERT INTO plants (name, "waterInterval", date_time, panel, line, "sensorNum") VALUES (%(name)s, %(waterInterval)s, %(date_time)s, %(panel)s, %(line)s, %(sensorNum)s) RETURNING plants.id]
+[parameters: {'name': 'Bostonski praprot ', 'waterInterval': '', 'date_time': '2023-08-08T11:33', 'panel': '5', 'line': '2', 'sensorNum': '6'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Exception on /posts [POST]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: ""
+LINE 1: ... line, "sensorNum") VALUES ('Bostonski praprot ', '', '2023-...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 354, in add_posts
+    db.session.commit()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 552, in commit
+    return self._proxied.commit()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1920, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1236, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1211, in _prepare_impl
+    self.session.flush()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4163, in flush
+    self._flush(objects)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4298, in _flush
+    with util.safe_reraise():
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4259, in _flush
+    flush_context.execute()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 1226, in _emit_insert_statements
+    result = connection.execute(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1412, in execute
+    return meth(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1844, in _execute_context
+    return self._exec_single_context(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1984, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: ""
+LINE 1: ... line, "sensorNum") VALUES ('Bostonski praprot ', '', '2023-...
+                                                             ^
+
+[SQL: INSERT INTO plants (name, "waterInterval", date_time, panel, line, "sensorNum") VALUES (%(name)s, %(waterInterval)s, %(date_time)s, %(panel)s, %(line)s, %(sensorNum)s) RETURNING plants.id]
+[parameters: {'name': 'Bostonski praprot ', 'waterInterval': '', 'date_time': '2023-08-08T11:34', 'panel': '5', 'line': '4', 'sensorNum': '3'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Exception on /posts [POST]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: ""
+LINE 1: ... line, "sensorNum") VALUES ('Bostonski praprot ', '', '2023-...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 354, in add_posts
+    db.session.commit()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 552, in commit
+    return self._proxied.commit()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1920, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1236, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1211, in _prepare_impl
+    self.session.flush()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4163, in flush
+    self._flush(objects)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4298, in _flush
+    with util.safe_reraise():
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4259, in _flush
+    flush_context.execute()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/orm/persistence.py", line 1226, in _emit_insert_statements
+    result = connection.execute(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1412, in execute
+    return meth(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1844, in _execute_context
+    return self._exec_single_context(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1984, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: ""
+LINE 1: ... line, "sensorNum") VALUES ('Bostonski praprot ', '', '2023-...
+                                                             ^
+
+[SQL: INSERT INTO plants (name, "waterInterval", date_time, panel, line, "sensorNum") VALUES (%(name)s, %(waterInterval)s, %(date_time)s, %(panel)s, %(line)s, %(sensorNum)s) RETURNING plants.id]
+[parameters: {'name': 'Bostonski praprot ', 'waterInterval': '', 'date_time': '2023-08-08T11:34', 'panel': '5', 'line': '4', 'sensorNum': '6'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)

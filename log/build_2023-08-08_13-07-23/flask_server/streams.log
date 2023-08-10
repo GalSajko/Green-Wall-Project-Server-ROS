@@ -1,0 +1,22 @@
+[3.019s] Invoking command in '/home/spiderpi/ros2_ws/src/flask_server': AMENT_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces:/home/spiderpi/ros2_ws/install/gwpspider_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces:/home/spiderpi/ros2_ws/install/gwpspider_interfaces LD_LIBRARY_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces/lib:/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/spiderpi/ros2_ws/build/flask_server/prefix_override:/home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages:/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/flask_server build --build-base /home/spiderpi/ros2_ws/build/flask_server/build install --record /home/spiderpi/ros2_ws/build/flask_server/install.log --single-version-externally-managed
+[4.091s] running egg_info
+[4.095s] writing ../../build/flask_server/flask_server.egg-info/PKG-INFO
+[4.096s] writing dependency_links to ../../build/flask_server/flask_server.egg-info/dependency_links.txt
+[4.097s] writing entry points to ../../build/flask_server/flask_server.egg-info/entry_points.txt
+[4.098s] writing requirements to ../../build/flask_server/flask_server.egg-info/requires.txt
+[4.099s] writing top-level names to ../../build/flask_server/flask_server.egg-info/top_level.txt
+[4.107s] reading manifest file '../../build/flask_server/flask_server.egg-info/SOURCES.txt'
+[4.111s] writing manifest file '../../build/flask_server/flask_server.egg-info/SOURCES.txt'
+[4.112s] running build
+[4.112s] running build_py
+[4.113s] running install
+[4.116s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[4.117s]   warnings.warn(
+[4.118s] running install_lib
+[4.123s] running install_data
+[4.126s] running install_egg_info
+[4.134s] removing '/home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages/flask_server-0.0.0-py3.10.egg-info' (and everything under it)
+[4.135s] Copying ../../build/flask_server/flask_server.egg-info to /home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages/flask_server-0.0.0-py3.10.egg-info
+[4.143s] running install_scripts
+[4.224s] writing list of installed files to '/home/spiderpi/ros2_ws/build/flask_server/install.log'
+[4.357s] Invoked command in '/home/spiderpi/ros2_ws/src/flask_server' returned '0': AMENT_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces:/home/spiderpi/ros2_ws/install/gwpspider_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces:/home/spiderpi/ros2_ws/install/gwpspider_interfaces LD_LIBRARY_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces/lib:/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/spiderpi/ros2_ws/build/flask_server/prefix_override:/home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages:/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/flask_server build --build-base /home/spiderpi/ros2_ws/build/flask_server/build install --record /home/spiderpi/ros2_ws/build/flask_server/install.log --single-version-externally-managed

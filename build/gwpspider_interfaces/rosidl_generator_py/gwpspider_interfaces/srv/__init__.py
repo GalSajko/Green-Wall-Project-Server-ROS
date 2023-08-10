@@ -1,4 +1,5 @@
 from gwpspider_interfaces.srv._apply_forces_on_legs import ApplyForcesOnLegs  # noqa: F401
+from gwpspider_interfaces.srv._breaks_control import BreaksControl  # noqa: F401
 from gwpspider_interfaces.srv._control_water_pump import ControlWaterPump  # noqa: F401
 from gwpspider_interfaces.srv._distribute_forces import DistributeForces  # noqa: F401
 from gwpspider_interfaces.srv._get_correction_offset import GetCorrectionOffset  # noqa: F401
@@ -7,6 +8,7 @@ from gwpspider_interfaces.srv._get_modified_walking_instructions import GetModif
 from gwpspider_interfaces.srv._get_spider_pose import GetSpiderPose  # noqa: F401
 from gwpspider_interfaces.srv._get_walking_instructions import GetWalkingInstructions  # noqa: F401
 from gwpspider_interfaces.srv._init_bno import InitBno  # noqa: F401
+from gwpspider_interfaces.srv._messages import Messages  # noqa: F401
 from gwpspider_interfaces.srv._move_gripper import MoveGripper  # noqa: F401
 from gwpspider_interfaces.srv._move_leg import MoveLeg  # noqa: F401
 from gwpspider_interfaces.srv._move_leg_velocity_mode import MoveLegVelocityMode  # noqa: F401

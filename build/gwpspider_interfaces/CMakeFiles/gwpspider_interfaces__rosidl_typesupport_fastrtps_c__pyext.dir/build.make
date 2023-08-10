@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/spider/ros2_ws/src/gwpspider_interfaces
+CMAKE_SOURCE_DIR = /home/spiderpi/ros2_ws/src/gwpspider_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/spider/ros2_ws/build/gwpspider_interfaces
+CMAKE_BINARY_DIR = /home/spiderpi/ros2_ws/build/gwpspider_interfaces
 
 # Include any dependencies generated for this target.
 include CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/depend.make
@@ -72,16 +72,16 @@ include CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.di
 CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o: CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/flags.make
 CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o: rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o: CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spider/ros2_ws/build/gwpspider_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o -MF CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o.d -o CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o -c /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spiderpi/ros2_ws/build/gwpspider_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o -MF CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o.d -o CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o -c /home/spiderpi/ros2_ws/build/gwpspider_interfaces/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 
 CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c > CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/spiderpi/ros2_ws/build/gwpspider_interfaces/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c > CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.i
 
 CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c -o CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/spiderpi/ros2_ws/build/gwpspider_interfaces/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c -o CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.s
 
 # Object files for target gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext
 gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext_OBJECTS = \
@@ -90,46 +90,46 @@ gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext_OBJECTS = \
 # External object files for target gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext
 gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext_EXTERNAL_OBJECTS =
 
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build.make
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: rosidl_generator_py/gwpspider_interfaces/libgwpspider_interfaces__rosidl_generator_py.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /usr/lib/x86_64-linux-gnu/libpython3.10.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: libgwpspider_interfaces__rosidl_typesupport_fastrtps_c.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: libgwpspider_interfaces__rosidl_typesupport_c.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/librmw.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /usr/lib/x86_64-linux-gnu/libpython3.10.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: libgwpspider_interfaces__rosidl_generator_c.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/libfastcdr.so.1.0.24
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/librmw.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/librosidl_typesupport_c.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/librosidl_runtime_c.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: /opt/ros/humble/lib/librcutils.so
-rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so: CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/spider/ros2_ws/build/gwpspider_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so"
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build.make
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: rosidl_generator_py/gwpspider_interfaces/libgwpspider_interfaces__rosidl_generator_py.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: libgwpspider_interfaces__rosidl_typesupport_fastrtps_c.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: libgwpspider_interfaces__rosidl_typesupport_c.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/librmw.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: libgwpspider_interfaces__rosidl_generator_c.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/libfastcdr.so.1.0.24
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/librmw.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/librosidl_typesupport_c.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/librosidl_runtime_c.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: /opt/ros/humble/lib/librcutils.so
+rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so: CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/spiderpi/ros2_ws/build/gwpspider_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build: rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build: rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
 .PHONY : CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build
 
 CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/clean:
@@ -137,6 +137,6 @@ CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/clean:
 .PHONY : CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/clean
 
 CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/depend:
-	cd /home/spider/ros2_ws/build/gwpspider_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/spider/ros2_ws/src/gwpspider_interfaces /home/spider/ros2_ws/src/gwpspider_interfaces /home/spider/ros2_ws/build/gwpspider_interfaces /home/spider/ros2_ws/build/gwpspider_interfaces /home/spider/ros2_ws/build/gwpspider_interfaces/CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/spiderpi/ros2_ws/build/gwpspider_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/spiderpi/ros2_ws/src/gwpspider_interfaces /home/spiderpi/ros2_ws/src/gwpspider_interfaces /home/spiderpi/ros2_ws/build/gwpspider_interfaces /home/spiderpi/ros2_ws/build/gwpspider_interfaces /home/spiderpi/ros2_ws/build/gwpspider_interfaces/CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/depend
 

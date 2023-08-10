@@ -6,8 +6,8 @@ from datetime import datetime
 conn = psycopg2.connect(
     host="localhost",
     database="plants",
-    user="admin",
-    password="admin",
+    user="spiderpi",
+    password="379579",
     port= '5432')
 
 cursor = conn.cursor()

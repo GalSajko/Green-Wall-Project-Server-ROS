@@ -23,7 +23,7 @@ from flask_migrate import Migrate
 import random
 from gwpspider_interfaces import gwp_interfaces_data as gid
 from datetime import datetime
-from gwpspider_interfaces.srv import SpiderGoal
+from gwpspider_interfaces.srv import SpiderGoal, Messages
 from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
 from gwpconfig import commconstants
@@ -35,7 +35,7 @@ file_handler = FileHandler('errorlog.txt')
 file_handler.setLevel(WARNING)
 app.logger.addHandler(file_handler)
 app.secret_key = b'asdasgfascajv'
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://admin:admin@localhost:5432/plants"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://spiderpi:379579@localhost:5432/plants"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
@@ -44,6 +44,7 @@ config.arduino_times = [None for i in range(6)]
 config.arduino_status = [None for i in range(6)]
 config.update_data = [None for i in range(15)]
 config.update_data[14] = 0.0
+config.update_data[13] = 0.0
 config.deleted = []
 config.orderIndex = 0
 config.no_of_moves = 0
@@ -160,26 +161,24 @@ class PositionSubscriber(Node):
         if config.poseData != [x,y]:
             config.poseData = [x,y]
 
-class MessagesSubscriber(Node):
+class MessagesService(Node):
     """ROS2 node that listens to a ROS2 topic where the robot sends information about its own workflow. 
 
     Args:
         Node (ROS2 Node): ROS2 subscriber node.
     """
     def __init__(self):
-        super().__init__('messages_subscriber')
-        self.subscription = self.create_subscription(
-            String,
-            'messages',
-            self.listener_callback,
-            10)
-        self.subscription  # prevent unused variable warning
+        super().__init__('service')
+        self.srv = self.create_service(Messages, gid.MESSAGE_SERVICE, self.callback)
 
-    def listener_callback(self, msg):
-        self.get_logger().info(msg.data)
-        if msg.data == "LEG":
-            config.no_of_moves += 1
-        messages(msg.data)
+    def callback(self, request, response):
+        try:
+            print("service callback")
+            msg = request.message
+            messages(msg)
+        except Exception as e:
+            print(e)
+        return response
 
 class VoltageSubscriber(Node):
     """ROS2 node that listens to a ROS2 topic where the robot sends information about the battery voltage. 
@@ -197,7 +196,7 @@ class VoltageSubscriber(Node):
         self.subscription  # prevent unused variable warning
 
     def listener_callback(self, msg):
-        self.get_logger().info('Received message: %f' % msg.data)
+        
         config.update_data[10] = msg.data
 
 #Database table classes
@@ -466,12 +465,12 @@ config.lastOrderIndex = 1
 #ROS2 initialization
 rclpy.init(args=None)
 ros2_service_node = MinimalService()
-ros2_message_subscriber = MessagesSubscriber()
+ros2_message_service = MessagesService()
 ros2_position_subscriber = PositionSubscriber()
 ros2_watering_success_service = WateringSuccessService()
 ros2_voltage_subscriber = VoltageSubscriber()
 executor = MultiThreadedExecutor()
-executor.add_node(ros2_message_subscriber)
+executor.add_node(ros2_message_service)
 executor.add_node(ros2_service_node)
 executor.add_node(ros2_position_subscriber)
 executor.add_node(ros2_watering_success_service)
@@ -796,7 +795,8 @@ def messages(message):
         config.status = "Resting"
     elif message == commconstants.LEG_MOVE_MESSAGE:
         config.update_data[13]+=1
-    send_error_notif(message)
+    else:
+        send_error_notif(message)
 
 def check_arduino_sensor_status():
     """Function checks if any arduino or sensor stopped responding.
@@ -937,6 +937,10 @@ def station_data():
         data = request.get_json()
         if "192.168.1.33" == ip_address:
             config.update_data[9] = data
+        elif "192.168.1.34" == ip_address:
+            config.update_data[11] = data
+        elif "192.168.1.35" == ip_address:
+            config.update_data[12] = data
         else:
             print(type(ip_address))
     except Exception as e:
@@ -986,7 +990,7 @@ def run_flask():
     """Function runs the app.
     """
     config.orderIndex = 0
-    app.run(host='192.168.1.25', port=5000)
+    app.run(host='192.168.1.20', port=5000)
 
 if __name__ == '__main__':
     with app.app_context():

@@ -1,10 +1,10 @@
 {
   "package_name": "my_service_interfaces",
-  "output_dir": "/home/spider/ros2_ws/build/my_service_interfaces/rosidl_typesupport_fastrtps_cpp/my_service_interfaces",
+  "output_dir": "/home/spiderpi/ros2_ws/build/my_service_interfaces/rosidl_typesupport_fastrtps_cpp/my_service_interfaces",
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource",
   "idl_tuples": [
-    "/home/spider/ros2_ws/build/my_service_interfaces/rosidl_adapter/my_service_interfaces:msg/TargetCoordinates.idl",
-    "/home/spider/ros2_ws/build/my_service_interfaces/rosidl_adapter/my_service_interfaces:srv/SetValue.idl"
+    "/home/spiderpi/ros2_ws/build/my_service_interfaces/rosidl_adapter/my_service_interfaces:msg/TargetCoordinates.idl",
+    "/home/spiderpi/ros2_ws/build/my_service_interfaces/rosidl_adapter/my_service_interfaces:srv/SetValue.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
@@ -76,8 +76,8 @@
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource/msg__type_support.cpp.em",
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource/srv__rosidl_typesupport_fastrtps_cpp.hpp.em",
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource/srv__type_support.cpp.em",
-    "/home/spider/ros2_ws/build/my_service_interfaces/rosidl_adapter/my_service_interfaces/msg/TargetCoordinates.idl",
-    "/home/spider/ros2_ws/build/my_service_interfaces/rosidl_adapter/my_service_interfaces/srv/SetValue.idl",
+    "/home/spiderpi/ros2_ws/build/my_service_interfaces/rosidl_adapter/my_service_interfaces/msg/TargetCoordinates.idl",
+    "/home/spiderpi/ros2_ws/build/my_service_interfaces/rosidl_adapter/my_service_interfaces/srv/SetValue.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/humble/share/geometry_msgs/msg/AccelWithCovariance.idl",

@@ -1,0 +1,22 @@
+[5.314s] Invoking command in '/home/spiderpi/ros2_ws/src/py_node_test': AMENT_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces LD_LIBRARY_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/spiderpi/ros2_ws/build/py_node_test/prefix_override:/home/spiderpi/ros2_ws/install/py_node_test/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_node_test build --build-base /home/spiderpi/ros2_ws/build/py_node_test/build install --record /home/spiderpi/ros2_ws/build/py_node_test/install.log --single-version-externally-managed
+[6.972s] running egg_info
+[6.976s] writing ../../build/py_node_test/py_node_test.egg-info/PKG-INFO
+[6.978s] writing dependency_links to ../../build/py_node_test/py_node_test.egg-info/dependency_links.txt
+[6.979s] writing entry points to ../../build/py_node_test/py_node_test.egg-info/entry_points.txt
+[6.981s] writing requirements to ../../build/py_node_test/py_node_test.egg-info/requires.txt
+[6.982s] writing top-level names to ../../build/py_node_test/py_node_test.egg-info/top_level.txt
+[6.994s] reading manifest file '../../build/py_node_test/py_node_test.egg-info/SOURCES.txt'
+[6.999s] writing manifest file '../../build/py_node_test/py_node_test.egg-info/SOURCES.txt'
+[7.001s] running build
+[7.001s] running build_py
+[7.003s] running install
+[7.004s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[7.004s]   warnings.warn(
+[7.005s] running install_lib
+[7.013s] running install_data
+[7.015s] running install_egg_info
+[7.025s] removing '/home/spiderpi/ros2_ws/install/py_node_test/lib/python3.10/site-packages/py_node_test-0.0.0-py3.10.egg-info' (and everything under it)
+[7.027s] Copying ../../build/py_node_test/py_node_test.egg-info to /home/spiderpi/ros2_ws/install/py_node_test/lib/python3.10/site-packages/py_node_test-0.0.0-py3.10.egg-info
+[7.036s] running install_scripts
+[7.144s] writing list of installed files to '/home/spiderpi/ros2_ws/build/py_node_test/install.log'
+[7.485s] Invoked command in '/home/spiderpi/ros2_ws/src/py_node_test' returned '0': AMENT_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces LD_LIBRARY_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/spiderpi/ros2_ws/build/py_node_test/prefix_override:/home/spiderpi/ros2_ws/install/py_node_test/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_node_test build --build-base /home/spiderpi/ros2_ws/build/py_node_test/build install --record /home/spiderpi/ros2_ws/build/py_node_test/install.log --single-version-externally-managed

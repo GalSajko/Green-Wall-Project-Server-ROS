@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/spider/ros2_ws/src/gwpspider_interfaces
+CMAKE_SOURCE_DIR = /home/spiderpi/ros2_ws/src/gwpspider_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/spider/ros2_ws/build/gwpspider_interfaces
+CMAKE_BINARY_DIR = /home/spiderpi/ros2_ws/build/gwpspider_interfaces
 
 # Utility rule file for gwpspider_interfaces__py.
 
@@ -97,6 +97,8 @@ gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py: rosidl_generator_p
 gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_toggle_additional_controller_mode.py
 gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_spider_goal.py
 gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_get_correction_offset.py
+gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_breaks_control.py
+gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_messages.py
 gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/msg/__init__.py
 gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/__init__.py
 gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/msg/_gripper_command_s.c
@@ -127,6 +129,8 @@ gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py: rosidl_generator_p
 gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_toggle_additional_controller_mode_s.c
 gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_spider_goal_s.c
 gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_get_correction_offset_s.c
+gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_breaks_control_s.c
+gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_messages_s.c
 
 rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -169,6 +173,8 @@ rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_types
 rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/gwpspider_interfaces/srv/ToggleAdditionalControllerMode.idl
 rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/gwpspider_interfaces/srv/SpiderGoal.idl
 rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/gwpspider_interfaces/srv/GetCorrectionOffset.idl
+rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/gwpspider_interfaces/srv/BreaksControl.idl
+rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/gwpspider_interfaces/srv/Messages.idl
 rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -201,8 +207,8 @@ rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_types
 rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/spider/ros2_ws/build/gwpspider_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/spider/ros2_ws/build/gwpspider_interfaces/gwpspider_interfaces__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/spiderpi/ros2_ws/build/gwpspider_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
+	cd /home/spiderpi/ros2_ws/build/gwpspider_interfaces/gwpspider_interfaces__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/spiderpi/ros2_ws/build/gwpspider_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_introspection_c.c
@@ -294,6 +300,12 @@ rosidl_generator_py/gwpspider_interfaces/srv/_spider_goal.py: rosidl_generator_p
 rosidl_generator_py/gwpspider_interfaces/srv/_get_correction_offset.py: rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/gwpspider_interfaces/srv/_get_correction_offset.py
 
+rosidl_generator_py/gwpspider_interfaces/srv/_breaks_control.py: rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/gwpspider_interfaces/srv/_breaks_control.py
+
+rosidl_generator_py/gwpspider_interfaces/srv/_messages.py: rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/gwpspider_interfaces/srv/_messages.py
+
 rosidl_generator_py/gwpspider_interfaces/msg/__init__.py: rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/gwpspider_interfaces/msg/__init__.py
 
@@ -384,6 +396,12 @@ rosidl_generator_py/gwpspider_interfaces/srv/_spider_goal_s.c: rosidl_generator_
 rosidl_generator_py/gwpspider_interfaces/srv/_get_correction_offset_s.c: rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/gwpspider_interfaces/srv/_get_correction_offset_s.c
 
+rosidl_generator_py/gwpspider_interfaces/srv/_breaks_control_s.c: rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/gwpspider_interfaces/srv/_breaks_control_s.c
+
+rosidl_generator_py/gwpspider_interfaces/srv/_messages_s.c: rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/gwpspider_interfaces/srv/_messages_s.c
+
 gwpspider_interfaces__py: gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py
 gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_c.c
 gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
@@ -410,6 +428,8 @@ gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/msg/_water_pu
 gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/__init__.py
 gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_apply_forces_on_legs.py
 gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_apply_forces_on_legs_s.c
+gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_breaks_control.py
+gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_breaks_control_s.c
 gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_control_water_pump.py
 gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_control_water_pump_s.c
 gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_distribute_forces.py
@@ -426,6 +446,8 @@ gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_get_walk
 gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_get_walking_instructions_s.c
 gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_init_bno.py
 gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_init_bno_s.c
+gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_messages.py
+gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_messages_s.c
 gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_move_gripper.py
 gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_move_gripper_s.c
 gwpspider_interfaces__py: rosidl_generator_py/gwpspider_interfaces/srv/_move_leg.py
@@ -454,10 +476,10 @@ gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py.dir/build: gwpspide
 .PHONY : gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py.dir/build
 
 gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py.dir/clean:
-	cd /home/spider/ros2_ws/build/gwpspider_interfaces/gwpspider_interfaces__py && $(CMAKE_COMMAND) -P CMakeFiles/gwpspider_interfaces__py.dir/cmake_clean.cmake
+	cd /home/spiderpi/ros2_ws/build/gwpspider_interfaces/gwpspider_interfaces__py && $(CMAKE_COMMAND) -P CMakeFiles/gwpspider_interfaces__py.dir/cmake_clean.cmake
 .PHONY : gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py.dir/clean
 
 gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py.dir/depend:
-	cd /home/spider/ros2_ws/build/gwpspider_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/spider/ros2_ws/src/gwpspider_interfaces /home/spider/ros2_ws/build/gwpspider_interfaces/gwpspider_interfaces__py /home/spider/ros2_ws/build/gwpspider_interfaces /home/spider/ros2_ws/build/gwpspider_interfaces/gwpspider_interfaces__py /home/spider/ros2_ws/build/gwpspider_interfaces/gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/spiderpi/ros2_ws/build/gwpspider_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/spiderpi/ros2_ws/src/gwpspider_interfaces /home/spiderpi/ros2_ws/build/gwpspider_interfaces/gwpspider_interfaces__py /home/spiderpi/ros2_ws/build/gwpspider_interfaces /home/spiderpi/ros2_ws/build/gwpspider_interfaces/gwpspider_interfaces__py /home/spiderpi/ros2_ws/build/gwpspider_interfaces/gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gwpspider_interfaces__py/CMakeFiles/gwpspider_interfaces__py.dir/depend
 

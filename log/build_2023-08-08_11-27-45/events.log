@@ -1,0 +1,61 @@
+[0.000000] (-) TimerEvent: {}
+[0.001894] (gwpspider_interfaces) JobQueued: {'identifier': 'gwpspider_interfaces', 'dependencies': OrderedDict()}
+[0.002520] (my_service_interfaces) JobQueued: {'identifier': 'my_service_interfaces', 'dependencies': OrderedDict()}
+[0.004217] (flask_server) JobQueued: {'identifier': 'flask_server', 'dependencies': OrderedDict([('gwpspider_interfaces', '/home/spiderpi/ros2_ws/install/gwpspider_interfaces'), ('my_service_interfaces', '/home/spiderpi/ros2_ws/install/my_service_interfaces')])}
+[0.004440] (py_node_test) JobQueued: {'identifier': 'py_node_test', 'dependencies': OrderedDict([('my_service_interfaces', '/home/spiderpi/ros2_ws/install/my_service_interfaces')])}
+[0.004726] (py_srvcli) JobQueued: {'identifier': 'py_srvcli', 'dependencies': OrderedDict([('my_service_interfaces', '/home/spiderpi/ros2_ws/install/my_service_interfaces')])}
+[0.004903] (my_service_interfaces) JobStarted: {'identifier': 'my_service_interfaces'}
+[0.031120] (gwpspider_interfaces) JobStarted: {'identifier': 'gwpspider_interfaces'}
+[0.051629] (my_service_interfaces) JobProgress: {'identifier': 'my_service_interfaces', 'progress': 'cmake'}
+[0.055180] (my_service_interfaces) JobProgress: {'identifier': 'my_service_interfaces', 'progress': 'build'}
+[0.057903] (my_service_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/spiderpi/ros2_ws/build/my_service_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/spiderpi/ros2_ws/build/my_service_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'spiderpi'), ('SSH_CLIENT', '192.168.1.25 56550 22'), ('LC_TIME', 'de_AT.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('BROWSER', '/home/spiderpi/.vscode-server/bin/6445d93c81ebe42c4cbd7a60712e0b17d9463e97/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/spiderpi'), ('OLDPWD', '/home/spiderpi/ros2_ws/src/gwpspider_interfaces'), ('TERM_PROGRAM_VERSION', '1.81.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ed24188f-2a1e-4653-8e8c-547b9fc733f2.sock'), ('LC_MONETARY', 'de_AT.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LOGNAME', 'spiderpi'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '14'), ('PATH', '/home/spiderpi/.vscode-server/bin/6445d93c81ebe42c4cbd7a60712e0b17d9463e97/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'de_AT.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'de_AT.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-41e25afa2b.sock'), ('TERM_PROGRAM', 'vscode'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_AT.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_AT.UTF-8'), ('LC_IDENTIFICATION', 'de_AT.UTF-8'), ('PWD', '/home/spiderpi/ros2_ws/build/my_service_interfaces'), ('SSH_CONNECTION', '192.168.1.25 56550 192.168.1.20 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'de_AT.UTF-8'), ('LC_PAPER', 'de_AT.UTF-8'), ('COLCON', '1')]), 'shell': False}
+[0.082759] (gwpspider_interfaces) JobProgress: {'identifier': 'gwpspider_interfaces', 'progress': 'cmake'}
+[0.086460] (gwpspider_interfaces) JobProgress: {'identifier': 'gwpspider_interfaces', 'progress': 'build'}
+[0.088101] (gwpspider_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/spiderpi/ros2_ws/build/gwpspider_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/spiderpi/ros2_ws/build/gwpspider_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'spiderpi'), ('SSH_CLIENT', '192.168.1.25 56550 22'), ('LC_TIME', 'de_AT.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('BROWSER', '/home/spiderpi/.vscode-server/bin/6445d93c81ebe42c4cbd7a60712e0b17d9463e97/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/spiderpi'), ('OLDPWD', '/home/spiderpi/ros2_ws/src/gwpspider_interfaces'), ('TERM_PROGRAM_VERSION', '1.81.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ed24188f-2a1e-4653-8e8c-547b9fc733f2.sock'), ('LC_MONETARY', 'de_AT.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LOGNAME', 'spiderpi'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '14'), ('PATH', '/home/spiderpi/.vscode-server/bin/6445d93c81ebe42c4cbd7a60712e0b17d9463e97/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'de_AT.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'de_AT.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-41e25afa2b.sock'), ('TERM_PROGRAM', 'vscode'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_AT.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_AT.UTF-8'), ('LC_IDENTIFICATION', 'de_AT.UTF-8'), ('PWD', '/home/spiderpi/ros2_ws/build/gwpspider_interfaces'), ('SSH_CONNECTION', '192.168.1.25 56550 192.168.1.20 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'de_AT.UTF-8'), ('LC_PAPER', 'de_AT.UTF-8'), ('COLCON', '1')]), 'shell': False}
+[0.099092] (-) TimerEvent: {}
+[0.200121] (-) TimerEvent: {}
+[0.207709] (my_service_interfaces) StderrLine: {'line': b'\x1b[0mCMake Error: The current CMakeCache.txt directory /home/spiderpi/ros2_ws/build/my_service_interfaces/CMakeCache.txt is different than the directory /home/spider/ros2_ws/build/my_service_interfaces where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt\x1b[0m\n'}
+[0.210477] (gwpspider_interfaces) StderrLine: {'line': b'\x1b[0mCMake Error: The current CMakeCache.txt directory /home/spiderpi/ros2_ws/build/gwpspider_interfaces/CMakeCache.txt is different than the directory /home/spider/ros2_ws/build/gwpspider_interfaces where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt\x1b[0m\n'}
+[0.297950] (my_service_interfaces) StderrLine: {'line': b'\x1b[0mCMake Error: The source directory "/home/spider/ros2_ws/src/my_service_interfaces" does not exist.\n'}
+[0.299017] (my_service_interfaces) StderrLine: {'line': b'Specify --help for usage, or press the help button on the CMake GUI.\x1b[0m\n'}
+[0.300261] (-) TimerEvent: {}
+[0.312661] (my_service_interfaces) StderrLine: {'line': b'gmake: *** [Makefile:963: cmake_check_build_system] Error 1\n'}
+[0.319639] (my_service_interfaces) CommandEnded: {'returncode': 2}
+[0.321503] (gwpspider_interfaces) StderrLine: {'line': b'\x1b[0mCMake Error: The source directory "/home/spider/ros2_ws/src/gwpspider_interfaces" does not exist.\n'}
+[0.325790] (gwpspider_interfaces) StderrLine: {'line': b'Specify --help for usage, or press the help button on the CMake GUI.\x1b[0m\n'}
+[0.329012] (gwpspider_interfaces) StderrLine: {'line': b'gmake: *** [Makefile:6579: cmake_check_build_system] Error 1\n'}
+[0.333308] (gwpspider_interfaces) CommandEnded: {'returncode': 2}
+[0.400494] (-) TimerEvent: {}
+[0.502692] (-) TimerEvent: {}
+[0.604509] (-) TimerEvent: {}
+[0.705377] (-) TimerEvent: {}
+[0.807899] (-) TimerEvent: {}
+[0.824251] (my_service_interfaces) JobEnded: {'identifier': 'my_service_interfaces', 'rc': 2}
+[0.908101] (-) TimerEvent: {}
+[1.008924] (-) TimerEvent: {}
+[1.110602] (-) TimerEvent: {}
+[1.211503] (-) TimerEvent: {}
+[1.312794] (-) TimerEvent: {}
+[1.413687] (-) TimerEvent: {}
+[1.514989] (-) TimerEvent: {}
+[1.615778] (-) TimerEvent: {}
+[1.716539] (-) TimerEvent: {}
+[1.817778] (-) TimerEvent: {}
+[1.918652] (-) TimerEvent: {}
+[2.019497] (-) TimerEvent: {}
+[2.120376] (-) TimerEvent: {}
+[2.221443] (-) TimerEvent: {}
+[2.383254] (-) TimerEvent: {}
+[2.484067] (-) TimerEvent: {}
+[2.584851] (-) TimerEvent: {}
+[2.685669] (-) TimerEvent: {}
+[2.787923] (-) TimerEvent: {}
+[2.888720] (-) TimerEvent: {}
+[2.989633] (-) TimerEvent: {}
+[3.090887] (-) TimerEvent: {}
+[3.191661] (-) TimerEvent: {}
+[3.246132] (gwpspider_interfaces) JobEnded: {'identifier': 'gwpspider_interfaces', 'rc': 'SIGINT'}
+[3.258666] (flask_server) JobSkipped: {'identifier': 'flask_server'}
+[3.259009] (py_node_test) JobSkipped: {'identifier': 'py_node_test'}
+[3.259159] (py_srvcli) JobSkipped: {'identifier': 'py_srvcli'}
+[3.259278] (-) EventReactorShutdown: {}

@@ -1,0 +1,6 @@
+[0.054s] Invoking command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces': /usr/bin/cmake --build /home/spiderpi/ros2_ws/build/gwpspider_interfaces -- -j4 -l4
+[0.081s] [0mCMake Error: The current CMakeCache.txt directory /home/spiderpi/ros2_ws/build/gwpspider_interfaces/CMakeCache.txt is different than the directory /home/spider/ros2_ws/build/gwpspider_interfaces where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.154s] [0mCMake Error: The source directory "/home/spider/ros2_ws/src/gwpspider_interfaces" does not exist.
+[0.155s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.158s] gmake: *** [Makefile:6579: cmake_check_build_system] Error 1
+[0.165s] Invoked command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces' returned '2': /usr/bin/cmake --build /home/spiderpi/ros2_ws/build/gwpspider_interfaces -- -j4 -l4

@@ -1,2 +1,0 @@
-int8 leg_id
-std_msgs/Float32MultiArray desired_force

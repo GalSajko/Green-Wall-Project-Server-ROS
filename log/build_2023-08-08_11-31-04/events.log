@@ -1,0 +1,112 @@
+[0.000000] (-) TimerEvent: {}
+[0.003498] (gwpspider_interfaces) JobQueued: {'identifier': 'gwpspider_interfaces', 'dependencies': OrderedDict()}
+[0.003877] (my_service_interfaces) JobQueued: {'identifier': 'my_service_interfaces', 'dependencies': OrderedDict()}
+[0.006374] (flask_server) JobQueued: {'identifier': 'flask_server', 'dependencies': OrderedDict([('gwpspider_interfaces', '/home/spiderpi/ros2_ws/install/gwpspider_interfaces'), ('my_service_interfaces', '/home/spiderpi/ros2_ws/install/my_service_interfaces')])}
+[0.006738] (py_node_test) JobQueued: {'identifier': 'py_node_test', 'dependencies': OrderedDict([('my_service_interfaces', '/home/spiderpi/ros2_ws/install/my_service_interfaces')])}
+[0.007021] (py_srvcli) JobQueued: {'identifier': 'py_srvcli', 'dependencies': OrderedDict([('my_service_interfaces', '/home/spiderpi/ros2_ws/install/my_service_interfaces')])}
+[0.007241] (my_service_interfaces) JobStarted: {'identifier': 'my_service_interfaces'}
+[0.047435] (gwpspider_interfaces) JobStarted: {'identifier': 'gwpspider_interfaces'}
+[0.086629] (my_service_interfaces) JobProgress: {'identifier': 'my_service_interfaces', 'progress': 'cmake'}
+[0.089596] (my_service_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/spiderpi/ros2_ws/src/my_service_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/spiderpi/ros2_ws/install/my_service_interfaces'], 'cwd': '/home/spiderpi/ros2_ws/build/my_service_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'spiderpi'), ('SSH_CLIENT', '192.168.1.25 56550 22'), ('LC_TIME', 'de_AT.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('BROWSER', '/home/spiderpi/.vscode-server/bin/6445d93c81ebe42c4cbd7a60712e0b17d9463e97/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/spiderpi'), ('OLDPWD', '/home/spiderpi/ros2_ws/src/gwpspider_interfaces'), ('TERM_PROGRAM_VERSION', '1.81.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ed24188f-2a1e-4653-8e8c-547b9fc733f2.sock'), ('LC_MONETARY', 'de_AT.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LOGNAME', 'spiderpi'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '14'), ('PATH', '/home/spiderpi/.vscode-server/bin/6445d93c81ebe42c4cbd7a60712e0b17d9463e97/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'de_AT.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'de_AT.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-41e25afa2b.sock'), ('TERM_PROGRAM', 'vscode'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_AT.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_AT.UTF-8'), ('LC_IDENTIFICATION', 'de_AT.UTF-8'), ('PWD', '/home/spiderpi/ros2_ws/build/my_service_interfaces'), ('SSH_CONNECTION', '192.168.1.25 56550 192.168.1.20 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'de_AT.UTF-8'), ('LC_PAPER', 'de_AT.UTF-8'), ('COLCON', '1')]), 'shell': False}
+[0.100171] (-) TimerEvent: {}
+[0.141190] (gwpspider_interfaces) JobProgress: {'identifier': 'gwpspider_interfaces', 'progress': 'cmake'}
+[0.142597] (gwpspider_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/spiderpi/ros2_ws/src/gwpspider_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/spiderpi/ros2_ws/install/gwpspider_interfaces'], 'cwd': '/home/spiderpi/ros2_ws/build/gwpspider_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'spiderpi'), ('SSH_CLIENT', '192.168.1.25 56550 22'), ('LC_TIME', 'de_AT.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('BROWSER', '/home/spiderpi/.vscode-server/bin/6445d93c81ebe42c4cbd7a60712e0b17d9463e97/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/spiderpi'), ('OLDPWD', '/home/spiderpi/ros2_ws/src/gwpspider_interfaces'), ('TERM_PROGRAM_VERSION', '1.81.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ed24188f-2a1e-4653-8e8c-547b9fc733f2.sock'), ('LC_MONETARY', 'de_AT.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LOGNAME', 'spiderpi'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '14'), ('PATH', '/home/spiderpi/.vscode-server/bin/6445d93c81ebe42c4cbd7a60712e0b17d9463e97/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'de_AT.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'de_AT.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-41e25afa2b.sock'), ('TERM_PROGRAM', 'vscode'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_AT.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_AT.UTF-8'), ('LC_IDENTIFICATION', 'de_AT.UTF-8'), ('PWD', '/home/spiderpi/ros2_ws/build/gwpspider_interfaces'), ('SSH_CONNECTION', '192.168.1.25 56550 192.168.1.20 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'de_AT.UTF-8'), ('LC_PAPER', 'de_AT.UTF-8'), ('COLCON', '1')]), 'shell': False}
+[0.200371] (-) TimerEvent: {}
+[0.303597] (-) TimerEvent: {}
+[0.404493] (-) TimerEvent: {}
+[0.505463] (-) TimerEvent: {}
+[0.606455] (-) TimerEvent: {}
+[0.707553] (-) TimerEvent: {}
+[0.808963] (-) TimerEvent: {}
+[0.909880] (-) TimerEvent: {}
+[1.012973] (-) TimerEvent: {}
+[1.058676] (gwpspider_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.062153] (my_service_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.113184] (-) TimerEvent: {}
+[1.214460] (-) TimerEvent: {}
+[1.315635] (-) TimerEvent: {}
+[1.416645] (-) TimerEvent: {}
+[1.517618] (-) TimerEvent: {}
+[1.619929] (-) TimerEvent: {}
+[1.720946] (-) TimerEvent: {}
+[1.822277] (-) TimerEvent: {}
+[1.823239] (gwpspider_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.824161] (my_service_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.873059] (my_service_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.873976] (gwpspider_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.923205] (-) TimerEvent: {}
+[2.024648] (-) TimerEvent: {}
+[2.125778] (-) TimerEvent: {}
+[2.226948] (-) TimerEvent: {}
+[2.271854] (my_service_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.275775] (gwpspider_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.304058] (my_service_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.306644] (gwpspider_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.308892] (gwpspider_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.309552] (my_service_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.311328] (gwpspider_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.311959] (my_service_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.327202] (-) TimerEvent: {}
+[2.329622] (gwpspider_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.330328] (my_service_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.428720] (-) TimerEvent: {}
+[2.530222] (-) TimerEvent: {}
+[2.631464] (-) TimerEvent: {}
+[2.728496] (gwpspider_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.729546] (my_service_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.731717] (-) TimerEvent: {}
+[2.755886] (gwpspider_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.757471] (gwpspider_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.760344] (gwpspider_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.765956] (my_service_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.767961] (my_service_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.768642] (my_service_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.831915] (-) TimerEvent: {}
+[2.922105] (gwpspider_interfaces) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:9 (find_package):\n'}
+[2.924197] (gwpspider_interfaces) StderrLine: {'line': b'  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project\n'}
+[2.925117] (gwpspider_interfaces) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[2.930286] (gwpspider_interfaces) StderrLine: {'line': b'  "ament_cmake", but CMake did not find one.\n'}
+[2.931421] (gwpspider_interfaces) StderrLine: {'line': b'\n'}
+[2.932301] (-) TimerEvent: {}
+[2.933504] (gwpspider_interfaces) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_cmake" with\n'}
+[2.934976] (gwpspider_interfaces) StderrLine: {'line': b'  any of the following names:\n'}
+[2.936291] (gwpspider_interfaces) StderrLine: {'line': b'\n'}
+[2.937123] (gwpspider_interfaces) StderrLine: {'line': b'    ament_cmakeConfig.cmake\n'}
+[2.939260] (gwpspider_interfaces) StderrLine: {'line': b'    ament_cmake-config.cmake\n'}
+[2.942852] (gwpspider_interfaces) StderrLine: {'line': b'\n'}
+[2.944289] (gwpspider_interfaces) StderrLine: {'line': b'  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set\n'}
+[2.945245] (gwpspider_interfaces) StderrLine: {'line': b'  "ament_cmake_DIR" to a directory containing one of the above files.  If\n'}
+[2.945943] (gwpspider_interfaces) StderrLine: {'line': b'  "ament_cmake" provides a separate development package or SDK, be sure it\n'}
+[2.946565] (gwpspider_interfaces) StderrLine: {'line': b'  has been installed.\n'}
+[2.950551] (gwpspider_interfaces) StderrLine: {'line': b'\n'}
+[2.952600] (gwpspider_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[2.953655] (my_service_interfaces) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[2.955197] (my_service_interfaces) StdoutLine: {'line': b'See also "/home/spiderpi/ros2_ws/build/my_service_interfaces/CMakeFiles/CMakeOutput.log".\n'}
+[2.956116] (my_service_interfaces) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:9 (find_package):\n'}
+[2.958415] (my_service_interfaces) StderrLine: {'line': b'  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project\n'}
+[2.959202] (my_service_interfaces) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[2.959930] (my_service_interfaces) StderrLine: {'line': b'  "ament_cmake", but CMake did not find one.\n'}
+[2.960872] (my_service_interfaces) StderrLine: {'line': b'\n'}
+[2.961722] (my_service_interfaces) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_cmake" with\n'}
+[2.962606] (my_service_interfaces) StderrLine: {'line': b'  any of the following names:\n'}
+[2.963417] (my_service_interfaces) StderrLine: {'line': b'\n'}
+[2.964130] (my_service_interfaces) StderrLine: {'line': b'    ament_cmakeConfig.cmake\n'}
+[2.964798] (my_service_interfaces) StderrLine: {'line': b'    ament_cmake-config.cmake\n'}
+[2.965483] (my_service_interfaces) StderrLine: {'line': b'\n'}
+[2.966399] (my_service_interfaces) StderrLine: {'line': b'  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set\n'}
+[2.967214] (my_service_interfaces) StderrLine: {'line': b'  "ament_cmake_DIR" to a directory containing one of the above files.  If\n'}
+[2.968234] (my_service_interfaces) StderrLine: {'line': b'  "ament_cmake" provides a separate development package or SDK, be sure it\n'}
+[2.969219] (my_service_interfaces) StderrLine: {'line': b'  has been installed.\n'}
+[2.969895] (my_service_interfaces) StderrLine: {'line': b'\n'}
+[2.970620] (my_service_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[2.971286] (gwpspider_interfaces) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[2.971973] (gwpspider_interfaces) StdoutLine: {'line': b'See also "/home/spiderpi/ros2_ws/build/gwpspider_interfaces/CMakeFiles/CMakeOutput.log".\n'}
+[2.976059] (gwpspider_interfaces) CommandEnded: {'returncode': 1}
+[2.977652] (my_service_interfaces) CommandEnded: {'returncode': 1}
+[3.035148] (-) TimerEvent: {}
+[3.051314] (gwpspider_interfaces) JobEnded: {'identifier': 'gwpspider_interfaces', 'rc': 1}
+[3.055709] (my_service_interfaces) JobEnded: {'identifier': 'my_service_interfaces', 'rc': 'SIGINT'}
+[3.067133] (flask_server) JobSkipped: {'identifier': 'flask_server'}
+[3.067448] (py_node_test) JobSkipped: {'identifier': 'py_node_test'}
+[3.067590] (py_srvcli) JobSkipped: {'identifier': 'py_srvcli'}
+[3.067723] (-) EventReactorShutdown: {}

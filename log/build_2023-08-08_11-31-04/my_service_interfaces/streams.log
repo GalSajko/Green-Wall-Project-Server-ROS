@@ -1,0 +1,33 @@
+[0.087s] Invoking command in '/home/spiderpi/ros2_ws/build/my_service_interfaces': /usr/bin/cmake /home/spiderpi/ros2_ws/src/my_service_interfaces -DCMAKE_INSTALL_PREFIX=/home/spiderpi/ros2_ws/install/my_service_interfaces
+[1.056s] -- The C compiler identification is GNU 11.4.0
+[1.817s] -- The CXX compiler identification is GNU 11.4.0
+[1.866s] -- Detecting C compiler ABI info
+[2.265s] -- Detecting C compiler ABI info - done
+[2.297s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.303s] -- Detecting C compile features
+[2.305s] -- Detecting C compile features - done
+[2.323s] -- Detecting CXX compiler ABI info
+[2.723s] -- Detecting CXX compiler ABI info - done
+[2.760s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.761s] -- Detecting CXX compile features
+[2.762s] -- Detecting CXX compile features - done
+[2.948s] -- Configuring incomplete, errors occurred!
+[2.948s] See also "/home/spiderpi/ros2_ws/build/my_service_interfaces/CMakeFiles/CMakeOutput.log".
+[2.951s] [31mCMake Error at CMakeLists.txt:9 (find_package):
+[2.952s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[2.952s]   has asked CMake to find a package configuration file provided by
+[2.953s]   "ament_cmake", but CMake did not find one.
+[2.954s] 
+[2.955s]   Could not find a package configuration file provided by "ament_cmake" with
+[2.956s]   any of the following names:
+[2.957s] 
+[2.957s]     ament_cmakeConfig.cmake
+[2.958s]     ament_cmake-config.cmake
+[2.959s] 
+[2.960s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[2.961s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[2.962s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[2.962s]   has been installed.
+[2.963s] 
+[2.964s] [0m
+[2.971s] Invoked command in '/home/spiderpi/ros2_ws/build/my_service_interfaces' returned '1': /usr/bin/cmake /home/spiderpi/ros2_ws/src/my_service_interfaces -DCMAKE_INSTALL_PREFIX=/home/spiderpi/ros2_ws/install/my_service_interfaces

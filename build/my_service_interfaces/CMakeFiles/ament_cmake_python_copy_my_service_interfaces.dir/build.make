@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/spider/ros2_ws/src/my_service_interfaces
+CMAKE_SOURCE_DIR = /home/spiderpi/ros2_ws/src/my_service_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/spider/ros2_ws/build/my_service_interfaces
+CMAKE_BINARY_DIR = /home/spiderpi/ros2_ws/build/my_service_interfaces
 
 # Utility rule file for ament_cmake_python_copy_my_service_interfaces.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_copy_my_service_interfaces.dir/compiler_de
 include CMakeFiles/ament_cmake_python_copy_my_service_interfaces.dir/progress.make
 
 CMakeFiles/ament_cmake_python_copy_my_service_interfaces:
-	/usr/bin/cmake -E copy_directory /home/spider/ros2_ws/build/my_service_interfaces/rosidl_generator_py/my_service_interfaces /home/spider/ros2_ws/build/my_service_interfaces/ament_cmake_python/my_service_interfaces/my_service_interfaces
+	/usr/bin/cmake -E copy_directory /home/spiderpi/ros2_ws/build/my_service_interfaces/rosidl_generator_py/my_service_interfaces /home/spiderpi/ros2_ws/build/my_service_interfaces/ament_cmake_python/my_service_interfaces/my_service_interfaces
 
 ament_cmake_python_copy_my_service_interfaces: CMakeFiles/ament_cmake_python_copy_my_service_interfaces
 ament_cmake_python_copy_my_service_interfaces: CMakeFiles/ament_cmake_python_copy_my_service_interfaces.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_copy_my_service_interfaces.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_copy_my_service_interfaces.dir/clean
 
 CMakeFiles/ament_cmake_python_copy_my_service_interfaces.dir/depend:
-	cd /home/spider/ros2_ws/build/my_service_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/spider/ros2_ws/src/my_service_interfaces /home/spider/ros2_ws/src/my_service_interfaces /home/spider/ros2_ws/build/my_service_interfaces /home/spider/ros2_ws/build/my_service_interfaces /home/spider/ros2_ws/build/my_service_interfaces/CMakeFiles/ament_cmake_python_copy_my_service_interfaces.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/spiderpi/ros2_ws/build/my_service_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/spiderpi/ros2_ws/src/my_service_interfaces /home/spiderpi/ros2_ws/src/my_service_interfaces /home/spiderpi/ros2_ws/build/my_service_interfaces /home/spiderpi/ros2_ws/build/my_service_interfaces /home/spiderpi/ros2_ws/build/my_service_interfaces/CMakeFiles/ament_cmake_python_copy_my_service_interfaces.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_copy_my_service_interfaces.dir/depend
 

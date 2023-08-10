@@ -8,4 +8,3 @@ my_service_interfaces/msg/__init__.py
 my_service_interfaces/msg/_target_coordinates.py
 my_service_interfaces/srv/__init__.py
 my_service_interfaces/srv/_set_value.py
-my_service_interfaces/srv/_spider_goal.py

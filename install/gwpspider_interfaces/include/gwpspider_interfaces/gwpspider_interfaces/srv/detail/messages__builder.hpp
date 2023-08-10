@@ -1,0 +1,78 @@
+// generated from rosidl_generator_cpp/resource/idl__builder.hpp.em
+// with input from gwpspider_interfaces:srv/Messages.idl
+// generated code does not contain a copyright notice
+
+#ifndef GWPSPIDER_INTERFACES__SRV__DETAIL__MESSAGES__BUILDER_HPP_
+#define GWPSPIDER_INTERFACES__SRV__DETAIL__MESSAGES__BUILDER_HPP_
+
+#include <algorithm>
+#include <utility>
+
+#include "gwpspider_interfaces/srv/detail/messages__struct.hpp"
+#include "rosidl_runtime_cpp/message_initialization.hpp"
+
+
+namespace gwpspider_interfaces
+{
+
+namespace srv
+{
+
+namespace builder
+{
+
+class Init_Messages_Request_message
+{
+public:
+  Init_Messages_Request_message()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  ::gwpspider_interfaces::srv::Messages_Request message(::gwpspider_interfaces::srv::Messages_Request::_message_type arg)
+  {
+    msg_.message = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::gwpspider_interfaces::srv::Messages_Request msg_;
+};
+
+}  // namespace builder
+
+}  // namespace srv
+
+template<typename MessageType>
+auto build();
+
+template<>
+inline
+auto build<::gwpspider_interfaces::srv::Messages_Request>()
+{
+  return gwpspider_interfaces::srv::builder::Init_Messages_Request_message();
+}
+
+}  // namespace gwpspider_interfaces
+
+
+namespace gwpspider_interfaces
+{
+
+namespace srv
+{
+
+
+}  // namespace srv
+
+template<typename MessageType>
+auto build();
+
+template<>
+inline
+auto build<::gwpspider_interfaces::srv::Messages_Response>()
+{
+  return ::gwpspider_interfaces::srv::Messages_Response(rosidl_runtime_cpp::MessageInitialization::ZERO);
+}
+
+}  // namespace gwpspider_interfaces
+
+#endif  // GWPSPIDER_INTERFACES__SRV__DETAIL__MESSAGES__BUILDER_HPP_

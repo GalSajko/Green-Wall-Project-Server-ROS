@@ -2,7 +2,7 @@ scale = 2.5 //Scale for drawing the working surface.
 
 function add() { //Function opens a form for adding a new plant to the wall.   
     $.post('./add', this.id);
-    window.open('http://192.168.1.25:5000/add', '_blank');
+    window.open('http://192.168.1.20:5000/add', '_blank');
 }
 
 function deleteCirc() {
@@ -35,7 +35,7 @@ function cleanLines() { //Function cleans the objects that need redrawing.
 
 function updt() { //Function opens a form for updating plant data.
     $.post('./getId', this.id, function (response) {
-        window.open('http://192.168.1.25:5000/updt/' + response, '_blank');
+        window.open('http://192.168.1.20:5000/updt/' + response, '_blank');
     });
 }
 
@@ -567,6 +567,20 @@ function stations(data) {
     document.getElementById("light1").innerHTML = station_data["luminosity"]
     document.getElementById("oxy1").innerHTML = station_data["o2"]
     document.getElementById("co1").innerHTML = station_data["co2"]
+
+    station_data = data[11]
+    document.getElementById("tvoc2").innerHTML = station_data["humidity"]
+    document.getElementById("temp2").innerHTML = station_data["temperature"]
+    document.getElementById("light2").innerHTML = station_data["luminosity"]
+    document.getElementById("oxy2").innerHTML = station_data["o2"]
+    document.getElementById("co2").innerHTML = station_data["co2"]
+
+    station_data = data[12]
+    document.getElementById("tvoc3").innerHTML = station_data["humidity"]
+    document.getElementById("temp3").innerHTML = station_data["temperature"]
+    document.getElementById("light3").innerHTML = station_data["luminosity"]
+    document.getElementById("oxy3").innerHTML = station_data["o2"]
+    document.getElementById("co3").innerHTML = station_data["co2"]
     }
     catch{
         console.log("err")
@@ -609,6 +623,8 @@ function update() { //Function gets data from the server and updates it on the g
         data[13]!=null ? document.getElementById("moves").innerHTML = data[13] : console.log("No move data")
         data[10]!=null ? document.getElementById("voltage").innerHTML = data[10].toFixed(2) : console.log("Voltage not found")
         data[14]!=null ? document.getElementById("walked").innerHTML = data[14].toFixed(2) : console.log("Walked distance not found")
+        console.log(data[11])
+        console.log(data[12])
     }
     catch(err){
         console.log(err);

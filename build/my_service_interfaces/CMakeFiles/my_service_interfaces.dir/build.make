@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/spider/ros2_ws/src/my_service_interfaces
+CMAKE_SOURCE_DIR = /home/spiderpi/ros2_ws/src/my_service_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/spider/ros2_ws/build/my_service_interfaces
+CMAKE_BINARY_DIR = /home/spiderpi/ros2_ws/build/my_service_interfaces
 
 # Utility rule file for my_service_interfaces.
 
@@ -66,8 +66,8 @@ include CMakeFiles/my_service_interfaces.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/my_service_interfaces.dir/progress.make
 
-CMakeFiles/my_service_interfaces: /home/spider/ros2_ws/src/my_service_interfaces/msg/TargetCoordinates.msg
-CMakeFiles/my_service_interfaces: /home/spider/ros2_ws/src/my_service_interfaces/srv/SetValue.srv
+CMakeFiles/my_service_interfaces: /home/spiderpi/ros2_ws/src/my_service_interfaces/msg/TargetCoordinates.msg
+CMakeFiles/my_service_interfaces: /home/spiderpi/ros2_ws/src/my_service_interfaces/srv/SetValue.srv
 CMakeFiles/my_service_interfaces: rosidl_cmake/srv/SetValue_Request.msg
 CMakeFiles/my_service_interfaces: rosidl_cmake/srv/SetValue_Response.msg
 CMakeFiles/my_service_interfaces: /opt/ros/humble/share/geometry_msgs/msg/Accel.idl
@@ -113,6 +113,6 @@ CMakeFiles/my_service_interfaces.dir/clean:
 .PHONY : CMakeFiles/my_service_interfaces.dir/clean
 
 CMakeFiles/my_service_interfaces.dir/depend:
-	cd /home/spider/ros2_ws/build/my_service_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/spider/ros2_ws/src/my_service_interfaces /home/spider/ros2_ws/src/my_service_interfaces /home/spider/ros2_ws/build/my_service_interfaces /home/spider/ros2_ws/build/my_service_interfaces /home/spider/ros2_ws/build/my_service_interfaces/CMakeFiles/my_service_interfaces.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/spiderpi/ros2_ws/build/my_service_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/spiderpi/ros2_ws/src/my_service_interfaces /home/spiderpi/ros2_ws/src/my_service_interfaces /home/spiderpi/ros2_ws/build/my_service_interfaces /home/spiderpi/ros2_ws/build/my_service_interfaces /home/spiderpi/ros2_ws/build/my_service_interfaces/CMakeFiles/my_service_interfaces.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/my_service_interfaces.dir/depend
 

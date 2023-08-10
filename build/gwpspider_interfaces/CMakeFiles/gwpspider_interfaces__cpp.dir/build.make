@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/spider/ros2_ws/src/gwpspider_interfaces
+CMAKE_SOURCE_DIR = /home/spiderpi/ros2_ws/src/gwpspider_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/spider/ros2_ws/build/gwpspider_interfaces
+CMAKE_BINARY_DIR = /home/spiderpi/ros2_ws/build/gwpspider_interfaces
 
 # Utility rule file for gwpspider_interfaces__cpp.
 
@@ -178,6 +178,14 @@ CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/
 CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__builder.hpp
 CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__struct.hpp
 CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__traits.hpp
+CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/breaks_control.hpp
+CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/breaks_control__builder.hpp
+CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/breaks_control__struct.hpp
+CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/breaks_control__traits.hpp
+CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/messages.hpp
+CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/messages__builder.hpp
+CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/messages__struct.hpp
+CMakeFiles/gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/messages__traits.hpp
 
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
@@ -222,6 +230,8 @@ rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: rosidl_adapte
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: rosidl_adapter/gwpspider_interfaces/srv/ToggleAdditionalControllerMode.idl
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: rosidl_adapter/gwpspider_interfaces/srv/SpiderGoal.idl
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: rosidl_adapter/gwpspider_interfaces/srv/GetCorrectionOffset.idl
+rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: rosidl_adapter/gwpspider_interfaces/srv/BreaksControl.idl
+rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: rosidl_adapter/gwpspider_interfaces/srv/Messages.idl
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -254,8 +264,8 @@ rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: /opt/ros/humb
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/spider/ros2_ws/build/gwpspider_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/spider/ros2_ws/build/gwpspider_interfaces/rosidl_generator_cpp__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/spiderpi/ros2_ws/build/gwpspider_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/spiderpi/ros2_ws/build/gwpspider_interfaces/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/gwpspider_interfaces/msg/detail/gripper_command__builder.hpp: rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/gwpspider_interfaces/msg/detail/gripper_command__builder.hpp
@@ -590,6 +600,30 @@ rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__stru
 rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__traits.hpp: rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__traits.hpp
 
+rosidl_generator_cpp/gwpspider_interfaces/srv/breaks_control.hpp: rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/gwpspider_interfaces/srv/breaks_control.hpp
+
+rosidl_generator_cpp/gwpspider_interfaces/srv/detail/breaks_control__builder.hpp: rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/gwpspider_interfaces/srv/detail/breaks_control__builder.hpp
+
+rosidl_generator_cpp/gwpspider_interfaces/srv/detail/breaks_control__struct.hpp: rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/gwpspider_interfaces/srv/detail/breaks_control__struct.hpp
+
+rosidl_generator_cpp/gwpspider_interfaces/srv/detail/breaks_control__traits.hpp: rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/gwpspider_interfaces/srv/detail/breaks_control__traits.hpp
+
+rosidl_generator_cpp/gwpspider_interfaces/srv/messages.hpp: rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/gwpspider_interfaces/srv/messages.hpp
+
+rosidl_generator_cpp/gwpspider_interfaces/srv/detail/messages__builder.hpp: rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/gwpspider_interfaces/srv/detail/messages__builder.hpp
+
+rosidl_generator_cpp/gwpspider_interfaces/srv/detail/messages__struct.hpp: rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/gwpspider_interfaces/srv/detail/messages__struct.hpp
+
+rosidl_generator_cpp/gwpspider_interfaces/srv/detail/messages__traits.hpp: rosidl_generator_cpp/gwpspider_interfaces/msg/gripper_command.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/gwpspider_interfaces/srv/detail/messages__traits.hpp
+
 gwpspider_interfaces__cpp: CMakeFiles/gwpspider_interfaces__cpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/msg/bno_data.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/msg/detail/bno_data__builder.hpp
@@ -628,10 +662,14 @@ gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/msg/legs_st
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/msg/walking_instructions.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/msg/water_pump_command.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/apply_forces_on_legs.hpp
+gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/breaks_control.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/control_water_pump.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/apply_forces_on_legs__builder.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/apply_forces_on_legs__struct.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/apply_forces_on_legs__traits.hpp
+gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/breaks_control__builder.hpp
+gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/breaks_control__struct.hpp
+gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/breaks_control__traits.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/control_water_pump__builder.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/control_water_pump__struct.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/control_water_pump__traits.hpp
@@ -656,6 +694,9 @@ gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/init_bno__builder.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/init_bno__struct.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/init_bno__traits.hpp
+gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/messages__builder.hpp
+gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/messages__struct.hpp
+gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/messages__traits.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/move_gripper__builder.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/move_gripper__struct.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/detail/move_gripper__traits.hpp
@@ -693,6 +734,7 @@ gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/get_mod
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/get_spider_pose.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/get_walking_instructions.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/init_bno.hpp
+gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/messages.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/move_gripper.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/move_leg.hpp
 gwpspider_interfaces__cpp: rosidl_generator_cpp/gwpspider_interfaces/srv/move_leg_velocity_mode.hpp
@@ -715,6 +757,6 @@ CMakeFiles/gwpspider_interfaces__cpp.dir/clean:
 .PHONY : CMakeFiles/gwpspider_interfaces__cpp.dir/clean
 
 CMakeFiles/gwpspider_interfaces__cpp.dir/depend:
-	cd /home/spider/ros2_ws/build/gwpspider_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/spider/ros2_ws/src/gwpspider_interfaces /home/spider/ros2_ws/src/gwpspider_interfaces /home/spider/ros2_ws/build/gwpspider_interfaces /home/spider/ros2_ws/build/gwpspider_interfaces /home/spider/ros2_ws/build/gwpspider_interfaces/CMakeFiles/gwpspider_interfaces__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/spiderpi/ros2_ws/build/gwpspider_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/spiderpi/ros2_ws/src/gwpspider_interfaces /home/spiderpi/ros2_ws/src/gwpspider_interfaces /home/spiderpi/ros2_ws/build/gwpspider_interfaces /home/spiderpi/ros2_ws/build/gwpspider_interfaces /home/spiderpi/ros2_ws/build/gwpspider_interfaces/CMakeFiles/gwpspider_interfaces__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/gwpspider_interfaces__cpp.dir/depend
 

@@ -1,2 +1,2 @@
-/home/spider/ros2_ws/build/my_service_interfaces/rosidl_adapter/my_service_interfaces:msg/TargetCoordinates.idl
-/home/spider/ros2_ws/build/my_service_interfaces/rosidl_adapter/my_service_interfaces:srv/SetValue.idl
+/home/spiderpi/ros2_ws/build/my_service_interfaces/rosidl_adapter/my_service_interfaces:msg/TargetCoordinates.idl
+/home/spiderpi/ros2_ws/build/my_service_interfaces/rosidl_adapter/my_service_interfaces:srv/SetValue.idl

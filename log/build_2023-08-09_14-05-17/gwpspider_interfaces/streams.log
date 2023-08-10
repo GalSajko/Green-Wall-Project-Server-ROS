@@ -1,0 +1,1096 @@
+[0.076s] Invoking command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spiderpi/ros2_ws/install/py_srvcli:/home/spiderpi/ros2_ws/install/py_node_test:/home/spiderpi/ros2_ws/install/flask_server:/opt/ros/humble /usr/bin/cmake --build /home/spiderpi/ros2_ws/build/gwpspider_interfaces -- -j4 -l4
+[0.561s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.404s] -- Found rclcpp: 16.0.5 (/opt/ros/humble/share/rclcpp/cmake)
+[1.652s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.669s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.708s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.777s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.871s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.187s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.203s] -- Found rmw_fastrtps_cpp: 6.2.3 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[3.314s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.052s] -- Found rclpy: 3.3.9 (/opt/ros/humble/share/rclpy/cmake)
+[4.057s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[6.390s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[8.318s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[9.093s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[9.230s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[9.362s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[9.362s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[9.363s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+[9.523s] -- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[9.663s] -- Added test 'flake8' to check Python code syntax and style conventions
+[9.680s] -- Added test 'lint_cmake' to check CMake code style
+[9.690s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[9.744s] -- Added test 'xmllint' to check XML markup files
+[9.762s] -- Configuring done
+[10.447s] -- Generating done
+[10.472s] -- Build files have been written to: /home/spiderpi/ros2_ws/build/gwpspider_interfaces
+[10.649s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[10.701s] [  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[10.931s] [  1%] Built target ament_cmake_python_copy_gwpspider_interfaces
+[12.489s] running egg_info
+[12.503s] writing gwpspider_interfaces.egg-info/PKG-INFO
+[12.504s] writing dependency_links to gwpspider_interfaces.egg-info/dependency_links.txt
+[12.504s] writing top-level names to gwpspider_interfaces.egg-info/top_level.txt
+[12.522s] reading manifest file 'gwpspider_interfaces.egg-info/SOURCES.txt'
+[12.531s] writing manifest file 'gwpspider_interfaces.egg-info/SOURCES.txt'
+[12.694s] [  1%] Built target ament_cmake_python_build_gwpspider_interfaces_egg
+[22.091s] [  1%] Built target gwpspider_interfaces__cpp
+[22.176s] [  2%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[22.359s] [  3%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[22.553s] [  4%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[25.694s] [35m[1mConsolidate compiler generated dependencies of target gwpspider_interfaces__rosidl_generator_c[0m
+[25.987s] [  4%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/msg/detail/gripper_command__functions.c.o[0m
+[26.913s] [  4%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/msg/detail/water_pump_command__functions.c.o[0m
+[27.264s] [  5%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/msg/detail/bno_data__functions.c.o[0m
+[27.613s] [  5%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/msg/detail/dynamixel_motors_data__functions.c.o[0m
+[27.994s] [  6%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/msg/detail/walking_instructions__functions.c.o[0m
+[28.376s] [  6%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/msg/detail/leg_trajectory__functions.c.o[0m
+[28.720s] [  6%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/msg/detail/legs_states__functions.c.o[0m
+[29.161s] [  7%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/msg/detail/gripper_state__functions.c.o[0m
+[29.359s] [35m[1mConsolidate compiler generated dependencies of target gwpspider_interfaces__rosidl_typesupport_cpp[0m
+[29.570s] [  7%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/msg/detail/grippers_states__functions.c.o[0m
+[29.589s] [  7%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/msg/gripper_command__type_support.cpp.o[0m
+[29.894s] [  7%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/move_gripper__functions.c.o[0m
+[30.258s] [  8%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/control_water_pump__functions.c.o[0m
+[30.666s] [  8%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/init_bno__functions.c.o[0m
+[31.131s] [  9%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/toggle_motors_torque__functions.c.o[0m
+[31.527s] [  9%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/set_bus_watchdog__functions.c.o[0m
+[31.913s] [  9%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/get_walking_instructions__functions.c.o[0m
+[32.324s] [ 10%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__functions.c.o[0m
+[32.521s] [ 10%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/msg/water_pump_command__type_support.cpp.o[0m
+[32.802s] [ 10%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/get_leg_trajectory__functions.c.o[0m
+[33.290s] [ 10%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/reboot_motors__functions.c.o[0m
+[33.431s] [35m[1mConsolidate compiler generated dependencies of target gwpspider_interfaces__rosidl_typesupport_introspection_cpp[0m
+[33.787s] [ 10%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/msg/detail/gripper_command__type_support.cpp.o[0m
+[33.852s] [ 11%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/move_leg__functions.c.o[0m
+[34.280s] [ 11%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/move_spider__functions.c.o[0m
+[34.452s] [ 12%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/msg/bno_data__type_support.cpp.o[0m
+[34.677s] [ 13%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/toggle_controller__functions.c.o[0m
+[35.076s] [ 13%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/distribute_forces__functions.c.o[0m
+[35.529s] [ 13%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__functions.c.o[0m
+[35.713s] [35m[1mConsolidate compiler generated dependencies of target gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[35.930s] [ 14%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/get_spider_pose__functions.c.o[0m
+[36.191s] [ 14%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/msg/detail/dds_fastrtps/gripper_command__type_support.cpp.o[0m
+[36.390s] [ 14%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__functions.c.o[0m
+[36.419s] [ 14%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/msg/dynamixel_motors_data__type_support.cpp.o[0m
+[36.760s] [ 15%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__functions.c.o[0m
+[36.769s] [ 15%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/msg/detail/water_pump_command__type_support.cpp.o[0m
+[37.176s] [ 15%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/spider_goal__functions.c.o[0m
+[37.633s] [ 15%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/get_correction_offset__functions.c.o[0m
+[38.179s] [ 16%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/breaks_control__functions.c.o[0m
+[38.290s] [ 16%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/msg/walking_instructions__type_support.cpp.o[0m
+[38.677s] [ 16%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gwpspider_interfaces/srv/detail/messages__functions.c.o[0m
+[39.167s] [ 16%] [32m[1mLinking C shared library libgwpspider_interfaces__rosidl_generator_c.so[0m
+[39.217s] [ 16%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/msg/detail/dds_fastrtps/water_pump_command__type_support.cpp.o[0m
+[39.585s] [ 17%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/msg/detail/bno_data__type_support.cpp.o[0m
+[39.634s] [ 17%] Built target gwpspider_interfaces__rosidl_generator_c
+[39.682s] [ 18%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/msg/detail/dds_fastrtps/bno_data__type_support.cpp.o[0m
+[40.315s] [ 19%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/msg/leg_trajectory__type_support.cpp.o[0m
+[42.196s] [ 20%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[42.438s] [ 20%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/msg/legs_states__type_support.cpp.o[0m
+[42.557s] [ 20%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/msg/detail/dynamixel_motors_data__type_support.cpp.o[0m
+[42.610s] [ 20%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/msg/detail/dds_fastrtps/dynamixel_motors_data__type_support.cpp.o[0m
+[44.609s] [ 21%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/msg/gripper_state__type_support.cpp.o[0m
+[45.528s] [ 22%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/msg/detail/dds_fastrtps/walking_instructions__type_support.cpp.o[0m
+[45.621s] [ 23%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/msg/detail/walking_instructions__type_support.cpp.o[0m
+[46.441s] [ 23%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/msg/grippers_states__type_support.cpp.o[0m
+[48.429s] [ 23%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/move_gripper__type_support.cpp.o[0m
+[48.465s] [ 23%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/msg/detail/dds_fastrtps/leg_trajectory__type_support.cpp.o[0m
+[48.497s] [ 23%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/msg/detail/leg_trajectory__type_support.cpp.o[0m
+[50.320s] [ 24%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/control_water_pump__type_support.cpp.o[0m
+[51.323s] [ 24%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/msg/detail/legs_states__type_support.cpp.o[0m
+[51.385s] [ 24%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/msg/detail/dds_fastrtps/legs_states__type_support.cpp.o[0m
+[52.164s] [ 24%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/init_bno__type_support.cpp.o[0m
+[54.233s] [ 24%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/toggle_motors_torque__type_support.cpp.o[0m
+[54.308s] [ 25%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/msg/detail/gripper_state__type_support.cpp.o[0m
+[54.404s] [ 26%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/msg/detail/dds_fastrtps/gripper_state__type_support.cpp.o[0m
+[56.117s] [ 27%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/set_bus_watchdog__type_support.cpp.o[0m
+[56.801s] [35m[1mConsolidate compiler generated dependencies of target gwpspider_interfaces__rosidl_typesupport_fastrtps_c[0m
+[57.116s] [ 27%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/msg/detail/gripper_command__type_support_c.cpp.o[0m
+[57.147s] [ 27%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/msg/detail/grippers_states__type_support.cpp.o[0m
+[57.399s] [ 27%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/msg/detail/dds_fastrtps/grippers_states__type_support.cpp.o[0m
+[57.958s] [ 27%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/get_walking_instructions__type_support.cpp.o[0m
+[59.596s] [ 27%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/msg/detail/water_pump_command__type_support_c.cpp.o[0m
+[60.122s] [ 28%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/move_gripper__type_support.cpp.o[0m
+[60.218s] [ 29%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/get_modified_walking_instructions__type_support.cpp.o[0m
+[60.425s] [ 29%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/move_gripper__type_support.cpp.o[0m
+[62.068s] [ 30%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/msg/detail/bno_data__type_support_c.cpp.o[0m
+[62.149s] [ 30%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/get_leg_trajectory__type_support.cpp.o[0m
+[62.959s] [ 30%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/control_water_pump__type_support.cpp.o[0m
+[63.757s] [ 31%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/control_water_pump__type_support.cpp.o[0m
+[64.114s] [ 31%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/reboot_motors__type_support.cpp.o[0m
+[64.554s] [ 31%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/msg/detail/dynamixel_motors_data__type_support_c.cpp.o[0m
+[66.013s] [ 31%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/init_bno__type_support.cpp.o[0m
+[66.089s] [ 32%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/move_leg__type_support.cpp.o[0m
+[66.782s] [ 32%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/init_bno__type_support.cpp.o[0m
+[66.960s] [ 33%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/msg/detail/walking_instructions__type_support_c.cpp.o[0m
+[68.186s] [ 33%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/move_spider__type_support.cpp.o[0m
+[68.783s] [ 34%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/toggle_motors_torque__type_support.cpp.o[0m
+[69.317s] [ 34%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/msg/detail/leg_trajectory__type_support_c.cpp.o[0m
+[69.921s] [ 35%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/toggle_motors_torque__type_support.cpp.o[0m
+[70.242s] [ 36%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/toggle_controller__type_support.cpp.o[0m
+[71.682s] [ 36%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/set_bus_watchdog__type_support.cpp.o[0m
+[71.853s] [ 36%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/msg/detail/legs_states__type_support_c.cpp.o[0m
+[72.157s] [ 36%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/distribute_forces__type_support.cpp.o[0m
+[73.014s] [ 36%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/set_bus_watchdog__type_support.cpp.o[0m
+[74.238s] [ 36%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/apply_forces_on_legs__type_support.cpp.o[0m
+[74.248s] [ 37%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/msg/detail/gripper_state__type_support_c.cpp.o[0m
+[74.319s] [ 37%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/get_walking_instructions__type_support.cpp.o[0m
+[76.228s] [ 38%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/get_spider_pose__type_support.cpp.o[0m
+[76.258s] [ 38%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/get_walking_instructions__type_support.cpp.o[0m
+[76.662s] [ 38%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/msg/detail/grippers_states__type_support_c.cpp.o[0m
+[77.300s] [ 39%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__type_support.cpp.o[0m
+[78.313s] [ 39%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/move_leg_velocity_mode__type_support.cpp.o[0m
+[79.106s] [ 39%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/move_gripper__type_support_c.cpp.o[0m
+[79.145s] [ 40%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/get_modified_walking_instructions__type_support.cpp.o[0m
+[80.257s] [ 40%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/toggle_additional_controller_mode__type_support.cpp.o[0m
+[80.487s] [ 40%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/get_leg_trajectory__type_support.cpp.o[0m
+[81.757s] [ 41%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/control_water_pump__type_support_c.cpp.o[0m
+[82.114s] [ 41%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/get_leg_trajectory__type_support.cpp.o[0m
+[82.197s] [ 42%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/spider_goal__type_support.cpp.o[0m
+[83.781s] [ 43%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/reboot_motors__type_support.cpp.o[0m
+[84.322s] [ 43%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/get_correction_offset__type_support.cpp.o[0m
+[84.368s] [ 43%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/init_bno__type_support_c.cpp.o[0m
+[85.213s] [ 43%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/reboot_motors__type_support.cpp.o[0m
+[86.320s] [ 44%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/breaks_control__type_support.cpp.o[0m
+[86.726s] [ 44%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/move_leg__type_support.cpp.o[0m
+[86.850s] [ 45%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/toggle_motors_torque__type_support_c.cpp.o[0m
+[88.303s] [ 45%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gwpspider_interfaces/srv/messages__type_support.cpp.o[0m
+[88.362s] [ 46%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/move_leg__type_support.cpp.o[0m
+[89.499s] [ 46%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/set_bus_watchdog__type_support_c.cpp.o[0m
+[89.757s] [ 46%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/move_spider__type_support.cpp.o[0m
+[90.260s] [ 46%] [32m[1mLinking CXX shared library libgwpspider_interfaces__rosidl_typesupport_cpp.so[0m
+[90.720s] [ 46%] Built target gwpspider_interfaces__rosidl_typesupport_cpp
+[90.790s] [ 46%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/get_walking_instructions__type_support_c.cpp.o[0m
+[91.410s] [ 46%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/move_spider__type_support.cpp.o[0m
+[92.041s] [ 47%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__type_support_c.cpp.o[0m
+[92.830s] [ 48%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/toggle_controller__type_support.cpp.o[0m
+[93.417s] [ 48%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/get_leg_trajectory__type_support_c.cpp.o[0m
+[94.553s] [ 49%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/toggle_controller__type_support.cpp.o[0m
+[94.658s] [ 50%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/reboot_motors__type_support_c.cpp.o[0m
+[95.728s] [ 50%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/distribute_forces__type_support.cpp.o[0m
+[96.008s] [ 50%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/move_leg__type_support_c.cpp.o[0m
+[97.167s] [ 50%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/move_spider__type_support_c.cpp.o[0m
+[97.536s] [ 50%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/distribute_forces__type_support.cpp.o[0m
+[98.649s] [ 50%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/apply_forces_on_legs__type_support.cpp.o[0m
+[98.731s] [ 51%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/toggle_controller__type_support_c.cpp.o[0m
+[99.760s] [ 51%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/distribute_forces__type_support_c.cpp.o[0m
+[100.650s] [ 51%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/apply_forces_on_legs__type_support.cpp.o[0m
+[101.338s] [ 51%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__type_support_c.cpp.o[0m
+[101.777s] [ 52%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/get_spider_pose__type_support.cpp.o[0m
+[102.373s] [ 53%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/get_spider_pose__type_support_c.cpp.o[0m
+[103.774s] [ 54%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/get_spider_pose__type_support.cpp.o[0m
+[104.109s] [ 54%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/move_leg_velocity_mode__type_support.cpp.o[0m
+[104.921s] [ 54%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__type_support_c.cpp.o[0m
+[105.019s] [ 54%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__type_support.cpp.o[0m
+[106.927s] [ 55%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/toggle_additional_controller_mode__type_support.cpp.o[0m
+[107.224s] [ 55%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/spider_goal__type_support.cpp.o[0m
+[107.420s] [ 56%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__type_support_c.cpp.o[0m
+[108.126s] [ 57%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__type_support.cpp.o[0m
+[110.234s] [ 57%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/spider_goal__type_support_c.cpp.o[0m
+[110.474s] [ 57%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/get_correction_offset__type_support.cpp.o[0m
+[110.873s] [ 57%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/spider_goal__type_support.cpp.o[0m
+[112.367s] [ 57%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/get_correction_offset__type_support_c.cpp.o[0m
+[113.032s] [ 58%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/breaks_control__type_support.cpp.o[0m
+[113.436s] [ 58%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/get_correction_offset__type_support.cpp.o[0m
+[114.573s] [ 59%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/breaks_control__type_support_c.cpp.o[0m
+[115.573s] [ 59%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gwpspider_interfaces/srv/detail/dds_fastrtps/messages__type_support.cpp.o[0m
+[116.031s] [ 60%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/breaks_control__type_support.cpp.o[0m
+[116.709s] [ 60%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gwpspider_interfaces/srv/detail/messages__type_support_c.cpp.o[0m
+[118.101s] [ 60%] [32m[1mLinking CXX shared library libgwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[118.401s] [ 60%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gwpspider_interfaces/srv/detail/messages__type_support.cpp.o[0m
+[118.684s] [ 60%] Built target gwpspider_interfaces__rosidl_typesupport_fastrtps_cpp
+[118.747s] [ 61%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[118.931s] [ 61%] [32m[1mLinking CXX shared library libgwpspider_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[119.474s] [ 61%] Built target gwpspider_interfaces__rosidl_typesupport_fastrtps_c
+[119.543s] [ 62%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[120.876s] [ 63%] [32m[1mLinking CXX shared library libgwpspider_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[121.414s] [ 63%] Built target gwpspider_interfaces__rosidl_typesupport_introspection_cpp
+[125.283s] [35m[1mConsolidate compiler generated dependencies of target gwpspider_interfaces__rosidl_typesupport_c[0m
+[125.366s] [ 63%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/msg/gripper_command__type_support.cpp.o[0m
+[125.373s] [ 63%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/msg/water_pump_command__type_support.cpp.o[0m
+[125.561s] [ 64%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/msg/bno_data__type_support.cpp.o[0m
+[125.569s] [ 64%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/msg/dynamixel_motors_data__type_support.cpp.o[0m
+[125.748s] [ 64%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/msg/walking_instructions__type_support.cpp.o[0m
+[125.769s] [ 65%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/msg/leg_trajectory__type_support.cpp.o[0m
+[125.934s] [ 65%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/msg/legs_states__type_support.cpp.o[0m
+[125.953s] [ 66%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/msg/gripper_state__type_support.cpp.o[0m
+[126.137s] [ 66%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/move_gripper__type_support.cpp.o[0m
+[126.145s] [ 66%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/msg/grippers_states__type_support.cpp.o[0m
+[126.194s] [ 67%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/control_water_pump__type_support.cpp.o[0m
+[126.384s] [ 67%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/init_bno__type_support.cpp.o[0m
+[126.392s] [ 68%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/toggle_motors_torque__type_support.cpp.o[0m
+[126.586s] [ 68%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/set_bus_watchdog__type_support.cpp.o[0m
+[126.587s] [ 68%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/get_walking_instructions__type_support.cpp.o[0m
+[126.779s] [ 69%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/get_modified_walking_instructions__type_support.cpp.o[0m
+[126.783s] [ 69%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/get_leg_trajectory__type_support.cpp.o[0m
+[126.971s] [ 69%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/reboot_motors__type_support.cpp.o[0m
+[127.007s] [ 70%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/move_leg__type_support.cpp.o[0m
+[127.204s] [ 70%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/move_spider__type_support.cpp.o[0m
+[127.247s] [ 71%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/toggle_controller__type_support.cpp.o[0m
+[127.431s] [ 71%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/distribute_forces__type_support.cpp.o[0m
+[127.457s] [ 71%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/apply_forces_on_legs__type_support.cpp.o[0m
+[127.690s] [ 72%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/get_spider_pose__type_support.cpp.o[0m
+[127.708s] [ 72%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/move_leg_velocity_mode__type_support.cpp.o[0m
+[127.892s] [ 72%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/toggle_additional_controller_mode__type_support.cpp.o[0m
+[127.916s] [ 73%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/spider_goal__type_support.cpp.o[0m
+[128.106s] [ 73%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/get_correction_offset__type_support.cpp.o[0m
+[128.160s] [ 74%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/breaks_control__type_support.cpp.o[0m
+[128.188s] [ 74%] [32mBuilding CXX object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gwpspider_interfaces/srv/messages__type_support.cpp.o[0m
+[128.402s] [ 74%] [32m[1mLinking CXX shared library libgwpspider_interfaces__rosidl_typesupport_c.so[0m
+[128.539s] [35m[1mConsolidate compiler generated dependencies of target gwpspider_interfaces__rosidl_typesupport_introspection_c[0m
+[128.664s] [ 75%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/msg/detail/water_pump_command__type_support.c.o[0m
+[128.674s] [ 75%] Built target gwpspider_interfaces__rosidl_typesupport_c
+[128.679s] [ 75%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/msg/detail/gripper_command__type_support.c.o[0m
+[128.875s] [ 75%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/msg/detail/dynamixel_motors_data__type_support.c.o[0m
+[128.878s] [ 76%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/msg/detail/walking_instructions__type_support.c.o[0m
+[129.078s] [ 76%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/msg/detail/leg_trajectory__type_support.c.o[0m
+[129.086s] [ 76%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/msg/detail/legs_states__type_support.c.o[0m
+[129.299s] [ 77%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/msg/detail/gripper_state__type_support.c.o[0m
+[129.320s] [ 77%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/msg/detail/grippers_states__type_support.c.o[0m
+[129.505s] [ 78%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/move_gripper__type_support.c.o[0m
+[129.514s] [ 78%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/control_water_pump__type_support.c.o[0m
+[129.712s] [ 78%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/init_bno__type_support.c.o[0m
+[129.913s] [ 78%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/set_bus_watchdog__type_support.c.o[0m
+[130.107s] [ 78%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/get_walking_instructions__type_support.c.o[0m
+[130.324s] [ 79%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__type_support.c.o[0m
+[130.325s] [ 80%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/toggle_motors_torque__type_support.c.o[0m
+[130.531s] [ 80%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/get_leg_trajectory__type_support.c.o[0m
+[130.542s] [ 81%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/reboot_motors__type_support.c.o[0m
+[130.748s] [ 81%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/move_leg__type_support.c.o[0m
+[130.955s] [ 82%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/toggle_controller__type_support.c.o[0m
+[131.155s] [ 82%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/distribute_forces__type_support.c.o[0m
+[131.206s] [ 83%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/apply_forces_on_legs__type_support.c.o[0m
+[131.371s] [ 83%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/move_spider__type_support.c.o[0m
+[131.418s] [ 83%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/get_spider_pose__type_support.c.o[0m
+[131.588s] [ 83%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__type_support.c.o[0m
+[131.635s] [ 84%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__type_support.c.o[0m
+[131.801s] [ 84%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/spider_goal__type_support.c.o[0m
+[132.013s] [ 85%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/breaks_control__type_support.c.o[0m
+[132.214s] [ 85%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/messages__type_support.c.o[0m
+[132.216s] [ 85%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/srv/detail/get_correction_offset__type_support.c.o[0m
+[132.416s] [ 85%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gwpspider_interfaces/msg/detail/bno_data__type_support.c.o[0m
+[132.607s] [ 86%] [32m[1mLinking C shared library libgwpspider_interfaces__rosidl_typesupport_introspection_c.so[0m
+[132.809s] [ 86%] Built target gwpspider_interfaces__rosidl_typesupport_introspection_c
+[132.906s] [ 86%] Built target gwpspider_interfaces
+[133.018s] [ 86%] [34m[1mGenerating Python code for ROS interfaces[0m
+[150.527s] [ 86%] Built target gwpspider_interfaces__py
+[150.623s] [35m[1mConsolidate compiler generated dependencies of target gwpspider_interfaces__rosidl_generator_py[0m
+[150.867s] [ 87%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/msg/_gripper_command_s.c.o[0m
+[150.876s] [ 87%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/msg/_water_pump_command_s.c.o[0m
+[150.881s] [ 88%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/msg/_bno_data_s.c.o[0m
+[150.887s] [ 88%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/msg/_dynamixel_motors_data_s.c.o[0m
+[151.614s] [ 88%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/msg/_walking_instructions_s.c.o[0m
+[151.621s] [ 88%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/msg/_legs_states_s.c.o[0m
+[151.628s] [ 89%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/msg/_leg_trajectory_s.c.o[0m
+[151.633s] [ 89%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/msg/_gripper_state_s.c.o[0m
+[152.220s] [ 90%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/msg/_grippers_states_s.c.o[0m
+[152.245s] [ 90%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_move_gripper_s.c.o[0m
+[152.272s] [ 90%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_init_bno_s.c.o[0m
+[152.290s] [ 91%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_control_water_pump_s.c.o[0m
+[152.853s] [ 91%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_toggle_motors_torque_s.c.o[0m
+[152.873s] [ 92%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_set_bus_watchdog_s.c.o[0m
+[152.927s] [ 92%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_get_walking_instructions_s.c.o[0m
+[152.936s] [ 93%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_get_modified_walking_instructions_s.c.o[0m
+[153.519s] [ 93%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_get_leg_trajectory_s.c.o[0m
+[153.633s] [ 93%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_reboot_motors_s.c.o[0m
+[153.688s] [ 94%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_move_leg_s.c.o[0m
+[153.720s] [ 94%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_move_spider_s.c.o[0m
+[154.204s] [ 94%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_toggle_controller_s.c.o[0m
+[154.274s] [ 95%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_distribute_forces_s.c.o[0m
+[154.419s] [ 95%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_apply_forces_on_legs_s.c.o[0m
+[154.449s] [ 96%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_get_spider_pose_s.c.o[0m
+[154.930s] [ 96%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_move_leg_velocity_mode_s.c.o[0m
+[154.992s] [ 96%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_toggle_additional_controller_mode_s.c.o[0m
+[155.082s] [ 97%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_spider_goal_s.c.o[0m
+[155.104s] [ 97%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_get_correction_offset_s.c.o[0m
+[155.609s] [ 97%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_breaks_control_s.c.o[0m
+[155.635s] [ 98%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gwpspider_interfaces/srv/_messages_s.c.o[0m
+[156.175s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/gwpspider_interfaces/libgwpspider_interfaces__rosidl_generator_py.so[0m
+[156.440s] [ 98%] Built target gwpspider_interfaces__rosidl_generator_py
+[156.497s] [35m[1mConsolidate compiler generated dependencies of target gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[156.498s] [35m[1mConsolidate compiler generated dependencies of target gwpspider_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[156.512s] [35m[1mConsolidate compiler generated dependencies of target gwpspider_interfaces__rosidl_typesupport_c__pyext[0m
+[156.581s] [ 99%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[156.597s] [ 99%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[156.686s] [100%] [32mBuilding C object CMakeFiles/gwpspider_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[158.306s] [100%] [32m[1mLinking C shared library rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so[0m
+[158.374s] [100%] [32m[1mLinking C shared library rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so[0m
+[158.419s] [100%] [32m[1mLinking C shared library rosidl_generator_py/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so[0m
+[158.650s] [100%] Built target gwpspider_interfaces__rosidl_typesupport_introspection_c__pyext
+[158.696s] [100%] Built target gwpspider_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[158.734s] [100%] Built target gwpspider_interfaces__rosidl_typesupport_c__pyext
+[158.789s] Invoked command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spiderpi/ros2_ws/install/py_srvcli:/home/spiderpi/ros2_ws/install/py_node_test:/home/spiderpi/ros2_ws/install/flask_server:/opt/ros/humble /usr/bin/cmake --build /home/spiderpi/ros2_ws/build/gwpspider_interfaces -- -j4 -l4
+[162.824s] Invoking command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spiderpi/ros2_ws/install/py_srvcli:/home/spiderpi/ros2_ws/install/py_node_test:/home/spiderpi/ros2_ws/install/flask_server:/opt/ros/humble /usr/bin/cmake --install /home/spiderpi/ros2_ws/build/gwpspider_interfaces
+[162.860s] -- Install configuration: ""
+[162.861s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/ament_index/resource_index/rosidl_interfaces/gwpspider_interfaces
+[162.863s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces
+[162.864s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv
+[162.864s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail
+[162.865s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_leg_trajectory__struct.h
+[162.866s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/reboot_motors__type_support.h
+[162.867s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_spider__type_support.h
+[162.869s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_spider__functions.h
+[162.871s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg__functions.c
+[162.872s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/spider_goal__functions.c
+[162.874s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_spider__functions.c
+[162.875s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/distribute_forces__type_support.h
+[162.877s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg__struct.h
+[162.878s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_gripper__functions.c
+[162.880s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_spider_pose__functions.c
+[162.882s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/messages__type_support.h
+[162.884s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/init_bno__struct.h
+[162.885s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_leg_trajectory__type_support.h
+[162.887s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/apply_forces_on_legs__type_support.h
+[162.888s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/control_water_pump__struct.h
+[162.890s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg__functions.h
+[162.892s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/distribute_forces__functions.h
+[162.893s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_spider_pose__functions.h
+[162.895s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/spider_goal__type_support.h
+[162.897s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__struct.h
+[162.898s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_spider__struct.h
+[162.900s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/set_bus_watchdog__functions.h
+[162.901s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/breaks_control__struct.h
+[162.903s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/distribute_forces__functions.c
+[162.905s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/breaks_control__type_support.h
+[162.906s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/apply_forces_on_legs__functions.h
+[162.908s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/set_bus_watchdog__functions.c
+[162.910s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/init_bno__type_support.h
+[162.911s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/control_water_pump__type_support.h
+[162.917s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__functions.c
+[162.918s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__type_support.h
+[162.918s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_leg_trajectory__functions.h
+[162.920s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_correction_offset__struct.h
+[162.922s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_spider_pose__type_support.h
+[162.924s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/reboot_motors__functions.c
+[162.926s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_controller__type_support.h
+[162.928s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_walking_instructions__type_support.h
+[162.930s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_controller__struct.h
+[162.931s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_walking_instructions__struct.h
+[162.933s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/messages__functions.h
+[162.935s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/breaks_control__functions.c
+[162.936s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/control_water_pump__functions.c
+[162.938s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_motors_torque__type_support.h
+[162.940s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_walking_instructions__functions.h
+[162.943s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__type_support.h
+[162.944s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_motors_torque__functions.c
+[162.945s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/messages__functions.c
+[162.947s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/spider_goal__struct.h
+[162.948s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_walking_instructions__functions.c
+[162.950s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_controller__functions.c
+[162.952s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__functions.c
+[162.953s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_motors_torque__functions.h
+[162.955s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_motors_torque__struct.h
+[162.956s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/apply_forces_on_legs__functions.c
+[162.958s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_gripper__type_support.h
+[162.960s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_correction_offset__functions.c
+[162.962s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/control_water_pump__functions.h
+[162.963s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/set_bus_watchdog__type_support.h
+[162.965s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__struct.h
+[162.966s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__functions.h
+[162.968s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_correction_offset__type_support.h
+[162.969s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_leg_trajectory__functions.c
+[162.971s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/reboot_motors__struct.h
+[162.972s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_controller__functions.h
+[162.974s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/init_bno__functions.c
+[162.975s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/messages__struct.h
+[162.977s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/distribute_forces__struct.h
+[162.978s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/apply_forces_on_legs__struct.h
+[162.985s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_correction_offset__functions.h
+[162.986s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/init_bno__functions.h
+[162.986s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__type_support.h
+[162.987s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/set_bus_watchdog__struct.h
+[162.987s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/spider_goal__functions.h
+[162.990s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/reboot_motors__functions.h
+[162.991s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_gripper__struct.h
+[162.991s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_gripper__functions.h
+[162.993s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_spider_pose__struct.h
+[162.997s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__functions.h
+[162.997s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__functions.h
+[163.000s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__functions.c
+[163.001s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg__type_support.h
+[163.002s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__struct.h
+[163.004s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/breaks_control__functions.h
+[163.006s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/toggle_additional_controller_mode.h
+[163.009s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/move_gripper.h
+[163.009s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/reboot_motors.h
+[163.010s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/toggle_motors_torque.h
+[163.012s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/get_correction_offset.h
+[163.014s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/apply_forces_on_legs.h
+[163.016s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/get_spider_pose.h
+[163.016s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/get_walking_instructions.h
+[163.018s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/control_water_pump.h
+[163.019s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/move_spider.h
+[163.020s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/move_leg.h
+[163.024s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/set_bus_watchdog.h
+[163.025s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/distribute_forces.h
+[163.027s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/toggle_controller.h
+[163.027s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/breaks_control.h
+[163.028s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/get_modified_walking_instructions.h
+[163.031s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/get_leg_trajectory.h
+[163.033s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/messages.h
+[163.034s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/init_bno.h
+[163.034s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/spider_goal.h
+[163.037s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/move_leg_velocity_mode.h
+[163.038s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg
+[163.038s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail
+[163.039s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_state__type_support.h
+[163.040s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/water_pump_command__type_support.h
+[163.042s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_command__functions.c
+[163.043s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/dynamixel_motors_data__struct.h
+[163.048s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/dynamixel_motors_data__functions.c
+[163.049s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_command__functions.h
+[163.050s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/grippers_states__functions.c
+[163.050s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/bno_data__functions.h
+[163.053s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/leg_trajectory__struct.h
+[163.055s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/grippers_states__type_support.h
+[163.055s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/walking_instructions__functions.c
+[163.059s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/water_pump_command__functions.h
+[163.059s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_command__struct.h
+[163.061s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/water_pump_command__functions.c
+[163.062s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/bno_data__struct.h
+[163.064s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/walking_instructions__functions.h
+[163.066s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_state__functions.h
+[163.068s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/legs_states__type_support.h
+[163.069s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/water_pump_command__struct.h
+[163.071s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_command__type_support.h
+[163.072s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/legs_states__struct.h
+[163.074s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/dynamixel_motors_data__type_support.h
+[163.076s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/leg_trajectory__functions.h
+[163.077s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/leg_trajectory__type_support.h
+[163.079s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/bno_data__functions.c
+[163.081s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/legs_states__functions.h
+[163.082s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/dynamixel_motors_data__functions.h
+[163.084s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/walking_instructions__struct.h
+[163.085s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_state__struct.h
+[163.086s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/grippers_states__functions.h
+[163.089s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/grippers_states__struct.h
+[163.090s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_state__functions.c
+[163.092s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/walking_instructions__type_support.h
+[163.093s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/leg_trajectory__functions.c
+[163.095s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/legs_states__functions.c
+[163.096s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/bno_data__type_support.h
+[163.098s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/rosidl_generator_c__visibility_control.h
+[163.099s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/walking_instructions.h
+[163.100s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/leg_trajectory.h
+[163.101s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/grippers_states.h
+[163.102s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/bno_data.h
+[163.104s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/legs_states.h
+[163.105s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/gripper_state.h
+[163.106s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/water_pump_command.h
+[163.108s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/gripper_command.h
+[163.110s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/dynamixel_motors_data.h
+[163.112s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/environment/library_path.sh
+[163.113s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/environment/library_path.dsv
+[163.122s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/libgwpspider_interfaces__rosidl_generator_c.so
+[163.128s] -- Set runtime path of "/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/libgwpspider_interfaces__rosidl_generator_c.so" to ""
+[163.129s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces
+[163.130s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv
+[163.131s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail
+[163.131s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_motors_torque__rosidl_typesupport_fastrtps_c.h
+[163.132s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_walking_instructions__rosidl_typesupport_fastrtps_c.h
+[163.135s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__rosidl_typesupport_fastrtps_c.h
+[163.141s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_gripper__rosidl_typesupport_fastrtps_c.h
+[163.142s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_leg_trajectory__rosidl_typesupport_fastrtps_c.h
+[163.143s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/spider_goal__rosidl_typesupport_fastrtps_c.h
+[163.145s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_correction_offset__rosidl_typesupport_fastrtps_c.h
+[163.149s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg__rosidl_typesupport_fastrtps_c.h
+[163.150s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__rosidl_typesupport_fastrtps_c.h
+[163.150s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/set_bus_watchdog__rosidl_typesupport_fastrtps_c.h
+[163.153s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_spider_pose__rosidl_typesupport_fastrtps_c.h
+[163.153s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/control_water_pump__rosidl_typesupport_fastrtps_c.h
+[163.158s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__rosidl_typesupport_fastrtps_c.h
+[163.159s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_spider__rosidl_typesupport_fastrtps_c.h
+[163.160s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/init_bno__rosidl_typesupport_fastrtps_c.h
+[163.167s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/apply_forces_on_legs__rosidl_typesupport_fastrtps_c.h
+[163.168s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/messages__rosidl_typesupport_fastrtps_c.h
+[163.168s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/reboot_motors__rosidl_typesupport_fastrtps_c.h
+[163.169s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/distribute_forces__rosidl_typesupport_fastrtps_c.h
+[163.174s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_controller__rosidl_typesupport_fastrtps_c.h
+[163.177s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/breaks_control__rosidl_typesupport_fastrtps_c.h
+[163.177s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg
+[163.178s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail
+[163.179s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/bno_data__rosidl_typesupport_fastrtps_c.h
+[163.180s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_command__rosidl_typesupport_fastrtps_c.h
+[163.180s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/walking_instructions__rosidl_typesupport_fastrtps_c.h
+[163.180s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/water_pump_command__rosidl_typesupport_fastrtps_c.h
+[163.182s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/legs_states__rosidl_typesupport_fastrtps_c.h
+[163.183s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_state__rosidl_typesupport_fastrtps_c.h
+[163.186s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/grippers_states__rosidl_typesupport_fastrtps_c.h
+[163.186s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/leg_trajectory__rosidl_typesupport_fastrtps_c.h
+[163.188s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/dynamixel_motors_data__rosidl_typesupport_fastrtps_c.h
+[163.190s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[163.196s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/libgwpspider_interfaces__rosidl_typesupport_fastrtps_c.so
+[163.200s] -- Set runtime path of "/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/libgwpspider_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[163.201s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces
+[163.202s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv
+[163.202s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/breaks_control.hpp
+[163.203s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail
+[163.204s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_correction_offset__traits.hpp
+[163.206s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg__struct.hpp
+[163.207s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_gripper__struct.hpp
+[163.209s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__builder.hpp
+[163.210s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_controller__traits.hpp
+[163.212s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__builder.hpp
+[163.213s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/init_bno__struct.hpp
+[163.214s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_leg_trajectory__builder.hpp
+[163.216s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/spider_goal__struct.hpp
+[163.217s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__struct.hpp
+[163.219s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/control_water_pump__traits.hpp
+[163.220s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg__builder.hpp
+[163.222s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_walking_instructions__traits.hpp
+[163.223s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/spider_goal__builder.hpp
+[163.225s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_gripper__traits.hpp
+[163.226s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_spider_pose__builder.hpp
+[163.228s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/distribute_forces__traits.hpp
+[163.229s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_gripper__builder.hpp
+[163.230s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/reboot_motors__builder.hpp
+[163.232s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/set_bus_watchdog__traits.hpp
+[163.233s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_correction_offset__builder.hpp
+[163.236s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/control_water_pump__builder.hpp
+[163.236s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/messages__traits.hpp
+[163.242s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__struct.hpp
+[163.243s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__struct.hpp
+[163.243s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/init_bno__traits.hpp
+[163.244s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_walking_instructions__struct.hpp
+[163.247s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/control_water_pump__struct.hpp
+[163.249s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/set_bus_watchdog__builder.hpp
+[163.252s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_motors_torque__struct.hpp
+[163.255s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/init_bno__builder.hpp
+[163.258s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_motors_torque__builder.hpp
+[163.261s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/breaks_control__builder.hpp
+[163.264s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/set_bus_watchdog__struct.hpp
+[163.267s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/apply_forces_on_legs__builder.hpp
+[163.269s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/messages__builder.hpp
+[163.271s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_leg_trajectory__traits.hpp
+[163.273s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_leg_trajectory__struct.hpp
+[163.275s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/distribute_forces__struct.hpp
+[163.277s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_spider_pose__struct.hpp
+[163.278s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_motors_torque__traits.hpp
+[163.280s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/breaks_control__struct.hpp
+[163.282s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__traits.hpp
+[163.283s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/spider_goal__traits.hpp
+[163.285s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__traits.hpp
+[163.287s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__builder.hpp
+[163.289s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/distribute_forces__builder.hpp
+[163.290s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__traits.hpp
+[163.292s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_correction_offset__struct.hpp
+[163.294s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/breaks_control__traits.hpp
+[163.295s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_controller__builder.hpp
+[163.297s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg__traits.hpp
+[163.299s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_spider_pose__traits.hpp
+[163.301s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/messages__struct.hpp
+[163.302s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_spider__struct.hpp
+[163.304s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_walking_instructions__builder.hpp
+[163.306s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_spider__traits.hpp
+[163.307s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/apply_forces_on_legs__struct.hpp
+[163.309s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_controller__struct.hpp
+[163.311s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/apply_forces_on_legs__traits.hpp
+[163.312s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_spider__builder.hpp
+[163.314s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/reboot_motors__struct.hpp
+[163.316s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/reboot_motors__traits.hpp
+[163.317s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/toggle_motors_torque.hpp
+[163.319s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/get_spider_pose.hpp
+[163.321s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/reboot_motors.hpp
+[163.322s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/apply_forces_on_legs.hpp
+[163.324s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/toggle_controller.hpp
+[163.325s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/move_leg.hpp
+[163.327s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/messages.hpp
+[163.328s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/toggle_additional_controller_mode.hpp
+[163.330s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/get_correction_offset.hpp
+[163.331s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/distribute_forces.hpp
+[163.333s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/move_leg_velocity_mode.hpp
+[163.334s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/init_bno.hpp
+[163.336s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/control_water_pump.hpp
+[163.338s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/get_leg_trajectory.hpp
+[163.339s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/spider_goal.hpp
+[163.341s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/get_walking_instructions.hpp
+[163.342s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/get_modified_walking_instructions.hpp
+[163.344s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/move_spider.hpp
+[163.345s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/set_bus_watchdog.hpp
+[163.347s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/move_gripper.hpp
+[163.348s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg
+[163.349s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail
+[163.350s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/grippers_states__builder.hpp
+[163.352s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/grippers_states__traits.hpp
+[163.353s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/bno_data__traits.hpp
+[163.355s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/legs_states__builder.hpp
+[163.357s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/bno_data__struct.hpp
+[163.358s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/leg_trajectory__builder.hpp
+[163.360s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/dynamixel_motors_data__struct.hpp
+[163.362s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/grippers_states__struct.hpp
+[163.364s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/dynamixel_motors_data__traits.hpp
+[163.366s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/dynamixel_motors_data__builder.hpp
+[163.368s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/legs_states__traits.hpp
+[163.369s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/leg_trajectory__traits.hpp
+[163.371s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_state__traits.hpp
+[163.372s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/walking_instructions__builder.hpp
+[163.374s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/water_pump_command__builder.hpp
+[163.376s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/walking_instructions__struct.hpp
+[163.377s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_state__builder.hpp
+[163.379s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/leg_trajectory__struct.hpp
+[163.381s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_command__builder.hpp
+[163.382s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_state__struct.hpp
+[163.384s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_command__traits.hpp
+[163.386s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/bno_data__builder.hpp
+[163.387s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/legs_states__struct.hpp
+[163.389s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/walking_instructions__traits.hpp
+[163.391s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/water_pump_command__struct.hpp
+[163.392s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_command__struct.hpp
+[163.394s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/water_pump_command__traits.hpp
+[163.396s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/leg_trajectory.hpp
+[163.397s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/walking_instructions.hpp
+[163.399s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/legs_states.hpp
+[163.400s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/gripper_state.hpp
+[163.402s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/bno_data.hpp
+[163.403s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/water_pump_command.hpp
+[163.405s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/grippers_states.hpp
+[163.406s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/dynamixel_motors_data.hpp
+[163.408s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/gripper_command.hpp
+[163.410s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces
+[163.411s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv
+[163.411s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail
+[163.412s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/dds_fastrtps
+[163.413s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_spider__rosidl_typesupport_fastrtps_cpp.hpp
+[163.414s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg__rosidl_typesupport_fastrtps_cpp.hpp
+[163.416s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/reboot_motors__rosidl_typesupport_fastrtps_cpp.hpp
+[163.418s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/breaks_control__rosidl_typesupport_fastrtps_cpp.hpp
+[163.419s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_walking_instructions__rosidl_typesupport_fastrtps_cpp.hpp
+[163.421s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_leg_trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[163.423s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_controller__rosidl_typesupport_fastrtps_cpp.hpp
+[163.424s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__rosidl_typesupport_fastrtps_cpp.hpp
+[163.426s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/control_water_pump__rosidl_typesupport_fastrtps_cpp.hpp
+[163.428s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__rosidl_typesupport_fastrtps_cpp.hpp
+[163.430s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/spider_goal__rosidl_typesupport_fastrtps_cpp.hpp
+[163.431s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_correction_offset__rosidl_typesupport_fastrtps_cpp.hpp
+[163.433s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/set_bus_watchdog__rosidl_typesupport_fastrtps_cpp.hpp
+[163.434s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_spider_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[163.436s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/apply_forces_on_legs__rosidl_typesupport_fastrtps_cpp.hpp
+[163.438s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__rosidl_typesupport_fastrtps_cpp.hpp
+[163.440s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_gripper__rosidl_typesupport_fastrtps_cpp.hpp
+[163.441s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_motors_torque__rosidl_typesupport_fastrtps_cpp.hpp
+[163.443s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/messages__rosidl_typesupport_fastrtps_cpp.hpp
+[163.444s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/init_bno__rosidl_typesupport_fastrtps_cpp.hpp
+[163.446s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/distribute_forces__rosidl_typesupport_fastrtps_cpp.hpp
+[163.448s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg
+[163.448s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail
+[163.449s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/dds_fastrtps
+[163.449s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/water_pump_command__rosidl_typesupport_fastrtps_cpp.hpp
+[163.451s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/legs_states__rosidl_typesupport_fastrtps_cpp.hpp
+[163.453s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_command__rosidl_typesupport_fastrtps_cpp.hpp
+[163.454s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/leg_trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[163.456s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_state__rosidl_typesupport_fastrtps_cpp.hpp
+[163.458s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/grippers_states__rosidl_typesupport_fastrtps_cpp.hpp
+[163.459s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/dynamixel_motors_data__rosidl_typesupport_fastrtps_cpp.hpp
+[163.461s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/walking_instructions__rosidl_typesupport_fastrtps_cpp.hpp
+[163.464s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/bno_data__rosidl_typesupport_fastrtps_cpp.hpp
+[163.466s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[163.470s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/libgwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[163.476s] -- Set runtime path of "/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/libgwpspider_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[163.477s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces
+[163.478s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv
+[163.478s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail
+[163.479s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/set_bus_watchdog__type_support.c
+[163.480s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_spider_pose__rosidl_typesupport_introspection_c.h
+[163.482s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_spider__rosidl_typesupport_introspection_c.h
+[163.484s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_controller__rosidl_typesupport_introspection_c.h
+[163.485s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/set_bus_watchdog__rosidl_typesupport_introspection_c.h
+[163.487s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_correction_offset__rosidl_typesupport_introspection_c.h
+[163.488s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/control_water_pump__type_support.c
+[163.490s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/breaks_control__rosidl_typesupport_introspection_c.h
+[163.492s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/distribute_forces__rosidl_typesupport_introspection_c.h
+[163.493s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/messages__type_support.c
+[163.494s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_motors_torque__type_support.c
+[163.496s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/messages__rosidl_typesupport_introspection_c.h
+[163.498s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_gripper__rosidl_typesupport_introspection_c.h
+[163.499s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_spider__type_support.c
+[163.501s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/spider_goal__rosidl_typesupport_introspection_c.h
+[163.502s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_correction_offset__type_support.c
+[163.504s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_controller__type_support.c
+[163.506s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_walking_instructions__rosidl_typesupport_introspection_c.h
+[163.507s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_walking_instructions__type_support.c
+[163.509s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/breaks_control__type_support.c
+[163.511s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_motors_torque__rosidl_typesupport_introspection_c.h
+[163.512s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/apply_forces_on_legs__type_support.c
+[163.514s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_leg_trajectory__rosidl_typesupport_introspection_c.h
+[163.516s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__rosidl_typesupport_introspection_c.h
+[163.517s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__rosidl_typesupport_introspection_c.h
+[163.519s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/reboot_motors__type_support.c
+[163.521s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/init_bno__type_support.c
+[163.522s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg__rosidl_typesupport_introspection_c.h
+[163.524s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/control_water_pump__rosidl_typesupport_introspection_c.h
+[163.525s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/distribute_forces__type_support.c
+[163.527s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/spider_goal__type_support.c
+[163.529s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__type_support.c
+[163.530s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_spider_pose__type_support.c
+[163.532s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_gripper__type_support.c
+[163.534s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/init_bno__rosidl_typesupport_introspection_c.h
+[163.535s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg__type_support.c
+[163.537s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/reboot_motors__rosidl_typesupport_introspection_c.h
+[163.538s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_leg_trajectory__type_support.c
+[163.540s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__rosidl_typesupport_introspection_c.h
+[163.542s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/apply_forces_on_legs__rosidl_typesupport_introspection_c.h
+[163.544s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__type_support.c
+[163.545s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__type_support.c
+[163.547s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg
+[163.547s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail
+[163.548s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/grippers_states__type_support.c
+[163.550s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/walking_instructions__type_support.c
+[163.551s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_state__type_support.c
+[163.553s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/water_pump_command__rosidl_typesupport_introspection_c.h
+[163.555s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/legs_states__type_support.c
+[163.556s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_command__type_support.c
+[163.558s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_command__rosidl_typesupport_introspection_c.h
+[163.559s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/bno_data__rosidl_typesupport_introspection_c.h
+[163.561s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/dynamixel_motors_data__rosidl_typesupport_introspection_c.h
+[163.562s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_state__rosidl_typesupport_introspection_c.h
+[163.564s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/legs_states__rosidl_typesupport_introspection_c.h
+[163.566s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/grippers_states__rosidl_typesupport_introspection_c.h
+[163.568s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/bno_data__type_support.c
+[163.569s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/leg_trajectory__type_support.c
+[163.571s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/leg_trajectory__rosidl_typesupport_introspection_c.h
+[163.572s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/dynamixel_motors_data__type_support.c
+[163.574s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/water_pump_command__type_support.c
+[163.575s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/walking_instructions__rosidl_typesupport_introspection_c.h
+[163.577s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[163.583s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/libgwpspider_interfaces__rosidl_typesupport_introspection_c.so
+[163.587s] -- Set runtime path of "/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/libgwpspider_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[163.590s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/libgwpspider_interfaces__rosidl_typesupport_c.so
+[163.594s] -- Set runtime path of "/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/libgwpspider_interfaces__rosidl_typesupport_c.so" to ""
+[163.595s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces
+[163.595s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv
+[163.596s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail
+[163.596s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/reboot_motors__type_support.cpp
+[163.598s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/control_water_pump__type_support.cpp
+[163.599s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/set_bus_watchdog__type_support.cpp
+[163.601s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_controller__type_support.cpp
+[163.602s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__type_support.cpp
+[163.604s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/init_bno__rosidl_typesupport_introspection_cpp.hpp
+[163.606s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/spider_goal__rosidl_typesupport_introspection_cpp.hpp
+[163.607s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/breaks_control__type_support.cpp
+[163.609s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/init_bno__type_support.cpp
+[163.610s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/spider_goal__type_support.cpp
+[163.612s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/distribute_forces__rosidl_typesupport_introspection_cpp.hpp
+[163.613s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_motors_torque__type_support.cpp
+[163.615s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__type_support.cpp
+[163.617s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/apply_forces_on_legs__rosidl_typesupport_introspection_cpp.hpp
+[163.618s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/reboot_motors__rosidl_typesupport_introspection_cpp.hpp
+[163.620s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_leg_trajectory__rosidl_typesupport_introspection_cpp.hpp
+[163.622s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__type_support.cpp
+[163.624s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_gripper__rosidl_typesupport_introspection_cpp.hpp
+[163.625s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_spider_pose__type_support.cpp
+[163.627s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg_velocity_mode__rosidl_typesupport_introspection_cpp.hpp
+[163.628s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_additional_controller_mode__rosidl_typesupport_introspection_cpp.hpp
+[163.630s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_walking_instructions__type_support.cpp
+[163.632s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/apply_forces_on_legs__type_support.cpp
+[163.633s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_leg_trajectory__type_support.cpp
+[163.635s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/messages__rosidl_typesupport_introspection_cpp.hpp
+[163.636s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/set_bus_watchdog__rosidl_typesupport_introspection_cpp.hpp
+[163.638s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/breaks_control__rosidl_typesupport_introspection_cpp.hpp
+[163.640s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg__rosidl_typesupport_introspection_cpp.hpp
+[163.641s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_controller__rosidl_typesupport_introspection_cpp.hpp
+[163.643s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/messages__type_support.cpp
+[163.644s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_walking_instructions__rosidl_typesupport_introspection_cpp.hpp
+[163.646s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/toggle_motors_torque__rosidl_typesupport_introspection_cpp.hpp
+[163.647s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_leg__type_support.cpp
+[163.649s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_gripper__type_support.cpp
+[163.650s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/distribute_forces__type_support.cpp
+[163.652s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/control_water_pump__rosidl_typesupport_introspection_cpp.hpp
+[163.653s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_correction_offset__type_support.cpp
+[163.655s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_spider_pose__rosidl_typesupport_introspection_cpp.hpp
+[163.656s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_spider__rosidl_typesupport_introspection_cpp.hpp
+[163.658s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/move_spider__type_support.cpp
+[163.660s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_correction_offset__rosidl_typesupport_introspection_cpp.hpp
+[163.661s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/srv/detail/get_modified_walking_instructions__rosidl_typesupport_introspection_cpp.hpp
+[163.664s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg
+[163.666s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail
+[163.667s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_state__rosidl_typesupport_introspection_cpp.hpp
+[163.668s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/dynamixel_motors_data__rosidl_typesupport_introspection_cpp.hpp
+[163.668s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/grippers_states__type_support.cpp
+[163.670s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/bno_data__rosidl_typesupport_introspection_cpp.hpp
+[163.671s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/walking_instructions__type_support.cpp
+[163.673s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/legs_states__rosidl_typesupport_introspection_cpp.hpp
+[163.674s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/leg_trajectory__type_support.cpp
+[163.676s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/legs_states__type_support.cpp
+[163.677s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/walking_instructions__rosidl_typesupport_introspection_cpp.hpp
+[163.679s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_command__type_support.cpp
+[163.681s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/water_pump_command__type_support.cpp
+[163.682s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/leg_trajectory__rosidl_typesupport_introspection_cpp.hpp
+[163.684s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_state__type_support.cpp
+[163.685s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/dynamixel_motors_data__type_support.cpp
+[163.687s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/water_pump_command__rosidl_typesupport_introspection_cpp.hpp
+[163.688s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/gripper_command__rosidl_typesupport_introspection_cpp.hpp
+[163.690s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/grippers_states__rosidl_typesupport_introspection_cpp.hpp
+[163.692s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/include/gwpspider_interfaces/gwpspider_interfaces/msg/detail/bno_data__type_support.cpp
+[163.698s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/libgwpspider_interfaces__rosidl_typesupport_introspection_cpp.so
+[163.704s] -- Set runtime path of "/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/libgwpspider_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[163.709s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/libgwpspider_interfaces__rosidl_typesupport_cpp.so
+[163.714s] -- Set runtime path of "/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/libgwpspider_interfaces__rosidl_typesupport_cpp.so" to ""
+[163.715s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/environment/pythonpath.sh
+[163.716s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/environment/pythonpath.dsv
+[163.717s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces-0.0.0-py3.10.egg-info
+[163.718s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[163.719s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[163.720s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[163.722s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[163.723s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces
+[163.724s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_c.c
+[163.728s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[163.731s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/__init__.py
+[163.732s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[163.735s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[163.739s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv
+[163.740s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_toggle_additional_controller_mode_s.c
+[163.742s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_set_bus_watchdog_s.c
+[163.743s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_get_leg_trajectory.py
+[163.744s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_init_bno.py
+[163.746s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_move_leg.py
+[163.747s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_move_gripper.py
+[163.749s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_get_spider_pose.py
+[163.750s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_spider_goal_s.c
+[163.752s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_spider_goal.py
+[163.753s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_apply_forces_on_legs_s.c
+[163.754s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_toggle_additional_controller_mode.py
+[163.756s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_toggle_motors_torque.py
+[163.759s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/__init__.py
+[163.759s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_get_correction_offset_s.c
+[163.760s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_distribute_forces.py
+[163.762s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_move_spider.py
+[163.764s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_get_walking_instructions.py
+[163.766s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_breaks_control.py
+[163.767s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_control_water_pump_s.c
+[163.768s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_distribute_forces_s.c
+[163.770s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_move_leg_velocity_mode.py
+[163.771s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_get_modified_walking_instructions_s.c
+[163.773s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_reboot_motors_s.c
+[163.774s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_get_spider_pose_s.c
+[163.776s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_toggle_controller_s.c
+[163.777s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_toggle_motors_torque_s.c
+[163.778s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_reboot_motors.py
+[163.780s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_set_bus_watchdog.py
+[163.782s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_messages_s.c
+[163.783s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_get_modified_walking_instructions.py
+[163.784s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_get_correction_offset.py
+[163.786s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_control_water_pump.py
+[163.787s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_get_leg_trajectory_s.c
+[163.789s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_move_spider_s.c
+[163.790s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_apply_forces_on_legs.py
+[163.794s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_move_gripper_s.c
+[163.794s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_init_bno_s.c
+[163.795s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_get_walking_instructions_s.c
+[163.796s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_move_leg_s.c
+[163.798s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_toggle_controller.py
+[163.799s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_messages.py
+[163.800s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_move_leg_velocity_mode_s.c
+[163.802s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_breaks_control_s.c
+[163.803s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[163.806s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/libgwpspider_interfaces__rosidl_generator_py.so
+[163.810s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg
+[163.810s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_legs_states_s.c
+[163.812s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_leg_trajectory.py
+[163.813s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_gripper_command.py
+[163.815s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_bno_data.py
+[163.816s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_dynamixel_motors_data.py
+[163.817s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/__init__.py
+[163.819s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_walking_instructions_s.c
+[163.820s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_gripper_state_s.c
+[163.822s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_water_pump_command.py
+[163.823s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_gripper_command_s.c
+[163.824s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_legs_states.py
+[163.826s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_leg_trajectory_s.c
+[163.827s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_grippers_states.py
+[163.828s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_grippers_states_s.c
+[163.830s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_water_pump_command_s.c
+[163.831s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_walking_instructions.py
+[163.833s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_gripper_state.py
+[163.834s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_dynamixel_motors_data_s.c
+[163.836s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_bno_data_s.c
+[163.837s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/_gwpspider_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[164.259s] Listing '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces'...
+[164.260s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/__init__.py'...
+[164.262s] Listing '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg'...
+[164.268s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/__init__.py'...
+[164.269s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_bno_data.py'...
+[164.270s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_dynamixel_motors_data.py'...
+[164.275s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_gripper_command.py'...
+[164.276s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_gripper_state.py'...
+[164.277s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_grippers_states.py'...
+[164.278s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_leg_trajectory.py'...
+[164.279s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_legs_states.py'...
+[164.280s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_walking_instructions.py'...
+[164.281s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/msg/_water_pump_command.py'...
+[164.282s] Listing '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv'...
+[164.291s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/__init__.py'...
+[164.293s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_apply_forces_on_legs.py'...
+[164.294s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_breaks_control.py'...
+[164.294s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_control_water_pump.py'...
+[164.295s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_distribute_forces.py'...
+[164.295s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_get_correction_offset.py'...
+[164.296s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_get_leg_trajectory.py'...
+[164.296s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_get_modified_walking_instructions.py'...
+[164.297s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_get_spider_pose.py'...
+[164.297s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_get_walking_instructions.py'...
+[164.298s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_init_bno.py'...
+[164.298s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_messages.py'...
+[164.298s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_move_gripper.py'...
+[164.299s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_move_leg.py'...
+[164.300s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_move_leg_velocity_mode.py'...
+[164.300s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_move_spider.py'...
+[164.300s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_reboot_motors.py'...
+[164.301s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_set_bus_watchdog.py'...
+[164.301s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_spider_goal.py'...
+[164.301s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_toggle_additional_controller_mode.py'...
+[164.302s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_toggle_controller.py'...
+[164.302s] Compiling '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/srv/_toggle_motors_torque.py'...
+[164.303s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[164.303s] -- Set runtime path of "/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""
+[164.304s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[164.304s] -- Set runtime path of "/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""
+[164.306s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[164.311s] -- Set runtime path of "/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages/gwpspider_interfaces/gwpspider_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""
+[164.323s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/libgwpspider_interfaces__rosidl_generator_py.so
+[164.324s] -- Set runtime path of "/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/libgwpspider_interfaces__rosidl_generator_py.so" to ""
+[164.324s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/GripperCommand.idl
+[164.325s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/WaterPumpCommand.idl
+[164.330s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/BnoData.idl
+[164.331s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/DynamixelMotorsData.idl
+[164.332s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/WalkingInstructions.idl
+[164.333s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/LegTrajectory.idl
+[164.334s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/LegsStates.idl
+[164.336s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/GripperState.idl
+[164.336s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/GrippersStates.idl
+[164.337s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/MoveGripper.idl
+[164.338s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ControlWaterPump.idl
+[164.339s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/InitBno.idl
+[164.340s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ToggleMotorsTorque.idl
+[164.340s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/SetBusWatchdog.idl
+[164.348s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetWalkingInstructions.idl
+[164.349s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetModifiedWalkingInstructions.idl
+[164.349s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetLegTrajectory.idl
+[164.350s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/RebootMotors.idl
+[164.351s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/MoveLeg.idl
+[164.352s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/MoveSpider.idl
+[164.353s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ToggleController.idl
+[164.353s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/DistributeForces.idl
+[164.354s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ApplyForcesOnLegs.idl
+[164.354s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetSpiderPose.idl
+[164.360s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/MoveLegVelocityMode.idl
+[164.361s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ToggleAdditionalControllerMode.idl
+[164.362s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/SpiderGoal.idl
+[164.362s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetCorrectionOffset.idl
+[164.365s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/BreaksControl.idl
+[164.365s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/Messages.idl
+[164.366s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/GripperCommand.msg
+[164.367s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/WaterPumpCommand.msg
+[164.368s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/BnoData.msg
+[164.369s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/DynamixelMotorsData.msg
+[164.370s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/WalkingInstructions.msg
+[164.375s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/LegTrajectory.msg
+[164.376s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/LegsStates.msg
+[164.376s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/GripperState.msg
+[164.377s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/msg/GrippersStates.msg
+[164.377s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/MoveGripper.srv
+[164.377s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/MoveGripper_Request.msg
+[164.378s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/MoveGripper_Response.msg
+[164.378s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ControlWaterPump.srv
+[164.378s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ControlWaterPump_Request.msg
+[164.384s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ControlWaterPump_Response.msg
+[164.389s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/InitBno.srv
+[164.392s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/InitBno_Request.msg
+[164.393s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/InitBno_Response.msg
+[164.393s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ToggleMotorsTorque.srv
+[164.393s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ToggleMotorsTorque_Request.msg
+[164.394s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ToggleMotorsTorque_Response.msg
+[164.394s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/SetBusWatchdog.srv
+[164.395s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/SetBusWatchdog_Request.msg
+[164.395s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/SetBusWatchdog_Response.msg
+[164.395s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetWalkingInstructions.srv
+[164.396s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetWalkingInstructions_Request.msg
+[164.396s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetWalkingInstructions_Response.msg
+[164.397s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetModifiedWalkingInstructions.srv
+[164.397s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetModifiedWalkingInstructions_Request.msg
+[164.397s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetModifiedWalkingInstructions_Response.msg
+[164.398s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetLegTrajectory.srv
+[164.398s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetLegTrajectory_Request.msg
+[164.398s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetLegTrajectory_Response.msg
+[164.399s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/RebootMotors.srv
+[164.399s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/RebootMotors_Request.msg
+[164.399s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/RebootMotors_Response.msg
+[164.400s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/MoveLeg.srv
+[164.407s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/MoveLeg_Request.msg
+[164.407s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/MoveLeg_Response.msg
+[164.408s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/MoveSpider.srv
+[164.408s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/MoveSpider_Request.msg
+[164.408s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/MoveSpider_Response.msg
+[164.409s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ToggleController.srv
+[164.409s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ToggleController_Request.msg
+[164.413s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ToggleController_Response.msg
+[164.414s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/DistributeForces.srv
+[164.414s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/DistributeForces_Request.msg
+[164.415s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/DistributeForces_Response.msg
+[164.417s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ApplyForcesOnLegs.srv
+[164.418s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ApplyForcesOnLegs_Request.msg
+[164.420s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ApplyForcesOnLegs_Response.msg
+[164.421s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetSpiderPose.srv
+[164.424s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetSpiderPose_Request.msg
+[164.425s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetSpiderPose_Response.msg
+[164.425s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/MoveLegVelocityMode.srv
+[164.435s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/MoveLegVelocityMode_Request.msg
+[164.436s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/MoveLegVelocityMode_Response.msg
+[164.436s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ToggleAdditionalControllerMode.srv
+[164.436s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ToggleAdditionalControllerMode_Request.msg
+[164.437s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/ToggleAdditionalControllerMode_Response.msg
+[164.437s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/SpiderGoal.srv
+[164.437s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/SpiderGoal_Request.msg
+[164.438s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/SpiderGoal_Response.msg
+[164.438s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetCorrectionOffset.srv
+[164.439s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetCorrectionOffset_Request.msg
+[164.439s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/GetCorrectionOffset_Response.msg
+[164.441s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/BreaksControl.srv
+[164.442s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/BreaksControl_Request.msg
+[164.444s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/BreaksControl_Response.msg
+[164.446s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/Messages.srv
+[164.448s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/Messages_Request.msg
+[164.451s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/srv/Messages_Response.msg
+[164.453s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/ament_index/resource_index/package_run_dependencies/gwpspider_interfaces
+[164.455s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/ament_index/resource_index/parent_prefix_path/gwpspider_interfaces
+[164.458s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/environment/ament_prefix_path.sh
+[164.459s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/environment/ament_prefix_path.dsv
+[164.462s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/environment/path.sh
+[164.464s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/environment/path.dsv
+[164.467s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/local_setup.bash
+[164.469s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/local_setup.sh
+[164.471s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/local_setup.zsh
+[164.472s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/local_setup.dsv
+[164.475s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/package.dsv
+[164.477s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/ament_index/resource_index/packages/gwpspider_interfaces
+[164.480s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/export_gwpspider_interfaces__rosidl_generator_cExport.cmake
+[164.481s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/export_gwpspider_interfaces__rosidl_generator_cExport-noconfig.cmake
+[164.485s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/export_gwpspider_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[164.486s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/export_gwpspider_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[164.488s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/export_gwpspider_interfaces__rosidl_generator_cppExport.cmake
+[164.489s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/export_gwpspider_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[164.491s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/export_gwpspider_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[164.493s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/gwpspider_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[164.495s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/gwpspider_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[164.498s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/gwpspider_interfaces__rosidl_typesupport_cExport.cmake
+[164.499s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/gwpspider_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[164.502s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/gwpspider_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[164.503s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/gwpspider_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[164.506s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/gwpspider_interfaces__rosidl_typesupport_cppExport.cmake
+[164.507s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/gwpspider_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[164.511s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/export_gwpspider_interfaces__rosidl_generator_pyExport.cmake
+[164.513s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/export_gwpspider_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[164.514s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/rosidl_cmake-extras.cmake
+[164.517s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[164.518s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[164.520s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[164.522s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[164.525s] -- Installing: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[164.528s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[164.529s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/gwpspider_interfacesConfig.cmake
+[164.531s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/cmake/gwpspider_interfacesConfig-version.cmake
+[164.532s] -- Up-to-date: /home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/package.xml
+[164.545s] Invoked command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/spiderpi/ros2_ws/install/py_srvcli:/home/spiderpi/ros2_ws/install/py_node_test:/home/spiderpi/ros2_ws/install/flask_server:/opt/ros/humble /usr/bin/cmake --install /home/spiderpi/ros2_ws/build/gwpspider_interfaces

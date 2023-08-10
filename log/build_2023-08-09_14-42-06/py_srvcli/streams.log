@@ -1,0 +1,26 @@
+[2.854s] Invoking command in '/home/spiderpi/ros2_ws/src/py_srvcli': PYTHONPATH=/home/spiderpi/ros2_ws/build/py_srvcli/prefix_override:/home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/spiderpi/ros2_ws/build/py_srvcli/build install --record /home/spiderpi/ros2_ws/build/py_srvcli/install.log --single-version-externally-managed
+[3.973s] running egg_info
+[3.977s] writing ../../build/py_srvcli/py_srvcli.egg-info/PKG-INFO
+[3.978s] writing dependency_links to ../../build/py_srvcli/py_srvcli.egg-info/dependency_links.txt
+[3.980s] writing entry points to ../../build/py_srvcli/py_srvcli.egg-info/entry_points.txt
+[3.981s] writing requirements to ../../build/py_srvcli/py_srvcli.egg-info/requires.txt
+[3.981s] writing top-level names to ../../build/py_srvcli/py_srvcli.egg-info/top_level.txt
+[3.990s] reading manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[3.994s] writing manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[3.994s] running build
+[3.995s] running build_py
+[3.997s] running install
+[3.998s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[3.999s]   warnings.warn(
+[4.000s] running install_lib
+[4.006s] running install_data
+[4.009s] running install_egg_info
+[4.016s] removing '/home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli-0.0.0-py3.10.egg-info' (and everything under it)
+[4.018s] Copying ../../build/py_srvcli/py_srvcli.egg-info to /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli-0.0.0-py3.10.egg-info
+[4.025s] running install_scripts
+[4.109s] Installing client script to /home/spiderpi/ros2_ws/install/py_srvcli/lib/py_srvcli
+[4.110s] Installing service script to /home/spiderpi/ros2_ws/install/py_srvcli/lib/py_srvcli
+[4.111s] Installing talker script to /home/spiderpi/ros2_ws/install/py_srvcli/lib/py_srvcli
+[4.112s] Installing talker2 script to /home/spiderpi/ros2_ws/install/py_srvcli/lib/py_srvcli
+[4.114s] writing list of installed files to '/home/spiderpi/ros2_ws/build/py_srvcli/install.log'
+[4.243s] Invoked command in '/home/spiderpi/ros2_ws/src/py_srvcli' returned '0': PYTHONPATH=/home/spiderpi/ros2_ws/build/py_srvcli/prefix_override:/home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/spiderpi/ros2_ws/build/py_srvcli/build install --record /home/spiderpi/ros2_ws/build/py_srvcli/install.log --single-version-externally-managed

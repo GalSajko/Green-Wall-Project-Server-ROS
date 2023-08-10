@@ -1,0 +1,33 @@
+running egg_info
+creating ../../build/flask_server/flask_server.egg-info
+writing ../../build/flask_server/flask_server.egg-info/PKG-INFO
+writing dependency_links to ../../build/flask_server/flask_server.egg-info/dependency_links.txt
+writing entry points to ../../build/flask_server/flask_server.egg-info/entry_points.txt
+writing requirements to ../../build/flask_server/flask_server.egg-info/requires.txt
+writing top-level names to ../../build/flask_server/flask_server.egg-info/top_level.txt
+writing manifest file '../../build/flask_server/flask_server.egg-info/SOURCES.txt'
+reading manifest file '../../build/flask_server/flask_server.egg-info/SOURCES.txt'
+writing manifest file '../../build/flask_server/flask_server.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/spiderpi/ros2_ws/build/flask_server/build
+creating /home/spiderpi/ros2_ws/build/flask_server/build/lib
+creating /home/spiderpi/ros2_ws/build/flask_server/build/lib/flask_server
+copying flask_server/__init__.py -> /home/spiderpi/ros2_ws/build/flask_server/build/lib/flask_server
+running install
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install_lib
+creating /home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages/flask_server
+copying /home/spiderpi/ros2_ws/build/flask_server/build/lib/flask_server/__init__.py -> /home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages/flask_server
+byte-compiling /home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages/flask_server/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/spiderpi/ros2_ws/install/flask_server/share/ament_index
+creating /home/spiderpi/ros2_ws/install/flask_server/share/ament_index/resource_index
+creating /home/spiderpi/ros2_ws/install/flask_server/share/ament_index/resource_index/packages
+copying resource/flask_server -> /home/spiderpi/ros2_ws/install/flask_server/share/ament_index/resource_index/packages
+copying package.xml -> /home/spiderpi/ros2_ws/install/flask_server/share/flask_server
+running install_egg_info
+Copying ../../build/flask_server/flask_server.egg-info to /home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages/flask_server-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/spiderpi/ros2_ws/build/flask_server/install.log'

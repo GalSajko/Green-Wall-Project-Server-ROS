@@ -40,29 +40,7 @@ max_serialized_size_Float32MultiArray(
 }  // namespace msg
 }  // namespace std_msgs
 
-namespace std_msgs
-{
-namespace msg
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const std_msgs::msg::Float32MultiArray &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  std_msgs::msg::Float32MultiArray &);
-size_t get_serialized_size(
-  const std_msgs::msg::Float32MultiArray &,
-  size_t current_alignment);
-size_t
-max_serialized_size_Float32MultiArray(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace msg
-}  // namespace std_msgs
+// functions for std_msgs::msg::Float32MultiArray already declared above
 
 
 namespace gwpspider_interfaces

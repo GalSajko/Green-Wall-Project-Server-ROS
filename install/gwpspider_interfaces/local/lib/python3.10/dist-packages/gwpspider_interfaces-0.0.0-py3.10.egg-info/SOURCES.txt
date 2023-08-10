@@ -16,7 +16,8 @@ gwpspider_interfaces/msg/_legs_states.py
 gwpspider_interfaces/msg/_walking_instructions.py
 gwpspider_interfaces/msg/_water_pump_command.py
 gwpspider_interfaces/srv/__init__.py
-gwpspider_interfaces/srv/_apply_force_leg.py
+gwpspider_interfaces/srv/_apply_forces_on_legs.py
+gwpspider_interfaces/srv/_breaks_control.py
 gwpspider_interfaces/srv/_control_water_pump.py
 gwpspider_interfaces/srv/_distribute_forces.py
 gwpspider_interfaces/srv/_get_correction_offset.py

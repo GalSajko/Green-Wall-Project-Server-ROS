@@ -1,0 +1,4 @@
+Invoking command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/spiderpi/ros2_ws/build/gwpspider_interfaces -- -j4 -l4
+Invoked command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/spiderpi/ros2_ws/build/gwpspider_interfaces -- -j4 -l4
+Invoking command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/spiderpi/ros2_ws/build/gwpspider_interfaces
+Invoked command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/spiderpi/ros2_ws/build/gwpspider_interfaces

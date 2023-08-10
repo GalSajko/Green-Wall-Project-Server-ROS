@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gwpspider_interfaces/srv/BreaksControl.srv
+// generated code does not contain a copyright notice
+
+
+module gwpspider_interfaces {
+  module srv {
+    struct BreaksControl_Request {
+      string command;
+
+      int64 break_id;
+    };
+    struct BreaksControl_Response {
+      boolean success;
+    };
+  };
+};

@@ -1,6 +1,6 @@
 import sys
 
-from gwpspider_interfaces.srv import SpiderGoal
+from gwpspider_interfaces.srv import SpiderGoal, Messages
 from gwpspider_interfaces import gwp_interfaces_data as gid
 import rclpy
 from rclpy.node import Node
@@ -40,6 +40,15 @@ class MyNode(Node):
         request = Empty.Request()
         future = client.call_async(request)
         rclpy.spin_until_future_complete(self, future)
+    
+    def call_service3(self):
+        client = self.create_client(Messages, gid.MESSAGE_SERVICE)  # Replace 'AnotherServiceType' and 'another_service' with your actual service type and name
+        while not client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Service 3 not available, waiting...')
+        request = Messages.Request()
+        request.message = "E01"
+        future = client.call_async(request)
+        rclpy.spin_until_future_complete(self, future)
         
 
 def main(args=None):
@@ -54,6 +63,7 @@ def main(args=None):
             node.call_service1()
             time.sleep(3)
             rclpy.spin_once(node)
+            node.call_service3()
         except Exception as e:
             print(e)
             break

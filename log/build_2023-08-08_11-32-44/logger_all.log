@@ -1,0 +1,374 @@
+[1.399s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.399s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff953ad3c0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff95c40df0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff95c40df0>>)
+[1.537s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.537s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.538s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.538s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.538s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.538s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.538s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/spiderpi/ros2_ws'
+[1.539s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.539s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.539s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.540s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.540s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.540s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.540s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.540s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.540s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.588s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.589s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.589s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.589s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.589s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.590s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.591s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.591s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.591s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.592s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.592s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.596s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.597s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.597s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.598s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.598s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.598s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.599s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.599s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.599s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.599s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.599s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.599s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.600s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.600s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.600s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.600s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.600s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extensions ['ignore', 'ignore_ament_install']
+[1.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extension 'ignore'
+[1.602s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extension 'ignore_ament_install'
+[1.602s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extensions ['colcon_pkg']
+[1.602s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extension 'colcon_pkg'
+[1.602s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extensions ['colcon_meta']
+[1.602s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extension 'colcon_meta'
+[1.603s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extensions ['ros']
+[1.603s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extension 'ros'
+[1.613s] DEBUG:colcon.colcon_core.package_identification:Package 'src/flask_server' with type 'ros.ament_python' and name 'flask_server'
+[1.613s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[1.614s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extension 'ignore'
+[1.614s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extension 'ignore_ament_install'
+[1.614s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extensions ['colcon_pkg']
+[1.615s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extension 'colcon_pkg'
+[1.615s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extensions ['colcon_meta']
+[1.615s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extension 'colcon_meta'
+[1.615s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extensions ['ros']
+[1.615s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extension 'ros'
+[1.618s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gwpspider_interfaces' with type 'ros.ament_cmake' and name 'gwpspider_interfaces'
+[1.619s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[1.619s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extension 'ignore'
+[1.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extension 'ignore_ament_install'
+[1.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extensions ['colcon_pkg']
+[1.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extension 'colcon_pkg'
+[1.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extensions ['colcon_meta']
+[1.620s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extension 'colcon_meta'
+[1.621s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extensions ['ros']
+[1.621s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extension 'ros'
+[1.623s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_service_interfaces' with type 'ros.ament_cmake' and name 'my_service_interfaces'
+[1.624s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extensions ['ignore', 'ignore_ament_install']
+[1.624s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extension 'ignore'
+[1.624s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extension 'ignore_ament_install'
+[1.625s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extensions ['colcon_pkg']
+[1.625s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extension 'colcon_pkg'
+[1.625s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extensions ['colcon_meta']
+[1.625s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extension 'colcon_meta'
+[1.626s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extensions ['ros']
+[1.626s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extension 'ros'
+[1.628s] DEBUG:colcon.colcon_core.package_identification:Package 'src/py_node_test' with type 'ros.ament_python' and name 'py_node_test'
+[1.629s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extensions ['ignore', 'ignore_ament_install']
+[1.630s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'ignore'
+[1.630s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'ignore_ament_install'
+[1.630s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extensions ['colcon_pkg']
+[1.630s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'colcon_pkg'
+[1.630s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extensions ['colcon_meta']
+[1.631s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'colcon_meta'
+[1.631s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extensions ['ros']
+[1.631s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'ros'
+[1.634s] DEBUG:colcon.colcon_core.package_identification:Package 'src/py_srvcli' with type 'ros.ament_python' and name 'py_srvcli'
+[1.634s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.634s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.634s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.634s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.635s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.727s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.728s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.750s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[1.756s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.024s] Level 5:colcon.colcon_core.verb:set package 'gwpspider_interfaces' build argument 'cmake_args' from command line to 'None'
+[2.024s] Level 5:colcon.colcon_core.verb:set package 'gwpspider_interfaces' build argument 'cmake_target' from command line to 'None'
+[2.024s] Level 5:colcon.colcon_core.verb:set package 'gwpspider_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.024s] Level 5:colcon.colcon_core.verb:set package 'gwpspider_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[2.024s] Level 5:colcon.colcon_core.verb:set package 'gwpspider_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[2.025s] Level 5:colcon.colcon_core.verb:set package 'gwpspider_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[2.025s] Level 5:colcon.colcon_core.verb:set package 'gwpspider_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[2.025s] Level 5:colcon.colcon_core.verb:set package 'gwpspider_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[2.025s] Level 5:colcon.colcon_core.verb:set package 'gwpspider_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.026s] DEBUG:colcon.colcon_core.verb:Building package 'gwpspider_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/spiderpi/ros2_ws/build/gwpspider_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/spiderpi/ros2_ws/install/gwpspider_interfaces', 'merge_install': False, 'path': '/home/spiderpi/ros2_ws/src/gwpspider_interfaces', 'symlink_install': False, 'test_result_base': None}
+[2.030s] Level 5:colcon.colcon_core.verb:set package 'my_service_interfaces' build argument 'cmake_args' from command line to 'None'
+[2.030s] Level 5:colcon.colcon_core.verb:set package 'my_service_interfaces' build argument 'cmake_target' from command line to 'None'
+[2.031s] Level 5:colcon.colcon_core.verb:set package 'my_service_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.031s] Level 5:colcon.colcon_core.verb:set package 'my_service_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[2.031s] Level 5:colcon.colcon_core.verb:set package 'my_service_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[2.031s] Level 5:colcon.colcon_core.verb:set package 'my_service_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[2.031s] Level 5:colcon.colcon_core.verb:set package 'my_service_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[2.031s] Level 5:colcon.colcon_core.verb:set package 'my_service_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[2.031s] Level 5:colcon.colcon_core.verb:set package 'my_service_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.031s] DEBUG:colcon.colcon_core.verb:Building package 'my_service_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/spiderpi/ros2_ws/build/my_service_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/spiderpi/ros2_ws/install/my_service_interfaces', 'merge_install': False, 'path': '/home/spiderpi/ros2_ws/src/my_service_interfaces', 'symlink_install': False, 'test_result_base': None}
+[2.035s] Level 5:colcon.colcon_core.verb:set package 'flask_server' build argument 'cmake_args' from command line to 'None'
+[2.036s] Level 5:colcon.colcon_core.verb:set package 'flask_server' build argument 'cmake_target' from command line to 'None'
+[2.036s] Level 5:colcon.colcon_core.verb:set package 'flask_server' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.036s] Level 5:colcon.colcon_core.verb:set package 'flask_server' build argument 'cmake_clean_cache' from command line to 'False'
+[2.036s] Level 5:colcon.colcon_core.verb:set package 'flask_server' build argument 'cmake_clean_first' from command line to 'False'
+[2.036s] Level 5:colcon.colcon_core.verb:set package 'flask_server' build argument 'cmake_force_configure' from command line to 'False'
+[2.036s] Level 5:colcon.colcon_core.verb:set package 'flask_server' build argument 'ament_cmake_args' from command line to 'None'
+[2.036s] Level 5:colcon.colcon_core.verb:set package 'flask_server' build argument 'catkin_cmake_args' from command line to 'None'
+[2.036s] Level 5:colcon.colcon_core.verb:set package 'flask_server' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.037s] DEBUG:colcon.colcon_core.verb:Building package 'flask_server' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/spiderpi/ros2_ws/build/flask_server', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/spiderpi/ros2_ws/install/flask_server', 'merge_install': False, 'path': '/home/spiderpi/ros2_ws/src/flask_server', 'symlink_install': False, 'test_result_base': None}
+[2.041s] Level 5:colcon.colcon_core.verb:set package 'py_node_test' build argument 'cmake_args' from command line to 'None'
+[2.041s] Level 5:colcon.colcon_core.verb:set package 'py_node_test' build argument 'cmake_target' from command line to 'None'
+[2.041s] Level 5:colcon.colcon_core.verb:set package 'py_node_test' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'py_node_test' build argument 'cmake_clean_cache' from command line to 'False'
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'py_node_test' build argument 'cmake_clean_first' from command line to 'False'
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'py_node_test' build argument 'cmake_force_configure' from command line to 'False'
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'py_node_test' build argument 'ament_cmake_args' from command line to 'None'
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'py_node_test' build argument 'catkin_cmake_args' from command line to 'None'
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'py_node_test' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.042s] DEBUG:colcon.colcon_core.verb:Building package 'py_node_test' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/spiderpi/ros2_ws/build/py_node_test', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/spiderpi/ros2_ws/install/py_node_test', 'merge_install': False, 'path': '/home/spiderpi/ros2_ws/src/py_node_test', 'symlink_install': False, 'test_result_base': None}
+[2.047s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_args' from command line to 'None'
+[2.047s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_target' from command line to 'None'
+[2.047s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.047s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_clean_cache' from command line to 'False'
+[2.047s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_clean_first' from command line to 'False'
+[2.047s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_force_configure' from command line to 'False'
+[2.048s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'ament_cmake_args' from command line to 'None'
+[2.048s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'catkin_cmake_args' from command line to 'None'
+[2.048s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.048s] DEBUG:colcon.colcon_core.verb:Building package 'py_srvcli' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/spiderpi/ros2_ws/build/py_srvcli', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/spiderpi/ros2_ws/install/py_srvcli', 'merge_install': False, 'path': '/home/spiderpi/ros2_ws/src/py_srvcli', 'symlink_install': False, 'test_result_base': None}
+[2.051s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.064s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.065s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/spiderpi/ros2_ws/src/my_service_interfaces' with build type 'ament_cmake'
+[2.066s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/spiderpi/ros2_ws/src/my_service_interfaces'
+[2.088s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.089s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.090s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.109s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/spiderpi/ros2_ws/src/gwpspider_interfaces' with build type 'ament_cmake'
+[2.109s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/spiderpi/ros2_ws/src/gwpspider_interfaces'
+[2.116s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.117s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.161s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/spiderpi/ros2_ws/build/my_service_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/spiderpi/ros2_ws/src/my_service_interfaces -DCMAKE_INSTALL_PREFIX=/home/spiderpi/ros2_ws/install/my_service_interfaces
+[2.188s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/spiderpi/ros2_ws/src/gwpspider_interfaces -DCMAKE_INSTALL_PREFIX=/home/spiderpi/ros2_ws/install/gwpspider_interfaces
+[10.643s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/spiderpi/ros2_ws/build/my_service_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/spiderpi/ros2_ws/src/my_service_interfaces -DCMAKE_INSTALL_PREFIX=/home/spiderpi/ros2_ws/install/my_service_interfaces
+[10.656s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/spiderpi/ros2_ws/build/my_service_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/spiderpi/ros2_ws/build/my_service_interfaces -- -j4 -l4
+[17.124s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/spiderpi/ros2_ws/src/gwpspider_interfaces -DCMAKE_INSTALL_PREFIX=/home/spiderpi/ros2_ws/install/gwpspider_interfaces
+[17.127s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/spiderpi/ros2_ws/build/gwpspider_interfaces -- -j4 -l4
+[34.542s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/spiderpi/ros2_ws/build/my_service_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/spiderpi/ros2_ws/build/my_service_interfaces -- -j4 -l4
+[35.188s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/spiderpi/ros2_ws/build/my_service_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/spiderpi/ros2_ws/build/my_service_interfaces
+[35.969s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_service_interfaces)
+[35.976s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/spiderpi/ros2_ws/build/my_service_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/spiderpi/ros2_ws/build/my_service_interfaces
+[36.012s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/my_service_interfaces' for CMake module files
+[36.018s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/my_service_interfaces' for CMake config files
+[36.023s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_service_interfaces', 'cmake_prefix_path')
+[36.034s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/hook/cmake_prefix_path.ps1'
+[36.038s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/hook/cmake_prefix_path.dsv'
+[36.042s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/hook/cmake_prefix_path.sh'
+[36.048s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/my_service_interfaces/lib'
+[36.049s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_service_interfaces', 'ld_library_path_lib')
+[36.057s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/hook/ld_library_path_lib.ps1'
+[36.060s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/hook/ld_library_path_lib.dsv'
+[36.063s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/hook/ld_library_path_lib.sh'
+[36.068s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/my_service_interfaces/bin'
+[36.069s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/my_service_interfaces/lib/pkgconfig/my_service_interfaces.pc'
+[36.071s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/my_service_interfaces/lib/python3.10/site-packages'
+[36.073s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/my_service_interfaces/bin'
+[36.086s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/package.ps1'
+[36.091s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/package.dsv'
+[36.097s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/package.sh'
+[36.102s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/package.bash'
+[36.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/package.zsh'
+[36.110s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/spiderpi/ros2_ws/install/my_service_interfaces/share/colcon-core/packages/my_service_interfaces)
+[37.371s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_service_interfaces)
+[37.402s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/my_service_interfaces' for CMake module files
+[37.409s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/my_service_interfaces' for CMake config files
+[37.421s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_service_interfaces', 'cmake_prefix_path')
+[37.429s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/hook/cmake_prefix_path.ps1'
+[37.446s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/hook/cmake_prefix_path.dsv'
+[37.449s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/hook/cmake_prefix_path.sh'
+[37.453s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/my_service_interfaces/lib'
+[37.454s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_service_interfaces', 'ld_library_path_lib')
+[37.462s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/hook/ld_library_path_lib.ps1'
+[37.465s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/hook/ld_library_path_lib.dsv'
+[37.468s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/hook/ld_library_path_lib.sh'
+[37.472s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/my_service_interfaces/bin'
+[37.473s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/my_service_interfaces/lib/pkgconfig/my_service_interfaces.pc'
+[37.476s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/my_service_interfaces/lib/python3.10/site-packages'
+[37.478s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/my_service_interfaces/bin'
+[37.486s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/package.ps1'
+[37.490s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/package.dsv'
+[37.494s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/package.sh'
+[37.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/package.bash'
+[37.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/my_service_interfaces/share/my_service_interfaces/package.zsh'
+[37.506s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/spiderpi/ros2_ws/install/my_service_interfaces/share/colcon-core/packages/my_service_interfaces)
+[37.518s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/spiderpi/ros2_ws/src/py_node_test' with build type 'ament_python'
+[37.522s] Level 1:colcon.colcon_core.shell:create_environment_hook('py_node_test', 'ament_prefix_path')
+[37.533s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/py_node_test/share/py_node_test/hook/ament_prefix_path.ps1'
+[37.539s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/spiderpi/ros2_ws/install/py_node_test/share/py_node_test/hook/ament_prefix_path.dsv'
+[37.543s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/py_node_test/share/py_node_test/hook/ament_prefix_path.sh'
+[37.554s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[37.555s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[37.595s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/spiderpi/ros2_ws/src/py_srvcli' with build type 'ament_python'
+[37.598s] Level 1:colcon.colcon_core.shell:create_environment_hook('py_srvcli', 'ament_prefix_path')
+[37.610s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/hook/ament_prefix_path.ps1'
+[37.622s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/hook/ament_prefix_path.dsv'
+[37.626s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/hook/ament_prefix_path.sh'
+[37.649s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[37.650s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[40.173s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/spiderpi/ros2_ws/src/py_node_test'
+[40.183s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[40.184s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[42.122s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/spiderpi/ros2_ws/src/py_srvcli'
+[42.128s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[42.129s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[45.292s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/spiderpi/ros2_ws/src/py_node_test': AMENT_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces LD_LIBRARY_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/spiderpi/ros2_ws/build/py_node_test/prefix_override:/home/spiderpi/ros2_ws/install/py_node_test/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_node_test build --build-base /home/spiderpi/ros2_ws/build/py_node_test/build install --record /home/spiderpi/ros2_ws/build/py_node_test/install.log --single-version-externally-managed
+[45.667s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/spiderpi/ros2_ws/src/py_srvcli': AMENT_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces LD_LIBRARY_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/spiderpi/ros2_ws/build/py_srvcli/prefix_override:/home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/spiderpi/ros2_ws/build/py_srvcli/build install --record /home/spiderpi/ros2_ws/build/py_srvcli/install.log --single-version-externally-managed
+[48.503s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/spiderpi/ros2_ws/src/py_node_test' returned '0': AMENT_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces LD_LIBRARY_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/spiderpi/ros2_ws/build/py_node_test/prefix_override:/home/spiderpi/ros2_ws/install/py_node_test/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_node_test build --build-base /home/spiderpi/ros2_ws/build/py_node_test/build install --record /home/spiderpi/ros2_ws/build/py_node_test/install.log --single-version-externally-managed
+[48.512s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_node_test' for CMake module files
+[48.527s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_node_test' for CMake config files
+[48.532s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_node_test/lib'
+[48.538s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_node_test/bin'
+[48.542s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_node_test/lib/pkgconfig/py_node_test.pc'
+[48.544s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_node_test/lib/python3.10/site-packages'
+[48.546s] Level 1:colcon.colcon_core.shell:create_environment_hook('py_node_test', 'pythonpath')
+[48.560s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/py_node_test/share/py_node_test/hook/pythonpath.ps1'
+[48.575s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/spiderpi/ros2_ws/install/py_node_test/share/py_node_test/hook/pythonpath.dsv'
+[48.583s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/py_node_test/share/py_node_test/hook/pythonpath.sh'
+[48.592s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_node_test/bin'
+[48.602s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(py_node_test)
+[48.623s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/py_node_test/share/py_node_test/package.ps1'
+[48.628s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/spiderpi/ros2_ws/install/py_node_test/share/py_node_test/package.dsv'
+[48.633s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/py_node_test/share/py_node_test/package.sh'
+[48.643s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/py_node_test/share/py_node_test/package.bash'
+[48.647s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/py_node_test/share/py_node_test/package.zsh'
+[48.652s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/spiderpi/ros2_ws/install/py_node_test/share/colcon-core/packages/py_node_test)
+[49.624s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/spiderpi/ros2_ws/src/py_srvcli' returned '0': AMENT_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces LD_LIBRARY_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/spiderpi/ros2_ws/build/py_srvcli/prefix_override:/home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/spiderpi/ros2_ws/build/py_srvcli/build install --record /home/spiderpi/ros2_ws/build/py_srvcli/install.log --single-version-externally-managed
+[49.636s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_srvcli' for CMake module files
+[49.638s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_srvcli' for CMake config files
+[49.644s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_srvcli/lib'
+[49.648s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_srvcli/bin'
+[49.649s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_srvcli/lib/pkgconfig/py_srvcli.pc'
+[49.651s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages'
+[49.651s] Level 1:colcon.colcon_core.shell:create_environment_hook('py_srvcli', 'pythonpath')
+[49.658s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/hook/pythonpath.ps1'
+[49.660s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/hook/pythonpath.dsv'
+[49.662s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/hook/pythonpath.sh'
+[49.665s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_srvcli/bin'
+[49.666s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(py_srvcli)
+[49.673s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/package.ps1'
+[49.676s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/package.dsv'
+[49.679s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/package.sh'
+[49.683s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/package.bash'
+[49.687s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/package.zsh'
+[49.692s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/spiderpi/ros2_ws/install/py_srvcli/share/colcon-core/packages/py_srvcli)
+[169.891s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/spiderpi/ros2_ws/build/gwpspider_interfaces -- -j4 -l4
+[173.367s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/spiderpi/ros2_ws/build/gwpspider_interfaces
+[174.819s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gwpspider_interfaces)
+[174.827s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/gwpspider_interfaces' for CMake module files
+[174.828s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/spiderpi/ros2_ws/build/gwpspider_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/spiderpi/ros2_ws/build/gwpspider_interfaces
+[174.832s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/gwpspider_interfaces' for CMake config files
+[174.837s] Level 1:colcon.colcon_core.shell:create_environment_hook('gwpspider_interfaces', 'cmake_prefix_path')
+[174.842s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/hook/cmake_prefix_path.ps1'
+[174.844s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/hook/cmake_prefix_path.dsv'
+[174.845s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/hook/cmake_prefix_path.sh'
+[174.848s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib'
+[174.849s] Level 1:colcon.colcon_core.shell:create_environment_hook('gwpspider_interfaces', 'ld_library_path_lib')
+[174.854s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/hook/ld_library_path_lib.ps1'
+[174.856s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/hook/ld_library_path_lib.dsv'
+[174.858s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/hook/ld_library_path_lib.sh'
+[174.859s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/bin'
+[174.860s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/pkgconfig/gwpspider_interfaces.pc'
+[174.861s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/python3.10/site-packages'
+[174.862s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/bin'
+[174.867s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/package.ps1'
+[174.870s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/package.dsv'
+[174.872s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/package.sh'
+[174.874s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/package.bash'
+[174.876s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/package.zsh'
+[174.878s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/colcon-core/packages/gwpspider_interfaces)
+[178.340s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gwpspider_interfaces)
+[178.352s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/gwpspider_interfaces' for CMake module files
+[178.357s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/gwpspider_interfaces' for CMake config files
+[178.362s] Level 1:colcon.colcon_core.shell:create_environment_hook('gwpspider_interfaces', 'cmake_prefix_path')
+[178.367s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/hook/cmake_prefix_path.ps1'
+[178.369s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/hook/cmake_prefix_path.dsv'
+[178.371s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/hook/cmake_prefix_path.sh'
+[178.374s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib'
+[178.374s] Level 1:colcon.colcon_core.shell:create_environment_hook('gwpspider_interfaces', 'ld_library_path_lib')
+[178.379s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/hook/ld_library_path_lib.ps1'
+[178.381s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/hook/ld_library_path_lib.dsv'
+[178.383s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/hook/ld_library_path_lib.sh'
+[178.385s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/bin'
+[178.386s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/pkgconfig/gwpspider_interfaces.pc'
+[178.387s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib/python3.10/site-packages'
+[178.388s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/bin'
+[178.393s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/package.ps1'
+[178.396s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/package.dsv'
+[178.398s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/package.sh'
+[178.400s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/package.bash'
+[178.403s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/gwpspider_interfaces/package.zsh'
+[178.405s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/spiderpi/ros2_ws/install/gwpspider_interfaces/share/colcon-core/packages/gwpspider_interfaces)
+[178.406s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/spiderpi/ros2_ws/src/flask_server' with build type 'ament_python'
+[178.407s] Level 1:colcon.colcon_core.shell:create_environment_hook('flask_server', 'ament_prefix_path')
+[178.412s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/flask_server/share/flask_server/hook/ament_prefix_path.ps1'
+[178.415s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/spiderpi/ros2_ws/install/flask_server/share/flask_server/hook/ament_prefix_path.dsv'
+[178.417s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/flask_server/share/flask_server/hook/ament_prefix_path.sh'
+[178.424s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[178.425s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[179.671s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/spiderpi/ros2_ws/src/flask_server'
+[179.677s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[179.677s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[181.183s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/spiderpi/ros2_ws/src/flask_server': AMENT_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces:/home/spiderpi/ros2_ws/install/gwpspider_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces:/home/spiderpi/ros2_ws/install/gwpspider_interfaces LD_LIBRARY_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces/lib:/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/spiderpi/ros2_ws/build/flask_server/prefix_override:/home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages:/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/flask_server build --build-base /home/spiderpi/ros2_ws/build/flask_server/build install --record /home/spiderpi/ros2_ws/build/flask_server/install.log --single-version-externally-managed
+[182.515s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/flask_server' for CMake module files
+[182.518s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/spiderpi/ros2_ws/src/flask_server' returned '0': AMENT_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces:/home/spiderpi/ros2_ws/install/gwpspider_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces:/home/spiderpi/ros2_ws/install/gwpspider_interfaces LD_LIBRARY_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces/lib:/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/spiderpi/ros2_ws/build/flask_server/prefix_override:/home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages:/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/flask_server build --build-base /home/spiderpi/ros2_ws/build/flask_server/build install --record /home/spiderpi/ros2_ws/build/flask_server/install.log --single-version-externally-managed
+[182.519s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/flask_server' for CMake config files
+[182.523s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/flask_server/lib'
+[182.523s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/flask_server/bin'
+[182.524s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/flask_server/lib/pkgconfig/flask_server.pc'
+[182.524s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages'
+[182.525s] Level 1:colcon.colcon_core.shell:create_environment_hook('flask_server', 'pythonpath')
+[182.530s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/flask_server/share/flask_server/hook/pythonpath.ps1'
+[182.533s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/spiderpi/ros2_ws/install/flask_server/share/flask_server/hook/pythonpath.dsv'
+[182.534s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/flask_server/share/flask_server/hook/pythonpath.sh'
+[182.536s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/flask_server/bin'
+[182.537s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(flask_server)
+[182.542s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/flask_server/share/flask_server/package.ps1'
+[182.544s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/spiderpi/ros2_ws/install/flask_server/share/flask_server/package.dsv'
+[182.546s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/flask_server/share/flask_server/package.sh'
+[182.548s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/flask_server/share/flask_server/package.bash'
+[182.549s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/flask_server/share/flask_server/package.zsh'
+[182.551s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/spiderpi/ros2_ws/install/flask_server/share/colcon-core/packages/flask_server)
+[182.552s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[182.554s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[182.555s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[182.557s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[182.581s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[182.581s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[182.581s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[182.635s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[182.641s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/spiderpi/ros2_ws/install/local_setup.ps1'
+[182.646s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/spiderpi/ros2_ws/install/_local_setup_util_ps1.py'
+[182.653s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/spiderpi/ros2_ws/install/setup.ps1'
+[182.660s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/spiderpi/ros2_ws/install/local_setup.sh'
+[182.663s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/spiderpi/ros2_ws/install/_local_setup_util_sh.py'
+[182.666s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/spiderpi/ros2_ws/install/setup.sh'
+[182.672s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/spiderpi/ros2_ws/install/local_setup.bash'
+[182.675s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/spiderpi/ros2_ws/install/setup.bash'
+[182.680s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/spiderpi/ros2_ws/install/local_setup.zsh'
+[182.682s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/spiderpi/ros2_ws/install/setup.zsh'

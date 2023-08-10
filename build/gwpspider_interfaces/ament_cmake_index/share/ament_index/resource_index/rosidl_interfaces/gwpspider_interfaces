@@ -20,6 +20,10 @@ srv/ApplyForcesOnLegs.idl
 srv/ApplyForcesOnLegs.srv
 srv/ApplyForcesOnLegs_Request.msg
 srv/ApplyForcesOnLegs_Response.msg
+srv/BreaksControl.idl
+srv/BreaksControl.srv
+srv/BreaksControl_Request.msg
+srv/BreaksControl_Response.msg
 srv/ControlWaterPump.idl
 srv/ControlWaterPump.srv
 srv/ControlWaterPump_Request.msg
@@ -52,6 +56,10 @@ srv/InitBno.idl
 srv/InitBno.srv
 srv/InitBno_Request.msg
 srv/InitBno_Response.msg
+srv/Messages.idl
+srv/Messages.srv
+srv/Messages_Request.msg
+srv/Messages_Response.msg
 srv/MoveGripper.idl
 srv/MoveGripper.srv
 srv/MoveGripper_Request.msg

@@ -20,6 +20,7 @@ SPIDER_POSE_TOPIC = 'spider_pose_topic'
 MOVE_GRIPPER_SERVICE = 'move_gripper_service'
 WATER_PUMP_SERVICE = 'water_pump_service'
 INIT_BNO_SERVICE = 'init_bno_service'
+BREAKS_SERVICE = 'breaks_service'
 
 # Controller
 MOVE_LEG_SERVICE = 'move_leg_service'
@@ -35,6 +36,7 @@ TOGGLE_ADDITIONAL_CONTROLLER_MODE_SERVICE = 'toggle_additional_controller_mode_s
 #Server
 SEND_GOAL_SERVICE = 'spider_goal_service'
 SET_WATERING_SUCCESS_SERVICE = 'set_watering_success_service'
+MESSAGE_SERVICE = 'message_service'
 
 # Dynamixel
 TOGGLE_MOTORS_TORQUE_SERVICE = 'toggle_motors_torque_service'

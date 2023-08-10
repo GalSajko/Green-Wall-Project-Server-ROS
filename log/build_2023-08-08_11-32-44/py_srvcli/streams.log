@@ -1,0 +1,54 @@
+[8.070s] Invoking command in '/home/spiderpi/ros2_ws/src/py_srvcli': AMENT_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces LD_LIBRARY_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/spiderpi/ros2_ws/build/py_srvcli/prefix_override:/home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/spiderpi/ros2_ws/build/py_srvcli/build install --record /home/spiderpi/ros2_ws/build/py_srvcli/install.log --single-version-externally-managed
+[11.272s] running egg_info
+[11.282s] creating ../../build/py_srvcli/py_srvcli.egg-info
+[11.292s] writing ../../build/py_srvcli/py_srvcli.egg-info/PKG-INFO
+[11.301s] writing dependency_links to ../../build/py_srvcli/py_srvcli.egg-info/dependency_links.txt
+[11.313s] writing entry points to ../../build/py_srvcli/py_srvcli.egg-info/entry_points.txt
+[11.319s] writing requirements to ../../build/py_srvcli/py_srvcli.egg-info/requires.txt
+[11.327s] writing top-level names to ../../build/py_srvcli/py_srvcli.egg-info/top_level.txt
+[11.335s] writing manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[11.350s] reading manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[11.359s] writing manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[11.365s] running build
+[11.369s] running build_py
+[11.375s] creating /home/spiderpi/ros2_ws/build/py_srvcli/build
+[11.379s] creating /home/spiderpi/ros2_ws/build/py_srvcli/build/lib
+[11.384s] creating /home/spiderpi/ros2_ws/build/py_srvcli/build/lib/py_srvcli
+[11.392s] copying py_srvcli/listener.py -> /home/spiderpi/ros2_ws/build/py_srvcli/build/lib/py_srvcli
+[11.399s] copying py_srvcli/publicher.py -> /home/spiderpi/ros2_ws/build/py_srvcli/build/lib/py_srvcli
+[11.405s] copying py_srvcli/__init__.py -> /home/spiderpi/ros2_ws/build/py_srvcli/build/lib/py_srvcli
+[11.411s] copying py_srvcli/talker2.py -> /home/spiderpi/ros2_ws/build/py_srvcli/build/lib/py_srvcli
+[11.417s] copying py_srvcli/client.py -> /home/spiderpi/ros2_ws/build/py_srvcli/build/lib/py_srvcli
+[11.425s] copying py_srvcli/server.py -> /home/spiderpi/ros2_ws/build/py_srvcli/build/lib/py_srvcli
+[11.432s] running install
+[11.437s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[11.439s]   warnings.warn(
+[11.442s] running install_lib
+[11.448s] creating /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli
+[11.450s] copying /home/spiderpi/ros2_ws/build/py_srvcli/build/lib/py_srvcli/listener.py -> /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli
+[11.454s] copying /home/spiderpi/ros2_ws/build/py_srvcli/build/lib/py_srvcli/publicher.py -> /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli
+[11.458s] copying /home/spiderpi/ros2_ws/build/py_srvcli/build/lib/py_srvcli/__init__.py -> /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli
+[11.461s] copying /home/spiderpi/ros2_ws/build/py_srvcli/build/lib/py_srvcli/talker2.py -> /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli
+[11.466s] copying /home/spiderpi/ros2_ws/build/py_srvcli/build/lib/py_srvcli/client.py -> /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli
+[11.470s] copying /home/spiderpi/ros2_ws/build/py_srvcli/build/lib/py_srvcli/server.py -> /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli
+[11.478s] byte-compiling /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/listener.py to listener.cpython-310.pyc
+[11.487s] byte-compiling /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/publicher.py to publicher.cpython-310.pyc
+[11.495s] byte-compiling /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/__init__.py to __init__.cpython-310.pyc
+[11.501s] byte-compiling /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/talker2.py to talker2.cpython-310.pyc
+[11.508s] byte-compiling /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/client.py to client.cpython-310.pyc
+[11.516s] byte-compiling /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/server.py to server.cpython-310.pyc
+[11.523s] running install_data
+[11.527s] creating /home/spiderpi/ros2_ws/install/py_srvcli/share/ament_index
+[11.529s] creating /home/spiderpi/ros2_ws/install/py_srvcli/share/ament_index/resource_index
+[11.531s] creating /home/spiderpi/ros2_ws/install/py_srvcli/share/ament_index/resource_index/packages
+[11.534s] copying resource/py_srvcli -> /home/spiderpi/ros2_ws/install/py_srvcli/share/ament_index/resource_index/packages
+[11.537s] copying package.xml -> /home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli
+[11.541s] running install_egg_info
+[11.552s] Copying ../../build/py_srvcli/py_srvcli.egg-info to /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli-0.0.0-py3.10.egg-info
+[11.585s] running install_scripts
+[11.721s] Installing client script to /home/spiderpi/ros2_ws/install/py_srvcli/lib/py_srvcli
+[11.726s] Installing service script to /home/spiderpi/ros2_ws/install/py_srvcli/lib/py_srvcli
+[11.732s] Installing talker script to /home/spiderpi/ros2_ws/install/py_srvcli/lib/py_srvcli
+[11.743s] Installing talker2 script to /home/spiderpi/ros2_ws/install/py_srvcli/lib/py_srvcli
+[11.752s] writing list of installed files to '/home/spiderpi/ros2_ws/build/py_srvcli/install.log'
+[12.027s] Invoked command in '/home/spiderpi/ros2_ws/src/py_srvcli' returned '0': AMENT_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces LD_LIBRARY_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/spiderpi/ros2_ws/build/py_srvcli/prefix_override:/home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/spiderpi/ros2_ws/build/py_srvcli/build install --record /home/spiderpi/ros2_ws/build/py_srvcli/install.log --single-version-externally-managed

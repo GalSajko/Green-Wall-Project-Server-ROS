@@ -1,8 +1,8 @@
-# Install script for directory: /home/spider/ros2_ws/build/gwpspider_interfaces/gwpspider_interfaces__py
+# Install script for directory: /home/spiderpi/ros2_ws/build/gwpspider_interfaces/gwpspider_interfaces__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/spider/ros2_ws/install/gwpspider_interfaces")
+  set(CMAKE_INSTALL_PREFIX "/home/spiderpi/ros2_ws/install/gwpspider_interfaces")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

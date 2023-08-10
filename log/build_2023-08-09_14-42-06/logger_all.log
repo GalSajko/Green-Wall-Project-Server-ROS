@@ -1,0 +1,171 @@
+[1.427s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'py_srvcli']
+[1.428s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['py_srvcli'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff95816d10>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff960b2740>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff960b2740>>)
+[1.582s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.583s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.583s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.583s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.583s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.583s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.584s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/spiderpi/ros2_ws'
+[1.585s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.585s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.586s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.586s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.586s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.587s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.587s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.587s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.587s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.643s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.644s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.644s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.644s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.644s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.645s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.645s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.646s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.646s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.647s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.647s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.651s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.652s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.652s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.653s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.653s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.654s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.654s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.654s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.654s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.654s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.655s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.655s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.655s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.655s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.655s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.656s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.656s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extensions ['ignore', 'ignore_ament_install']
+[1.657s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extension 'ignore'
+[1.657s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extension 'ignore_ament_install'
+[1.657s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extensions ['colcon_pkg']
+[1.657s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extension 'colcon_pkg'
+[1.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extensions ['colcon_meta']
+[1.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extension 'colcon_meta'
+[1.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extensions ['ros']
+[1.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/flask_server) by extension 'ros'
+[1.667s] DEBUG:colcon.colcon_core.package_identification:Package 'src/flask_server' with type 'ros.ament_python' and name 'flask_server'
+[1.668s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[1.669s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extension 'ignore'
+[1.670s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extension 'ignore_ament_install'
+[1.670s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extensions ['colcon_pkg']
+[1.670s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extension 'colcon_pkg'
+[1.670s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extensions ['colcon_meta']
+[1.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extension 'colcon_meta'
+[1.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extensions ['ros']
+[1.671s] Level 1:colcon.colcon_core.package_identification:_identify(src/gwpspider_interfaces) by extension 'ros'
+[1.674s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gwpspider_interfaces' with type 'ros.ament_cmake' and name 'gwpspider_interfaces'
+[1.675s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[1.675s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extension 'ignore'
+[1.675s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extension 'ignore_ament_install'
+[1.676s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extensions ['colcon_pkg']
+[1.676s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extension 'colcon_pkg'
+[1.676s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extensions ['colcon_meta']
+[1.676s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extension 'colcon_meta'
+[1.676s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extensions ['ros']
+[1.677s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_service_interfaces) by extension 'ros'
+[1.679s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_service_interfaces' with type 'ros.ament_cmake' and name 'my_service_interfaces'
+[1.680s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extensions ['ignore', 'ignore_ament_install']
+[1.680s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extension 'ignore'
+[1.680s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extension 'ignore_ament_install'
+[1.681s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extensions ['colcon_pkg']
+[1.681s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extension 'colcon_pkg'
+[1.681s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extensions ['colcon_meta']
+[1.681s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extension 'colcon_meta'
+[1.682s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extensions ['ros']
+[1.682s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_node_test) by extension 'ros'
+[1.684s] DEBUG:colcon.colcon_core.package_identification:Package 'src/py_node_test' with type 'ros.ament_python' and name 'py_node_test'
+[1.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extensions ['ignore', 'ignore_ament_install']
+[1.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'ignore'
+[1.686s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'ignore_ament_install'
+[1.686s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extensions ['colcon_pkg']
+[1.686s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'colcon_pkg'
+[1.686s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extensions ['colcon_meta']
+[1.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'colcon_meta'
+[1.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extensions ['ros']
+[1.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/py_srvcli) by extension 'ros'
+[1.690s] DEBUG:colcon.colcon_core.package_identification:Package 'src/py_srvcli' with type 'ros.ament_python' and name 'py_srvcli'
+[1.690s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.690s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.690s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.691s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.691s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.790s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'gwpspider_interfaces' in 'src/gwpspider_interfaces'
+[1.790s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'my_service_interfaces' in 'src/my_service_interfaces'
+[1.790s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'flask_server' in 'src/flask_server'
+[1.790s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'py_node_test' in 'src/py_node_test'
+[1.794s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.794s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.808s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/spiderpi/ros2_ws/install
+[1.819s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[1.825s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.095s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_args' from command line to 'None'
+[2.095s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_target' from command line to 'None'
+[2.095s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.096s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_clean_cache' from command line to 'False'
+[2.096s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_clean_first' from command line to 'False'
+[2.096s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'cmake_force_configure' from command line to 'False'
+[2.096s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'ament_cmake_args' from command line to 'None'
+[2.096s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'catkin_cmake_args' from command line to 'None'
+[2.096s] Level 5:colcon.colcon_core.verb:set package 'py_srvcli' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.096s] DEBUG:colcon.colcon_core.verb:Building package 'py_srvcli' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/spiderpi/ros2_ws/build/py_srvcli', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/spiderpi/ros2_ws/install/py_srvcli', 'merge_install': False, 'path': '/home/spiderpi/ros2_ws/src/py_srvcli', 'symlink_install': False, 'test_result_base': None}
+[2.099s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.112s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.113s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/spiderpi/ros2_ws/src/py_srvcli' with build type 'ament_python'
+[2.114s] Level 1:colcon.colcon_core.shell:create_environment_hook('py_srvcli', 'ament_prefix_path')
+[2.136s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.137s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/hook/ament_prefix_path.ps1'
+[2.139s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/hook/ament_prefix_path.dsv'
+[2.141s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/hook/ament_prefix_path.sh'
+[2.149s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.150s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.404s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/spiderpi/ros2_ws/src/py_srvcli'
+[3.409s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.410s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.972s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/spiderpi/ros2_ws/src/py_srvcli': PYTHONPATH=/home/spiderpi/ros2_ws/build/py_srvcli/prefix_override:/home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/spiderpi/ros2_ws/build/py_srvcli/build install --record /home/spiderpi/ros2_ws/build/py_srvcli/install.log --single-version-externally-managed
+[6.361s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/spiderpi/ros2_ws/src/py_srvcli' returned '0': PYTHONPATH=/home/spiderpi/ros2_ws/build/py_srvcli/prefix_override:/home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/spiderpi/ros2_ws/build/py_srvcli/build install --record /home/spiderpi/ros2_ws/build/py_srvcli/install.log --single-version-externally-managed
+[6.383s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_srvcli' for CMake module files
+[6.385s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_srvcli' for CMake config files
+[6.389s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_srvcli/lib'
+[6.390s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_srvcli/bin'
+[6.391s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_srvcli/lib/pkgconfig/py_srvcli.pc'
+[6.392s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages'
+[6.392s] Level 1:colcon.colcon_core.shell:create_environment_hook('py_srvcli', 'pythonpath')
+[6.397s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/hook/pythonpath.ps1'
+[6.399s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/hook/pythonpath.dsv'
+[6.401s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/hook/pythonpath.sh'
+[6.404s] Level 1:colcon.colcon_core.environment:checking '/home/spiderpi/ros2_ws/install/py_srvcli/bin'
+[6.405s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(py_srvcli)
+[6.410s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/package.ps1'
+[6.414s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/package.dsv'
+[6.418s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/package.sh'
+[6.422s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/package.bash'
+[6.426s] INFO:colcon.colcon_core.shell:Creating package script '/home/spiderpi/ros2_ws/install/py_srvcli/share/py_srvcli/package.zsh'
+[6.429s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/spiderpi/ros2_ws/install/py_srvcli/share/colcon-core/packages/py_srvcli)
+[6.431s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[6.432s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[6.433s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[6.433s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[6.457s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[6.457s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[6.457s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[6.513s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[6.521s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/spiderpi/ros2_ws/install/local_setup.ps1'
+[6.528s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/spiderpi/ros2_ws/install/_local_setup_util_ps1.py'
+[6.536s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/spiderpi/ros2_ws/install/setup.ps1'
+[6.545s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/spiderpi/ros2_ws/install/local_setup.sh'
+[6.548s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/spiderpi/ros2_ws/install/_local_setup_util_sh.py'
+[6.550s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/spiderpi/ros2_ws/install/setup.sh'
+[6.558s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/spiderpi/ros2_ws/install/local_setup.bash'
+[6.561s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/spiderpi/ros2_ws/install/setup.bash'
+[6.568s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/spiderpi/ros2_ws/install/local_setup.zsh'
+[6.571s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/spiderpi/ros2_ws/install/setup.zsh'

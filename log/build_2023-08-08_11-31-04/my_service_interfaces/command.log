@@ -1,0 +1,2 @@
+Invoking command in '/home/spiderpi/ros2_ws/build/my_service_interfaces': /usr/bin/cmake /home/spiderpi/ros2_ws/src/my_service_interfaces -DCMAKE_INSTALL_PREFIX=/home/spiderpi/ros2_ws/install/my_service_interfaces
+Invoked command in '/home/spiderpi/ros2_ws/build/my_service_interfaces' returned '1': /usr/bin/cmake /home/spiderpi/ros2_ws/src/my_service_interfaces -DCMAKE_INSTALL_PREFIX=/home/spiderpi/ros2_ws/install/my_service_interfaces
