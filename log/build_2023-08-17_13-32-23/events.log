@@ -1,0 +1,76 @@
+[0.000000] (-) TimerEvent: {}
+[0.004482] (-) JobUnselected: {'identifier': 'gwpspider_interfaces'}
+[0.005306] (-) JobUnselected: {'identifier': 'my_service_interfaces'}
+[0.007758] (-) JobUnselected: {'identifier': 'py_node_test'}
+[0.008022] (-) JobUnselected: {'identifier': 'py_srvcli'}
+[0.009041] (flask_server) JobQueued: {'identifier': 'flask_server', 'dependencies': OrderedDict([('gwpspider_interfaces', '/home/spiderpi/ros2_ws/install/gwpspider_interfaces'), ('my_service_interfaces', '/home/spiderpi/ros2_ws/install/my_service_interfaces')])}
+[0.009524] (flask_server) JobStarted: {'identifier': 'flask_server'}
+[0.099017] (-) TimerEvent: {}
+[0.199805] (-) TimerEvent: {}
+[0.300598] (-) TimerEvent: {}
+[0.401392] (-) TimerEvent: {}
+[0.502201] (-) TimerEvent: {}
+[0.602914] (-) TimerEvent: {}
+[0.703759] (-) TimerEvent: {}
+[0.804983] (-) TimerEvent: {}
+[0.905725] (-) TimerEvent: {}
+[1.006443] (-) TimerEvent: {}
+[1.107197] (-) TimerEvent: {}
+[1.207939] (-) TimerEvent: {}
+[1.308947] (-) TimerEvent: {}
+[1.410835] (-) TimerEvent: {}
+[1.511690] (-) TimerEvent: {}
+[1.612487] (-) TimerEvent: {}
+[1.713288] (-) TimerEvent: {}
+[1.814133] (-) TimerEvent: {}
+[1.915026] (-) TimerEvent: {}
+[2.015730] (-) TimerEvent: {}
+[2.116478] (-) TimerEvent: {}
+[2.217182] (-) TimerEvent: {}
+[2.317928] (-) TimerEvent: {}
+[2.418761] (-) TimerEvent: {}
+[2.519613] (-) TimerEvent: {}
+[2.620395] (-) TimerEvent: {}
+[2.721393] (-) TimerEvent: {}
+[2.822198] (-) TimerEvent: {}
+[2.923198] (-) TimerEvent: {}
+[3.024353] (-) TimerEvent: {}
+[3.117037] (flask_server) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/flask_server', 'build', '--build-base', '/home/spiderpi/ros2_ws/build/flask_server/build', 'install', '--record', '/home/spiderpi/ros2_ws/build/flask_server/install.log', '--single-version-externally-managed'], 'cwd': '/home/spiderpi/ros2_ws/src/flask_server', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'spiderpi', 'SSH_CLIENT': '192.168.1.25 38744 22', 'LC_TIME': 'de_AT.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/spiderpi/ros2_ws/install/my_service_interfaces/lib:/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/spiderpi/.vscode-server/bin/6445d93c81ebe42c4cbd7a60712e0b17d9463e97/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/spiderpi', 'OLDPWD': '/home/spiderpi/ros2_ws/src/flask_server/scripts', 'TERM_PROGRAM_VERSION': '1.81.0', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-30d0c0be-a341-4854-9198-0e0218f883de.sock', 'ROS_PYTHON_VERSION': '3', 'LC_MONETARY': 'de_AT.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/spiderpi/ros2_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'spiderpi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1487', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/spiderpi/.vscode-server/bin/6445d93c81ebe42c4cbd7a60712e0b17d9463e97/bin/remote-cli:/home/spiderpi/.local/bin:/home/spiderpi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'de_AT.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'de_AT.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-41e25afa2b.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/humble:/home/spiderpi/ros2_ws/install/py_srvcli:/home/spiderpi/ros2_ws/install/py_node_test:/home/spiderpi/ros2_ws/install/flask_server:/home/spiderpi/ros2_ws/install/my_service_interfaces:/home/spiderpi/ros2_ws/install/gwpspider_interfaces', 'SHELL': '/bin/bash', 'LC_NAME': 'de_AT.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'de_AT.UTF-8', 'LC_IDENTIFICATION': 'de_AT.UTF-8', 'PWD': '/home/spiderpi/ros2_ws/build/flask_server', 'SSH_CONNECTION': '192.168.1.25 38744 192.168.1.20 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/spiderpi/ros2_ws/build/flask_server/prefix_override:/home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/py_node_test/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages:/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'de_AT.UTF-8', 'LC_PAPER': 'de_AT.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/spiderpi/ros2_ws/install/my_service_interfaces:/home/spiderpi/ros2_ws/install/gwpspider_interfaces'}, 'shell': False}
+[3.131547] (-) TimerEvent: {}
+[3.233162] (-) TimerEvent: {}
+[3.333900] (-) TimerEvent: {}
+[3.434683] (-) TimerEvent: {}
+[3.535406] (-) TimerEvent: {}
+[3.636132] (-) TimerEvent: {}
+[3.736911] (-) TimerEvent: {}
+[3.837619] (-) TimerEvent: {}
+[3.938292] (-) TimerEvent: {}
+[4.038962] (-) TimerEvent: {}
+[4.139670] (-) TimerEvent: {}
+[4.231286] (flask_server) StdoutLine: {'line': b'running egg_info\n'}
+[4.235126] (flask_server) StdoutLine: {'line': b'writing ../../build/flask_server/flask_server.egg-info/PKG-INFO\n'}
+[4.236306] (flask_server) StdoutLine: {'line': b'writing dependency_links to ../../build/flask_server/flask_server.egg-info/dependency_links.txt\n'}
+[4.237205] (flask_server) StdoutLine: {'line': b'writing entry points to ../../build/flask_server/flask_server.egg-info/entry_points.txt\n'}
+[4.238031] (flask_server) StdoutLine: {'line': b'writing requirements to ../../build/flask_server/flask_server.egg-info/requires.txt\n'}
+[4.238637] (flask_server) StdoutLine: {'line': b'writing top-level names to ../../build/flask_server/flask_server.egg-info/top_level.txt\n'}
+[4.239803] (-) TimerEvent: {}
+[4.246866] (flask_server) StdoutLine: {'line': b"reading manifest file '../../build/flask_server/flask_server.egg-info/SOURCES.txt'\n"}
+[4.250905] (flask_server) StdoutLine: {'line': b"writing manifest file '../../build/flask_server/flask_server.egg-info/SOURCES.txt'\n"}
+[4.252059] (flask_server) StdoutLine: {'line': b'running build\n'}
+[4.252585] (flask_server) StdoutLine: {'line': b'running build_py\n'}
+[4.253492] (flask_server) StdoutLine: {'line': b'running install\n'}
+[4.256264] (flask_server) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[4.257085] (flask_server) StderrLine: {'line': b'  warnings.warn(\n'}
+[4.257898] (flask_server) StdoutLine: {'line': b'running install_lib\n'}
+[4.263386] (flask_server) StdoutLine: {'line': b'running install_data\n'}
+[4.266039] (flask_server) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.273988] (flask_server) StdoutLine: {'line': b"removing '/home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages/flask_server-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[4.278630] (flask_server) StdoutLine: {'line': b'Copying ../../build/flask_server/flask_server.egg-info to /home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages/flask_server-0.0.0-py3.10.egg-info\n'}
+[4.286562] (flask_server) StdoutLine: {'line': b'running install_scripts\n'}
+[4.340038] (-) TimerEvent: {}
+[4.371768] (flask_server) StdoutLine: {'line': b"writing list of installed files to '/home/spiderpi/ros2_ws/build/flask_server/install.log'\n"}
+[4.440423] (-) TimerEvent: {}
+[4.500649] (flask_server) CommandEnded: {'returncode': 0}
+[4.540580] (-) TimerEvent: {}
+[4.590943] (flask_server) JobEnded: {'identifier': 'flask_server', 'rc': 0}
+[4.594127] (-) EventReactorShutdown: {}

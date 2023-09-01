@@ -85,11 +85,7 @@ class WateringSuccessService(Node):
             if config.orderIndex != 0:
                 with app.app_context():
                     array_ind = config.order[config.orderIndex].index
-                    print(array_ind)
-                    print(config.orderIndex)
-                    print(config.sensorBase[array_ind].arduino)
-                    print(config.sensorBase[array_ind].line)
-                    print(config.sensorBase[array_ind].sensorID)
+                    
                     config.sensorBase[array_ind].lastWater = time.time()
                     plant = Plants.query.get(config.sensorBase[array_ind].db_id)
                     plant.date_time = datetime.fromtimestamp(config.sensorBase[array_ind].lastWater)
@@ -113,18 +109,25 @@ class MinimalService(Node):
     def spider_goal_callback(self, request, response):
         try:
             if config.orderIndex<len(config.order) and not config.empty_tank and config.orderIndex != 0:
-                response.watering_position = [config.order[config.orderIndex].x, config.order[config.orderIndex].y, 0.0]
+                response.watering_position = [(config.order[config.orderIndex].x), config.order[config.orderIndex].y, 0.0]
                 response.go_refill = False
-                print(response.watering_position)
+                
                 response.volume = config.order[config.orderIndex].water
+                print(config.order[config.orderIndex].y)
+            elif config.empty_tank:
+                response.watering_position =[]
+                response.go_refill = True
+                response.volume = config.refill_volume
+                config.empty_tank = False
             else:
-                if not config.empty_tank or config.orderIndex != 0:
+                if config.orderIndex != 0:
                     print("refilling")
                     refill()
                 response.watering_position =[]
                 response.go_refill = True
                 response.volume = config.refill_volume
                 config.empty_tank = False
+            
             return response
         except Exception as e:
             print(e)
@@ -151,10 +154,6 @@ class PositionSubscriber(Node):
         if config.poseData == [] or config.update_data[14] == 0.0:
             config.reset_time = time.time()
         if config.poseData != []:
-            print(config.poseData)
-            print(x)
-            print(y)
-            print(np.sqrt((config.poseData[0] + x)**2 - (config.poseData[1] - y)**2))
             config.update_data[14]+= np.sqrt((config.poseData[0] - x)**2 + (config.poseData[1] - y)**2)
         if time.time() - config.reset_time >= 3600:
             config.update_data[14] == 0.0
@@ -488,8 +487,9 @@ def get_data_thread():
     try:
         while True:
             for i in range(len(config.ARDUIONO_IP_LIST)):
+                print("CALLING ARDUINOS")
                 try:
-                    requests.get(f'http://{config.ARDUIONO_IP_LIST[i]}:5000/zalij')
+                    requests.get(f'http://{config.ARDUIONO_IP_LIST[i]}:5000/zalij', timeout=15)
                     config.arduino_pings[i]=True
                 except Exception as e:
                     print(config.ARDUIONO_IP_LIST[i])
@@ -522,6 +522,7 @@ def set_data_from_db():
     x_dim = 20
     y_dim = 25
     plants = Plants.query.all()
+   
     for data in plants:
         start = 0
         panel = data.panel
@@ -530,24 +531,31 @@ def set_data_from_db():
         name = data.name
 
         db_id = db.session.query(Plants.id).filter(Plants.panel==panel,Plants.line==data.line,Plants.sensorNum==sensor_id).all()[0][0]
-
-        plant_type =db.session.query(PlantsData.plant_type).filter(PlantsData.name==name).all()[0][0]
+       
+        plant_type = 1 #db.session.query(PlantsData.plant_type).filter(PlantsData.name==name).all()[0][0]
         water =db.session.query(PlantsData.watering_96h).filter(PlantsData.name==name).all()[0][0]
+      
         areas = db.session.query(PlantsData.areas).filter(PlantsData.name==name).all()[0][0]
         needs = db.session.query(PlantsData.plant_needs).filter(PlantsData.name==name).all()[0][0]
         latin_name = db.session.query(PlantsData.name_latin).filter(PlantsData.name==name).all()[0][0]
         characteristics = db.session.query(PlantsData.characteristics).filter(PlantsData.name==name).all()[0][0]
-
+        offset = 22
+        #sensor_id-=1
         if panel == 1 or panel == 4:
             start = 20
         elif panel == 3 or panel == 6:
             start = -20
         if panel < 4:
-            y_coordinate = (((5 - vrstica) + 6) * y_dim + 24.0) / 100.0
+            y_coordinate = (((5 - vrstica) + 6) * y_dim + offset) / 100.0
             x_coordinate = (start + ((panel - 1) * 7 + (sensor_id-1)) * x_dim + x_dim / 2) / 100.0
         else:
-            y_coordinate = (((5 - vrstica)) * y_dim + 24.0) / 100.0
+            if (vrstica) == 0:
+                offset = 17
+                
+            y_coordinate = (((5 - vrstica)) * y_dim + offset) / 100.0
+            
             x_coordinate = (start + ((panel - 4) * 7 + (sensor_id-1)) * x_dim + x_dim / 2) / 100.0
+            
         
         sensor = Sensor()
         sensor.plantName = name
@@ -588,6 +596,7 @@ def tsp(data, sol):
         list: ordered list of sensors
     """
     try:
+        print("here")
         data.insert(0, startPos)
         sol = list(range(len(data)))
         if len(data) <=3:
@@ -625,7 +634,7 @@ def setup_sensor_list(panel, arduino):
         for j in sensor_ids:
             start = 0
             try:
-                offset = 24
+                offset = 22
                 sensor_id = config.SENSOR_IDS.index(arduino["vrstica" + str(i)]["senzor" + str(j)]["id"])
                 vrstica = i
                 x_dim = 20
@@ -639,10 +648,12 @@ def setup_sensor_list(panel, arduino):
                     y_coordinate = (((5 - vrstica) + 6) * y_dim + offset) / 100.0
                     x_coordinate = (start + ((panel - 1) * 7 + (sensor_id)) * x_dim + x_dim / 2) / 100.0
                 else:
-                    if (5-vrstica) == 0:
-                        offset = 20
+                    if (vrstica) == 0:
+                        offset = 17
                     y_coordinate = (((5 - vrstica)) * y_dim + offset) / 100.0
+                    
                     x_coordinate = (start + ((panel - 4) * 7 + (sensor_id)) * x_dim + x_dim / 2) / 100.0
+                    
                 sensor = Sensor()
                 sensor.arduino = panel
                 sensor.line = vrstica
@@ -659,7 +670,8 @@ def setup_sensor_list(panel, arduino):
                     config.sensorBase[array_ind].cap = sensor.cap
                     config.sensorBase[array_ind].lastAlive = sensor.lastAlive
                     config.sensorBase[array_ind].index = sensor.index
-            except Exception:
+            except Exception as e:
+                #print(e)
                 pass
 
 def create_order():
@@ -683,6 +695,7 @@ def create_order():
                     print(i)
                     water_sum += i.water
                 data.insert(0,startPos) 
+                print(data)
                 return data
             elif len(config.watering_queue) != 0:
                 if water_sum + config.watering_queue[len(config.watering_queue)-1].water <= config.WATER_LIMIT:
@@ -707,6 +720,7 @@ def create_order():
                     continue
                 return []
         order = tsp(data,sol)
+        print(order)
         return order
     except Exception as e:
         print(e)
@@ -795,7 +809,7 @@ def messages(message):
         config.status = "Resting"
     elif message == commconstants.LEG_MOVE_MESSAGE:
         config.update_data[13]+=1
-    else:
+    elif message[0] == 'E':
         send_error_notif(message)
 
 def check_arduino_sensor_status():
@@ -832,12 +846,14 @@ def send_goal():
     """
     try:
         data = []
+        print(config.order)
         for i in config.order:
             data.append(i.toJson())
         config.update_data[1] = data
         config.update_data[2] = config.orderIndex
         
-    except Exception:
+    except Exception as e:
+        print(e)
         print("ERROR TRYING TO SEND GOAL VALUE TO FRONTEND")    
 
 def get_plant_num():
@@ -887,10 +903,14 @@ def update():
         config.update_data[0] = config.status
         send_goal()
         config.jsons.clear()
+        #print(config.sensorBase)
         for i in config.sensorBase:
             if i is not None:
+                
+                
                 config.jsons.append(json.loads(i.toJson()))
         config.update_data[4] = config.jsons
+        
         get_plant_num()
         get_routes()
         if len(config.poseData) == 2:
@@ -900,7 +920,8 @@ def update():
         send_error_notif("Error updating data: "+str(e))
     try:
         return jsonify(config.update_data), 200, {"Access-Control-Allow-Origin": "*"}
-    except Exception:
+    except Exception as e:
+        print(e)
         return jsonify([]), 200, {"Access-Control-Allow-Origin": "*"}
 
 @app.route('/test', methods=['POST'])

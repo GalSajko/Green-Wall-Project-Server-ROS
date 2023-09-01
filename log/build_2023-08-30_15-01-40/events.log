@@ -1,0 +1,81 @@
+[0.000000] (-) TimerEvent: {}
+[0.001631] (-) JobUnselected: {'identifier': 'flask_server'}
+[0.002338] (-) JobUnselected: {'identifier': 'gwpspider_interfaces'}
+[0.004433] (-) JobUnselected: {'identifier': 'my_service_interfaces'}
+[0.004633] (-) JobUnselected: {'identifier': 'py_node_test'}
+[0.004932] (py_srvcli) JobQueued: {'identifier': 'py_srvcli', 'dependencies': OrderedDict([('my_service_interfaces', '/home/spiderpi/ros2_ws/install/my_service_interfaces')])}
+[0.005159] (py_srvcli) JobStarted: {'identifier': 'py_srvcli'}
+[0.099048] (-) TimerEvent: {}
+[0.200020] (-) TimerEvent: {}
+[0.300781] (-) TimerEvent: {}
+[0.401532] (-) TimerEvent: {}
+[0.502288] (-) TimerEvent: {}
+[0.603068] (-) TimerEvent: {}
+[0.703817] (-) TimerEvent: {}
+[0.804624] (-) TimerEvent: {}
+[0.905446] (-) TimerEvent: {}
+[1.006156] (-) TimerEvent: {}
+[1.106921] (-) TimerEvent: {}
+[1.207832] (-) TimerEvent: {}
+[1.310432] (-) TimerEvent: {}
+[1.414454] (-) TimerEvent: {}
+[1.515226] (-) TimerEvent: {}
+[1.616048] (-) TimerEvent: {}
+[1.716848] (-) TimerEvent: {}
+[1.817685] (-) TimerEvent: {}
+[1.918402] (-) TimerEvent: {}
+[2.019146] (-) TimerEvent: {}
+[2.119867] (-) TimerEvent: {}
+[2.220570] (-) TimerEvent: {}
+[2.321318] (-) TimerEvent: {}
+[2.422157] (-) TimerEvent: {}
+[2.522914] (-) TimerEvent: {}
+[2.623709] (-) TimerEvent: {}
+[2.724853] (-) TimerEvent: {}
+[2.826326] (-) TimerEvent: {}
+[2.846102] (py_srvcli) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/py_srvcli', 'build', '--build-base', '/home/spiderpi/ros2_ws/build/py_srvcli/build', 'install', '--record', '/home/spiderpi/ros2_ws/build/py_srvcli/install.log', '--single-version-externally-managed'], 'cwd': '/home/spiderpi/ros2_ws/src/py_srvcli', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'spiderpi', 'SSH_CLIENT': '192.168.1.25 39524 22', 'LC_TIME': 'de_AT.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/spiderpi/ros2_ws/install/my_service_interfaces/lib:/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/spiderpi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/spiderpi', 'TERM_PROGRAM_VERSION': '1.81.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-bad928b1-9613-4b50-a046-2b78e50de3eb.sock', 'ROS_PYTHON_VERSION': '3', 'LC_MONETARY': 'de_AT.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/spiderpi/ros2_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'spiderpi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '7', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/spiderpi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/bin/remote-cli:/home/spiderpi/.local/bin:/home/spiderpi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'de_AT.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'de_AT.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-41e25afa2b.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/spiderpi/ros2_ws/install/py_srvcli:/home/spiderpi/ros2_ws/install/py_node_test:/home/spiderpi/ros2_ws/install/flask_server:/home/spiderpi/ros2_ws/install/my_service_interfaces:/home/spiderpi/ros2_ws/install/gwpspider_interfaces:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'de_AT.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'de_AT.UTF-8', 'LC_IDENTIFICATION': 'de_AT.UTF-8', 'PWD': '/home/spiderpi/ros2_ws/build/py_srvcli', 'SSH_CONNECTION': '192.168.1.25 39524 192.168.1.20 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/spiderpi/ros2_ws/build/py_srvcli/prefix_override:/home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/py_node_test/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages:/home/spiderpi/ros2_ws/install/my_service_interfaces/local/lib/python3.10/dist-packages:/home/spiderpi/ros2_ws/install/gwpspider_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'de_AT.UTF-8', 'LC_PAPER': 'de_AT.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/spiderpi/ros2_ws/install/my_service_interfaces:/home/spiderpi/ros2_ws/install/gwpspider_interfaces'}, 'shell': False}
+[2.926699] (-) TimerEvent: {}
+[3.028076] (-) TimerEvent: {}
+[3.129744] (-) TimerEvent: {}
+[3.232036] (-) TimerEvent: {}
+[3.333408] (-) TimerEvent: {}
+[3.434139] (-) TimerEvent: {}
+[3.534924] (-) TimerEvent: {}
+[3.635611] (-) TimerEvent: {}
+[3.736338] (-) TimerEvent: {}
+[3.837111] (-) TimerEvent: {}
+[3.937813] (-) TimerEvent: {}
+[3.982749] (py_srvcli) StdoutLine: {'line': b'running egg_info\n'}
+[3.994693] (py_srvcli) StdoutLine: {'line': b'writing ../../build/py_srvcli/py_srvcli.egg-info/PKG-INFO\n'}
+[3.996555] (py_srvcli) StdoutLine: {'line': b'writing dependency_links to ../../build/py_srvcli/py_srvcli.egg-info/dependency_links.txt\n'}
+[3.998457] (py_srvcli) StdoutLine: {'line': b'writing entry points to ../../build/py_srvcli/py_srvcli.egg-info/entry_points.txt\n'}
+[3.999967] (py_srvcli) StdoutLine: {'line': b'writing requirements to ../../build/py_srvcli/py_srvcli.egg-info/requires.txt\n'}
+[4.001304] (py_srvcli) StdoutLine: {'line': b'writing top-level names to ../../build/py_srvcli/py_srvcli.egg-info/top_level.txt\n'}
+[4.010888] (py_srvcli) StdoutLine: {'line': b"reading manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'\n"}
+[4.014795] (py_srvcli) StdoutLine: {'line': b"writing manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'\n"}
+[4.015528] (py_srvcli) StdoutLine: {'line': b'running build\n'}
+[4.016039] (py_srvcli) StdoutLine: {'line': b'running build_py\n'}
+[4.017356] (py_srvcli) StdoutLine: {'line': b'copying py_srvcli/client.py -> /home/spiderpi/ros2_ws/build/py_srvcli/build/lib/py_srvcli\n'}
+[4.019155] (py_srvcli) StdoutLine: {'line': b'running install\n'}
+[4.019904] (py_srvcli) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[4.020460] (py_srvcli) StderrLine: {'line': b'  warnings.warn(\n'}
+[4.021182] (py_srvcli) StdoutLine: {'line': b'running install_lib\n'}
+[4.025318] (py_srvcli) StdoutLine: {'line': b'copying /home/spiderpi/ros2_ws/build/py_srvcli/build/lib/py_srvcli/client.py -> /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli\n'}
+[4.028820] (py_srvcli) StdoutLine: {'line': b'byte-compiling /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli/client.py to client.cpython-310.pyc\n'}
+[4.032160] (py_srvcli) StdoutLine: {'line': b'running install_data\n'}
+[4.034618] (py_srvcli) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.037953] (-) TimerEvent: {}
+[4.041839] (py_srvcli) StdoutLine: {'line': b"removing '/home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[4.043571] (py_srvcli) StdoutLine: {'line': b'Copying ../../build/py_srvcli/py_srvcli.egg-info to /home/spiderpi/ros2_ws/install/py_srvcli/lib/python3.10/site-packages/py_srvcli-0.0.0-py3.10.egg-info\n'}
+[4.054358] (py_srvcli) StdoutLine: {'line': b'running install_scripts\n'}
+[4.138148] (-) TimerEvent: {}
+[4.139089] (py_srvcli) StdoutLine: {'line': b'Installing client script to /home/spiderpi/ros2_ws/install/py_srvcli/lib/py_srvcli\n'}
+[4.140120] (py_srvcli) StdoutLine: {'line': b'Installing service script to /home/spiderpi/ros2_ws/install/py_srvcli/lib/py_srvcli\n'}
+[4.140975] (py_srvcli) StdoutLine: {'line': b'Installing talker script to /home/spiderpi/ros2_ws/install/py_srvcli/lib/py_srvcli\n'}
+[4.143452] (py_srvcli) StdoutLine: {'line': b'Installing talker2 script to /home/spiderpi/ros2_ws/install/py_srvcli/lib/py_srvcli\n'}
+[4.146157] (py_srvcli) StdoutLine: {'line': b"writing list of installed files to '/home/spiderpi/ros2_ws/build/py_srvcli/install.log'\n"}
+[4.238515] (-) TimerEvent: {}
+[4.276866] (py_srvcli) CommandEnded: {'returncode': 0}
+[4.338981] (-) TimerEvent: {}
+[4.344026] (py_srvcli) JobEnded: {'identifier': 'py_srvcli', 'rc': 0}
+[4.347624] (-) EventReactorShutdown: {}

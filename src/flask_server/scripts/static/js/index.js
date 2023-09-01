@@ -307,64 +307,106 @@ function goal(data) { //Function draws the path and the bubble that displays dat
         visibility = "hidden"
         refill_text = "visible"
     }
+    
     if (lines.length == 0) {
-        for (let i = 0; i < coords.length - 1; i++) {
-
-            //Drawing the path lines.
-            var newLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-            newLine.setAttribute('id', 'line' + i);
-            newLine.setAttribute('x1', (JSON.parse(coords[i]))["x"] * 100 * scale + pad);
-            newLine.setAttribute('y1', (12 * yDim * scale + 20) - ((JSON.parse(coords[i])["y"]) * 100 * scale - 7.5 * scale));
-            newLine.setAttribute('x2', (JSON.parse(coords[i + 1]))["x"] * 100 * scale + pad);
-            newLine.setAttribute('y2', (12 * yDim * scale + 20) - ((JSON.parse(coords[i + 1])["y"]) * 100 * scale - 7.5 * scale));
-            newLine.setAttribute("stroke-width", 3)
-            newLine.setAttribute("stroke", "pink")
-            $("svg").append(newLine);
-
-            //Drawing the path points.
-            var pathPoint = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-            pathPoint.setAttribute('id', "pathPoint" + i);
-            pathPoint.setAttribute("cx", (JSON.parse(coords[i]))["x"] * 100 * scale + pad);
-            pathPoint.setAttribute("cy", (12 * yDim * scale + 20) - ((JSON.parse(coords[i])["y"]) * 100 * scale - 7.5 * scale));
+        var pathPoint = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            pathPoint.setAttribute('id', "pathPoint0");
+            pathPoint.setAttribute("cx", (JSON.parse(coords[0]))["x"] * 100 * scale + pad);
+            pathPoint.setAttribute("cy", (12 * yDim * scale + 20) - ((JSON.parse(coords[0])["y"]) * 100 * scale - 7.5 * scale));
             pathPoint.setAttribute("r", 2 * Math.PI + 1);
             pathPoint.setAttribute("fill", "pink")
             $("svg").append(pathPoint);
+            
+            pathPoints.push(pathPoint)
+        for (let i = 1; i < coords.length - 1; i++) {
+            
+            var line = (JSON.parse(coords[i]))["line"]
+            console.log(coords[i])
+            var arduino = parseInt(JSON.parse(coords[i])["arduino"])
+            console.log(arduino)
+            var sensor = parseInt(JSON.parse(coords[i])["sensorID"])
+            console.log(sensor)
+            let drawIndex = ((arduino - 1) * 36 + line * 6 + sensor)
+            console.log("index is "+ drawIndex)
+            //Drawing the path lines.
+            
+            
+            //Drawing the path points.
+            var pathPoint = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            pathPoint.setAttribute('id', "pathPoint" + i);
+            pathPoint.setAttribute("cx", empty_slots[drawIndex].getAttribute("cx"));
+            pathPoint.setAttribute("cy", empty_slots[drawIndex].getAttribute("cy"));
+            pathPoint.setAttribute("r", 2 * Math.PI + 1);
+            pathPoint.setAttribute("fill", "pink")
+            $("svg").append(pathPoint);
+            
+            
+            var newLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            newLine.setAttribute('id', 'line' + (i-1));
+            newLine.setAttribute('x1', pathPoint.getAttribute('cx'));
+            newLine.setAttribute('y1', pathPoint.getAttribute('cy'));
+            newLine.setAttribute('x2', pathPoints[pathPoints.length-1].getAttribute('cx'));
+            newLine.setAttribute('y2', pathPoints[pathPoints.length-1].getAttribute('cy'));
+            newLine.setAttribute("stroke-width", 3)
+            newLine.setAttribute("stroke", "pink")
+            $("svg").append(newLine);
             lines.push(newLine)
             pathPoints.push(pathPoint)
         }
 
+        
+        var line = (JSON.parse(coords[coords.length - 1]))["line"]
+           
+        var arduino = parseInt(JSON.parse(coords[coords.length - 1])["arduino"])
+            console.log(arduino)
+        var sensor = parseInt(JSON.parse(coords[coords.length - 1])["sensorID"])
+            console.log(sensor)
+        let drawIndex = ((arduino - 1) * 36 + line * 6 + sensor)
+            console.log("index is "+ drawIndex)
+        //Last line point.
+        var pathPoint = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        pathPoint.setAttribute('id', "pathPoint");
+        pathPoint.setAttribute("cx", empty_slots[drawIndex].getAttribute("cx"));
+        pathPoint.setAttribute("cy", empty_slots[drawIndex].getAttribute("cy"));
+        pathPoint.setAttribute("r", 2 * Math.PI + 1);
+        pathPoint.setAttribute("fill", "pink")
+        $("svg").append(pathPoint)
+        
+
         //Last line on the path.
         var newLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
         newLine.setAttribute('id', 'line' + coords.length);
-        newLine.setAttribute('x1', (JSON.parse(coords[coords.length - 1]))["x"] * 100 * scale + pad);
-        newLine.setAttribute('y1', (12 * yDim * scale + 20) - ((JSON.parse(coords[coords.length - 1])["y"]) * 100 * scale - 7.5 * scale));
-        newLine.setAttribute('x2', (JSON.parse(coords[0]))["x"] * 100 * scale + pad);
-        newLine.setAttribute('y2', (12 * yDim * scale + 20) - ((JSON.parse(coords[0])["y"]) * 100 * scale - 7.5 * scale));
+        newLine.setAttribute('x1', (pathPoint.getAttribute('cx')));
+        newLine.setAttribute('y1', (pathPoint.getAttribute('cy')));
+        newLine.setAttribute('x2', pathPoints[0].getAttribute('cx'));
+        newLine.setAttribute('y2', pathPoints[0].getAttribute('cy'));
         newLine.setAttribute("stroke-width", 3)
         newLine.setAttribute("stroke", "pink")
         $("svg").append(newLine);
         lines.push(newLine)
 
-        //Last line point.
-        var pathPoint = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-        pathPoint.setAttribute('id', "pathPoint");
-        pathPoint.setAttribute("cx", (JSON.parse(coords[coords.length - 1]))["x"] * 100 * scale + pad);
-        pathPoint.setAttribute("cy", (12 * yDim * scale + 20) - ((JSON.parse(coords[coords.length - 1])["y"]) * 100 * scale - 7.5 * scale));
-        pathPoint.setAttribute("r", 2 * Math.PI + 1);
-        pathPoint.setAttribute("fill", "pink")
-        $("svg").append(pathPoint)
+        var newLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        newLine.setAttribute('id', 'line' + (coords.length-1));
+        newLine.setAttribute('x1', (pathPoint.getAttribute('cx')));
+        newLine.setAttribute('y1', (pathPoint.getAttribute('cy')));
+        newLine.setAttribute('x2', (pathPoints[pathPoints.length-1].getAttribute('cx')));
+        newLine.setAttribute('y2', (pathPoints[pathPoints.length-1].getAttribute('cy')));
+        newLine.setAttribute("stroke-width", 3)
+        newLine.setAttribute("stroke", "pink")
+        $("svg").append(newLine);
+        lines.push(newLine)
+        console.log(lines)
         pathPoints.push(pathPoint)
-
         //Drawing current goal on the path (blue dot).
         goalPos = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
         goalPos.setAttribute('id', "goalPos");
-        goalPos.setAttribute("cx", (JSON.parse(coords[index]))["x"] * 100 * scale + pad);
-        goalPos.setAttribute("cy", (12 * yDim * scale + 20) - ((JSON.parse(coords[index])["y"]) * 100 * scale - 7.5 * scale));
+        goalPos.setAttribute("cx", pathPoints[index].getAttribute("cx"));
+        goalPos.setAttribute("cy", pathPoints[index].getAttribute("cy"));
         goalPos.setAttribute("r", 1.8 * Math.PI);
         goalPos.setAttribute("fill", "blue")
         $("svg").append(goalPos);
 
-        if ((12 * yDim * scale + 20) - ((JSON.parse(coords[index])["y"]) * 100 * scale - 7.5 * scale) < 150) {
+        if ((JSON.parse(coords[index])["y"])>2.40) {
             used_coords = [...text_coords1]
             bubble_coords = [-175, 15]
             arrow1_coords = 15
@@ -525,8 +567,7 @@ function goal(data) { //Function draws the path and the bubble that displays dat
             $("svg").append(text9);
             texts.push(text9)
 
-            console.log(text3.getAttribute("visibility"))
-            console.log(goalPos.getAttribute("cx"))
+            
         }
     }
 }
@@ -562,25 +603,13 @@ function spiderPos(data) {
 function stations(data) {
     try{
     station_data = data[9]
-    document.getElementById("tvoc1").innerHTML = station_data["humidity"]
-    document.getElementById("temp1").innerHTML = station_data["temperature"]
-    document.getElementById("light1").innerHTML = station_data["luminosity"]
+    document.getElementById("temp").innerHTML = station_data["temperature"]
+    document.getElementById("hum").innerHTML = station_data["humidity"]
+    
     document.getElementById("oxy1").innerHTML = station_data["o2"]
     document.getElementById("co1").innerHTML = station_data["co2"]
 
-    station_data = data[11]
-    document.getElementById("tvoc2").innerHTML = station_data["humidity"]
-    document.getElementById("temp2").innerHTML = station_data["temperature"]
-    document.getElementById("light2").innerHTML = station_data["luminosity"]
-    document.getElementById("oxy2").innerHTML = station_data["o2"]
-    document.getElementById("co2").innerHTML = station_data["co2"]
-
-    station_data = data[12]
-    document.getElementById("tvoc3").innerHTML = station_data["humidity"]
-    document.getElementById("temp3").innerHTML = station_data["temperature"]
-    document.getElementById("light3").innerHTML = station_data["luminosity"]
-    document.getElementById("oxy3").innerHTML = station_data["o2"]
-    document.getElementById("co3").innerHTML = station_data["co2"]
+    
     }
     catch{
         console.log("err")
@@ -592,7 +621,7 @@ function update() { //Function gets data from the server and updates it on the g
         spiderPos(data)
         get_routes(data)
         stations(data)
-        
+        console.log(data[4])
         try{
         for (let i = 0; i < data[4].length; i++) {
             let arduino = data[4][i]['arduino']
@@ -600,12 +629,13 @@ function update() { //Function gets data from the server and updates it on the g
             let sensor = data[4][i]['sensorID']
             let cap = data[4][i]['cap']
             let name = data[4][i]['plantName']
-            let index = ((arduino - 1) * 36 + line * 6 + sensor)
+            let index = ((arduino - 1) * 36 + line * 6 + (sensor))
 
             if (cap == null && empty_slots[index].getAttribute('fill') != "pink") {
                 empty_slots[index].setAttribute("fill", "red");
             }
             else if (empty_slots[index].getAttribute('fill') != "pink") {
+                console.log("coloring")
                 empty_slots[index].setAttribute("fill", "green");
             }
             empty_slots[index].setAttribute("stroke", "none");
@@ -623,8 +653,8 @@ function update() { //Function gets data from the server and updates it on the g
         data[13]!=null ? document.getElementById("moves").innerHTML = data[13] : console.log("No move data")
         data[10]!=null ? document.getElementById("voltage").innerHTML = data[10].toFixed(2) : console.log("Voltage not found")
         data[14]!=null ? document.getElementById("walked").innerHTML = data[14].toFixed(2) : console.log("Walked distance not found")
-        console.log(data[11])
-        console.log(data[12])
+        
+        console.log(data[2])
     }
     catch(err){
         console.log(err);

@@ -22,5 +22,8 @@ class Sensor:
         self.characteristics = None
         self.dead = False
     def toJson(self):
-        return json.dumps(self, default=lambda o:o.__dict__)
+        try:
+            return json.dumps(self, default=lambda o:o.__dict__)
+        except Exception as e:
+            print(e)
     

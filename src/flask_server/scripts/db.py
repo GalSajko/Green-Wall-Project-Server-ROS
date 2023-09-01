@@ -15,8 +15,8 @@ cursor.execute('''SELECT * from plants''')
 data = cursor.fetchall()
 print(data)
 
-date = datetime(2023,6,1,5,5,5)
-date2 = datetime(2023,5,25,5,5,5)
+date = datetime(2023,8,30,5,5,5)
+date2 = datetime(2023,8,30,5,5,5)
 sql = "update plants set date_time = %s where id > 70"
 sql2 = "update plants set date_time = %s where id <= 70"
 cursor.execute(sql,(date,))

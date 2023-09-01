@@ -1,0 +1,22 @@
+[2.879s] Invoking command in '/home/spiderpi/ros2_ws/src/flask_server': LD_LIBRARY_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces/lib:/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/spiderpi/ros2_ws/build/flask_server/prefix_override:/home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/flask_server build --build-base /home/spiderpi/ros2_ws/build/flask_server/build install --record /home/spiderpi/ros2_ws/build/flask_server/install.log --single-version-externally-managed
+[3.985s] running egg_info
+[3.989s] writing ../../build/flask_server/flask_server.egg-info/PKG-INFO
+[3.990s] writing dependency_links to ../../build/flask_server/flask_server.egg-info/dependency_links.txt
+[3.991s] writing entry points to ../../build/flask_server/flask_server.egg-info/entry_points.txt
+[3.991s] writing requirements to ../../build/flask_server/flask_server.egg-info/requires.txt
+[3.992s] writing top-level names to ../../build/flask_server/flask_server.egg-info/top_level.txt
+[4.000s] reading manifest file '../../build/flask_server/flask_server.egg-info/SOURCES.txt'
+[4.004s] writing manifest file '../../build/flask_server/flask_server.egg-info/SOURCES.txt'
+[4.004s] running build
+[4.005s] running build_py
+[4.006s] running install
+[4.007s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[4.007s]   warnings.warn(
+[4.008s] running install_lib
+[4.013s] running install_data
+[4.017s] running install_egg_info
+[4.026s] removing '/home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages/flask_server-0.0.0-py3.10.egg-info' (and everything under it)
+[4.028s] Copying ../../build/flask_server/flask_server.egg-info to /home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages/flask_server-0.0.0-py3.10.egg-info
+[4.037s] running install_scripts
+[4.136s] writing list of installed files to '/home/spiderpi/ros2_ws/build/flask_server/install.log'
+[4.266s] Invoked command in '/home/spiderpi/ros2_ws/src/flask_server' returned '0': LD_LIBRARY_PATH=/home/spiderpi/ros2_ws/install/my_service_interfaces/lib:/home/spiderpi/ros2_ws/install/gwpspider_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/spiderpi/ros2_ws/build/flask_server/prefix_override:/home/spiderpi/ros2_ws/install/flask_server/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/flask_server build --build-base /home/spiderpi/ros2_ws/build/flask_server/build install --record /home/spiderpi/ros2_ws/build/flask_server/install.log --single-version-externally-managed

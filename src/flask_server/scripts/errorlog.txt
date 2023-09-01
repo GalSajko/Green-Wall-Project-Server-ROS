@@ -4667,3 +4667,409 @@ LINE 1: ... line, "sensorNum") VALUES ('Bostonski praprot ', '', '2023-...
 [SQL: INSERT INTO plants (name, "waterInterval", date_time, panel, line, "sensorNum") VALUES (%(name)s, %(waterInterval)s, %(date_time)s, %(panel)s, %(line)s, %(sensorNum)s) RETURNING plants.id]
 [parameters: {'name': 'Bostonski praprot ', 'waterInterval': '', 'date_time': '2023-08-08T11:34', 'panel': '5', 'line': '4', 'sensorNum': '6'}]
 (Background on this error at: https://sqlalche.me/e/20/9h9h)
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 983, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 539, in set_data_from_db
+    plant_type =db.session.query(PlantsData.plant_type).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 983, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 539, in set_data_from_db
+    plant_type =db.session.query(PlantsData.plant_type).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 983, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 539, in set_data_from_db
+    plant_type =db.session.query(PlantsData.plant_type).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 983, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 539, in set_data_from_db
+    plant_type =db.session.query(PlantsData.plant_type).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 983, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 539, in set_data_from_db
+    plant_type =db.session.query(PlantsData.plant_type).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 983, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 540, in set_data_from_db
+    water =db.session.query(PlantsData.watering_96h).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 983, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 540, in set_data_from_db
+    water =db.session.query(PlantsData.watering_96h).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 984, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 541, in set_data_from_db
+    water =db.session.query(PlantsData.watering_96h).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 984, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 541, in set_data_from_db
+    water =db.session.query(PlantsData.watering_96h).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /add [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 310, in ind
+    position = config.selected.split(':')
+AttributeError: module 'config' has no attribute 'selected'
+Exception on /add [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 310, in ind
+    position = config.selected.split(':')
+AttributeError: module 'config' has no attribute 'selected'
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 985, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 543, in set_data_from_db
+    areas = db.session.query(PlantsData.areas).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 985, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 543, in set_data_from_db
+    areas = db.session.query(PlantsData.areas).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 988, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 538, in set_data_from_db
+    water =db.session.query(PlantsData.watering_96h).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 988, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 538, in set_data_from_db
+    water =db.session.query(PlantsData.watering_96h).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 988, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 538, in set_data_from_db
+    water =db.session.query(PlantsData.watering_96h).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 988, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 538, in set_data_from_db
+    water =db.session.query(PlantsData.watering_96h).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 988, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 538, in set_data_from_db
+    water =db.session.query(PlantsData.watering_96h).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 988, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 538, in set_data_from_db
+    water =db.session.query(PlantsData.watering_96h).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 988, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 538, in set_data_from_db
+    water =db.session.query(PlantsData.watering_96h).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 988, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 538, in set_data_from_db
+    water =db.session.query(PlantsData.watering_96h).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /updt/6 [POST]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 270, in updt
+    config.sensorBase[array_ind].plantName = request.form['name']
+AttributeError: 'NoneType' object has no attribute 'plantName'
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 988, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 538, in set_data_from_db
+    water =db.session.query(PlantsData.watering_96h).filter(PlantsData.name==name).all()[0][0]
+IndexError: list index out of range
+Exception on /getId [POST]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 419, in get_id
+    return str(id_num[0][0])
+IndexError: list index out of range
+Exception on /getId [POST]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 419, in get_id
+    return str(id_num[0][0])
+IndexError: list index out of range
+Exception on /getId [POST]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 419, in get_id
+    return str(id_num[0][0])
+IndexError: list index out of range
+Exception on /getId [POST]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 419, in get_id
+    return str(id_num[0][0])
+IndexError: list index out of range
+Exception on /svg [GET]
+Traceback (most recent call last):
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/spiderpi/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 1015, in svg
+    set_data_from_db()
+  File "/home/spiderpi/ros2_ws/src/flask_server/scripts/server.py", line 533, in set_data_from_db
+    db_id = db.session.query(Plants.id).filter(Plants.panel==panel,Plants.line==data.line,Plants.sensorNum==sensor_id).all()[0][0]
+IndexError: list index out of range

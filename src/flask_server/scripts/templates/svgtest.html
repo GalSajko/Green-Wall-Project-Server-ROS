@@ -15,12 +15,7 @@
       position: relative;
       
     }
-    p.bottom-left {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      margin: 10px; /* Add some space around the paragraph for better visibility */
-    }
+    
 
     #naslov {
       text-align: center;
@@ -31,10 +26,7 @@
       border: none;
       font-size: 45px;
     }
-    .container {
-    width: fit-content;
-    display: flex;
-}
+    
 p{font-size: 14px;}
 h3{font-size: 18px;}
 
@@ -66,7 +58,7 @@ h3{font-size: 18px;}
         <h3>SpiderBot:</h3>
         <div>
           <p>Status: <span id="status"></span></p>
-          <p>Start: <span id="startTime"></span> Stop: <span id="stopTime"></span></p>
+          <p>Voltage: <span id="voltage"></span> V</p>
           <p>No. of movements on current route: <span id="moves"></span></p>
           <p>No. of meters walked since last reset: <span id="walked"></span>m</p>
           <p>Next route: <span id="routeNext"></span></p>
@@ -77,42 +69,19 @@ h3{font-size: 18px;}
           <p>Number of plants: <span id="plantsNo"></span></p>
           <p>Water usage total: <span id="water"></span>L</p>
         </div>
-        <h3>Fish pond:</h3>
-        <div>
-          <p>Number of fish: 12</p>
-          <p>Food amount: 42kg</p>
-        </div>
-        <h3>Fields:</h3>
+        <h3>Environment:</h3>
         <div class="container">
-          <div class="child">Field 1:
-            <p>Temperature: <span id="temp1"></span>&deg;C</p>
-            <p>Luminosity: <span id="light1"></span> lx</p>
+            <p>Temperature: <span id="temp"></span> &#8451;</p>
+            <p>Humidity: <span id="hum"></span> % RH</p>
+            
             <p>Oxygen: <span id="oxy1"></span> %vol</p>
             <p>CO2: <span id="co1"></span> ppm</p>
-            <p>Humidity: <span id="tvoc1"></span> %</p>
-          </div>
-          <div class="child">Field 2:
-            <p>Temperature: <span id="temp2"></span>&deg;C</p>
-            <p>Luminosity: <span id="light2"></span> lx</p>
-            <p>Oxygen: <span id="oxy2"> %vol</span></p>
-            <p>CO2: <span id="co2"></span> ppm</p>
-            <p>Humidity: <span id="tvoc2"></span> %</p>
-          </div>
-          <div class="child">Field 3:
-            <p>Temperature: <span id="temp3"></span>&deg;C</p>
-            <p>Luminosity: <span id="light3"></span> lx</p>
-            <p>Oxygen: <span id="oxy3"> %vol</span></p>
-            <p>CO2: <span id="co3"></span> ppm</p>
-            <p>Humidity: <span id="tvoc3"></span> %</p>
           </div>
         </div>
       </div>
-      <p class="bottom-left"><span id="voltage"></span> V</p>
+      
     </div>
     <script>
-      document.getElementById("status").innerHTML = "ON"
-      document.getElementById("startTime").innerHTML = "12:00"
-      document.getElementById("stopTime").innerHTML = "20:00"
       var date = new Date()
       var yr = date.getFullYear()
       var m = date.getMonth() + 1
